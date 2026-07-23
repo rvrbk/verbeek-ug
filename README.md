@@ -1,34 +1,35 @@
-# Rik Verbeek - Portfolio Website
+# Verbeek.ug - Portfolio Website
 
-> **Custom Web Solutions for Ugandan Businesses**
-> 
-> Laravel + Vue.js portfolio website showcasing software development services for Ugandan farmers, real estate businesses, and small enterprises.
+**Professional software development services for Ugandan businesses.**
 
----
-
-## Preview
-
-A professional portfolio website built with **Laravel 11** and **Vue 3** to help potential clients discover my services, view case studies, and get in touch. The site features:
-
-- Responsive design with Tailwind CSS v4
-- Single Page Application (SPA) architecture with Vue Router
-- Case studies for warehouse management and real estate applications
-- Contact form with validation
-- Blog section for thought leadership content
+A modern portfolio website built with Laravel and Vue.js, designed to showcase custom web solutions for farmers, real estate businesses, and small enterprises in Uganda.
 
 ---
 
-## Tech Stack
+## Overview
 
-| Layer | Technology |
-|-------|------------|
-| **Backend** | Laravel 11.x |
-| **Frontend** | Vue 3, Vue Router 4 |
-| **Styling** | Tailwind CSS v4 |
-| **Build Tool** | Vite 8 |
-| **Hosting** | Hetzner (recommended) |
-| **Language** | PHP 8.2+ |
-| **Database** | MySQL / SQLite (for future expansion) |
+This project is a Single Page Application (SPA) combining Laravel's powerful backend with Vue.js's reactive frontend. It serves as a professional hub to:
+
+- Display service offerings with clear value propositions
+- Showcase case studies and completed projects
+- Provide contact information and lead capture forms
+- Share insights through blog articles
+
+**Key Features:** Responsive design, SPA navigation, form validation, case study showcases, testimonials section
+
+---
+
+## Technology Stack
+
+| Category | Technology | Version |
+|----------|------------|---------|
+| Backend Framework | Laravel | 11.x |
+| Frontend Framework | Vue.js | 3.x |
+| Router | Vue Router | 4.x |
+| Styling | Tailwind CSS | 4.x |
+| Build Tool | Vite | 8.x |
+| Package Manager | npm | 20+ |
+| PHP | PHP | 8.2+ |
 
 ---
 
@@ -36,305 +37,205 @@ A professional portfolio website built with **Laravel 11** and **Vue 3** to help
 
 ```
 verbeek-ug/
-├── app/                    # Laravel application logic
-├── config/                # Laravel configuration
-├── database/              # Migrations, seeders, factories
-├── public/                # Compiled assets, entry point
+├── app/                          # Laravel application
+├── config/                      # Laravel configuration
+├── database/                    # Database migrations & seeders
+├── public/                      # Static files & entry point
 ├── resources/
 │   ├── css/
-│   │   └── app.css        # Tailwind CSS with custom styles
+│   │   └── app.css              # Tailwind styles
 │   ├── js/
-│   │   ├── app.js         # Vue app initialization
-│   │   ├── App.vue        # Root Vue component
+│   │   ├── app.js               # Vue initialization
+│   │   ├── App.vue              # Root component
 │   │   ├── router/
-│   │   │   └── index.js   # Vue Router configuration
+│   │   │   └── index.js         # Route definitions
 │   │   ├── layouts/
-│   │   │   └── AppLayout.vue  # Header, footer, navigation
-│   │   └── pages/         # All page components
+│   │   │   └── AppLayout.vue    # Shared layout
+│   │   └── pages/               # Page components
 │   │       ├── Home.vue
-│   │       ├── About/
-│   │       │   └── Index.vue
-│   │       ├── Services/
-│   │       │   └── Index.vue
+│   │       ├── About/Index.vue
+│   │       ├── Services/Index.vue
 │   │       ├── Portfolio/
 │   │       │   ├── Index.vue
 │   │       │   └── Item.vue
-│   │       ├── Contact/
-│   │       │   └── Index.vue
+│   │       ├── Contact/Index.vue
 │   │       └── Blog/
 │   │           ├── Index.vue
 │   │           └── Post.vue
 │   └── views/
-│       └── welcome.blade.php  # Blade template with Vite
+│       └── welcome.blade.php    # Blade template
 ├── routes/
-│   └── web.php            # SPA catch-all route
-├── vite.config.js         # Vite configuration
-├── package.json           # Frontend dependencies
-└── composer.json          # PHP dependencies
+│   └── web.php                  # SPA catch-all route
+├── vite.config.js
+├── package.json
+└── composer.json
 ```
 
 ---
 
-## Getting Started
+## Requirements
 
-### Prerequisites
+- PHP 8.2+
+- Composer 2.5+
+- Node.js 20+
+- npm or yarn
 
-- **PHP** 8.2 or higher
-- **Composer** 2.5+ (for PHP dependencies)
-- **Node.js** 20+ (for frontend dependencies)
-- **npm** or **yarn** (for package management)
+---
 
-### Installation
+## Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/rvrbk/verbeek-ug.git
-   cd verbeek-ug
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/rvrbk/verbeek-ug.git
+cd verbeek-ug
 
-2. **Install PHP dependencies**
-   ```bash
-   composer install
-   ```
+# Install PHP dependencies
+composer install
 
-3. **Install Node dependencies**
-   ```bash
-   npm install
-   ```
+# Install Node dependencies
+npm install
 
-4. **Copy environment file**
-   ```bash
-   cp .env.example .env
-   ```
-
-5. **Generate application key**
-   ```bash
-   php artisan key:generate
-   ```
-
-6. **Configure environment** (optional)
-   Edit `.env` to configure:
-   ```ini
-   APP_NAME="Rik Verbeek - Software Developer"
-   APP_URL=http://verbeek.ug
-   ```
+# Configure environment
+cp .env.example .env
+php artisan key:generate
+```
 
 ---
 
 ## Development
 
-### Running the Development Server
+### Start Development Servers
 
-Use two terminal windows:
-
-**Terminal 1 - Laravel Server**
+**Terminal 1:**
 ```bash
 php artisan serve
-# Runs on http://localhost:8000
 ```
 
-**Terminal 2 - Vite Dev Server**
+**Terminal 2:**
 ```bash
 npm run dev
-# Hot module replacement on http://localhost:5173
 ```
 
-Visit `http://localhost:8000` in your browser. The site will use Vite's HMR for fast frontend development.
+Access the application at `http://localhost:8000`
 
-### Alternative: Single Command
-
-You can also run both servers simultaneously:
+### Single Command
 ```bash
 npx concurrently "php artisan serve" "npm run dev"
 ```
 
 ---
 
-## Building for Production
-
-### Local Build
+## Build for Production
 
 ```bash
 npm run build
 ```
 
-This compiles all assets with optimizations for production and outputs them to `public/build/`.
-
-### Asset Optimization
-
-The build process includes:
-- CSS minification and purging (Tailwind)
-- JavaScript bundling and tree-shaking
-- Image optimization
-- Cache-busting with content hashing
+Compiled assets are output to `public/build/` with:
+- Minified CSS (Tailwind purged)
+- Tree-shaken JavaScript
+- Optimized assets
+- Cache-busted filenames
 
 ---
 
-## Deployment to Hetzner
+## Deployment
 
-### Option 1: Manual Deployment via SSH
+### Hetzner Server Setup
 
-1. **Build assets locally**
-   ```bash
-   npm run build
-   ```
+#### 1. Nginx Configuration
 
-2. **Upload to Hetzner server**
-   ```bash
-   rsync -avz --delete ./ user@your-hetzner-ip:/var/www/verbeek.ug/
-   ```
+```nginx
+server {
+    listen 80;
+    server_name verbeek.ug www.verbeek.ug;
+    root /var/www/verbeek.ug/public;
+    index index.php index.html;
 
-3. **Set permissions**
-   ```bash
-   chown -R www-data:www-data /var/www/verbeek.ug/
-   chmod -R 755 /var/www/verbeek.ug/storage
-   chmod -R 755 /var/www/verbeek.ug/bootstrap/cache
-   ```
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
 
-4. **Configure web server (Nginx)**
-   ```nginx
-   server {
-       listen 80;
-       server_name verbeek.ug www.verbeek.ug;
-       root /var/www/verbeek.ug/public;
-       index index.php index.html;
-       
-       location / {
-           try_files $uri $uri/ /index.php?$query_string;
-       }
-       
-       location ~ \.php$ {
-           include snippets/fastcgi-php.conf;
-           fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
-           fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
-       }
-       
-       location ~ /\. {
-           deny all;
-       }
-   }
-   ```
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php8.2-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+    }
 
-5. **Restart services**
-   ```bash
-   sudo systemctl restart nginx
-   sudo systemctl restart php8.2-fpm
-   ```
+    location ~ /\. {
+        deny all;
+    }
+}
+```
 
-### Option 2: Automated Deployment with Git
-
-1. **Set up a bare repository on the server**
-   ```bash
-   mkdir -p /var/www/verbeek.ug-repo.git
-   cd /var/www/verbeek.ug-repo.git
-   git init --bare
-   ```
-
-2. **Create a post-receive hook**
-   ```bash
-   # In /var/www/verbeek.ug-repo.git/hooks/post-receive
-   #!/bin/bash
-   TARGET="/var/www/verbeek.ug"
-   GIT_WORK_TREE="$TARGET" git checkout -f
-   cd "$TARGET"
-   composer install --no-dev --optimize-autoloader
-   npm install
-   npm run build
-   chown -R www-data:www-data .
-   chmod -R 755 storage bootstrap/cache
-   ```
-
-3. **Add remote and push**
-   ```bash
-   git remote add hetzner user@your-hetzner-ip:/var/www/verbeek.ug-repo.git
-   git push hetzner main
-   ```
-
-### Option 3: Using Deployer (Recommended for Hetzner)
-
-1. **Install Deployer**
-   ```bash
-   composer require --dev deployer/deployer
-   vendor/bin/dep init
-   ```
-
-2. **Create `deploy.php`**
-   ```php
-   <?php
-   namespace Deployer;
-   
-   require 'recipe/laravel.php';
-   
-   // Configuration
-   set('repository', 'git@github.com:rvrbk/verbeek-ug.git');
-   set('shared_files', ['.env']);
-   set('shared_dirs', ['storage']);
-   set('writable_dirs', ['storage', 'bootstrap/cache']);
-   
-   // Servers
-   host('verbeek.ug')
-       ->set('host', 'your-hetzner-ip')
-       ->set('remote_user', 'user')
-       ->set('deploy_path', '/var/www/verbeek.ug');
-   
-   // Hooks
-   task('build:frontend', function () {
-       run('cd {{release_path}} && npm install && npm run build');
-   });
-   
-   after('deploy:vendor', 'build:frontend');
-   ```
-
-3. **Deploy**
-   ```bash
-   vendor/bin/dep deploy production
-   ```
-
----
-
-## SSL Certificate (HTTPS)
-
-Use Let's Encrypt with Certbot:
+#### 2. Permissions
 
 ```bash
-# Install Certbot
+chown -R www-data:www-data /var/www/verbeek.ug/
+chmod -R 755 /var/www/verbeek.ug/storage
+chmod -R 755 /var/www/verbeek-ug/bootstrap/cache
+```
+
+#### 3. SSL Certificate (Let's Encrypt)
+
+```bash
 sudo apt install certbot python3-certbot-nginx
-
-# Obtain certificate
 sudo certbot --nginx -d verbeek.ug -d www.verbeek.ug
-
-# Auto-renewal
 sudo certbot renew --dry-run
 ```
 
-Update Nginx to listen on port 443 and redirect HTTP to HTTPS.
+### Deployment Methods
+
+**Option A: Manual (rsync)**
+```bash
+npm run build
+rsync -avz --delete ./ user@server-ip:/var/www/verbeek.ug/
+```
+
+**Option B: Git Hook**
+```bash
+# Server setup
+mkdir -p /var/www/verbeek.ug-repo.git
+cd /var/www/verbeek.ug-repo.git
+git init --bare
+
+# Create hook at /var/www/verbeek.ug-repo.git/hooks/post-receive
+#!/bin/bash
+TARGET="/var/www/verbeek.ug"
+GIT_WORK_TREE="$TARGET" git checkout -f
+cd "$TARGET"
+composer install --no-dev --optimize-autoloader
+npm install
+npm run build
+chown -R www-data:www-data .
+chmod -R 755 storage bootstrap/cache
+
+# Deploy
+git remote add hetzner user@server-ip:/var/www/verbeek.ug-repo.git
+git push hetzner main
+```
 
 ---
 
 ## Environment Configuration
 
-### Required Settings
+### Required
 
 ```ini
 APP_NAME="Rik Verbeek - Software Developer"
 APP_ENV=production
-APP_KEY=base64:your-generated-key
+APP_KEY=base64:...your-key...
 APP_DEBUG=false
 APP_URL=https://verbeek.ug
-
-LOG_CHANNEL=stack
-LOG_LEVEL=error
 ```
 
-### Optional: Mail Configuration (for Contact Form)
-
-To enable the contact form to send emails:
+### Mail (Optional - for Contact Form)
 
 ```ini
 MAIL_MAILER=smtp
-MAIL_HOST=mail.your-smtp-server.com
+MAIL_HOST=your-smtp-server.com
 MAIL_PORT=587
-MAIL_USERNAME=your-email@verbeek.ug
+MAIL_USERNAME=noreply@verbeek.ug
 MAIL_PASSWORD=your-password
 MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS=rik@verbeek.ug
@@ -343,130 +244,76 @@ MAIL_FROM_NAME="Rik Verbeek"
 
 ---
 
-## Pages Overview
+## Available Pages
 
-| Route | Component | Description |
-|-------|-----------|-------------|
-| `/` | `Home.vue` | Hero, services preview, portfolio preview, testimonials |
-| `/services` | `Services/Index.vue` | Detailed service offerings with outcomes |
-| `/portfolio` | `Portfolio/Index.vue` | Case studies with Problem/Solution/Result |
-| `/portfolio/:id` | `Portfolio/Item.vue` | Single project detail |
-| `/about` | `About/Index.vue` | Bio, expertise, process |
-| `/contact` | `Contact/Index.vue` | Contact form, FAQ, social links |
-| `/blog` | `Blog/Index.vue` | Article listings |
-| `/blog/:slug` | `Blog/Post.vue` | Single blog post |
-
----
-
-## Customization
-
-### Changing Content
-
-Edit the respective Vue components in `resources/js/pages/` to update:
-- **Home page**: Edit `Home.vue`
-- **Services**: Edit `Services/Index.vue`
-- **Portfolio**: Edit `Portfolio/Index.vue` and `Portfolio/Item.vue`
-- **About**: Edit `About/Index.vue`
-- **Contact**: Edit `Contact/Index.vue`
-- **Blog**: Edit `Blog/Index.vue` and `Blog/Post.vue`
-
-### Adding New Pages
-
-1. Create a new Vue component in `resources/js/pages/`
-2. Add a route in `resources/js/router/index.js`
-3. Add navigation link in `resources/js/layouts/AppLayout.vue`
-
-### Changing Styles
-
-Edit `resources/css/app.css` for custom Tailwind styles, or modify classes directly in Vue templates.
+| Path | Component | Purpose |
+|------|-----------|---------|
+| `/` | Home | Hero, services preview, portfolio highlights, testimonials |
+| `/services` | Services | Detailed service descriptions and outcomes |
+| `/portfolio` | Portfolio | Case studies with Problem/Solution/Result structure |
+| `/portfolio/:id` | Portfolio Item | Individual project deep dive |
+| `/about` | About | Professional bio, expertise, process |
+| `/contact` | Contact | Contact form, FAQ, social links |
+| `/blog` | Blog | Article listings |
+| `/blog/:slug` | Blog Post | Individual article |
 
 ---
 
-## Performance Optimization
+## Customization Guide
 
-### Vite Configuration
+### Content Updates
 
-The project uses:
-- `laravel-vite-plugin` for Laravel integration
-- `@tailwindcss/vite` for Tailwind CSS v4
-- `@vitejs/plugin-vue` for Vue 3 support
+Edit Vue components in `resources/js/pages/`:
+- Home: `Home.vue`
+- Services: `Services/Index.vue`
+- Portfolio: `Portfolio/Index.vue` and `Item.vue`
+- About: `About/Index.vue`
+- Contact: `Contact/Index.vue`
+- Blog: `Blog/Index.vue` and `Post.vue`
 
-### Cache Configuration
+### Add New Page
 
-For production, add to `.env`:
-```ini
-CACHE_DRIVER=file
-VIEW_COMPILED_PATH=/var/www/verbeek.ug/storage/framework/views
-```
+1. Create component in `resources/js/pages/`
+2. Add route in `resources/js/router/index.js`
+3. Add navigation link in `AppLayout.vue`
+
+### Styling
+
+Modify Tailwind classes directly in components or update `resources/css/app.css` for global styles.
 
 ---
 
 ## Troubleshooting
 
-### Common Issues
-
-**Vite HMR not working:**
-- Ensure `APP_URL` in `.env` matches your development URL
-- Check Vite dev server is running on port 5173
-- Clear browser cache
-
-**Build fails:**
-- Delete `node_modules/` and `package-lock.json`, then run `npm install`
-- Delete `vendor/` and run `composer install`
-
-**Blank page:**
-- Check that `public/build/` contains compiled assets
-- Verify `APP_URL` is correct in `.env`
-
-**500 Error:**
-- Check Laravel logs: `tail -f storage/logs/laravel.log`
-- Verify storage permissions: `chmod -R 755 storage/ bootstrap/cache/`
+| Issue | Solution |
+|-------|----------|
+| HMR not working | Verify `APP_URL` in .env matches dev URL; ensure Vite runs on 5173 |
+| Build fails | Delete `node_modules/` and `package-lock.json`, reinstall |
+| Blank page | Check `public/build/` exists; verify `APP_URL` |
+| 500 Error | Check `storage/logs/laravel.log`; verify permissions |
 
 ---
 
-## Security Best Practices
+## Security
 
-1. Keep `.env` out of version control (it's in `.gitignore`)
-2. Never commit `APP_KEY` or database credentials
-3. Set `APP_DEBUG=false` in production
-4. Use HTTPS with a valid SSL certificate
-5. Keep dependencies updated:
-   ```bash
-   composer update
-   npm update
-   ```
-
----
-
-## Contributing
-
-This is a personal portfolio project. Contributions are welcome for:
-- Bug fixes
-- Security improvements
-- Performance optimizations
-- Accessibility enhancements
-
-Please open an issue or pull request on GitHub.
+- Never commit `.env` or `APP_KEY`
+- Set `APP_DEBUG=false` in production
+- Use HTTPS with valid SSL certificate
+- Keep dependencies updated
 
 ---
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Laravel framework: [MIT License](https://opensource.org/licenses/MIT)
 
-This project's frontend code and design are proprietary. Free to use for personal portfolio purposes with attribution.
+Project frontend: Proprietary - free for personal portfolio use with attribution
 
 ---
 
 ## Contact
 
-- **Email**: rik@verbeek.ug
-- **Website**: https://verbeek.ug
-- **LinkedIn**: [@rikverbeek](https://linkedin.com/in/rikverbeek)
-- **GitHub**: [@rvrbk](https://github.com/rvrbk)
-
----
-
-<p align="center">
-Built with love using Laravel and Vue.js for Ugandan businesses
-</p>
+- **Email:** rik@verbeek.ug
+- **Website:** https://verbeek.ug
+- **LinkedIn:** https://linkedin.com/in/rikverbeek
+- **GitHub:** https://github.com/rvrbk
