@@ -4,8 +4,37 @@
 @source '../../storage/framework/views/*.php';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    --font-sans: 'Inter', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+    
+    /* Professional Color Palette */
+    --color-primary: #2563eb;
+    --color-primary-dark: #1d4ed8;
+    --color-primary-light: #3b82f6;
+    --color-secondary: #7c3aed;
+    --color-accent: #059669;
+    --color-accent-light: #10b981;
+    
+    /* Gradient Definitions */
+    --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    --gradient-secondary: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+    --gradient-accent: linear-gradient(135deg, #059669 0%, #047857 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 40px rgba(37, 99, 235, 0.1);
+    --shadow-glow-lg: 0 0 60px rgba(37, 99, 235, 0.15);
+    
+    /* Border Radius */
+    --radius-sm: 0.375rem;
+    --radius: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-2xl: 1.5rem;
+    --radius-full: 9999px;
 }
 
 /* Custom animations */
@@ -33,6 +62,26 @@
     }
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
 .animate-spin {
     animation: spin 1s linear infinite;
 }
@@ -43,6 +92,10 @@
 
 .animate-float {
     animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
 }
 
 /* Custom scrollbar */
@@ -77,3 +130,166 @@
 .dark ::-webkit-scrollbar-thumb:hover {
     background: #5c5c5c;
 }
+
+/* Base Styles */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Component Styles */
+@layer components {
+    /* Primary Button */
+    .btn-primary {
+        @apply inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5;
+    }
+    
+    .btn-primary-lg {
+        @apply inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-200 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 text-lg;
+    }
+    
+    /* Secondary Button */
+    .btn-secondary {
+        @apply inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:border-blue-700;
+    }
+    
+    .btn-secondary-lg {
+        @apply inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4 rounded-lg transition-all duration-200 hover:border-blue-700 text-lg;
+    }
+    
+    /* Card Component */
+    .card {
+        @apply bg-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    }
+    
+    .card-dark {
+        @apply bg-gray-700 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+    }
+    
+    /* Service Card */
+    .service-card {
+        @apply bg-gray-50 rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-2;
+    }
+    
+    .service-card-dark {
+        @apply bg-gray-700 rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-2;
+    }
+    
+    /* Gradient Backgrounds */
+    .gradient-bg {
+        background: var(--gradient-primary);
+    }
+    
+    .gradient-text {
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    /* Glass Effect */
+    .glass {
+        @apply bg-white/80 backdrop-blur-sm;
+    }
+    
+    .glass-dark {
+        @apply bg-gray-800/80 backdrop-blur-sm;
+    }
+    
+    /* Icon Container */
+    .icon-container {
+        @apply w-14 h-14 rounded-xl flex items-center justify-center;
+    }
+    
+    .icon-container-lg {
+        @apply w-16 h-16 rounded-xl flex items-center justify-center;
+    }
+    
+    /* Section Divider */
+    .section-divider {
+        @apply relative py-20;
+    }
+    
+    .section-divider::before {
+        content: '';
+        @apply absolute inset-0 bg-gradient-to-b from-transparent via-blue-50 to-transparent opacity-50;
+    }
+}
+
+/* Utility Styles */
+@layer utilities {
+    /* Text Gradient */
+    .text-gradient {
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    /* Shimmer Effect */
+    .shimmer {
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.5) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        background-size: 200% 100%;
+        animation: shimmer 1.5s infinite;
+    }
+    
+    /* Hide scrollbar but keep functionality */
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Smooth transitions */
+    .transition-smooth {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+/* Dark Mode Adjustments */
+@layer utilities {
+    .dark .card {
+        @apply bg-gray-700;
+    }
+    
+    .dark .service-card {
+        @apply bg-gray-700;
+    }
+    
+    .dark .btn-secondary {
+        @apply border-blue-400 text-blue-400 hover:bg-gray-600;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .mobile-card {
+        @apply p-4;
+    }
+    
+    .mobile-btn {
+        @apply px-4 py-2 text-sm;
+    }
+}
+
+/* Animation Delays for Staggered Effects */
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+.animation-delay-500 { animation-delay: 500ms; }
