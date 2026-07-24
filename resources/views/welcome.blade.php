@@ -9,7 +9,7 @@
         @fonts
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-200">
+    <body class="bg-white dark:bg-black text-gray-800 dark:text-white">
         <div id="app"></div>
     </body>
 </html>

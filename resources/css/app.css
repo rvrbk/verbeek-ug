@@ -7,30 +7,30 @@
     --font-sans: 'Inter', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
     
-    /* Dark Professional Color Palette - Darker */
-    --color-primary: #1e3a8a;
-    --color-primary-dark: #1e293b;
-    --color-primary-light: #3b82f6;
-    --color-secondary: #6d28d9;
-    --color-secondary-dark: #5b21b6;
-    --color-accent: #047857;
-    --color-accent-dark: #065f46;
-    --color-warning: #dc2626;
-    --color-warning-dark: #b91c1c;
+    /* Black and Yellow Color Palette */
+    --color-primary: #facc15;  /* Yellow-400 */
+    --color-primary-dark: #eab308;  /* Yellow-500 */
+    --color-primary-light: #fef3c7;  /* Yellow-100 */
+    --color-secondary: #ca8a04;  /* Yellow-600 */
+    --color-secondary-dark: #a16207;  /* Yellow-700 */
+    --color-accent: #ffd700;  /* Gold */
+    --color-accent-dark: #cc9900;  /* Darker Gold */
+    --color-warning: #f59e0b;  /* Amber-500 */
+    --color-warning-dark: #d97706;  /* Amber-600 */
     
-    /* Background Colors - Much Darker */
-    --bg-light: #f8fafc;
-    --bg-dark: #020617;
-    --bg-darker: #000000;
-    --bg-card-light: #ffffff;
-    --bg-card-dark: #0f172a;
-    --bg-card-darker: #020617;
+    /* Background Colors - Black Theme */
+    --bg-light: #ffffff;
+    --bg-dark: #000000;
+    --bg-darker: #111111;
+    --bg-card-light: #f0f0f0;
+    --bg-card-dark: #1a1a1a;
+    --bg-card-darker: #2a2a2a;
     
-    /* Text Colors - More contrast for dark mode */
-    --text-primary-light: #0f172a;
-    --text-primary-dark: #f8fafc;
-    --text-secondary-light: #475569;
-    --text-secondary-dark: #cbd5e1;
+    /* Text Colors - Black and Yellow Theme */
+    --text-primary-light: #000000;
+    --text-primary-dark: #ffffff;
+    --text-secondary-light: #333333;
+    --text-secondary-dark: #cccccc;
     
     /* Border Colors */
     --border-light: #e2e8f0;
@@ -183,22 +183,22 @@
 
 /* Component Styles */
 @layer components {
-    /* Primary Button - Darker and more compact */
+    /* Primary Button - Yellow and black */
     .btn-primary {
-        @apply inline-flex items-center justify-center bg-blue-900 hover:bg-blue-950 text-white font-semibold px-4 py-2 rounded-md transition-all duration-150 shadow-md shadow-blue-950/25 hover:shadow-lg hover:shadow-blue-950/30 hover:-translate-y-0.5 border border-blue-800 text-sm;
+        @apply inline-flex items-center justify-center bg-yellow-600 hover:bg-yellow-700 text-black font-semibold px-4 py-2 rounded-md transition-all duration-150 shadow-md shadow-yellow-700/25 hover:shadow-lg hover:shadow-yellow-700/30 hover:-translate-y-0.5 border border-yellow-700 text-sm;
     }
     
     .btn-primary-lg {
-        @apply inline-flex items-center justify-center bg-blue-900 hover:bg-blue-950 text-white font-semibold px-6 py-3 rounded-md transition-all duration-150 shadow-md shadow-blue-950/25 hover:shadow-lg hover:shadow-blue-950/30 hover:-translate-y-0.5 border border-blue-800;
+        @apply inline-flex items-center justify-center bg-yellow-600 hover:bg-yellow-700 text-black font-semibold px-6 py-3 rounded-md transition-all duration-150 shadow-md shadow-yellow-700/25 hover:shadow-lg hover:shadow-yellow-700/30 hover:-translate-y-0.5 border border-yellow-700;
     }
     
-    /* Secondary Button - More defined and compact */
+    /* Secondary Button - Yellow border */
     .btn-secondary {
-        @apply inline-flex items-center justify-center border border-blue-600 dark:border-blue-700 text-blue-600 dark:text-blue-300 hover:bg-blue-950/10 dark:hover:bg-blue-950/20 font-semibold px-4 py-2 rounded-md transition-all duration-150 hover:border-blue-700 dark:hover:border-blue-600 text-sm;
+        @apply inline-flex items-center justify-center border border-yellow-600 dark:border-yellow-500 text-yellow-600 dark:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-950/20 font-semibold px-4 py-2 rounded-md transition-all duration-150 hover:border-yellow-700 dark:hover:border-yellow-400 text-sm;
     }
     
     .btn-secondary-lg {
-        @apply inline-flex items-center justify-center border border-blue-600 dark:border-blue-700 text-blue-600 dark:text-blue-300 hover:bg-blue-950/10 dark:hover:bg-blue-950/20 font-semibold px-6 py-3 rounded-md transition-all duration-150 hover:border-blue-700 dark:hover:border-blue-600;
+        @apply inline-flex items-center justify-center border border-yellow-600 dark:border-yellow-500 text-yellow-600 dark:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-950/20 font-semibold px-6 py-3 rounded-md transition-all duration-150 hover:border-yellow-700 dark:hover:border-yellow-400;
     }
     
     /* Tertiary Button - For subtle actions */
@@ -206,22 +206,22 @@
         @apply inline-flex items-center justify-center bg-slate-800 dark:bg-slate-700 hover:bg-slate-900 dark:hover:bg-slate-600 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 border border-slate-700 dark:border-slate-600;
     }
     
-    /* Card Component - Darker and more compact */
+    /* Card Component - Black and yellow */
     .card {
-        @apply bg-white dark:bg-slate-900 rounded-lg shadow-md transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 border border-slate-200 dark:border-slate-800;
+        @apply bg-white dark:bg-gray-900 rounded-lg shadow-md transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 border border-gray-200 dark:border-gray-800;
     }
     
     .card-dark {
-        @apply bg-slate-900 rounded-lg shadow-md transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 border border-slate-800;
+        @apply bg-gray-900 rounded-lg shadow-md transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 border border-gray-800;
     }
     
-    /* Service Card - More compact */
+    /* Service Card - Black and yellow */
     .service-card {
-        @apply bg-slate-50 dark:bg-slate-900/50 rounded-lg p-4 transition-all duration-200 hover:shadow-md hover:-translate-y-1 border border-slate-200 dark:border-slate-800;
+        @apply bg-gray-50 dark:bg-gray-900/50 rounded-lg p-4 transition-all duration-200 hover:shadow-md hover:-translate-y-1 border border-gray-200 dark:border-gray-800;
     }
     
     .service-card-dark {
-        @apply bg-slate-900/50 rounded-lg p-4 transition-all duration-200 hover:shadow-md hover:-translate-y-1 border border-slate-800;
+        @apply bg-gray-900/50 rounded-lg p-4 transition-all duration-200 hover:shadow-md hover:-translate-y-1 border border-gray-800;
     }
     
     /* Gradient Backgrounds */
