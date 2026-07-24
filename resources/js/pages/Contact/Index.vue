@@ -1,12 +1,12 @@
 <template>
-    <div class="bg-gray-50 dark:bg-gray-800 py-20">
+    <div class="bg-slate-50 dark:bg-slate-800 py-20">
         <div class="container mx-auto px-6">
             <!-- Header Section -->
             <div class="text-center mb-16">
-                <h1 class="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+                <h1 class="text-4xl lg:text-5xl font-bold text-slate-800 dark:text-white mb-4">
                     Get in Touch
                 </h1>
-                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                <p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
                     Ready to transform your business with custom software? Let's start the conversation. 
                     I offer a free consultation to discuss your needs and how I can help.
                 </p>
@@ -14,11 +14,11 @@
 
             <div class="grid lg:grid-cols-2 gap-12 items-start">
                 <!-- Contact Form -->
-                <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg p-8 lg:p-10">
-                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+                <div class="bg-white dark:bg-slate-700 rounded-2xl shadow-lg p-8 lg:p-10">
+                    <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-6">
                         Contact Form
                     </h2>
-                    <p class="text-gray-600 dark:text-gray-300 mb-8">
+                    <p class="text-slate-600 dark:text-slate-300 mb-8">
                         Fill out the form below and I'll get back to you within 24 hours. 
                         All fields are required.
                     </p>
@@ -26,7 +26,7 @@
                     <form @submit.prevent="submitForm" class="space-y-6">
                         <!-- Name -->
                         <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            <label for="name" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                                 Full Name
                             </label>
                             <input 
@@ -34,7 +34,7 @@
                                 id="name" 
                                 v-model="form.name" 
                                 @blur="validateField('name')"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white transition-colors"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white transition-colors"
                                 placeholder="John Doe"
                                 :class="{ 'border-red-500': errors.name }"
                             />
@@ -43,7 +43,7 @@
                         
                         <!-- Email -->
                         <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                                 Email Address
                             </label>
                             <input 
@@ -51,7 +51,7 @@
                                 id="email" 
                                 v-model="form.email" 
                                 @blur="validateField('email')"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white transition-colors"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white transition-colors"
                                 placeholder="john@email.com"
                                 :class="{ 'border-red-500': errors.email }"
                             />
@@ -60,28 +60,28 @@
                         
                         <!-- Phone -->
                         <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            <label for="phone" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                                 Phone Number (Optional)
                             </label>
                             <input 
                                 type="tel" 
                                 id="phone" 
                                 v-model="form.phone"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white transition-colors"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white transition-colors"
                                 placeholder="+256 700 000 000"
                             />
                         </div>
                         
                         <!-- Service -->
                         <div>
-                            <label for="service" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            <label for="service" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                                 What service are you interested in?
                             </label>
                             <select 
                                 id="service" 
                                 v-model="form.service" 
                                 @change="validateField('service')"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white transition-colors"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white transition-colors"
                                 :class="{ 'border-red-500': errors.service }"
                             >
                                 <option value="">Select a service...</option>
@@ -97,7 +97,7 @@
                         
                         <!-- Project Idea -->
                         <div>
-                            <label for="projectIdea" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            <label for="projectIdea" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                                 Tell me about your project
                             </label>
                             <textarea 
@@ -105,7 +105,7 @@
                                 v-model="form.projectIdea" 
                                 @blur="validateField('projectIdea')"
                                 rows="4"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white transition-colors resize-none"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white transition-colors resize-none"
                                 placeholder="Describe your business, your challenges, and what you'd like to achieve..."
                                 :class="{ 'border-red-500': errors.projectIdea }"
                             ></textarea>
@@ -114,13 +114,13 @@
                         
                         <!-- Budget Range -->
                         <div>
-                            <label for="budget" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            <label for="budget" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                                 Budget Range (Optional)
                             </label>
                             <select 
                                 id="budget" 
                                 v-model="form.budget"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white transition-colors"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white transition-colors"
                             >
                                 <option value="">Select your budget range...</option>
                                 <option value="under-500">Under $500</option>
@@ -134,14 +134,14 @@
                         
                         <!-- How Did You Hear -->
                         <div>
-                            <label for="howDidYouHear" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            <label for="howDidYouHear" class="block text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">
                                 How did you hear about me? (Optional)
                             </label>
                             <input 
                                 type="text" 
                                 id="howDidYouHear" 
                                 v-model="form.howDidYouHear"
-                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white transition-colors"
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white transition-colors"
                                 placeholder="Social media, friend, search engine, etc."
                             />
                         </div>
@@ -150,7 +150,7 @@
                         <button 
                             type="submit" 
                             :disabled="isSubmitting || Object.keys(errors).length > 0"
-                            class="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center"
+                            class="w-full bg-blue-800 hover:bg-blue-900 disabled:bg-blue-400 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-lg transition-colors flex items-center justify-center"
                         >
                             <span v-if="!isSubmitting">Send Message</span>
                             <span v-else class="flex items-center">
@@ -192,8 +192,8 @@
                 <!-- Contact Info & Other Options -->
                 <div class="space-y-8">
                     <!-- Direct Contact Methods -->
-                    <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg p-8">
-                        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+                    <div class="bg-white dark:bg-slate-700 rounded-2xl shadow-lg p-8">
+                        <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-6">
                             Other Ways to Reach Me
                         </h2>
                         
@@ -201,18 +201,18 @@
                             <!-- Email -->
                             <div class="flex items-start">
                                 <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                    <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="w-6 h-6 text-blue-800 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Email</h3>
+                                    <h3 class="text-lg font-semibold text-slate-800 dark:text-white">Email</h3>
                                     <p class="text-gray-600 dark:text-gray-400">
-                                        <a href="mailto:rik@verbeek.ug" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                        <a href="mailto:rik@verbeek.ug" class="text-blue-800 dark:text-blue-400 hover:underline">
                                             rik@verbeek.ug
                                         </a>
                                     </p>
-                                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                                    <p class="text-sm text-slate-500 dark:text-slate-400">
                                         I typically respond within 24 hours
                                     </p>
                                 </div>
@@ -221,18 +221,18 @@
                             <!-- Calendly -->
                             <div class="flex items-start">
                                 <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                    <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="w-6 h-6 text-green-700 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Book a Call</h3>
+                                    <h3 class="text-lg font-semibold text-slate-800 dark:text-white">Book a Call</h3>
                                     <p class="text-gray-600 dark:text-gray-400">
-                                        <a href="https://calendly.com/rik-verbeek/free-consultation" target="_blank" class="text-green-600 dark:text-green-400 hover:underline">
+                                        <a href="https://calendly.com/rik-verbeek/free-consultation" target="_blank" class="text-green-700 dark:text-green-400 hover:underline">
                                             Schedule a free 30-minute consultation
                                         </a>
                                     </p>
-                                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                                    <p class="text-sm text-slate-500 dark:text-slate-400">
                                         Pick a time that works for you
                                     </p>
                                 </div>
@@ -241,19 +241,19 @@
                             <!-- WhatsApp -->
                             <div class="flex items-start">
                                 <div class="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                    <svg class="w-6 h-6 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="w-6 h-6 text-green-700 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">WhatsApp</h3>
+                                    <h3 class="text-lg font-semibold text-slate-800 dark:text-white">WhatsApp</h3>
                                     <p class="text-gray-600 dark:text-gray-400">
-                                        <a href="https://wa.me/256" target="_blank" class="text-green-600 dark:text-green-400 hover:underline">
+                                        <a href="https://wa.me/256" target="_blank" class="text-green-700 dark:text-green-400 hover:underline">
                                             +256 (WhatsApp)
                                         </a>
                                     </p>
-                                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                                    <p class="text-sm text-slate-500 dark:text-slate-400">
                                         Quick responses via messaging
                                     </p>
                                 </div>
@@ -262,17 +262,17 @@
                             <!-- Location -->
                             <div class="flex items-start">
                                 <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                                    <svg class="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="w-6 h-6 text-purple-700 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
                                 </div>
                                 <div>
-                                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Location</h3>
+                                    <h3 class="text-lg font-semibold text-slate-800 dark:text-white">Location</h3>
                                     <p class="text-gray-600 dark:text-gray-400">
                                         Kampala, Uganda
                                     </p>
-                                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                                    <p class="text-sm text-slate-500 dark:text-slate-400">
                                         Available for remote work worldwide
                                     </p>
                                 </div>
@@ -281,11 +281,11 @@
                     </div>
                     
                     <!-- Social Media -->
-                    <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg p-8">
-                        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+                    <div class="bg-white dark:bg-slate-700 rounded-2xl shadow-lg p-8">
+                        <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-6">
                             Connect on Social Media
                         </h2>
-                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        <p class="text-slate-600 dark:text-slate-300 mb-6">
                             Follow me for updates, tips, and insights about software development and digital transformation.
                         </p>
                         <div class="flex space-x-4">
@@ -344,8 +344,8 @@
                     </div>
                     
                     <!-- FAQ Section -->
-                    <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg p-8">
-                        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+                    <div class="bg-white dark:bg-slate-700 rounded-2xl shadow-lg p-8">
+                        <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-6">
                             Frequently Asked Questions
                         </h2>
                         
@@ -353,15 +353,15 @@
                             <!-- FAQ 1 -->
                             <div 
                                 class="border border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden"
-                                :class="{ 'bg-gray-50 dark:bg-gray-800': activeFaq === 1 }"
+                                :class="{ 'bg-slate-50 dark:bg-slate-800': activeFaq === 1 }"
                             >
                                 <button 
                                     @click="toggleFaq(1)" 
                                     class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
                                 >
-                                    <span class="font-medium text-gray-800 dark:text-white">How much does a custom app cost?</span>
+                                    <span class="font-medium text-slate-800 dark:text-white">How much does a custom app cost?</span>
                                     <svg 
-                                        class="w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform" 
+                                        class="w-5 h-5 text-slate-500 dark:text-slate-400 transition-transform" 
                                         :class="{ 'rotate-180': activeFaq === 1 }"
                                         fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                     >
@@ -379,15 +379,15 @@
                             <!-- FAQ 2 -->
                             <div 
                                 class="border border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden"
-                                :class="{ 'bg-gray-50 dark:bg-gray-800': activeFaq === 2 }"
+                                :class="{ 'bg-slate-50 dark:bg-slate-800': activeFaq === 2 }"
                             >
                                 <button 
                                     @click="toggleFaq(2)" 
                                     class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
                                 >
-                                    <span class="font-medium text-gray-800 dark:text-white">How long does it take to build an app?</span>
+                                    <span class="font-medium text-slate-800 dark:text-white">How long does it take to build an app?</span>
                                     <svg 
-                                        class="w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform" 
+                                        class="w-5 h-5 text-slate-500 dark:text-slate-400 transition-transform" 
                                         :class="{ 'rotate-180': activeFaq === 2 }"
                                         fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                     >
@@ -405,15 +405,15 @@
                             <!-- FAQ 3 -->
                             <div 
                                 class="border border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden"
-                                :class="{ 'bg-gray-50 dark:bg-gray-800': activeFaq === 3 }"
+                                :class="{ 'bg-slate-50 dark:bg-slate-800': activeFaq === 3 }"
                             >
                                 <button 
                                     @click="toggleFaq(3)" 
                                     class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
                                 >
-                                    <span class="font-medium text-gray-800 dark:text-white">Do you offer support after launch?</span>
+                                    <span class="font-medium text-slate-800 dark:text-white">Do you offer support after launch?</span>
                                     <svg 
-                                        class="w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform" 
+                                        class="w-5 h-5 text-slate-500 dark:text-slate-400 transition-transform" 
                                         :class="{ 'rotate-180': activeFaq === 3 }"
                                         fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                     >
@@ -431,15 +431,15 @@
                             <!-- FAQ 4 -->
                             <div 
                                 class="border border-gray-200 dark:border-gray-600 rounded-lg overflow-hidden"
-                                :class="{ 'bg-gray-50 dark:bg-gray-800': activeFaq === 4 }"
+                                :class="{ 'bg-slate-50 dark:bg-slate-800': activeFaq === 4 }"
                             >
                                 <button 
                                     @click="toggleFaq(4)" 
                                     class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
                                 >
-                                    <span class="font-medium text-gray-800 dark:text-white">Can you help with existing systems?</span>
+                                    <span class="font-medium text-slate-800 dark:text-white">Can you help with existing systems?</span>
                                     <svg 
-                                        class="w-5 h-5 text-gray-500 dark:text-gray-400 transition-transform" 
+                                        class="w-5 h-5 text-slate-500 dark:text-slate-400 transition-transform" 
                                         :class="{ 'rotate-180': activeFaq === 4 }"
                                         fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                     >
