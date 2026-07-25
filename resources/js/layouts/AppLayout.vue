@@ -27,37 +27,24 @@
           </router-link>
         </nav>
         
-        <!-- Mobile Menu Button - NEW DESIGN -->
-        <button @click="toggleMobileMenu" class="mm-toggle" :class="{ 'mm-toggle-active': mobileMenuOpen }" aria-label="Toggle menu" aria-expanded="mobileMenuOpen">
-          <span class="mm-toggle-box">
-            <span class="mm-toggle-inner"></span>
-          </span>
+        <!-- Simple Mobile Menu Button -->
+        <button @click="mobileMenuOpen = !mobileMenuOpen" class="mobile-menu-btn" aria-label="Toggle menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </button>
       </div>
       
-      <!-- Mobile Menu - NEW DESIGN: Slide-in from right -->
-      <transition name="mm-transition">
-        <aside v-if="mobileMenuOpen" class="mm-overlay" @click="closeMobileMenu">
-          <nav class="mm-panel" @click.stop>
-            <div class="mm-header">
-              <router-link to="/" class="mm-logo" @click="closeMobileMenu">verbeek.ug</router-link>
-              <button @click="closeMobileMenu" class="mm-close" aria-label="Close menu">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18"/>
-                  <line x1="6" y1="6" x2="18" y2="18"/>
-                </svg>
-              </button>
-            </div>
-            <div class="mm-body">
-              <router-link to="/" class="mm-link" exact-active-class="mm-link-active" @click="closeMobileMenu">Home</router-link>
-              <a href="#services" @click.prevent="navigateToSection('services'); closeMobileMenu()" class="mm-link" :class="{ 'mm-link-active': currentSection === 'services' }">Services</a>
-              <router-link to="/portfolio" class="mm-link" exact-active-class="mm-link-active" @click="closeMobileMenu">Portfolio</router-link>
-              <a href="#about" @click.prevent="navigateToSection('about'); closeMobileMenu()" class="mm-link" :class="{ 'mm-link-active': currentSection === 'about' }">About</a>
-              <router-link to="/contact" class="mm-link" exact-active-class="mm-link-active" @click="closeMobileMenu">Contact</router-link>
-            </div>
-          </nav>
-        </aside>
-      </transition>
+      <!-- Simple Mobile Menu Overlay -->
+      <div v-if="mobileMenuOpen" class="mobile-menu" @click="mobileMenuOpen = false">
+        <nav class="mobile-nav" @click.stop>
+          <router-link to="/" class="mobile-nav-link" @click="mobileMenuOpen = false">Home</router-link>
+          <a href="#services" @click.prevent="navigateToSection('services'); mobileMenuOpen = false" class="mobile-nav-link" :class="{ 'active': currentSection === 'services' }">Services</a>
+          <router-link to="/portfolio" class="mobile-nav-link" @click="mobileMenuOpen = false">Portfolio</router-link>
+          <a href="#about" @click.prevent="navigateToSection('about'); mobileMenuOpen = false" class="mobile-nav-link" :class="{ 'active': currentSection === 'about' }">About</a>
+          <router-link to="/contact" class="mobile-nav-link" @click="mobileMenuOpen = false">Contact</router-link>
+        </nav>
+      </div>
     </header>
     
     <!-- Main Content -->
@@ -259,207 +246,70 @@ export default {
   border-radius: 50%;
 }
 
-/* ============================================
-   NEW MOBILE MENU DESIGN - mm = Mobile Menu
-   ============================================ */
-
-/* Mobile Menu Toggle Button */
-.mm-toggle {
+/* Simple Mobile Menu */
+.mobile-menu-btn {
   display: none;
-  position: relative;
-  width: 44px;
-  height: 44px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   background: transparent;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
-  padding: 0;
+  padding: 8px;
   z-index: 1001;
-  transition: background-color 0.2s ease;
 }
 
-.mm-toggle:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.mm-toggle-box {
+.hamburger-line {
   display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
-.mm-toggle-inner {
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 24px;
   height: 2px;
   background: var(--hb-text);
+  margin: 5px 0;
   border-radius: 2px;
-  transition: all 0.25s ease;
 }
 
-.mm-toggle-inner::before,
-.mm-toggle-inner::after {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  background: var(--hb-text);
-  border-radius: 2px;
-  transition: all 0.25s ease;
-}
-
-.mm-toggle-inner::before {
-  top: -8px;
-}
-
-.mm-toggle-inner::after {
-  top: 8px;
-}
-
-/* Active state - transforms into X */
-.mm-toggle-active .mm-toggle-inner {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.mm-toggle-active .mm-toggle-inner::before {
-  transform: translate(-50%, -50%) rotate(90deg);
-  top: 0;
-}
-
-.mm-toggle-active .mm-toggle-inner::after {
-  opacity: 0;
-}
-
-/* Mobile Menu Overlay */
-.mm-overlay {
+.mobile-menu {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 56, 133, 0.98);
   z-index: 1000;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
 }
 
-/* Mobile Menu Panel - Slide in from right */
-.mm-panel {
-  width: min(85vw, 360px);
-  height: 100vh;
-  background: var(--hb-primary);
-  padding: 1.5rem;
-  overflow-y: auto;
-}
-
-/* Mobile Menu Header */
-.mm-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 1.5rem;
-}
-
-.mm-logo {
-  color: var(--hb-text);
-  text-decoration: none;
-  font-size: 1.25rem;
-  font-weight: 500;
-}
-
-.mm-close {
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--hb-text);
-  padding: 0;
-  transition: all 0.2s ease;
-}
-
-.mm-close:hover {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.mm-close svg {
-  width: 24px;
-  height: 24px;
-}
-
-/* Mobile Menu Body */
-.mm-body {
+.mobile-nav {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 2rem;
+  gap: 1.5rem;
 }
 
-/* Mobile Menu Links */
-.mm-link {
-  display: block;
+.mobile-nav-link {
   color: var(--hb-text);
   text-decoration: none;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  padding: 1rem 1.25rem;
-  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
   transition: all 0.2s ease;
-  text-align: left;
 }
 
-.mm-link:hover {
-  background: rgba(255, 255, 255, 0.08);
+.mobile-nav-link:hover {
   color: var(--hb-accent);
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.mm-link-active,
-.router-link-active {
-  background: rgba(245, 171, 139, 0.15);
+.mobile-nav-link.active,
+.mobile-nav-link.router-link-active {
   color: var(--hb-accent);
   font-weight: 500;
-}
-
-/* Mobile Menu Transition */
-.mm-transition-enter-active {
-  transition: opacity 0.25s ease;
-}
-
-.mm-transition-leave-active {
-  transition: opacity 0.25s ease;
-}
-
-.mm-transition-enter-from,
-.mm-transition-leave-to {
-  opacity: 0;
-}
-
-/* Panel slide animation */
-.mm-transition-enter-active .mm-panel {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.mm-transition-leave-active .mm-panel {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.mm-transition-enter-from .mm-panel {
-  transform: translateX(100%);
-}
-
-.mm-transition-leave-to .mm-panel {
-  transform: translateX(100%);
 }
 
 /* ===== Main Content ===== */
@@ -544,8 +394,12 @@ export default {
     display: none;
   }
   
-  .mm-toggle {
+  .mobile-menu-btn {
     display: flex;
+  }
+  
+  .mobile-menu {
+    display: block;
   }
   
   .hb-main {
