@@ -211,9 +211,22 @@ export default {
             if (!validateForm()) return
             isSubmitting.value = true
             try {
-                await new Promise(resolve => setTimeout(resolve, 1500))
-                successMessage.value = 'Thank you! I will get back to you within 24 hours.'
-                form.value = { name: '', email: '', phone: '', service: '', message: '' }
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')?.content || ''
+                    },
+                    body: JSON.stringify(form.value)
+                })
+                const data = await response.json()
+                if (response.ok) {
+                    successMessage.value = data.message || 'Thank you! I will get back to you within 24 hours.'
+                    form.value = { name: '', email: '', phone: '', service: '', message: '' }
+                } else {
+                    errorMessage.value = data.message || 'Error sending message. Please try again.'
+                }
             } catch (err) {
                 errorMessage.value = 'Error sending message. Please try again.'
             } finally {
