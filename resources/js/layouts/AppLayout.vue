@@ -28,10 +28,10 @@
         </nav>
         
         <!-- Simple Mobile Menu Button -->
-        <button @click="mobileMenuOpen = !mobileMenuOpen" class="mobile-menu-btn" aria-label="Toggle menu">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
+        <button @click="mobileMenuOpen = !mobileMenuOpen" class="mobile-menu-btn" :class="{ 'mobile-menu-btn-open': mobileMenuOpen }" aria-label="Toggle menu">
+          <span class="hamburger-line hamburger-line-1"></span>
+          <span class="hamburger-line hamburger-line-2"></span>
+          <span class="hamburger-line hamburger-line-3"></span>
         </button>
       </div>
       
@@ -255,7 +255,6 @@ export default {
   align-items: center;
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.15);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -267,9 +266,23 @@ export default {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--hb-text);
+  background: #fff;
   margin: 4px 0;
   border-radius: 2px;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.mobile-menu-btn-open .hamburger-line-1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn-open .hamburger-line-2 {
+  opacity: 0;
+}
+
+.mobile-menu-btn-open .hamburger-line-3 {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .mobile-menu {
