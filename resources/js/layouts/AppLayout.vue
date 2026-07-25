@@ -10,18 +10,18 @@
         
         <!-- Navigation -->
         <nav class="hb-nav">
-          <router-link to="/" class="hb-nav-item" :class="{ 'hb-nav-item-active': route.path === '/' && currentSection === 'hero' }">
+          <router-link to="/" class="hb-nav-item" exact-active-class="hb-nav-item-active">
             Home
           </router-link>
-          <a href="#services" @click.prevent="navigateToSection('services')" class="hb-nav-item" :class="{ 'hb-nav-item-active': route.path === '/' && currentSection === 'services' }">
+          <router-link to="/services" class="hb-nav-item" exact-active-class="hb-nav-item-active">
             Services
-          </a>
+          </router-link>
           <router-link to="/portfolio" class="hb-nav-item" exact-active-class="hb-nav-item-active">
             Portfolio
           </router-link>
-          <a href="#about" @click.prevent="navigateToSection('about')" class="hb-nav-item" :class="{ 'hb-nav-item-active': route.path === '/' && currentSection === 'about' }">
+          <router-link to="/about" class="hb-nav-item" exact-active-class="hb-nav-item-active">
             About
-          </a>
+          </router-link>
           <router-link to="/contact" class="hb-nav-item" exact-active-class="hb-nav-item-active">
             Contact
           </router-link>
@@ -39,10 +39,10 @@
     <!-- Simple Mobile Menu - Below header -->
     <div v-if="mobileMenuOpen" class="mobile-menu" @click="mobileMenuOpen = false">
       <nav class="mobile-nav" @click.stop>
-        <router-link to="/" class="mobile-nav-link" @click="mobileMenuOpen = false" :class="{ 'hb-nav-item-active': route.path === '/' && currentSection === 'hero' }">Home</router-link>
-        <a href="#services" @click.prevent="navigateToSection('services'); mobileMenuOpen = false" class="mobile-nav-link" :class="{ 'hb-nav-item-active': route.path === '/' && currentSection === 'services' }">Services</a>
+        <router-link to="/" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">Home</router-link>
+        <router-link to="/services" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">Services</router-link>
         <router-link to="/portfolio" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">Portfolio</router-link>
-        <a href="#about" @click.prevent="navigateToSection('about'); mobileMenuOpen = false" class="mobile-nav-link" :class="{ 'hb-nav-item-active': route.path === '/' && currentSection === 'about' }">About</a>
+        <router-link to="/about" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">About</router-link>
         <router-link to="/contact" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">Contact</router-link>
       </nav>
     </div>
