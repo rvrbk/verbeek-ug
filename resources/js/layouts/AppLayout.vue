@@ -288,10 +288,11 @@ export default {
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 6rem;
+  top: 4.3rem;
   left: 0;
   right: 0;
-  background: rgba(0, 56, 133, 0.98);
+  background: transparent;
+  backdrop-filter: blur(10px);
   z-index: 1002;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -300,8 +301,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.5rem;
-  gap: 1rem;
+  padding: 1rem;
+  gap: 0.5rem;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -309,9 +310,9 @@ export default {
 .mobile-nav-link {
   color: var(--hb-text);
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 400;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 8px;
   transition: all 0.2s ease;
 }
