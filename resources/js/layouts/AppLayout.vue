@@ -249,15 +249,17 @@ export default {
 /* Simple Mobile Menu */
 .mobile-menu-btn {
   display: none;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.15);
   border: none;
+  border-radius: 4px;
   cursor: pointer;
-  padding: 8px;
+  padding: 6px;
   z-index: 1001;
 }
 
@@ -266,7 +268,7 @@ export default {
   width: 24px;
   height: 2px;
   background: var(--hb-text);
-  margin: 5px 0;
+  margin: 4px 0;
   border-radius: 2px;
 }
 
