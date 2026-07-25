@@ -293,7 +293,7 @@ export default {
   right: 0;
   bottom: 0;
   background: rgba(0, 56, 133, 0.98);
-  z-index: 1000;
+  z-index: 1002;
 }
 
 .mobile-nav {
