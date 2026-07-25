@@ -4,30 +4,17 @@
         <header class="hb-header">
             <div class="hb-nav">
                 <!-- Logo -->
-                <router-link to="/" class="hb-logo">
+                <a href="#hero" class="hb-logo">
                     Rik Verbeek
-                </router-link>
+                </a>
                 
                 <!-- Desktop Navigation -->
                 <nav class="hb-nav-links">
-                    <router-link to="/" class="hb-nav-link" active-class="active">
-                        Home
-                    </router-link>
-                    <router-link to="/services" class="hb-nav-link" active-class="active">
-                        Services
-                    </router-link>
-                    <router-link to="/portfolio" class="hb-nav-link" active-class="active">
-                        Portfolio
-                    </router-link>
-                    <router-link to="/about" class="hb-nav-link" active-class="active">
-                        About
-                    </router-link>
-                    <router-link to="/blog" class="hb-nav-link" active-class="active">
-                        Blog
-                    </router-link>
-                    <router-link to="/contact" class="hb-nav-link" active-class="active">
-                        Contact
-                    </router-link>
+                    <a href="#hero" class="hb-nav-link" @click="scrollToSection('hero')">Home</a>
+                    <a href="#services" class="hb-nav-link" @click="scrollToSection('services')">Services</a>
+                    <a href="#portfolio" class="hb-nav-link" @click="scrollToSection('portfolio')">Portfolio</a>
+                    <a href="#about" class="hb-nav-link" @click="scrollToSection('about')">About</a>
+                    <a href="#contact" class="hb-nav-link" @click="scrollToSection('contact')">Contact</a>
                 </nav>
                 
                 <!-- Mobile menu button -->
@@ -48,48 +35,11 @@
                 class="lg:hidden bg-navy border-t border-white/10"
             >
                 <div class="px-6 py-4 space-y-2 hb-nav-links">
-                    <router-link 
-                        to="/" 
-                        @click="mobileMenuOpen = false"
-                        class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase"
-                    >
-                        Home
-                    </router-link>
-                    <router-link 
-                        to="/services" 
-                        @click="mobileMenuOpen = false"
-                        class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase"
-                    >
-                        Services
-                    </router-link>
-                    <router-link 
-                        to="/portfolio" 
-                        @click="mobileMenuOpen = false"
-                        class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase"
-                    >
-                        Portfolio
-                    </router-link>
-                    <router-link 
-                        to="/about" 
-                        @click="mobileMenuOpen = false"
-                        class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase"
-                    >
-                        About
-                    </router-link>
-                    <router-link 
-                        to="/blog" 
-                        @click="mobileMenuOpen = false"
-                        class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase"
-                    >
-                        Blog
-                    </router-link>
-                    <router-link 
-                        to="/contact" 
-                        @click="mobileMenuOpen = false"
-                        class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase"
-                    >
-                        Contact
-                    </router-link>
+                    <a href="#hero" @click="scrollToSection('hero'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Home</a>
+                    <a href="#services" @click="scrollToSection('services'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Services</a>
+                    <a href="#portfolio" @click="scrollToSection('portfolio'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Portfolio</a>
+                    <a href="#about" @click="scrollToSection('about'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">About</a>
+                    <a href="#contact" @click="scrollToSection('contact'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Contact</a>
                 </div>
             </div>
         </header>
@@ -104,28 +54,27 @@
             <div class="hb-footer-grid">
                 <!-- Company -->
                 <div class="hb-footer-column">
-                    <h4>Company</h4>
-                    <router-link to="/">Home</router-link>
-                    <router-link to="/about">About</router-link>
-                    <router-link to="/contact">Contact</router-link>
+                    <h4>Rik Verbeek</h4>
+                    <p>Custom software for Ugandan businesses. From warehouse management to real estate platforms, I turn challenges into digital solutions.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="hb-footer-column">
+                    <h4>Quick Links</h4>
+                    <a href="#hero" @click.prevent="scrollToSection('hero')">Home</a>
+                    <a href="#services" @click.prevent="scrollToSection('services')">Services</a>
+                    <a href="#portfolio" @click.prevent="scrollToSection('portfolio')">Portfolio</a>
+                    <a href="#about" @click.prevent="scrollToSection('about')">About</a>
+                    <a href="#contact" @click.prevent="scrollToSection('contact')">Contact</a>
                 </div>
                 
                 <!-- Services -->
                 <div class="hb-footer-column">
                     <h4>Services</h4>
-                    <router-link to="/services">Overview</router-link>
                     <span>Warehouse Management</span>
                     <span>Real Estate Apps</span>
                     <span>API Integrations</span>
                     <span>Headless Web Apps</span>
-                </div>
-                
-                <!-- Portfolio -->
-                <div class="hb-footer-column">
-                    <h4>Portfolio</h4>
-                    <router-link to="/portfolio">All Projects</router-link>
-                    <span>Warehouse System</span>
-                    <span>Real Estate Platform</span>
                 </div>
                 
                 <!-- Connect -->
@@ -154,7 +103,6 @@
             
             <div class="hb-footer-bottom text-center">
                 <p>&copy; {{ new Date().getFullYear() }} Rik Verbeek. All rights reserved.</p>
-                <p class="mt-1">Laravel & Vue.js Expert | Headless Architectures | Hosted on Hetzner</p>
             </div>
         </footer>
     </div>
@@ -166,7 +114,15 @@ import { ref } from 'vue'
 export default {
     setup() {
         const mobileMenuOpen = ref(false)
-        return { mobileMenuOpen }
+        
+        const scrollToSection = (sectionId) => {
+            const element = document.getElementById(sectionId)
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' })
+            }
+        }
+        
+        return { mobileMenuOpen, scrollToSection }
     }
 }
 </script>

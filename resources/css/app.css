@@ -145,13 +145,13 @@
 
 /* Hero Section */
 .hb-hero {
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     background: #001a3d;
-    padding: 8rem 0 6rem;
+    padding: 6rem 0 4rem;
 }
 
 .hb-hero-content {
@@ -162,22 +162,22 @@
 
 .hb-hero h1 {
     color: white;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     line-height: 1.1;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-weight: 400;
 }
 
 .hb-hero p {
     color: #cde3fc;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     max-width: 700px;
 }
 
 /* Content Section */
 .hb-content-section {
-    padding: 6rem 0;
+    padding: 4rem 0;
     position: relative;
 }
 
@@ -190,33 +190,36 @@
 }
 
 .hb-content-section.light h2,
+.hb-content-section.light h3,
 .hb-content-section.light p,
 .hb-content-section.light span {
     color: #003885;
 }
 
-.hb-content-section.navy h2 {
+.hb-content-section.navy h2,
+.hb-content-section.navy h3 {
     color: #cbe0d4;
 }
 
-.hb-content-section.navy p {
+.hb-content-section.navy p,
+.hb-content-section.navy span {
     color: #cde3fc;
 }
 
 .hb-section-header {
-    text-align: left;
-    margin-bottom: 4rem;
-}
-
-.hb-section-title {
-    font-size: 2.22rem;
-    line-height: 1.2;
+    text-align: center;
     margin-bottom: 2rem;
 }
 
+.hb-section-title {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
 .hb-section-subtitle {
-    font-size: 1rem;
-    line-height: 1.7;
+    font-size: 0.95rem;
+    line-height: 1.6;
     max-width: 600px;
 }
 
