@@ -224,7 +224,20 @@ export default {
 }
 
 .hb-nav-item:hover {
-  color: var(--hb-accent);
+  color: orange;
+  font-weight: 500;
+}
+
+.hb-nav-item:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: orange;
+  border-radius: 50%;
 }
 
 .router-link-active,
@@ -318,8 +331,21 @@ export default {
 }
 
 .mobile-nav-link:hover {
-  color: var(--hb-accent);
+  color: orange;
+  font-weight: 500;
   background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: orange;
+  border-radius: 50%;
 }
 
 .mobile-nav-link.hb-nav-item-active {
