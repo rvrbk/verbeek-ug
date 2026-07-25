@@ -39,6 +39,12 @@
       <transition name="hb-mobile-menu-transition">
         <div v-if="mobileMenuOpen" class="hb-mobile-menu" @click="closeMobileMenu">
           <nav class="hb-mobile-menu-content" @click.stop>
+            <button @click="closeMobileMenu" class="hb-mobile-close-btn" aria-label="Close menu">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </button>
             <router-link to="/" class="hb-mobile-nav-item" exact-active-class="hb-mobile-nav-item-active" @click="closeMobileMenu">Home</router-link>
             <a href="#services" @click.prevent="navigateToSection('services'); closeMobileMenu()" class="hb-mobile-nav-item" :class="{ 'hb-mobile-nav-item-active': currentSection === 'services' }">Services</a>
             <router-link to="/portfolio" class="hb-mobile-nav-item" exact-active-class="hb-mobile-nav-item-active" @click="closeMobileMenu">Portfolio</router-link>
@@ -250,31 +256,35 @@ export default {
 /* Mobile Menu Button */
 .hb-mobile-menu-btn {
   display: none;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   background: var(--hb-text);
-  border: none;
-  border-radius: 4px;
+  border: 2px solid var(--hb-accent);
+  border-radius: 8px;
   cursor: pointer;
-  padding: 10px;
+  padding: 12px;
   z-index: 1001;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .hb-mobile-menu-btn:hover {
   background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
 }
 
 .hb-hamburger-line {
   display: block;
-  width: 24px;
+  width: 28px;
   height: 3px;
   background-color: var(--hb-primary);
-  margin: 5px 0;
+  margin: 6px 0;
   transition: all 0.3s ease;
+  border-radius: 2px;
 }
 
 .hb-mobile-menu-btn-open .hb-hamburger-line:nth-child(1) {
@@ -297,12 +307,39 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 56, 133, 0.98);
-  z-index: 999;
+  background-color: var(--hb-primary);
+  z-index: 1002;
   cursor: pointer;
   overflow-y: auto;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+}
+
+/* Mobile Menu Close Button */
+.hb-mobile-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--hb-text);
+  padding: 0;
+  z-index: 1003;
+  transition: all 0.2s ease;
+}
+
+.hb-mobile-close-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.hb-mobile-close-btn svg {
+  width: 24px;
+  height: 24px;
 }
 
 .hb-mobile-menu-content {
@@ -315,10 +352,15 @@ export default {
   gap: 0.5rem;
   align-items: center;
   cursor: default;
-  width: 100%;
+  width: calc(100% - 2rem);
   max-width: 400px;
-  padding: 3rem 2rem;
+  padding: 4rem 2rem 2.5rem;
   box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .hb-mobile-nav-item {
@@ -328,15 +370,16 @@ export default {
   font-weight: 400;
   transition: all 0.2s ease;
   position: relative;
-  padding: 1rem 0;
+  padding: 1rem 1.5rem;
   width: 100%;
   text-align: center;
   border-radius: 8px;
+  margin: 0.25rem 0;
 }
 
 .hb-mobile-nav-item:hover {
   color: var(--hb-accent);
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(245, 171, 139, 0.15);
 }
 
 .router-link-active,
@@ -458,7 +501,7 @@ export default {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .hb-header-inner {
     padding: 0 1rem;
   }
