@@ -10,7 +10,7 @@
         
         <!-- Navigation -->
         <nav class="hb-nav">
-          <router-link to="/" class="hb-nav-item" exact-active-class="hb-nav-item-active">
+          <router-link to="/" class="hb-nav-item" :class="{ 'hb-nav-item-active': route.path === '/' && currentSection === 'hero' }">
             Home
           </router-link>
           <a href="#services" @click.prevent="navigateToSection('services')" class="hb-nav-item" :class="{ 'hb-nav-item-active': route.path === '/' && currentSection === 'services' }">
@@ -39,7 +39,7 @@
     <!-- Simple Mobile Menu - Below header -->
     <div v-if="mobileMenuOpen" class="mobile-menu" @click="mobileMenuOpen = false">
       <nav class="mobile-nav" @click.stop>
-        <router-link to="/" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">Home</router-link>
+        <router-link to="/" class="mobile-nav-link" @click="mobileMenuOpen = false" :class="{ 'hb-nav-item-active': route.path === '/' && currentSection === 'hero' }">Home</router-link>
         <a href="#services" @click.prevent="navigateToSection('services'); mobileMenuOpen = false" class="mobile-nav-link" :class="{ 'hb-nav-item-active': route.path === '/' && currentSection === 'services' }">Services</a>
         <router-link to="/portfolio" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">Portfolio</router-link>
         <a href="#about" @click.prevent="navigateToSection('about'); mobileMenuOpen = false" class="mobile-nav-link" :class="{ 'hb-nav-item-active': route.path === '/' && currentSection === 'about' }">About</a>
@@ -225,7 +225,6 @@ export default {
 
 .hb-nav-item:hover {
   color: orange;
-  font-weight: 500;
 }
 
 .hb-nav-item:hover::after {
@@ -243,7 +242,6 @@ export default {
 .router-link-active,
 .hb-nav-item-active {
   color: orange;
-  font-weight: 500;
 }
 
 .router-link-active::after,
@@ -332,8 +330,6 @@ export default {
 
 .mobile-nav-link:hover {
   color: orange;
-  font-weight: 500;
-  background: rgba(255, 255, 255, 0.1);
 }
 
 .mobile-nav-link:hover::after {
@@ -350,7 +346,6 @@ export default {
 
 .mobile-nav-link.hb-nav-item-active {
   color: orange;
-  font-weight: 500;
 }
 
 /* ===== Main Content ===== */
