@@ -1,280 +1,261 @@
 <template>
-    <div class="bg-slate-50 dark:bg-slate-800 py-20">
-        <div class="container mx-auto px-6">
-            <!-- Header Section -->
-            <div class="text-center mb-16">
-                <h1 class="text-4xl lg:text-5xl font-bold text-slate-800 dark:text-white mb-4">
-                    Blog
-                </h1>
-                <p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+    <div class="hb-page-content">
+        <!-- Hero Section -->
+        <section class="hb-section hb-hero-section min-h-[50vh] flex items-center justify-center">
+            <div class="hb-hero-bg"></div>
+            <div class="hb-hero-content text-center relative z-10">
+                <p class="hb-hero-subtitle text-sm tracking-widest uppercase">Blog</p>
+                <h1 class="hb-hero-title">Insights & Resources</h1>
+                <p class="hb-hero-description">
                     Actionable insights and tips to help Ugandan businesses leverage technology 
                     for growth and success.
                 </p>
             </div>
+        </section>
 
-            <!-- Featured Post -->
-            <div class="mb-16">
-                <article class="bg-white dark:bg-slate-700 rounded-2xl shadow-lg overflow-hidden">
-                    <div class="grid lg:grid-cols-2">
-                        <div class="h-64 lg:h-auto bg-gradient-to-br from-blue-600 to-blue-800"></div>
-                        <div class="p-8 lg:p-10 flex flex-col justify-center">
-                            <div class="mb-4">
-                                <span class="inline-block bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm mb-3">
-                                    Warehouse Management
-                                </span>
-                                <div class="text-sm text-slate-500 dark:text-slate-400">
-                                    May 15, 2026 • 5 min read
-                                </div>
+        <!-- Blog Content -->
+        <section class="hb-section">
+            <div class="hb-container">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Featured Post -->
+                    <article class="hb-blog-featured">
+                        <div class="hb-blog-featured-image"></div>
+                        <div class="hb-blog-featured-content">
+                            <div class="hb-blog-meta">
+                                <span class="hb-blog-category">Warehouse Management</span>
+                                <span class="hb-blog-date">May 15, 2026 • 5 min read</span>
                             </div>
-                            <h2 class="text-2xl lg:text-3xl font-bold text-slate-800 dark:text-white mb-4">
-                                5 Signs Your Farm Needs a Warehouse Management System
+                            <h2 class="hb-blog-featured-title">
+                                <router-link to="/blog/5-signs-your-farm-needs-wms">
+                                    5 Signs Your Farm Needs a Warehouse Management System
+                                </router-link>
                             </h2>
-                            <p class="text-gray-600 dark:text-gray-400 mb-6">
+                            <p class="hb-blog-featured-excerpt">
                                 Are you losing money due to poor inventory tracking? Discover the warning signs and how a WMS can help your Ugandan farm reduce waste and increase profits.
                             </p>
-                            <router-link 
-                                to="/blog/5-signs-your-farm-needs-wms" 
-                                class="inline-flex items-center text-blue-800 dark:text-blue-400 font-medium hover:underline"
-                            >
+                            <router-link to="/blog/5-signs-your-farm-needs-wms" class="hb-blog-featured-link">
                                 Read more
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="hb-blog-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
                             </router-link>
                         </div>
-                    </div>
-                </article>
-            </div>
+                    </article>
 
-            <!-- Blog Posts Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-                <!-- Post 1 -->
-                <article class="bg-white dark:bg-slate-700 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <div class="h-48 bg-gradient-to-br from-green-600 to-green-800"></div>
-                    <div class="p-6">
-                        <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">May 8, 2026 • 7 min read</div>
-                        <h3 class="text-xl font-semibold text-slate-800 dark:text-white mb-3">
-                            How a Custom Real Estate App Can 10x Your Property Sales
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                            Learn how digital tools can streamline your property management, reach more buyers, and close deals faster in Uganda's competitive real estate market.
-                        </p>
-                        <router-link to="/blog/custom-real-estate-app-sales" class="text-blue-800 dark:text-blue-400 font-medium hover:underline">
-                            Read more
-                        </router-link>
-                    </div>
-                </article>
-                
-                <!-- Post 2 -->
-                <article class="bg-white dark:bg-slate-700 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <div class="h-48 bg-gradient-to-br from-purple-600 to-purple-800"></div>
-                    <div class="p-6">
-                        <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">May 1, 2026 • 6 min read</div>
-                        <h3 class="text-xl font-semibold text-slate-800 dark:text-white mb-3">
-                            Why Headless Architectures Are Perfect for Scaling Businesses in Uganda
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                            Future-proof your Ugandan business with headless architecture. Learn the benefits: flexibility, performance, and scalability for growing enterprises.
-                        </p>
-                        <router-link to="/blog/headless-architectures-scaling" class="text-blue-800 dark:text-blue-400 font-medium hover:underline">
-                            Read more
-                        </router-link>
-                    </div>
-                </article>
-                
-                <!-- Post 3 -->
-                <article class="bg-white dark:bg-slate-700 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <div class="h-48 bg-gradient-to-br from-orange-600 to-orange-800"></div>
-                    <div class="p-6">
-                        <div class="text-sm text-slate-500 dark:text-slate-400 mb-2">April 20, 2026 • 8 min read</div>
-                        <h3 class="text-xl font-semibold text-slate-800 dark:text-white mb-3">
-                            The Ultimate Guide to API Integrations for Ugandan Businesses
-                        </h3>
-                        <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">
-                            Connect your legacy systems and modern tools seamlessly. Learn how API integrations can save time, reduce errors, and improve efficiency.
-                        </p>
-                        <router-link to="/blog/api-integrations-guide" class="text-blue-800 dark:text-blue-400 font-medium hover:underline">
-                            Read more
-                        </router-link>
-                    </div>
-                </article>
-            </div>
+                    <!-- Blog Posts Grid -->
+                    <div class="hb-blog-grid">
+                        <article class="hb-blog-card">
+                            <div class="hb-blog-card-image hb-blog-image-1"></div>
+                            <div class="hb-blog-card-content">
+                                <div class="hb-blog-meta">
+                                    <span class="hb-blog-category">Real Estate</span>
+                                    <span class="hb-blog-date">May 1, 2026 • 4 min read</span>
+                                </div>
+                                <h3 class="hb-blog-card-title">
+                                    <router-link to="/blog/building-real-estate-platform">
+                                        Building a Real Estate Platform: Key Features for Ugandan Agents
+                                    </router-link>
+                                </h3>
+                                <p class="hb-blog-card-excerpt">
+                                    Learn what it takes to create a successful property listing platform tailored to the Ugandan market.
+                                </p>
+                                <router-link to="/blog/building-real-estate-platform" class="hb-blog-card-link">
+                                    Read more
+                                </router-link>
+                            </div>
+                        </article>
 
-            <!-- Categories Section -->
-            <section class="mb-16">
-                <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-8">
-                    Browse by Category
-                </h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <router-link 
-                        to="/blog?category=warehouse" 
-                        class="bg-blue-100 dark:bg-blue-900/30 rounded-xl p-6 hover:bg-blue-200 dark:hover:bg-blue-800/40 transition-colors group"
-                    >
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <h3 class="text-lg font-semibold text-blue-700 dark:text-blue-300 mb-1">Warehouse Management</h3>
-                                <p class="text-sm text-blue-800 dark:text-blue-400">5 articles</p>
+                        <article class="hb-blog-card">
+                            <div class="hb-blog-card-image hb-blog-image-2"></div>
+                            <div class="hb-blog-card-content">
+                                <div class="hb-blog-meta">
+                                    <span class="hb-blog-category">API Integration</span>
+                                    <span class="hb-blog-date">April 20, 2026 • 6 min read</span>
+                                </div>
+                                <h3 class="hb-blog-card-title">
+                                    <router-link to="/blog/api-integration-benefits">
+                                        How API Integrations Can Transform Your Business
+                                    </router-link>
+                                </h3>
+                                <p class="hb-blog-card-excerpt">
+                                    Explore the benefits of connecting your systems and tools through APIs for better efficiency.
+                                </p>
+                                <router-link to="/blog/api-integration-benefits" class="hb-blog-card-link">
+                                    Read more
+                                </router-link>
                             </div>
-                            <svg class="w-6 h-6 text-blue-800 dark:text-blue-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </div>
-                    </router-link>
-                    
-                    <router-link 
-                        to="/blog?category=real-estate" 
-                        class="bg-green-100 dark:bg-green-900/30 rounded-xl p-6 hover:bg-green-200 dark:hover:bg-green-800/40 transition-colors group"
-                    >
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <h3 class="text-lg font-semibold text-green-700 dark:text-green-300 mb-1">Real Estate</h3>
-                                <p class="text-sm text-green-700 dark:text-green-400">4 articles</p>
+                        </article>
+
+                        <article class="hb-blog-card">
+                            <div class="hb-blog-card-image hb-blog-image-3"></div>
+                            <div class="hb-blog-card-content">
+                                <div class="hb-blog-meta">
+                                    <span class="hb-blog-category">Headless</span>
+                                    <span class="hb-blog-date">April 10, 2026 • 5 min read</span>
+                                </div>
+                                <h3 class="hb-blog-card-title">
+                                    <router-link to="/blog/headless-web-apps">
+                                        The Future of Web Development: Headless Architectures
+                                    </router-link>
+                                </h3>
+                                <p class="hb-blog-card-excerpt">
+                                    Discover why headless web apps are becoming the standard for modern, scalable applications.
+                                </p>
+                                <router-link to="/blog/headless-web-apps" class="hb-blog-card-link">
+                                    Read more
+                                </router-link>
                             </div>
-                            <svg class="w-6 h-6 text-green-700 dark:text-green-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </div>
-                    </router-link>
-                    
-                    <router-link 
-                        to="/blog?category=technology" 
-                        class="bg-purple-100 dark:bg-purple-900/30 rounded-xl p-6 hover:bg-purple-200 dark:hover:bg-purple-800/40 transition-colors group"
-                    >
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <h3 class="text-lg font-semibold text-purple-700 dark:text-purple-300 mb-1">Technology</h3>
-                                <p class="text-sm text-purple-700 dark:text-purple-400">6 articles</p>
+                        </article>
+
+                        <article class="hb-blog-card">
+                            <div class="hb-blog-card-image hb-blog-image-4"></div>
+                            <div class="hb-blog-card-content">
+                                <div class="hb-blog-meta">
+                                    <span class="hb-blog-category">Laravel</span>
+                                    <span class="hb-blog-date">March 25, 2026 • 7 min read</span>
+                                </div>
+                                <h3 class="hb-blog-card-title">
+                                    <router-link to="/blog/laravel-for-business">
+                                        Why Laravel is the Perfect Framework for Ugandan Businesses
+                                    </router-link>
+                                </h3>
+                                <p class="hb-blog-card-excerpt">
+                                    Learn how Laravel's features make it ideal for building custom business applications in Uganda.
+                                </p>
+                                <router-link to="/blog/laravel-for-business" class="hb-blog-card-link">
+                                    Read more
+                                </router-link>
                             </div>
-                            <svg class="w-6 h-6 text-purple-700 dark:text-purple-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </div>
-                    </router-link>
-                    
-                    <router-link 
-                        to="/blog?category=business" 
-                        class="bg-orange-100 dark:bg-orange-900/30 rounded-xl p-6 hover:bg-orange-200 dark:hover:bg-orange-800/40 transition-colors group"
-                    >
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <h3 class="text-lg font-semibold text-orange-700 dark:text-orange-300 mb-1">Business Tips</h3>
-                                <p class="text-sm text-orange-700 dark:text-orange-400">3 articles</p>
+                        </article>
+
+                        <article class="hb-blog-card">
+                            <div class="hb-blog-card-image hb-blog-image-5"></div>
+                            <div class="hb-blog-card-content">
+                                <div class="hb-blog-meta">
+                                    <span class="hb-blog-category">Vue.js</span>
+                                    <span class="hb-blog-date">March 15, 2026 • 5 min read</span>
+                                </div>
+                                <h3 class="hb-blog-card-title">
+                                    <router-link to="/blog/vue-js-benefits">
+                                        Building Interactive UIs with Vue.js
+                                    </router-link>
+                                </h3>
+                                <p class="hb-blog-card-excerpt">
+                                    A guide to creating reactive, user-friendly interfaces with Vue.js for your business applications.
+                                </p>
+                                <router-link to="/blog/vue-js-benefits" class="hb-blog-card-link">
+                                    Read more
+                                </router-link>
                             </div>
-                            <svg class="w-6 h-6 text-orange-700 dark:text-orange-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </div>
-                    </router-link>
+                        </article>
+
+                        <article class="hb-blog-card">
+                            <div class="hb-blog-card-image hb-blog-image-6"></div>
+                            <div class="hb-blog-card-content">
+                                <div class="hb-blog-meta">
+                                    <span class="hb-blog-category">Business</span>
+                                    <span class="hb-blog-date">March 1, 2026 • 4 min read</span>
+                                </div>
+                                <h3 class="hb-blog-card-title">
+                                    <router-link to="/blog/custom-software-roi">
+                                        The ROI of Custom Software: Is It Worth It?
+                                    </router-link>
+                                </h3>
+                                <p class="hb-blog-card-excerpt">
+                                    Understanding the return on investment for custom software development for your business.
+                                </p>
+                                <router-link to="/blog/custom-software-roi" class="hb-blog-card-link">
+                                    Read more
+                                </router-link>
+                            </div>
+                        </article>
+                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Newsletter Signup -->
-            <section class="bg-white dark:bg-slate-700 rounded-2xl p-8 lg:p-12 text-center">
-                <h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">
-                    Get Weekly Tech Insights
-                </h2>
-                <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-                    Subscribe to my newsletter for actionable tips, case studies, and exclusive content 
-                    to help your Ugandan business grow with technology.
+        <!-- CTA Section -->
+        <section class="hb-section">
+            <div class="hb-container text-center">
+                <p class="hb-section-label text-sm tracking-widest uppercase">Stay Updated</p>
+                <h2 class="hb-section-title">Want more insights?</h2>
+                <p class="hb-cta-text max-w-2xl mx-auto">
+                    Subscribe to my newsletter for regular updates on technology trends and business solutions.
                 </p>
-                <form @submit.prevent="subscribe" class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
-                    <input 
-                        type="email" 
-                        v-model="email" 
-                        placeholder="Enter your email..."
-                        class="flex-grow px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-white transition-colors"
-                        required
-                    />
-                    <button 
-                        type="submit" 
-                        :disabled="isSubscribing"
-                        class="bg-blue-800 hover:bg-blue-900 disabled:bg-blue-400 disabled:cursor-not-allowed text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-                    >
-                        <span v-if="!isSubscribing">Subscribe</span>
-                        <span v-else class="flex items-center justify-center">
-                            <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                            </svg>
-                            Subscribing...
-                        </span>
-                    </button>
-                </form>
-                <p 
-                    v-if="successMessage" 
-                    class="mt-4 text-green-700 dark:text-green-400 text-sm"
-                >
-                    {{ successMessage }}
-                </p>
-            </section>
-
-            <!-- CTA Section -->
-            <section class="text-center">
-                <h2 class="text-3xl font-bold text-slate-800 dark:text-white mb-4">
-                    Ready to Build Your Own Solution?
-                </h2>
-                <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
-                    Reading is great, but taking action is better. Let's discuss how we can implement 
-                    these strategies for your specific business.
-                </p>
-                <router-link 
-                    to="/contact" 
-                    class="inline-flex items-center justify-center bg-blue-800 hover:bg-blue-900 text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg"
-                >
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                    Get a Free Consultation
+                <router-link to="/contact" class="hb-btn hb-btn-light hb-cta-btn">
+                    Subscribe
                 </router-link>
-            </section>
-        </div>
+            </div>
+        </section>
     </div>
 </template>
 
 <script>
-import { ref } from 'vue'
-
 export default {
-    name: 'Blog',
-    setup() {
-        const email = ref('')
-        const isSubscribing = ref(false)
-        const successMessage = ref('')
-        
-        const subscribe = async () => {
-            isSubscribing.value = true
-            
-            try {
-                // Simulate subscription
-                await new Promise(resolve => setTimeout(resolve, 1500))
-                
-                // In a real implementation, you would send the email to your Laravel backend
-                // const response = await axios.post('/api/newsletter', { email: email.value })
-                
-                successMessage.value = 'Thank you for subscribing! Check your email for confirmation.'
-                email.value = ''
-                
-                setTimeout(() => {
-                    successMessage.value = ''
-                }, 5000)
-                
-            } catch (error) {
-                console.error('Error subscribing:', error)
-            } finally {
-                isSubscribing.value = false
-            }
-        }
-        
-        return {
-            email,
-            isSubscribing,
-            successMessage,
-            subscribe
-        }
-    }
+    name: 'Blog'
 }
 </script>
 
 <style scoped>
-/* Add any custom styles here */
+:root {
+    --hb-primary: #003885;
+    --hb-accent: #f5ab8b;
+    --hb-text: #ffffff;
+    --hb-text-muted: rgba(255, 255, 255, 0.7);
+}
+
+.hb-page-content { position: relative; z-index: 1; }
+.hb-section { padding: 6rem 0; position: relative; }
+.hb-hero-section { min-height: 50vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.hb-hero-content { max-width: 800px; padding: 0 2rem; }
+.hb-hero-subtitle { color: var(--hb-text-muted); font-size: 0.875rem; margin-bottom: 1.5rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.hb-hero-title { font-family: Georgia, serif; font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 400; line-height: 1.2; color: var(--hb-text); margin-bottom: 1.5rem; letter-spacing: -0.01em; }
+.hb-hero-description { font-size: 1.125rem; line-height: 1.7; color: var(--hb-text-muted); max-width: 700px; margin: 0 auto; }
+.hb-container { max-width: 1440px; margin: 0 auto; padding: 0 2rem; }
+.hb-section-label { color: var(--hb-text-muted); font-size: 0.875rem; margin-bottom: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.hb-section-title { font-family: Georgia, serif; font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 400; line-height: 1.2; color: var(--hb-text); margin-bottom: 1rem; letter-spacing: -0.01em; }
+.hb-cta-text { font-size: 1rem; line-height: 1.6; color: var(--hb-text-muted); margin-bottom: 2rem; }
+.hb-cta-btn { margin-top: 1rem; }
+.hb-btn { display: inline-block; padding: 0.75rem 1.5rem; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; border-radius: 0; transition: all 0.2s ease; cursor: pointer; border: 1px solid transparent; }
+.hb-btn-light { background-color: transparent; color: var(--hb-text); border: 1px solid var(--hb-text); }
+.hb-btn-light:hover { background-color: var(--hb-text); color: var(--hb-primary); }
+
+/* Featured Post */
+.hb-blog-featured { display: flex; flex-direction: column; margin-bottom: 4rem; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
+@media (min-width: 1024px) { .hb-blog-featured { flex-direction: row; } }
+.hb-blog-featured-image { height: 300px; background: linear-gradient(135deg, #003885 0%, #0050a0 100%); }
+@media (min-width: 1024px) { .hb-blog-featured-image { flex: 0 0 50%; } }
+.hb-blog-featured-content { padding: 2rem; flex: 1; }
+.hb-blog-meta { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem; }
+.hb-blog-category { font-size: 0.75rem; padding: 0.25rem 0.75rem; background-color: rgba(245, 171, 139, 0.2); border: 1px solid rgba(245, 171, 139, 0.4); color: #f5ab8b; border-radius: 2px; }
+.hb-blog-date { font-size: 0.875rem; color: var(--hb-text-muted); }
+.hb-blog-featured-title { font-family: Georgia, serif; font-size: 1.75rem; font-weight: 400; line-height: 1.3; color: var(--hb-text); margin-bottom: 1rem; letter-spacing: -0.01em; }
+.hb-blog-featured-title a { color: inherit; text-decoration: none; }
+.hb-blog-featured-title a:hover { color: var(--hb-accent); }
+.hb-blog-featured-excerpt { font-size: 1rem; line-height: 1.6; color: var(--hb-text-muted); margin-bottom: 1.5rem; }
+.hb-blog-featured-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--hb-accent); font-size: 0.875rem; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; transition: all 0.2s ease; }
+.hb-blog-featured-link:hover { color: var(--hb-text); }
+.hb-blog-arrow { width: 16px; height: 16px; }
+
+/* Blog Grid */
+.hb-blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+.hb-blog-card { background-color: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; }
+.hb-blog-card:hover { background-color: rgba(255, 255, 255, 0.06); }
+.hb-blog-card-image { height: 200px; background-size: cover; background-position: center; }
+.hb-blog-image-1 { background: linear-gradient(135deg, #003885 0%, #0050a0 100%); }
+.hb-blog-image-2 { background: linear-gradient(135deg, #0050a0 0%, #003885 100%); }
+.hb-blog-image-3 { background: linear-gradient(135deg, #003885 0%, #0060a0 100%); }
+.hb-blog-image-4 { background: linear-gradient(135deg, #0060a0 0%, #003885 100%); }
+.hb-blog-image-5 { background: linear-gradient(135deg, #003885 0%, #0070a0 100%); }
+.hb-blog-image-6 { background: linear-gradient(135deg, #0070a0 0%, #003885 100%); }
+.hb-blog-card-content { padding: 1.5rem; }
+.hb-blog-card-title { font-family: Georgia, serif; font-size: 1.25rem; font-weight: 400; line-height: 1.3; color: var(--hb-text); margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+.hb-blog-card-title a { color: inherit; text-decoration: none; }
+.hb-blog-card-title a:hover { color: var(--hb-accent); }
+.hb-blog-card-excerpt { font-size: 0.9rem; line-height: 1.6; color: var(--hb-text-muted); margin-bottom: 1rem; }
+.hb-blog-card-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--hb-accent); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; transition: all 0.2s ease; }
+.hb-blog-card-link:hover { color: var(--hb-text); }
+
+@media (max-width: 768px) { .hb-section { padding: 4rem 0; } .hb-hero-bg { opacity: 0.5; } }
+@media (max-width: 480px) { .hb-hero-title { font-size: 1.75rem; } .hb-section-title { font-size: 1.75rem; } }
 </style>

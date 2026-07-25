@@ -1,89 +1,130 @@
 <template>
-    <div>
+    <div class="hb-page-content">
         <!-- Hero Section -->
-        <section class="hb-hero geometric-bg min-h-[50vh] flex items-center">
-            <div class="geometric-pattern">
-                <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice">
-                    <defs>
-                        <pattern id="dots" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-                            <circle cx="20" cy="20" r="2" />
-                            <circle cx="80" cy="40" r="2" />
-                            <circle cx="40" cy="80" r="2" />
-                            <circle cx="60" cy="60" r="2" />
-                        </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#dots)" opacity="0.3" />
-                    <line x1="0" y1="0" x2="1440" y2="600" stroke="rgba(255,255,255,0.1)" />
-                    <line x1="1440" y1="0" x2="0" y2="300" stroke="rgba(255,255,255,0.1)" />
-                    <line x1="0" y1="300" x2="720" y2="0" stroke="rgba(255,255,255,0.1)" />
-                    <line x1="720" y1="600" x2="1440" y2="300" stroke="rgba(255,255,255,0.1)" />
-                </svg>
-            </div>
-            <div class="hb-hero-content text-center">
-                <p class="text-text-soft-light text-sm tracking-widest uppercase mb-6">Portfolio</p>
-                <h1 class="hb-hero h1">My Work</h1>
-                <p class="hb-hero p">
+        <section class="hb-section hb-hero-section min-h-[50vh] flex items-center justify-center">
+            <div class="hb-hero-bg"></div>
+            <div class="hb-hero-content text-center relative z-10">
+                <p class="hb-hero-subtitle text-sm tracking-widest uppercase">Portfolio</p>
+                <h1 class="hb-hero-title">My Work</h1>
+                <p class="hb-hero-description">
                     See how I've helped Ugandan businesses transform their operations with custom software solutions.
                 </p>
             </div>
         </section>
 
         <!-- Portfolio Grid -->
-        <section class="hb-content-section light">
+        <section class="hb-section">
             <div class="hb-container">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="hb-portfolio-grid">
                     <!-- Project 1 -->
-                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                        <div class="h-48 bg-gradient-to-br from-orange-400 to-orange-600"></div>
-                        <div class="p-6">
-                            <h3 class="text-color-primary font-serif text-xl mb-2">Warehouse Management System</h3>
-                            <p class="text-gray-600 text-sm mb-4">
+                    <div class="hb-portfolio-item">
+                        <div class="hb-portfolio-image hb-portfolio-image-1"></div>
+                        <div class="hb-portfolio-content">
+                            <h3 class="hb-portfolio-title">Warehouse Management System</h3>
+                            <p class="hb-portfolio-description">
                                 Custom Laravel + Vue.js system for Ugandan farmers to track inventory across multiple locations.
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">Laravel</span>
-                                <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">Vue.js</span>
-                                <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">MySQL</span>
+                            <div class="hb-portfolio-tags">
+                                <span class="hb-tag">Laravel</span>
+                                <span class="hb-tag">Vue.js</span>
+                                <span class="hb-tag">MySQL</span>
                             </div>
-                            <router-link to="/portfolio/warehouse-management" class="hb-btn hb-btn-primary text-xs px-3 py-1.5">
+                            <router-link to="/portfolio/warehouse-management" class="hb-btn hb-btn-primary hb-portfolio-btn">
                                 View Project
                             </router-link>
                         </div>
                     </div>
                     
                     <!-- Project 2 -->
-                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                        <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600"></div>
-                        <div class="p-6">
-                            <h3 class="text-color-primary font-serif text-xl mb-2">Real Estate Platform</h3>
-                            <p class="text-gray-600 text-sm mb-4">
+                    <div class="hb-portfolio-item">
+                        <div class="hb-portfolio-image hb-portfolio-image-2"></div>
+                        <div class="hb-portfolio-content">
+                            <h3 class="hb-portfolio-title">Real Estate Platform</h3>
+                            <p class="hb-portfolio-description">
                                 Funda-inspired property listing and management platform for Ugandan real estate agents.
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">Vue.js</span>
-                                <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">Laravel</span>
-                                <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">Inertia.js</span>
+                            <div class="hb-portfolio-tags">
+                                <span class="hb-tag">Laravel</span>
+                                <span class="hb-tag">Vue.js</span>
+                                <span class="hb-tag">Inertia</span>
                             </div>
-                            <router-link to="/portfolio/real-estate-platform" class="hb-btn hb-btn-primary text-xs px-3 py-1.5">
+                            <router-link to="/portfolio/real-estate-platform" class="hb-btn hb-btn-primary hb-portfolio-btn">
                                 View Project
                             </router-link>
                         </div>
                     </div>
                     
                     <!-- Project 3 -->
-                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-                        <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600"></div>
-                        <div class="p-6">
-                            <h3 class="text-color-primary font-serif text-xl mb-2">API Integration Hub</h3>
-                            <p class="text-gray-600 text-sm mb-4">
-                                Seamlessly connect legacy systems with modern APIs for streamlined business operations.
+                    <div class="hb-portfolio-item">
+                        <div class="hb-portfolio-image hb-portfolio-image-3"></div>
+                        <div class="hb-portfolio-content">
+                            <h3 class="hb-portfolio-title">E-commerce Integration</h3>
+                            <p class="hb-portfolio-description">
+                                Headless e-commerce solution with custom API integrations for seamless payment processing.
                             </p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">Laravel</span>
-                                <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">REST API</span>
-                                <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">JSON</span>
+                            <div class="hb-portfolio-tags">
+                                <span class="hb-tag">Laravel</span>
+                                <span class="hb-tag">API</span>
+                                <span class="hb-tag">Headless</span>
                             </div>
-                            <router-link to="/portfolio/api-integration" class="hb-btn hb-btn-primary text-xs px-3 py-1.5">
+                            <router-link to="/portfolio/ecommerce-integration" class="hb-btn hb-btn-primary hb-portfolio-btn">
+                                View Project
+                            </router-link>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="hb-portfolio-item">
+                        <div class="hb-portfolio-image hb-portfolio-image-4"></div>
+                        <div class="hb-portfolio-content">
+                            <h3 class="hb-portfolio-title">Inventory Tracking</h3>
+                            <p class="hb-portfolio-description">
+                                Real-time inventory management system with barcode scanning and reporting features.
+                            </p>
+                            <div class="hb-portfolio-tags">
+                                <span class="hb-tag">Vue.js</span>
+                                <span class="hb-tag">Firebase</span>
+                                <span class="hb-tag">Mobile</span>
+                            </div>
+                            <router-link to="/portfolio/inventory-tracking" class="hb-btn hb-btn-primary hb-portfolio-btn">
+                                View Project
+                            </router-link>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="hb-portfolio-item">
+                        <div class="hb-portfolio-image hb-portfolio-image-5"></div>
+                        <div class="hb-portfolio-content">
+                            <h3 class="hb-portfolio-title">Property Management</h3>
+                            <p class="hb-portfolio-description">
+                                Comprehensive property management system for handling rentals, maintenance, and tenant communications.
+                            </p>
+                            <div class="hb-portfolio-tags">
+                                <span class="hb-tag">Laravel</span>
+                                <span class="hb-tag">Livewire</span>
+                                <span class="hb-tag">Alpine</span>
+                            </div>
+                            <router-link to="/portfolio/property-management" class="hb-btn hb-btn-primary hb-portfolio-btn">
+                                View Project
+                            </router-link>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 6 -->
+                    <div class="hb-portfolio-item">
+                        <div class="hb-portfolio-image hb-portfolio-image-6"></div>
+                        <div class="hb-portfolio-content">
+                            <h3 class="hb-portfolio-title">Customer Portal</h3>
+                            <p class="hb-portfolio-description">
+                                Self-service customer portal with order tracking, invoice management, and support tickets.
+                            </p>
+                            <div class="hb-portfolio-tags">
+                                <span class="hb-tag">Inertia</span>
+                                <span class="hb-tag">Vue.js</span>
+                                <span class="hb-tag">Tailwind</span>
+                            </div>
+                            <router-link to="/portfolio/customer-portal" class="hb-btn hb-btn-primary hb-portfolio-btn">
                                 View Project
                             </router-link>
                         </div>
@@ -93,14 +134,15 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="hb-content-section navy">
+        <section class="hb-section">
             <div class="hb-container text-center">
-                <h2 class="text-2xl font-serif text-white mb-4">Interested in working together?</h2>
-                <p class="text-text-lighter mb-6 max-w-2xl mx-auto">
-                    Let's build something amazing for your business. First consultation is always free.
+                <p class="hb-section-label text-sm tracking-widest uppercase">Interested?</p>
+                <h2 class="hb-section-title">Have a project in mind?</h2>
+                <p class="hb-cta-text max-w-2xl mx-auto">
+                    Let's discuss how I can create a custom solution for your business. First consultation is free.
                 </p>
-                <router-link to="/contact" class="hb-btn hb-btn-light">
-                    Get a Free Consultation
+                <router-link to="/contact" class="hb-btn hb-btn-light hb-cta-btn">
+                    Get Started
                 </router-link>
             </div>
         </section>
@@ -114,6 +156,46 @@ export default {
 </script>
 
 <style scoped>
-.color-primary { color: #003885; }
-.text-gray-600 { color: #666; }
+:root {
+    --hb-primary: #003885;
+    --hb-accent: #f5ab8b;
+    --hb-text: #ffffff;
+    --hb-text-muted: rgba(255, 255, 255, 0.7);
+}
+
+.hb-page-content { position: relative; z-index: 1; }
+.hb-section { padding: 6rem 0; position: relative; }
+.hb-hero-section { min-height: 50vh; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.hb-hero-content { max-width: 800px; padding: 0 2rem; }
+.hb-hero-subtitle { color: var(--hb-text-muted); font-size: 0.875rem; margin-bottom: 1.5rem; letter-spacing: 0.1em; }
+.hb-hero-title { font-family: Georgia, serif; font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 400; line-height: 1.2; color: var(--hb-text); margin-bottom: 1.5rem; letter-spacing: -0.01em; }
+.hb-hero-description { font-size: 1.125rem; line-height: 1.7; color: var(--hb-text-muted); max-width: 700px; margin: 0 auto; }
+.hb-section-label { color: var(--hb-text-muted); font-size: 0.875rem; margin-bottom: 0.75rem; letter-spacing: 0.1em; }
+.hb-section-title { font-family: Georgia, serif; font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 400; line-height: 1.2; color: var(--hb-text); margin-bottom: 1rem; letter-spacing: -0.01em; }
+.hb-container { max-width: 1440px; margin: 0 auto; padding: 0 2rem; }
+.hb-portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+.hb-portfolio-item { background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); overflow: hidden; transition: all 0.3s ease; }
+.hb-portfolio-item:hover { background-color: rgba(255, 255, 255, 0.08); }
+.hb-portfolio-image { height: 200px; background-size: cover; background-position: center; }
+.hb-portfolio-image-1 { background: linear-gradient(135deg, #003885 0%, #0050a0 100%); }
+.hb-portfolio-image-2 { background: linear-gradient(135deg, #0050a0 0%, #003885 100%); }
+.hb-portfolio-image-3 { background: linear-gradient(135deg, #003885 0%, #0060a0 100%); }
+.hb-portfolio-image-4 { background: linear-gradient(135deg, #0060a0 0%, #003885 100%); }
+.hb-portfolio-image-5 { background: linear-gradient(135deg, #003885 0%, #0070a0 100%); }
+.hb-portfolio-image-6 { background: linear-gradient(135deg, #0070a0 0%, #003885 100%); }
+.hb-portfolio-content { padding: 1.5rem; }
+.hb-portfolio-title { font-family: Georgia, serif; font-size: 1.25rem; font-weight: 400; color: var(--hb-text); margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+.hb-portfolio-description { font-size: 0.95rem; line-height: 1.6; color: var(--hb-text-muted); margin-bottom: 1rem; }
+.hb-portfolio-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
+.hb-tag { font-size: 0.75rem; padding: 0.25rem 0.75rem; background-color: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: var(--hb-text-muted); border-radius: 2px; }
+.hb-portfolio-btn { margin-top: 0.5rem; }
+.hb-cta-text { font-size: 1rem; line-height: 1.6; color: var(--hb-text-muted); margin-bottom: 2rem; }
+.hb-cta-btn { margin-top: 1rem; }
+.hb-btn { display: inline-block; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; border-radius: 0; transition: all 0.2s ease; cursor: pointer; border: 1px solid transparent; }
+.hb-btn-primary { background-color: var(--hb-text); color: var(--hb-primary); }
+.hb-btn-primary:hover { background-color: rgba(255, 255, 255, 0.9); }
+.hb-btn-light { background-color: transparent; color: var(--hb-text); border: 1px solid var(--hb-text); }
+.hb-btn-light:hover { background-color: var(--hb-text); color: var(--hb-primary); }
+@media (max-width: 768px) { .hb-section { padding: 4rem 0; } .hb-portfolio-grid { grid-template-columns: 1fr; } .hb-hero-bg { opacity: 0.5; } }
+@media (max-width: 480px) { .hb-hero-title { font-size: 1.75rem; } .hb-section-title { font-size: 1.75rem; } }
 </style>

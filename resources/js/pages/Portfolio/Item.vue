@@ -1,31 +1,17 @@
 <template>
-    <div>
+    <div class="hb-page-content">
         <!-- Hero Section -->
-        <section class="hb-hero geometric-bg min-h-[40vh] flex items-center">
-            <div class="geometric-pattern">
-                <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice">
-                    <defs>
-                        <pattern id="dots" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-                            <circle cx="20" cy="20" r="2" />
-                            <circle cx="80" cy="40" r="2" />
-                            <circle cx="40" cy="80" r="2" />
-                            <circle cx="60" cy="60" r="2" />
-                        </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#dots)" opacity="0.3" />
-                    <line x1="0" y1="0" x2="1440" y2="600" stroke="rgba(255,255,255,0.1)" />
-                    <line x1="1440" y1="0" x2="0" y2="300" stroke="rgba(255,255,255,0.1)" />
-                </svg>
-            </div>
-            <div class="hb-hero-content text-center">
-                <p class="text-text-soft-light text-sm tracking-widest uppercase mb-6">Project</p>
-                <h1 class="hb-hero h1">{{ project.title }}</h1>
-                <p class="hb-hero p">{{ project.tagline }}</p>
+        <section class="hb-hero-section min-h-[50vh] flex items-center justify-center">
+            <div class="hb-hero-bg"></div>
+            <div class="hb-hero-content text-center relative z-10">
+                <p class="hb-hero-subtitle text-sm tracking-widest uppercase">Project</p>
+                <h1 class="hb-hero-title">{{ project.title }}</h1>
+                <p class="hb-hero-description">{{ project.tagline }}</p>
             </div>
         </section>
 
         <!-- Project Details -->
-        <section class="hb-content-section light">
+        <section class="hb-section">
             <div class="hb-container">
                 <div class="max-w-4xl mx-auto">
                     <!-- Project Image -->
@@ -35,26 +21,34 @@
                     
                     <!-- Project Meta -->
                     <div class="flex flex-wrap gap-3 mb-8">
-                        <span v-for="tech in project.technologies" :key="tech" class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">{{ tech }}</span>
+                        <span v-for="tech in project.technologies" :key="tech" class="hb-tag">{{ tech }}</span>
                     </div>
                     
                     <!-- Project Description -->
-                    <div class="prose max-w-none">
-                        <h2 class="text-color-primary font-serif text-2xl mb-4">Overview</h2>
-                        <p class="text-gray-600 mb-6">{{ project.description }}</p>
+                    <div class="space-y-6">
+                        <div>
+                            <h2 class="hb-section-title text-left mb-4">Overview</h2>
+                            <p class="text-text-muted">{{ project.description }}</p>
+                        </div>
                         
-                        <h2 class="text-color-primary font-serif text-2xl mb-4 mt-8">Challenges</h2>
-                        <p class="text-gray-600 mb-6">{{ project.challenges }}</p>
+                        <div class="mt-8">
+                            <h2 class="hb-section-title text-left mb-4">Challenges</h2>
+                            <p class="text-text-muted">{{ project.challenges }}</p>
+                        </div>
                         
-                        <h2 class="text-color-primary font-serif text-2xl mb-4 mt-8">Solution</h2>
-                        <p class="text-gray-600 mb-6">{{ project.solution }}</p>
+                        <div class="mt-8">
+                            <h2 class="hb-section-title text-left mb-4">Solution</h2>
+                            <p class="text-text-muted">{{ project.solution }}</p>
+                        </div>
                         
-                        <h2 class="text-color-primary font-serif text-2xl mb-4 mt-8">Results</h2>
-                        <p class="text-gray-600 mb-6">{{ project.results }}</p>
+                        <div class="mt-8">
+                            <h2 class="hb-section-title text-left mb-4">Results</h2>
+                            <p class="text-text-muted">{{ project.results }}</p>
+                        </div>
                     </div>
                     
                     <!-- Back Link -->
-                    <div class="mt-12">
+                    <div class="mt-12 text-center">
                         <router-link to="/portfolio" class="hb-btn hb-btn-light">
                             &larr; Back to Portfolio
                         </router-link>
@@ -64,15 +58,18 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="hb-content-section navy">
+        <section class="hb-section">
             <div class="hb-container text-center">
-                <h2 class="text-2xl font-serif text-white mb-4">Need a similar solution?</h2>
-                <p class="text-text-lighter mb-6 max-w-2xl mx-auto">
+                <p class="hb-section-label text-sm tracking-widest uppercase">Need Help?</p>
+                <h2 class="hb-section-title">Need a similar solution?</h2>
+                <p class="hb-section-subtitle max-w-2xl mx-auto">
                     Let's discuss how I can build something custom for your business.
                 </p>
-                <router-link to="/contact" class="hb-btn hb-btn-light">
-                    Get a Free Consultation
-                </router-link>
+                <div class="mt-8">
+                    <router-link to="/contact" class="hb-btn hb-btn-primary">
+                        Get a Free Consultation
+                    </router-link>
+                </div>
             </div>
         </section>
     </div>
@@ -133,6 +130,68 @@ export default {
 </script>
 
 <style scoped>
-.color-primary { color: #003885; }
-.text-gray-600 { color: #666; }
+/* Highbridge Color Palette */
+:root {
+    --hb-primary: #003885;
+    --hb-accent: #f5ab8b;
+    --hb-text: #ffffff;
+    --hb-text-muted: rgba(255, 255, 255, 0.7);
+}
+
+/* Hero Background */
+.hb-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Text utility */
+.text-text-muted {
+    color: var(--hb-text-muted);
+}
+
+/* Gradient colors */
+.bg-gradient-to-br {
+    background: linear-gradient(to bottom right, var(--hb-accent), var(--hb-primary));
+}
+
+.from-orange-400.to-orange-600 {
+    background: linear-gradient(to bottom right, #fb923c, #ea580c);
+}
+
+.from-blue-400.to-blue-600 {
+    background: linear-gradient(to bottom right, #60a5fa, #2563eb);
+}
+
+.from-purple-400.to-purple-600 {
+    background: linear-gradient(to bottom right, #a78bfa, #7c3aed);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hb-hero-section {
+        min-height: 40vh;
+    }
+    
+    .hb-section {
+        padding: 4rem 0;
+    }
+    
+    .hb-hero-bg {
+        opacity: 0.5;
+    }
+    
+    .hb-section-title {
+        font-size: 1.5rem;
+    }
+    
+    .hb-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
 </style>

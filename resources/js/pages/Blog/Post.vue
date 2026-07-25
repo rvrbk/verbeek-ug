@@ -1,47 +1,46 @@
 <template>
-    <div class="bg-slate-50 dark:bg-slate-800 py-20">
-        <div class="container mx-auto px-6">
-            <!-- Back Navigation -->
-            <div class="mb-8">
-                <router-link 
-                    to="/blog" 
-                    class="inline-flex items-center text-blue-800 dark:text-blue-400 hover:underline"
-                >
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                    Back to Blog
-                </router-link>
-            </div>
-
-            <!-- Post Not Found -->
-            <div class="text-center py-20">
-                <svg class="w-20 h-20 text-gray-400 dark:text-gray-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3h3m-3 4h3m-3 4h3m-3 4h3" />
-                </svg>
-                <h1 class="text-4xl font-bold text-slate-800 dark:text-white mb-4">
-                    Article Not Found
-                </h1>
-                <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-                    This article doesn't exist or the URL may be incorrect. 
-                    Please check the URL or browse our available articles.
+    <div class="hb-page-content">
+        <!-- Hero Section -->
+        <section class="hb-hero-section min-h-[60vh] flex items-center justify-center">
+            <div class="hb-hero-bg"></div>
+            <div class="hb-hero-content text-center relative z-10">
+                <p class="hb-hero-subtitle text-sm tracking-widest uppercase">Blog</p>
+                <h1 class="hb-hero-title">Article Not Found</h1>
+                <p class="hb-hero-description">
+                    This article doesn't exist or the URL may be incorrect. Please check the URL or browse our available articles.
                 </p>
-                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                    <router-link 
-                        to="/blog" 
-                        class="inline-flex items-center justify-center bg-blue-800 hover:bg-blue-900 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
-                    >
-                        View All Articles
+            </div>
+        </section>
+
+        <!-- Not Found Content -->
+        <section class="hb-section">
+            <div class="hb-container">
+                <div class="max-w-2xl mx-auto text-center">
+                    <router-link to="/blog" class="hb-btn hb-btn-light mb-8 inline-flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                        </svg>
+                        Back to Blog
                     </router-link>
-                    <router-link 
-                        to="/contact" 
-                        class="inline-flex items-center justify-center border-2 border-blue-600 dark:border-blue-400 text-blue-800 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-600 font-semibold px-6 py-3 rounded-lg transition-colors"
-                    >
-                        Contact Me
-                    </router-link>
+                    
+                    <div class="hb-card">
+                        <h2 class="hb-section-title mb-4">Available Articles</h2>
+                        <p class="text-text-muted mb-6">
+                            Browse through my collection of articles covering software development, 
+                            business solutions, and technology insights for Ugandan businesses.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <router-link to="/blog" class="hb-btn hb-btn-primary">
+                                View All Articles
+                            </router-link>
+                            <router-link to="/contact" class="hb-btn hb-btn-light">
+                                Contact Me
+                            </router-link>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </template>
 
@@ -67,5 +66,55 @@ export default {
 </script>
 
 <style scoped>
-/* Add any custom styles here */
+/* Highbridge Color Palette */
+:root {
+    --hb-primary: #003885;
+    --hb-accent: #f5ab8b;
+    --hb-text: #ffffff;
+    --hb-text-muted: rgba(255, 255, 255, 0.7);
+}
+
+/* Hero Background */
+.hb-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Text utility */
+.text-text-muted {
+    color: var(--hb-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hb-hero-section {
+        min-height: 40vh;
+    }
+    
+    .hb-section {
+        padding: 4rem 0;
+    }
+    
+    .hb-hero-bg {
+        opacity: 0.5;
+    }
+    
+    .flex.sm\:flex-row {
+        flex-direction: column;
+    }
+    
+    .hb-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .flex.sm\:flex-row {
+        flex-direction: column;
+    }
+}
 </style>

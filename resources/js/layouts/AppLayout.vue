@@ -1,144 +1,463 @@
 <template>
-    <div class="min-h-screen flex flex-col bg-navy">
-        <!-- Header -->
-        <header class="hb-header">
-            <div class="hb-nav">
-                <!-- Logo -->
-                <router-link to="/" class="hb-logo">
-                    Rik Verbeek
-                </router-link>
-                
-                <!-- Desktop Navigation -->
-                <nav class="hb-nav-links">
-                    <a href="#hero" @click.prevent="navigateToSection('hero')" class="hb-nav-link">Home</a>
-                    <a href="#services" @click.prevent="navigateToSection('services')" class="hb-nav-link">Services</a>
-                    <router-link to="/portfolio" class="hb-nav-link">Portfolio</router-link>
-                    <a href="#about" @click.prevent="navigateToSection('about')" class="hb-nav-link">About</a>
-                    <router-link to="/contact" class="hb-nav-link">Contact</router-link>
-                </nav>
-                
-                <!-- Mobile menu button -->
-                <button 
-                    @click="mobileMenuOpen = !mobileMenuOpen" 
-                    class="lg:hidden text-white"
-                >
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path v-if="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            
-            <!-- Mobile Navigation -->
-            <div 
-                v-if="mobileMenuOpen" 
-                class="lg:hidden bg-navy border-t border-white/10"
-            >
-                <div class="px-6 py-4 space-y-2 hb-nav-links">
-                    <a href="#hero" @click.prevent="navigateToSection('hero'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Home</a>
-                    <a href="#services" @click.prevent="navigateToSection('services'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Services</a>
-                    <router-link to="/portfolio" @click="mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Portfolio</router-link>
-                    <a href="#about" @click.prevent="navigateToSection('about'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">About</a>
-                    <router-link to="/contact" @click="mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Contact</router-link>
-                </div>
-            </div>
-        </header>
+  <div class="hb-site-wrapper">
+    <!-- Header -->
+    <header class="hb-header">
+      <div class="hb-header-inner">
+        <!-- Logo -->
+        <router-link to="/" class="hb-logo">
+          <span class="hb-logo-text">verbeek.ug</span>
+        </router-link>
         
-        <!-- Main Content -->
-        <main class="flex-grow">
-            <slot />
-        </main>
+        <!-- Navigation -->
+        <nav class="hb-nav">
+          <router-link to="/" class="hb-nav-item" exact-active-class="hb-nav-item-active">
+            Home
+          </router-link>
+          <a href="#services" @click.prevent="navigateToSection('services')" class="hb-nav-item" :class="{ 'hb-nav-item-active': currentSection === 'services' }">
+            Services
+          </a>
+          <router-link to="/portfolio" class="hb-nav-item" exact-active-class="hb-nav-item-active">
+            Portfolio
+          </router-link>
+          <a href="#about" @click.prevent="navigateToSection('about')" class="hb-nav-item" :class="{ 'hb-nav-item-active': currentSection === 'about' }">
+            About
+          </a>
+          <router-link to="/contact" class="hb-nav-item" exact-active-class="hb-nav-item-active">
+            Contact
+          </router-link>
+        </nav>
         
-        <!-- Footer -->
-        <footer class="hb-footer">
-            <div class="hb-footer-grid">
-                <!-- Company -->
-                <div class="hb-footer-column">
-                    <h4>Rik Verbeek</h4>
-                    <p>Custom software for Ugandan businesses. From warehouse management to real estate platforms, I turn challenges into digital solutions.</p>
-                </div>
-                
-                <!-- Quick Links -->
-                <div class="hb-footer-column">
-                    <h4>Quick Links</h4>
-                    <router-link to="/">Home</router-link>
-                    <router-link to="/#services">Services</router-link>
-                    <router-link to="/portfolio">Portfolio</router-link>
-                    <router-link to="/#about">About</router-link>
-                    <router-link to="/contact">Contact</router-link>
-                </div>
-                
-                <!-- Services -->
-                <div class="hb-footer-column">
-                    <h4>Services</h4>
-                    <span>Warehouse Management</span>
-                    <span>Real Estate Apps</span>
-                    <span>API Integrations</span>
-                    <span>Headless Web Apps</span>
-                </div>
-                
-                <!-- Connect -->
-                <div class="hb-footer-column">
-                    <h4>Connect</h4>
-                    <a href="mailto:rik@verbeek.ug" target="_blank">rik@verbeek.ug</a>
-                    <a href="https://wa.me/256" target="_blank">+256 (WhatsApp)</a>
-                    <span>Kampala, Uganda</span>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="https://linkedin.com/in/rikverbeek" target="_blank" class="text-text-lighter hover:text-accent-orange">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                        <a href="https://github.com/rvrbk" target="_blank" class="text-text-lighter hover:text-accent-orange">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.608 1.647.242 2.717.116 3.177.88 1.008 1.241 2.381 1.241 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <a href="https://calendly.com/rik-verbeek/free-consultation" target="_blank" class="hb-btn hb-btn-light mt-4">
-                        Book a Call
-                    </a>
-                </div>
-            </div>
-            
-            <div class="hb-footer-bottom text-center">
-                <p>&copy; {{ new Date().getFullYear() }} Rik Verbeek. All rights reserved.</p>
-            </div>
-        </footer>
-    </div>
+        <!-- Mobile Menu Button -->
+        <button @click="mobileMenuOpen = !mobileMenuOpen" class="hb-mobile-menu-btn" :class="{ 'hb-mobile-menu-btn-open': mobileMenuOpen }" aria-label="Toggle menu">
+          <span class="hb-hamburger-line"></span>
+          <span class="hb-hamburger-line"></span>
+          <span class="hb-hamburger-line"></span>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu Overlay -->
+      <div v-if="mobileMenuOpen" class="hb-mobile-menu" @click="mobileMenuOpen = false">
+        <nav class="hb-mobile-menu-content" @click.stop>
+          <router-link to="/" class="hb-mobile-nav-item" exact-active-class="hb-mobile-nav-item-active" @click="mobileMenuOpen = false">Home</router-link>
+          <a href="#services" @click.prevent="navigateToSection('services'); mobileMenuOpen = false" class="hb-mobile-nav-item" :class="{ 'hb-mobile-nav-item-active': currentSection === 'services' }">Services</a>
+          <router-link to="/portfolio" class="hb-mobile-nav-item" exact-active-class="hb-mobile-nav-item-active" @click="mobileMenuOpen = false">Portfolio</router-link>
+          <a href="#about" @click.prevent="navigateToSection('about'); mobileMenuOpen = false" class="hb-mobile-nav-item" :class="{ 'hb-mobile-nav-item-active': currentSection === 'about' }">About</a>
+          <router-link to="/contact" class="hb-mobile-nav-item" exact-active-class="hb-mobile-nav-item-active" @click="mobileMenuOpen = false">Contact</router-link>
+        </nav>
+      </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="hb-main">
+      <slot />
+    </main>
+    
+    <!-- Footer -->
+    <footer class="hb-footer">
+      <div class="hb-footer-content">
+        <div class="hb-footer-left">
+          <p>Rik Verbeek</p>
+          <p>Custom software for Ugandan businesses</p>
+        </div>
+        <div class="hb-footer-right">
+          <a href="mailto:rik@verbeek.ug" class="hb-footer-link">rik@verbeek.ug</a>
+          <span class="hb-footer-divider">|</span>
+          <a href="https://wa.me/256" class="hb-footer-link">+256 (WhatsApp)</a>
+          <span class="hb-footer-divider">|</span>
+          <span>Kampala, Uganda</span>
+          <span class="hb-footer-copyright">&copy; {{ new Date().getFullYear() }} Rik Verbeek. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 
 export default {
-    setup() {
-        const router = useRouter()
-        const route = useRoute()
-        const mobileMenuOpen = ref(false)
-        
-        const navigateToSection = (sectionId) => {
-            if (route.path === '/') {
-                const element = document.getElementById(sectionId)
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' })
-                }
-            } else {
-                router.push({ path: '/', hash: `#${sectionId}` })
-            }
+  setup() {
+    const router = useRouter()
+    const route = useRoute()
+    const mobileMenuOpen = ref(false)
+    const currentSection = ref('')
+    
+    const navigateToSection = (sectionId) => {
+      currentSection.value = sectionId
+      if (route.path === '/') {
+        const element = document.getElementById(sectionId)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          window.history.replaceState({}, '', `#${sectionId}`)
         }
-        
-        return { mobileMenuOpen, navigateToSection }
+      } else {
+        router.push({ path: '/', hash: `#${sectionId}` })
+      }
     }
+    
+    const handleScroll = () => {
+      const sections = ['hero', 'services', 'about', 'portfolio']
+      const scrollPosition = window.scrollY + 100
+      
+      for (const section of sections) {
+        const element = document.getElementById(section)
+        if (element) {
+          const top = element.offsetTop
+          const bottom = top + element.offsetHeight
+          if (scrollPosition >= top && scrollPosition < bottom) {
+            currentSection.value = section
+            break
+          }
+        }
+      }
+    }
+    
+    onMounted(() => {
+      window.addEventListener('scroll', handleScroll)
+      handleScroll()
+      
+      if (route.hash) {
+        currentSection.value = route.hash.substring(1)
+      }
+    })
+    
+    onUnmounted(() => {
+      window.removeEventListener('scroll', handleScroll)
+    })
+    
+    return { mobileMenuOpen, currentSection, navigateToSection }
+  }
 }
 </script>
 
 <style scoped>
-.bg-navy { background-color: #001a3d; }
-.hb-nav { max-width: 1440px; margin: 0 auto; padding: 0 2rem; }
-.hb-nav-links { display: flex; gap: 3rem; list-style: none; margin: 0; padding: 0; }
-.hb-nav-link { color: white; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; padding: 0.5rem 0; }
-.hb-nav-link:hover, .hb-nav-link.router-link-active { color: #f5ab8b; }
-@media (max-width: 768px) { .hb-nav-links { display: none; } }
+/* ===== Highbridge Exact Design ===== */
+
+:root {
+  --hb-primary: #003885;
+  --hb-accent: #f5ab8b;
+  --hb-text: #ffffff;
+  --hb-text-muted: rgba(255, 255, 255, 0.7);
+}
+
+/* Reset and Base */
+.hb-site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--hb-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--hb-text);
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+.hb-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1.5rem 3rem;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+}
+
+.hb-header-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.hb-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--hb-text);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.hb-logo-text {
+  display: inline-block;
+}
+
+/* Navigation */
+.hb-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hb-nav-item {
+  color: var(--hb-text);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.hb-nav-item:hover {
+  color: var(--hb-accent);
+}
+
+.router-link-active,
+.hb-nav-item-active {
+  color: var(--hb-accent);
+  font-weight: 500;
+}
+
+.router-link-active::after,
+.hb-nav-item-active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--hb-accent);
+  border-radius: 50%;
+}
+
+/* Mobile Menu Button */
+.hb-mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background: var(--hb-text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.hb-hamburger-line {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: var(--hb-primary);
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.hb-mobile-menu-btn-open .hb-hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hb-mobile-menu-btn-open .hb-hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hb-mobile-menu-btn-open .hb-hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Menu Overlay */
+.hb-mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--hb-primary);
+  z-index: 999;
+  cursor: pointer;
+  overflow-y: auto;
+}
+
+.hb-mobile-menu-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  cursor: default;
+  width: 100%;
+  max-width: 400px;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+}
+
+.hb-mobile-nav-item {
+  color: var(--hb-text);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+  transition: color 0.2s ease;
+  position: relative;
+  padding: 0.75rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.hb-mobile-nav-item:hover {
+  color: var(--hb-accent);
+}
+
+.router-link-active,
+.hb-mobile-nav-item-active {
+  color: var(--hb-accent);
+  font-weight: 500;
+}
+
+.router-link-active::after,
+.hb-mobile-nav-item-active::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: var(--hb-accent);
+  border-radius: 50%;
+}
+
+/* ===== Main Content ===== */
+.hb-main {
+  flex-grow: 1;
+  padding-top: 6rem;
+  position: relative;
+}
+
+/* ===== Footer ===== */
+.hb-footer {
+  background-color: var(--hb-primary);
+  padding: 3rem 3rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hb-footer-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hb-footer-left p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--hb-text-muted);
+}
+
+.hb-footer-left p:first-child {
+  color: var(--hb-text);
+  font-weight: 500;
+}
+
+.hb-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  color: var(--hb-text-muted);
+}
+
+.hb-footer-link {
+  color: var(--hb-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.hb-footer-link:hover {
+  color: var(--hb-accent);
+}
+
+.hb-footer-divider {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.hb-footer-copyright {
+  margin-left: 1rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .hb-header {
+    padding: 1.5rem 2rem;
+  }
+  
+  .hb-nav {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hb-header-inner {
+    padding: 0 1rem;
+  }
+  
+  .hb-nav {
+    display: none;
+  }
+  
+  .hb-mobile-menu-btn {
+    display: flex;
+  }
+  
+  .hb-main {
+    padding-top: 5rem;
+  }
+  
+  .hb-footer {
+    padding: 2rem 1rem 1.5rem;
+  }
+  
+  .hb-footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .hb-footer-left p:first-child {
+    font-size: 1rem;
+  }
+  
+  .hb-footer-right {
+    gap: 0.5rem;
+  }
+  
+  .hb-footer-copyright {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .hb-header {
+    padding: 1rem;
+  }
+  
+  .hb-nav-item {
+    font-size: 0.8rem;
+    padding: 0.4rem 0;
+  }
+  
+  .hb-nav {
+    gap: 1.25rem;
+  }
+}
 </style>
