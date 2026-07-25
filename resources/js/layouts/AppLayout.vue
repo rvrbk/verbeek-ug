@@ -142,7 +142,7 @@ export default {
       document.body.style.overflow = ''
     })
     
-    return { mobileMenuOpen, currentSection, navigateToSection, toggleMobileMenu, closeMobileMenu }
+    return { mobileMenuOpen, currentSection, navigateToSection, toggleMobileMenu, closeMobileMenu, route }
   }
 }
 </script>
