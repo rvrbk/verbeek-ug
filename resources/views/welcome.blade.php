@@ -4,7 +4,30 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ config('app.name', 'Laravel + Vue') }}</title>
+        <!-- SEO Meta Tags -->
+        <title>Rik Verbeek | Custom Software Development for Ugandan Businesses</title>
+        <meta name="description" content="Custom web solutions for Ugandan businesses. From warehouse management to real estate platforms, I build tailored software to help small businesses grow.">
+        <meta name="keywords" content="software development, web development, Laravel, Vue.js, Uganda, Kampala, warehouse management, real estate apps, API integration, headless web apps">
+        <meta name="author" content="Rik Verbeek">
+        
+        <!-- Open Graph / Social Media Meta Tags -->
+        <meta property="og:title" content="Rik Verbeek | Custom Software Development for Ugandan Businesses">
+        <meta property="og:description" content="Custom web solutions for Ugandan businesses. From warehouse management to real estate platforms, I build tailored software to help small businesses grow.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://verbeek.ug">
+        <meta property="og:image" content="https://verbeek.ug/images/og-image.jpg">
+        
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Rik Verbeek | Custom Software Development for Ugandan Businesses">
+        <meta name="twitter:description" content="Custom web solutions for Ugandan businesses. From warehouse management to real estate platforms, I build tailored software to help small businesses grow.">
+        <meta name="twitter:image" content="https://verbeek.ug/images/og-image.jpg">
+        
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://verbeek.ug">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
         @fonts
         @vite(['resources/css/app.css', 'resources/js/app.js'])

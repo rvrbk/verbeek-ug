@@ -94,6 +94,9 @@
                             <p class="text-gray-600 text-sm mb-4">
                                 Custom Laravel + Vue.js system for Ugandan farmers to track inventory across multiple locations.
                             </p>
+                            <router-link to="/portfolio/warehouse-management" class="hb-btn hb-btn-primary text-xs px-4 py-2">
+                                View Details
+                            </router-link>
                         </div>
                     </div>
                     <div class="bg-white overflow-hidden shadow-sm">
@@ -103,6 +106,9 @@
                             <p class="text-gray-600 text-sm mb-4">
                                 Funda-inspired property listing and management platform for Ugandan real estate agents.
                             </p>
+                            <router-link to="/portfolio/real-estate-platform" class="hb-btn hb-btn-primary text-xs px-4 py-2">
+                                View Details
+                            </router-link>
                         </div>
                     </div>
                 </div>
@@ -132,14 +138,11 @@
                         Let's discuss how custom software can solve your unique challenges. First consultation is always free.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="mailto:rik@verbeek.ug" class="hb-btn hb-btn-primary">
-                            Email Me
-                        </a>
+                        <router-link to="/contact" class="hb-btn hb-btn-primary">
+                            Get a Free Consultation
+                        </router-link>
                         <a href="https://calendly.com/rik-verbeek/free-consultation" target="_blank" class="hb-btn hb-btn-light">
                             Book a Call
-                        </a>
-                        <a href="https://wa.me/256" target="_blank" class="hb-btn hb-btn-light">
-                            WhatsApp
                         </a>
                     </div>
                 </div>

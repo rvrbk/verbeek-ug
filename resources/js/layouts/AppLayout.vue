@@ -4,17 +4,17 @@
         <header class="hb-header">
             <div class="hb-nav">
                 <!-- Logo -->
-                <a href="#hero" class="hb-logo">
+                <router-link to="/" class="hb-logo">
                     Rik Verbeek
-                </a>
+                </router-link>
                 
                 <!-- Desktop Navigation -->
                 <nav class="hb-nav-links">
-                    <a href="#hero" class="hb-nav-link" @click="scrollToSection('hero')">Home</a>
-                    <a href="#services" class="hb-nav-link" @click="scrollToSection('services')">Services</a>
-                    <a href="#portfolio" class="hb-nav-link" @click="scrollToSection('portfolio')">Portfolio</a>
-                    <a href="#about" class="hb-nav-link" @click="scrollToSection('about')">About</a>
-                    <a href="#contact" class="hb-nav-link" @click="scrollToSection('contact')">Contact</a>
+                    <a href="#hero" @click.prevent="navigateToSection('hero')" class="hb-nav-link">Home</a>
+                    <a href="#services" @click.prevent="navigateToSection('services')" class="hb-nav-link">Services</a>
+                    <router-link to="/portfolio" class="hb-nav-link">Portfolio</router-link>
+                    <a href="#about" @click.prevent="navigateToSection('about')" class="hb-nav-link">About</a>
+                    <router-link to="/contact" class="hb-nav-link">Contact</router-link>
                 </nav>
                 
                 <!-- Mobile menu button -->
@@ -35,11 +35,11 @@
                 class="lg:hidden bg-navy border-t border-white/10"
             >
                 <div class="px-6 py-4 space-y-2 hb-nav-links">
-                    <a href="#hero" @click="scrollToSection('hero'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Home</a>
-                    <a href="#services" @click="scrollToSection('services'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Services</a>
-                    <a href="#portfolio" @click="scrollToSection('portfolio'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Portfolio</a>
-                    <a href="#about" @click="scrollToSection('about'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">About</a>
-                    <a href="#contact" @click="scrollToSection('contact'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Contact</a>
+                    <a href="#hero" @click.prevent="navigateToSection('hero'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Home</a>
+                    <a href="#services" @click.prevent="navigateToSection('services'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Services</a>
+                    <router-link to="/portfolio" @click="mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Portfolio</router-link>
+                    <a href="#about" @click.prevent="navigateToSection('about'); mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">About</a>
+                    <router-link to="/contact" @click="mobileMenuOpen = false" class="block text-white/80 hover:text-accent-orange py-3 px-4 text-sm tracking-wide uppercase">Contact</router-link>
                 </div>
             </div>
         </header>
@@ -61,11 +61,11 @@
                 <!-- Quick Links -->
                 <div class="hb-footer-column">
                     <h4>Quick Links</h4>
-                    <a href="#hero" @click.prevent="scrollToSection('hero')">Home</a>
-                    <a href="#services" @click.prevent="scrollToSection('services')">Services</a>
-                    <a href="#portfolio" @click.prevent="scrollToSection('portfolio')">Portfolio</a>
-                    <a href="#about" @click.prevent="scrollToSection('about')">About</a>
-                    <a href="#contact" @click.prevent="scrollToSection('contact')">Contact</a>
+                    <router-link to="/">Home</router-link>
+                    <router-link to="/#services">Services</router-link>
+                    <router-link to="/portfolio">Portfolio</router-link>
+                    <router-link to="/#about">About</router-link>
+                    <router-link to="/contact">Contact</router-link>
                 </div>
                 
                 <!-- Services -->
@@ -110,19 +110,26 @@
 
 <script>
 import { ref } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 
 export default {
     setup() {
+        const router = useRouter()
+        const route = useRoute()
         const mobileMenuOpen = ref(false)
         
-        const scrollToSection = (sectionId) => {
-            const element = document.getElementById(sectionId)
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' })
+        const navigateToSection = (sectionId) => {
+            if (route.path === '/') {
+                const element = document.getElementById(sectionId)
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' })
+                }
+            } else {
+                router.push({ path: '/', hash: `#${sectionId}` })
             }
         }
         
-        return { mobileMenuOpen, scrollToSection }
+        return { mobileMenuOpen, navigateToSection }
     }
 }
 </script>
@@ -132,8 +139,6 @@ export default {
 .hb-nav { max-width: 1440px; margin: 0 auto; padding: 0 2rem; }
 .hb-nav-links { display: flex; gap: 3rem; list-style: none; margin: 0; padding: 0; }
 .hb-nav-link { color: white; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; padding: 0.5rem 0; }
-.hb-nav-link:hover, .hb-nav-link.active { color: #f5ab8b; }
+.hb-nav-link:hover, .hb-nav-link.router-link-active { color: #f5ab8b; }
 @media (max-width: 768px) { .hb-nav-links { display: none; } }
 </style>
-
-

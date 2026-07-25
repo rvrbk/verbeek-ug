@@ -32,6 +32,7 @@
         background-color: #001a3d;
         color: #cde3fc;
         line-height: 1.7;
+        padding-top: 6rem;
     }
     
     h1, h2, h3, h4, h5, h6 {
@@ -151,7 +152,7 @@
     justify-content: center;
     position: relative;
     background: #001a3d;
-    padding: 6rem 0 4rem;
+    padding: 4rem 0 4rem;
 }
 
 .hb-hero-content {
@@ -177,7 +178,7 @@
 
 /* Content Section */
 .hb-content-section {
-    padding: 4rem 0;
+    padding: 3rem 0;
     position: relative;
 }
 
