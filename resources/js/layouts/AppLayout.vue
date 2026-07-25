@@ -34,18 +34,18 @@
           <span class="hamburger-line hamburger-line-3"></span>
         </button>
       </div>
-      
-      <!-- Simple Mobile Menu Overlay -->
-      <div v-if="mobileMenuOpen" class="mobile-menu" @click="mobileMenuOpen = false">
-        <nav class="mobile-nav" @click.stop>
-          <router-link to="/" class="mobile-nav-link" @click="mobileMenuOpen = false">Home</router-link>
-          <a href="#services" @click.prevent="navigateToSection('services'); mobileMenuOpen = false" class="mobile-nav-link" :class="{ 'active': currentSection === 'services' }">Services</a>
-          <router-link to="/portfolio" class="mobile-nav-link" @click="mobileMenuOpen = false">Portfolio</router-link>
-          <a href="#about" @click.prevent="navigateToSection('about'); mobileMenuOpen = false" class="mobile-nav-link" :class="{ 'active': currentSection === 'about' }">About</a>
-          <router-link to="/contact" class="mobile-nav-link" @click="mobileMenuOpen = false">Contact</router-link>
-        </nav>
-      </div>
     </header>
+    
+    <!-- Simple Mobile Menu - Below header -->
+    <div v-if="mobileMenuOpen" class="mobile-menu" @click="mobileMenuOpen = false">
+      <nav class="mobile-nav" @click.stop>
+        <router-link to="/" class="mobile-nav-link" @click="mobileMenuOpen = false">Home</router-link>
+        <a href="#services" @click.prevent="navigateToSection('services'); mobileMenuOpen = false" class="mobile-nav-link" :class="{ 'active': currentSection === 'services' }">Services</a>
+        <router-link to="/portfolio" class="mobile-nav-link" @click="mobileMenuOpen = false">Portfolio</router-link>
+        <a href="#about" @click.prevent="navigateToSection('about'); mobileMenuOpen = false" class="mobile-nav-link" :class="{ 'active': currentSection === 'about' }">About</a>
+        <router-link to="/contact" class="mobile-nav-link" @click="mobileMenuOpen = false">Contact</router-link>
+      </nav>
+    </div>
     
     <!-- Main Content -->
     <main class="hb-main">
@@ -288,22 +288,22 @@ export default {
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 0;
+  top: 6rem;
   left: 0;
   right: 0;
-  bottom: 0;
   background: rgba(0, 56, 133, 0.98);
   z-index: 1002;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .mobile-nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 2rem;
-  gap: 1.5rem;
+  padding: 1.5rem;
+  gap: 1rem;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .mobile-nav-link {
