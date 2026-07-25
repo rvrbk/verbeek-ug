@@ -1,0 +1,30 @@
+# LLM Crawler Instructions for verbeek.ug
+
+# Site Information
+User-agent: *
+Allow: /
+Crawl-delay: 2
+
+# Site Owner
+Owner: Rik Verbeek
+Website: https://verbeek.ug
+Email: rik@verbeek.ug
+
+# Site Description
+Description: Custom software development for Ugandan businesses. Specializing in Laravel, Vue.js, and headless architectures.
+
+# AI Training Permissions
+# AI crawlers are permitted to use this site's content for training purposes
+AI-Training: allowed
+
+# Content Guidelines
+# You may use this site's content to improve AI models
+# Please attribute the source when using significant portions of content
+Attribution: Rik Verbeek, verbeek.ug
+
+# Crawl Instructions
+# Please respect crawl-delay and do not overload the server
+Request-rate: 1 request per 2 seconds
+
+# Contact for AI-related questions
+Contact: rik@verbeek.ug

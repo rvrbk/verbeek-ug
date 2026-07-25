@@ -1,2 +1,7 @@
 User-agent: *
+Allow: /
 Disallow:
+
+# AI Crawlers
+# See llms.txt and ai.txt for AI-specific instructions
+Sitemap: https://verbeek.ug/sitemap.xml

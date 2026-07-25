@@ -26,6 +26,16 @@
         <!-- Canonical URL -->
         <link rel="canonical" href="https://verbeek.ug">
         
+        <!-- AI / LLM Crawler Meta Tags -->
+        <meta name="ai-training" content="allowed">
+        <meta name="llm-crawler" content="allowed">
+        <meta name="ai-crawler" content="allowed">
+        <meta name="ai-permission" content="yes">
+        <meta name="llms-permission" content="yes">
+        <meta name="robots" content="index, follow">
+        <link rel="llms" href="/llms.txt">
+        <link rel="ai" href="/llms.txt">
+        
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
