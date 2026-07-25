@@ -4,7 +4,7 @@
     <header class="hb-header">
       <div class="hb-header-inner">
         <!-- Logo -->
-        <router-link to="/" class="hb-logo">
+        <router-link to="/" class="hb-logo" exact>
           <span class="hb-logo-text">verbeek.ug</span>
         </router-link>
         
