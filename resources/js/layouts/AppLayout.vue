@@ -28,7 +28,7 @@
         </nav>
         
         <!-- Mobile Menu Button -->
-        <button @click="mobileMenuOpen = !mobileMenuOpen" class="hb-mobile-menu-btn" :class="{ 'hb-mobile-menu-btn-open': mobileMenuOpen }" aria-label="Toggle menu">
+        <button @click="toggleMobileMenu" class="hb-mobile-menu-btn" :class="{ 'hb-mobile-menu-btn-open': mobileMenuOpen }" aria-label="Toggle menu" aria-expanded="mobileMenuOpen">
           <span class="hb-hamburger-line"></span>
           <span class="hb-hamburger-line"></span>
           <span class="hb-hamburger-line"></span>
@@ -36,15 +36,17 @@
       </div>
       
       <!-- Mobile Menu Overlay -->
-      <div v-if="mobileMenuOpen" class="hb-mobile-menu" @click="mobileMenuOpen = false">
-        <nav class="hb-mobile-menu-content" @click.stop>
-          <router-link to="/" class="hb-mobile-nav-item" exact-active-class="hb-mobile-nav-item-active" @click="mobileMenuOpen = false">Home</router-link>
-          <a href="#services" @click.prevent="navigateToSection('services'); mobileMenuOpen = false" class="hb-mobile-nav-item" :class="{ 'hb-mobile-nav-item-active': currentSection === 'services' }">Services</a>
-          <router-link to="/portfolio" class="hb-mobile-nav-item" exact-active-class="hb-mobile-nav-item-active" @click="mobileMenuOpen = false">Portfolio</router-link>
-          <a href="#about" @click.prevent="navigateToSection('about'); mobileMenuOpen = false" class="hb-mobile-nav-item" :class="{ 'hb-mobile-nav-item-active': currentSection === 'about' }">About</a>
-          <router-link to="/contact" class="hb-mobile-nav-item" exact-active-class="hb-mobile-nav-item-active" @click="mobileMenuOpen = false">Contact</router-link>
-        </nav>
-      </div>
+      <transition name="hb-mobile-menu-transition">
+        <div v-if="mobileMenuOpen" class="hb-mobile-menu" @click="closeMobileMenu">
+          <nav class="hb-mobile-menu-content" @click.stop>
+            <router-link to="/" class="hb-mobile-nav-item" exact-active-class="hb-mobile-nav-item-active" @click="closeMobileMenu">Home</router-link>
+            <a href="#services" @click.prevent="navigateToSection('services'); closeMobileMenu()" class="hb-mobile-nav-item" :class="{ 'hb-mobile-nav-item-active': currentSection === 'services' }">Services</a>
+            <router-link to="/portfolio" class="hb-mobile-nav-item" exact-active-class="hb-mobile-nav-item-active" @click="closeMobileMenu">Portfolio</router-link>
+            <a href="#about" @click.prevent="navigateToSection('about'); closeMobileMenu()" class="hb-mobile-nav-item" :class="{ 'hb-mobile-nav-item-active': currentSection === 'about' }">About</a>
+            <router-link to="/contact" class="hb-mobile-nav-item" exact-active-class="hb-mobile-nav-item-active" @click="closeMobileMenu">Contact</router-link>
+          </nav>
+        </div>
+      </transition>
     </header>
     
     <!-- Main Content -->
@@ -96,6 +98,21 @@ export default {
       }
     }
     
+    const toggleMobileMenu = () => {
+      mobileMenuOpen.value = !mobileMenuOpen.value
+      // Prevent body scroll when menu is open
+      if (mobileMenuOpen.value) {
+        document.body.style.overflow = 'hidden'
+      } else {
+        document.body.style.overflow = ''
+      }
+    }
+    
+    const closeMobileMenu = () => {
+      mobileMenuOpen.value = false
+      document.body.style.overflow = ''
+    }
+    
     const handleScroll = () => {
       const sections = ['hero', 'services', 'about', 'portfolio']
       const scrollPosition = window.scrollY + 100
@@ -124,9 +141,10 @@ export default {
     
     onUnmounted(() => {
       window.removeEventListener('scroll', handleScroll)
+      document.body.style.overflow = ''
     })
     
-    return { mobileMenuOpen, currentSection, navigateToSection }
+    return { mobileMenuOpen, currentSection, navigateToSection, toggleMobileMenu, closeMobileMenu }
   }
 }
 </script>
@@ -243,6 +261,11 @@ export default {
   cursor: pointer;
   padding: 10px;
   z-index: 1001;
+  transition: background-color 0.2s ease;
+}
+
+.hb-mobile-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .hb-hamburger-line {
@@ -274,10 +297,12 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--hb-primary);
+  background-color: rgba(0, 56, 133, 0.98);
   z-index: 999;
   cursor: pointer;
   overflow-y: auto;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .hb-mobile-menu-content {
@@ -287,7 +312,7 @@ export default {
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.5rem;
   align-items: center;
   cursor: default;
   width: 100%;
@@ -299,17 +324,19 @@ export default {
 .hb-mobile-nav-item {
   color: var(--hb-text);
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 400;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
   position: relative;
-  padding: 0.75rem 0;
+  padding: 1rem 0;
   width: 100%;
   text-align: center;
+  border-radius: 8px;
 }
 
 .hb-mobile-nav-item:hover {
   color: var(--hb-accent);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .router-link-active,
@@ -322,13 +349,40 @@ export default {
 .hb-mobile-nav-item-active::after {
   content: '';
   position: absolute;
-  bottom: -0.75rem;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: var(--hb-accent);
   border-radius: 50%;
+}
+
+/* Mobile Menu Transition */
+.hb-mobile-menu-transition-enter-active {
+  animation: hb-mobile-menu-fade-in 0.3s ease-out;
+}
+
+.hb-mobile-menu-transition-leave-active {
+  animation: hb-mobile-menu-fade-out 0.3s ease-in;
+}
+
+@keyframes hb-mobile-menu-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hb-mobile-menu-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 /* ===== Main Content ===== */
@@ -444,6 +498,20 @@ export default {
     margin-top: 0.5rem;
     display: block;
   }
+  
+  .hb-mobile-menu {
+    display: block;
+  }
+  
+  .hb-mobile-menu-content {
+    padding: 2rem 1.5rem;
+    max-width: 90%;
+  }
+  
+  .hb-mobile-nav-item {
+    font-size: 1.5rem;
+    padding: 0.75rem 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -458,6 +526,14 @@ export default {
   
   .hb-nav {
     gap: 1.25rem;
+  }
+  
+  .hb-mobile-menu-content {
+    padding: 2rem 1rem;
+  }
+  
+  .hb-mobile-nav-item {
+    font-size: 1.25rem;
   }
 }
 </style>
