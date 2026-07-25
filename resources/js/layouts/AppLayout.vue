@@ -27,31 +27,36 @@
           </router-link>
         </nav>
         
-        <!-- Mobile Menu Button -->
-        <button @click="toggleMobileMenu" class="hb-mobile-menu-btn" :class="{ 'hb-mobile-menu-btn-open': mobileMenuOpen }" aria-label="Toggle menu" aria-expanded="mobileMenuOpen">
-          <span class="hb-hamburger-line"></span>
-          <span class="hb-hamburger-line"></span>
-          <span class="hb-hamburger-line"></span>
+        <!-- Mobile Menu Button - NEW DESIGN -->
+        <button @click="toggleMobileMenu" class="mm-toggle" :class="{ 'mm-toggle-active': mobileMenuOpen }" aria-label="Toggle menu" aria-expanded="mobileMenuOpen">
+          <span class="mm-toggle-box">
+            <span class="mm-toggle-inner"></span>
+          </span>
         </button>
       </div>
       
-      <!-- Mobile Menu Overlay -->
-      <transition name="hb-mobile-menu-transition">
-        <div v-if="mobileMenuOpen" class="hb-mobile-menu" @click="closeMobileMenu">
-          <nav class="hb-mobile-menu-content" @click.stop>
-            <button @click="closeMobileMenu" class="hb-mobile-close-btn" aria-label="Close menu">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="18" y1="6" x2="6" y2="18"/>
-                <line x1="6" y1="6" x2="18" y2="18"/>
-              </svg>
-            </button>
-            <router-link to="/" class="hb-mobile-nav-item" exact-active-class="hb-mobile-nav-item-active" @click="closeMobileMenu">Home</router-link>
-            <a href="#services" @click.prevent="navigateToSection('services'); closeMobileMenu()" class="hb-mobile-nav-item" :class="{ 'hb-mobile-nav-item-active': currentSection === 'services' }">Services</a>
-            <router-link to="/portfolio" class="hb-mobile-nav-item" exact-active-class="hb-mobile-nav-item-active" @click="closeMobileMenu">Portfolio</router-link>
-            <a href="#about" @click.prevent="navigateToSection('about'); closeMobileMenu()" class="hb-mobile-nav-item" :class="{ 'hb-mobile-nav-item-active': currentSection === 'about' }">About</a>
-            <router-link to="/contact" class="hb-mobile-nav-item" exact-active-class="hb-mobile-nav-item-active" @click="closeMobileMenu">Contact</router-link>
+      <!-- Mobile Menu - NEW DESIGN: Slide-in from right -->
+      <transition name="mm-transition">
+        <aside v-if="mobileMenuOpen" class="mm-overlay" @click="closeMobileMenu">
+          <nav class="mm-panel" @click.stop>
+            <div class="mm-header">
+              <router-link to="/" class="mm-logo" @click="closeMobileMenu">verbeek.ug</router-link>
+              <button @click="closeMobileMenu" class="mm-close" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </div>
+            <div class="mm-body">
+              <router-link to="/" class="mm-link" exact-active-class="mm-link-active" @click="closeMobileMenu">Home</router-link>
+              <a href="#services" @click.prevent="navigateToSection('services'); closeMobileMenu()" class="mm-link" :class="{ 'mm-link-active': currentSection === 'services' }">Services</a>
+              <router-link to="/portfolio" class="mm-link" exact-active-class="mm-link-active" @click="closeMobileMenu">Portfolio</router-link>
+              <a href="#about" @click.prevent="navigateToSection('about'); closeMobileMenu()" class="mm-link" :class="{ 'mm-link-active': currentSection === 'about' }">About</a>
+              <router-link to="/contact" class="mm-link" exact-active-class="mm-link-active" @click="closeMobileMenu">Contact</router-link>
+            </div>
           </nav>
-        </div>
+        </aside>
       </transition>
     </header>
     
@@ -194,6 +199,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 /* Logo */
@@ -253,73 +259,125 @@ export default {
   border-radius: 50%;
 }
 
-/* Mobile Menu Button */
-.hb-mobile-menu-btn {
+/* ============================================
+   NEW MOBILE MENU DESIGN - mm = Mobile Menu
+   ============================================ */
+
+/* Mobile Menu Toggle Button */
+.mm-toggle {
   display: none;
   position: relative;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 56px;
-  height: 56px;
-  background: var(--hb-text);
-  border: 2px solid var(--hb-accent);
-  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  padding: 12px;
+  padding: 0;
   z-index: 1001;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.2s ease;
 }
 
-.hb-mobile-menu-btn:hover {
-  background: rgba(255, 255, 255, 0.9);
-  transform: scale(1.05);
+.mm-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.hb-hamburger-line {
+.mm-toggle-box {
   display: block;
-  width: 28px;
-  height: 3px;
-  background-color: var(--hb-primary);
-  margin: 6px 0;
-  transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mm-toggle-inner {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 2px;
+  background: var(--hb-text);
   border-radius: 2px;
+  transition: all 0.25s ease;
 }
 
-.hb-mobile-menu-btn-open .hb-hamburger-line:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+.mm-toggle-inner::before,
+.mm-toggle-inner::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: var(--hb-text);
+  border-radius: 2px;
+  transition: all 0.25s ease;
 }
 
-.hb-mobile-menu-btn-open .hb-hamburger-line:nth-child(2) {
+.mm-toggle-inner::before {
+  top: -8px;
+}
+
+.mm-toggle-inner::after {
+  top: 8px;
+}
+
+/* Active state - transforms into X */
+.mm-toggle-active .mm-toggle-inner {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.mm-toggle-active .mm-toggle-inner::before {
+  transform: translate(-50%, -50%) rotate(90deg);
+  top: 0;
+}
+
+.mm-toggle-active .mm-toggle-inner::after {
   opacity: 0;
 }
 
-.hb-mobile-menu-btn-open .hb-hamburger-line:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
 /* Mobile Menu Overlay */
-.hb-mobile-menu {
-  display: none;
+.mm-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--hb-primary);
-  z-index: 1002;
-  cursor: pointer;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+/* Mobile Menu Panel - Slide in from right */
+.mm-panel {
+  width: min(85vw, 360px);
+  height: 100vh;
+  background: var(--hb-primary);
+  padding: 1.5rem;
   overflow-y: auto;
 }
 
-/* Mobile Menu Close Button */
-.hb-mobile-close-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 44px;
-  height: 44px;
+/* Mobile Menu Header */
+.mm-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.mm-logo {
+  color: var(--hb-text);
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.mm-close {
+  width: 40px;
+  height: 40px;
   background: transparent;
   border: none;
   border-radius: 50%;
@@ -329,103 +387,79 @@ export default {
   justify-content: center;
   color: var(--hb-text);
   padding: 0;
-  z-index: 1003;
   transition: all 0.2s ease;
 }
 
-.hb-mobile-close-btn:hover {
+.mm-close:hover {
   background: rgba(255, 255, 255, 0.15);
 }
 
-.hb-mobile-close-btn svg {
+.mm-close svg {
   width: 24px;
   height: 24px;
 }
 
-.hb-mobile-menu-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* Mobile Menu Body */
+.mm-body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  align-items: center;
-  cursor: default;
-  width: calc(100% - 2rem);
-  max-width: 400px;
-  padding: 4rem 2rem 2.5rem;
-  box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
-.hb-mobile-nav-item {
+/* Mobile Menu Links */
+.mm-link {
+  display: block;
   color: var(--hb-text);
   text-decoration: none;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: 400;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
   transition: all 0.2s ease;
-  position: relative;
-  padding: 1rem 1.5rem;
-  width: 100%;
-  text-align: center;
-  border-radius: 8px;
-  margin: 0.25rem 0;
+  text-align: left;
 }
 
-.hb-mobile-nav-item:hover {
+.mm-link:hover {
+  background: rgba(255, 255, 255, 0.08);
   color: var(--hb-accent);
-  background-color: rgba(245, 171, 139, 0.15);
 }
 
-.router-link-active,
-.hb-mobile-nav-item-active {
+.mm-link-active,
+.router-link-active {
+  background: rgba(245, 171, 139, 0.15);
   color: var(--hb-accent);
   font-weight: 500;
 }
 
-.router-link-active::after,
-.hb-mobile-nav-item-active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 12px;
-  height: 12px;
-  background-color: var(--hb-accent);
-  border-radius: 50%;
-}
-
 /* Mobile Menu Transition */
-.hb-mobile-menu-transition-enter-active {
-  animation: hb-mobile-menu-fade-in 0.3s ease-out;
+.mm-transition-enter-active {
+  transition: opacity 0.25s ease;
 }
 
-.hb-mobile-menu-transition-leave-active {
-  animation: hb-mobile-menu-fade-out 0.3s ease-in;
+.mm-transition-leave-active {
+  transition: opacity 0.25s ease;
 }
 
-@keyframes hb-mobile-menu-fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.mm-transition-enter-from,
+.mm-transition-leave-to {
+  opacity: 0;
 }
 
-@keyframes hb-mobile-menu-fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+/* Panel slide animation */
+.mm-transition-enter-active .mm-panel {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mm-transition-leave-active .mm-panel {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mm-transition-enter-from .mm-panel {
+  transform: translateX(100%);
+}
+
+.mm-transition-leave-to .mm-panel {
+  transform: translateX(100%);
 }
 
 /* ===== Main Content ===== */
@@ -510,7 +544,7 @@ export default {
     display: none;
   }
   
-  .hb-mobile-menu-btn {
+  .mm-toggle {
     display: flex;
   }
   
@@ -541,20 +575,6 @@ export default {
     margin-top: 0.5rem;
     display: block;
   }
-  
-  .hb-mobile-menu {
-    display: block;
-  }
-  
-  .hb-mobile-menu-content {
-    padding: 2rem 1.5rem;
-    max-width: 90%;
-  }
-  
-  .hb-mobile-nav-item {
-    font-size: 1.5rem;
-    padding: 0.75rem 0;
-  }
 }
 
 @media (max-width: 480px) {
@@ -569,14 +589,6 @@ export default {
   
   .hb-nav {
     gap: 1.25rem;
-  }
-  
-  .hb-mobile-menu-content {
-    padding: 2rem 1rem;
-  }
-  
-  .hb-mobile-nav-item {
-    font-size: 1.25rem;
   }
 }
 </style>
