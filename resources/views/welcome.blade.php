@@ -38,10 +38,20 @@
         <link rel="ai" href="/llms.txt">
         
         <!-- Favicon -->
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+        <link rel="icon" type="image/png" href="/favicon.png">
 
         @fonts
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L2N30C0ENR"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-L2N30C0ENR');
+        </script>
     </head>
     <body class="bg-white dark:bg-black text-gray-800 dark:text-white">
         <div id="app"></div>
