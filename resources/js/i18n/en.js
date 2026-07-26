@@ -27,7 +27,7 @@ export default {
     hero: {
         subtitle: 'Smart Software Solutions',
         title: 'Smart software solutions for smart businesses',
-        description: 'We build innovative, tailored web applications that help businesses grow. From inventory tracking to online management, we turn your challenges into smart digital solutions.'
+        description: 'We build innovative, tailored web applications that help businesses grow. We turn your challenges into smart digital solutions.'
     },
     
     // Features Section (Home)

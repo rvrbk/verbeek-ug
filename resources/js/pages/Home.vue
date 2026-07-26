@@ -121,12 +121,13 @@ export default {
 
 /* Hero Section */
 .hb-hero-section {
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    padding-top: 4rem;
 }
 
 .hb-hero-bg {

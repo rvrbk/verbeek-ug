@@ -27,7 +27,7 @@ export default {
     hero: {
         subtitle: 'Ebifananyizo Bya Softwaare Bya Nnyono',
         title: 'Ebifananyizo bya softwaare bya nnyono bwe bitusobola',
-        description: 'Tukola ebifananyizo bya web ebyetagisa ebibuga okukula. Oluvannyuma lwokuggya ebya nkola ku nkola zokukwata, tukyusa ebikwata ku ebifananyizo bya softwaare bya nnyono.'
+        description: 'Tukola ebifananyizo bya web ebyetagisa ebibuga okukula. Tukyusa ebikwata ku ebifananyizo bya softwaare bya nnyono.'
     },
     
     // Features Section (Home)
