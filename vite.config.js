@@ -13,8 +13,8 @@ export default defineConfig({
                 bunny('Instrument Sans', {
                     weights: [400, 500, 600],
                 }),
-                google('Inter', {
-                    weights: [300, 400, 500, 600, 700, 800],
+                google('Ubuntu', {
+                    weights: [300, 400, 500, 700],
                     styles: ['normal'],
                 }),
             ],

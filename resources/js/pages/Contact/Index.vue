@@ -75,24 +75,6 @@
                                 </div>
                                 
                                 <div class="hb-form-group">
-                                    <label for="service" class="hb-form-label">Service *</label>
-                                    <select 
-                                        id="service" 
-                                        v-model="form.service" 
-                                        @change="validateField('service')"
-                                        class="hb-form-input hb-form-select"
-                                        :class="{ 'hb-form-input-error': errors.service }"
-                                    >
-                                        <option value="">Select...</option>
-                                        <option value="warehouse">Warehouse Management System</option>
-                                        <option value="real-estate">Real Estate Platform</option>
-                                        <option value="airport">Airport Information System</option>
-                                        <option value="custom">Custom Business Solution</option>
-                                    </select>
-                                    <p v-if="errors.service" class="hb-form-error">{{ errors.service }}</p>
-                                </div>
-                                
-                                <div class="hb-form-group">
                                     <label for="message" class="hb-form-label">Message *</label>
                                     <textarea 
                                         id="message" 
@@ -179,7 +161,6 @@ export default {
             name: '',
             email: '',
             phone: '',
-            service: '',
             message: ''
         })
         
@@ -201,7 +182,6 @@ export default {
         const validateForm = () => {
             validateField('name')
             validateField('email')
-            validateField('service')
             validateField('message')
             return Object.keys(errors.value).length === 0
         }
@@ -222,7 +202,7 @@ export default {
                 const data = await response.json()
                 if (response.ok) {
                     successMessage.value = data.message || 'Thank you! I will get back to you within 24 hours.'
-                    form.value = { name: '', email: '', phone: '', service: '', message: '' }
+                    form.value = { name: '', email: '', phone: '', message: '' }
                 } else {
                     errorMessage.value = data.message || 'Error sending message. Please try again.'
                 }

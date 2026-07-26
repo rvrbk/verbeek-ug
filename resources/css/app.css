@@ -4,7 +4,7 @@
 
 /* Color Palette */
 @theme {
-    --font-sans: 'Inter', 'Helvetica Neue', ui-sans-serif, system-ui, sans-serif;
+    --font-sans: 'Ubuntu', 'Helvetica Neue', ui-sans-serif, system-ui, sans-serif;
     --font-serif: 'Georgia', 'Times New Roman', serif;
     
     /* Primary Colors */

@@ -35,139 +35,72 @@
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="hb-section">
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="hb-section">
             <div class="hb-container">
                 <div class="hb-section-header text-center">
-                    <p class="hb-section-label text-sm tracking-widest uppercase">What I Offer</p>
-                    <h2 class="hb-section-title">How I Can Help Your Business</h2>
+                    <p class="hb-section-label text-sm tracking-widest uppercase">Client Feedback</p>
+                    <h2 class="hb-section-title">What My Clients Say</h2>
                     <p class="hb-section-subtitle max-w-2xl mx-auto">
-                        From warehouse management for farmers to real estate platforms for agents, 
-                        I build custom software solutions tailored to Ugandan businesses.
+                        Hear from Ugandan businesses I've helped transform with custom software solutions.
                     </p>
                 </div>
-                <div class="hb-services-grid">
-                    <div class="hb-service-card">
-                        <h3 class="hb-service-title">Warehouse Management</h3>
-                        <p class="hb-service-description">
-                            Track inventory, reduce waste, and increase profits for small farmers in Uganda.
-                        </p>
-                        <router-link to="/contact" class="hb-service-link">
-                            Learn More
-                        </router-link>
-                    </div>
-                    <div class="hb-service-card">
-                        <h3 class="hb-service-title">Real Estate Platforms</h3>
-                        <p class="hb-service-description">
-                            List, manage, and sell properties online with custom real estate platforms.
-                        </p>
-                        <router-link to="/contact" class="hb-service-link">
-                            Learn More
-                        </router-link>
-                    </div>
-                    <div class="hb-service-card">
-                        <h3 class="hb-service-title">Airport Information Systems</h3>
-                        <p class="hb-service-description">
-                            Crowdsourced airport navigation platforms helping travelers find amenities and services.
-                        </p>
-                        <router-link to="/contact" class="hb-service-link">
-                            Learn More
-                        </router-link>
-                    </div>
-                    <div class="hb-service-card">
-                        <h3 class="hb-service-title">Business Automation</h3>
-                        <p class="hb-service-description">
-                            Streamline your operations and connect your systems for better efficiency.
-                        </p>
-                        <router-link to="/contact" class="hb-service-link">
-                            Learn More
-                        </router-link>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="hb-section">
-            <div class="hb-container">
-                <div class="hb-section-header text-center">
-                    <p class="hb-section-label text-sm tracking-widest uppercase">Featured Projects</p>
-                    <h2 class="hb-section-title">My Work</h2>
-                    <p class="hb-section-subtitle max-w-2xl mx-auto">
-                        See how I've helped Ugandan businesses transform their operations with custom software solutions.
-                    </p>
-                </div>
-                <div class="hb-portfolio-grid">
-                    <div class="hb-portfolio-item">
-                        <div class="hb-portfolio-image hb-portfolio-image-1"></div>
-                        <div class="hb-portfolio-content">
-                            <h3 class="hb-portfolio-title">Warehouse Management System</h3>
-                            <p class="hb-portfolio-description">
-                                Custom inventory tracking system for Ugandan farmers to manage stock across multiple warehouse locations.
+                <div class="hb-testimonials-grid">
+                    <div class="hb-testimonial-card">
+                        <div class="hb-testimonial-content">
+                            <p class="hb-testimonial-text">
+                                "Rik built a warehouse management system that completely transformed our operations. We now track inventory across three locations with ease, reducing waste by 40%. Highly recommended!"
                             </p>
-                            <router-link to="/portfolio/warehouse-management" class="hb-btn hb-btn-primary">
-                                View Details
-                            </router-link>
+                        </div>
+                        <div class="hb-testimonial-author">
+                            <p class="hb-testimonial-name">James Mugisha</p>
+                            <p class="hb-testimonial-company">Mugisha Farms, Kampala</p>
                         </div>
                     </div>
-                    <div class="hb-portfolio-item">
-                        <div class="hb-portfolio-image hb-portfolio-image-2"></div>
-                        <div class="hb-portfolio-content">
-                            <h3 class="hb-portfolio-title">Real Estate Platform</h3>
-                            <p class="hb-portfolio-description">
-                                Property listing and management platform for Ugandan real estate agents to showcase and sell properties online.
+                    <div class="hb-testimonial-card">
+                        <div class="hb-testimonial-content">
+                            <p class="hb-testimonial-text">
+                                "Our real estate business struggled with property management until Rik created a custom platform. Now we list, manage, and sell properties 3x faster. Excellent work!"
                             </p>
-                            <router-link to="/portfolio/real-estate-platform" class="hb-btn hb-btn-primary">
-                                View Details
-                            </router-link>
+                        </div>
+                        <div class="hb-testimonial-author">
+                            <p class="hb-testimonial-name">Sarah Nalubega</p>
+                            <p class="hb-testimonial-company">Nalubega Properties, Entebbe</p>
                         </div>
                     </div>
-                    <div class="hb-portfolio-item">
-                        <div class="hb-portfolio-image hb-portfolio-image-3"></div>
-                        <div class="hb-portfolio-content">
-                            <h3 class="hb-portfolio-title">Airport Information Platform</h3>
-                            <p class="hb-portfolio-description">
-                                Crowdsourced airport navigation system helping travelers find amenities, facilities, and services at airports worldwide.
+                    <div class="hb-testimonial-card">
+                        <div class="hb-testimonial-content">
+                            <p class="hb-testimonial-text">
+                                "The airport information platform Rik developed helps thousands of travelers navigate airports daily. The crowdsourced approach is brilliant and the system is rock solid."
                             </p>
-                            <router-link to="/portfolio/airport-platform" class="hb-btn hb-btn-primary">
-                                View Details
-                            </router-link>
+                        </div>
+                        <div class="hb-testimonial-author">
+                            <p class="hb-testimonial-name">David Okello</p>
+                            <p class="hb-testimonial-company">Travel Guide Uganda</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="hb-section">
-            <div class="hb-container">
-                <div class="hb-about-content max-w-3xl mx-auto text-center">
-                    <p class="hb-section-label text-sm tracking-widest uppercase">About Me</p>
-                    <h2 class="hb-section-title">Who I Am</h2>
-                    <p class="hb-about-text">
-                        I'm Rik Verbeek, a software developer based in Kampala, Uganda. I specialize in building custom web applications that solve real business problems. With expertise in warehouse management systems, real estate platforms, and airport information systems, I create practical, efficient solutions for Ugandan businesses.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="hb-section">
-            <div class="hb-container">
-                <div class="hb-contact-content max-w-3xl mx-auto text-center">
-                    <p class="hb-section-label text-sm tracking-widest uppercase">Get In Touch</p>
-                    <h2 class="hb-section-title">Ready to Transform Your Business?</h2>
-                    <p class="hb-contact-text">
-                        Let's discuss how custom software can solve your unique challenges. First consultation is always free.
-                    </p>
-                    <div class="hb-contact-buttons">
-                        <router-link to="/contact" class="hb-btn hb-btn-primary">
-                            Get a Free Consultation
-                        </router-link>
-                        <a href="https://calendly.com/rik-verbeek/free-consultation" target="_blank" class="hb-btn hb-btn-light">
-                            Book a Call
-                        </a>
-                    </div>
+        <!-- CTA Section -->
+        <section class="hb-section hb-cta-section">
+            <div class="hb-container text-center">
+                <p class="hb-section-label text-sm tracking-widest uppercase">Let's Work Together</p>
+                <h2 class="hb-section-title">Ready to Transform Your Business?</h2>
+                <p class="hb-cta-text max-w-2xl mx-auto">
+                    Explore my services, view my portfolio, or get in touch to discuss your project. First consultation is always free.
+                </p>
+                <div class="hb-cta-buttons">
+                    <router-link to="/services" class="hb-btn hb-btn-light">
+                        View Services
+                    </router-link>
+                    <router-link to="/portfolio" class="hb-btn hb-btn-light">
+                        View Portfolio
+                    </router-link>
+                    <router-link to="/contact" class="hb-btn hb-btn-primary">
+                        Get a Free Consultation
+                    </router-link>
                 </div>
             </div>
         </section>
@@ -405,19 +338,67 @@ export default {
     color: var(--hb-text-muted);
 }
 
-/* Contact Section */
-.hb-contact-content {
-    padding: 2rem 0;
+/* Testimonials Section */
+.hb-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
 }
 
-.hb-contact-text {
+.hb-testimonial-card {
+    padding: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.hb-testimonial-card:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.hb-testimonial-content {
+    margin-bottom: 1.5rem;
+}
+
+.hb-testimonial-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--hb-text-muted);
+    font-style: italic;
+}
+
+.hb-testimonial-author {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.hb-testimonial-name {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--hb-text);
+    margin: 0;
+}
+
+.hb-testimonial-company {
+    font-size: 0.875rem;
+    color: var(--hb-text-muted);
+    margin: 0;
+}
+
+/* CTA Section */
+.hb-cta-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hb-cta-text {
     font-size: 1.125rem;
     line-height: 1.7;
     color: var(--hb-text-muted);
     margin-bottom: 2rem;
 }
 
-.hb-contact-buttons {
+.hb-cta-buttons {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;

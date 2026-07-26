@@ -112,7 +112,7 @@ export default {
     }
     
     const handleScroll = () => {
-      const sections = ['hero', 'services', 'about', 'portfolio']
+      const sections = ['hero', 'testimonials']
       const scrollPosition = window.scrollY + 100
       
       for (const section of sections) {
@@ -163,7 +163,7 @@ export default {
   display: flex;
   flex-direction: column;
   background-color: var(--hb-primary);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: var(--font-ubuntu), var(--font-sans);
   color: var(--hb-text);
   line-height: 1.6;
 }

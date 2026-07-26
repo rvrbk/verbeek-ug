@@ -2,7 +2,19 @@
     <div class="hb-page-content">
         <!-- Hero Section -->
         <section class="hb-section hb-hero-section min-h-[50vh] flex items-center justify-center">
-            <div class="hb-hero-bg"></div>
+            <div class="hb-hero-bg">
+                <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" class="hb-hero-svg">
+                    <line x1="0" y1="400" x2="400" y2="0" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                    <line x1="400" y1="0" x2="800" y2="200" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                    <line x1="800" y1="200" x2="1200" y2="0" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                    <line x1="1200" y1="0" x2="1440" y2="200" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+                    <circle cx="400" cy="0" r="6" fill="#f5ab8b"/>
+                    <circle cx="800" cy="200" r="6" fill="#f5ab8b"/>
+                    <circle cx="1200" cy="0" r="6" fill="#f5ab8b"/>
+                    <circle cx="1440" cy="200" r="6" fill="#f5ab8b"/>
+                    <circle cx="0" cy="400" r="6" fill="#f5ab8b"/>
+                </svg>
+            </div>
             <div class="hb-hero-content text-center relative z-10">
                 <p class="hb-hero-subtitle text-sm tracking-widest uppercase">Portfolio</p>
                 <h1 class="hb-hero-title">My Work</h1>
