@@ -90,10 +90,10 @@ export default {
                 tagline: 'Inventory tracking for Ugandan farmers',
                 fromColor: 'from-orange-400',
                 toColor: 'to-orange-600',
-                technologies: ['Laravel', 'Vue.js', 'MySQL', 'Sanctum API'],
+                technologies: ['Inventory Management', 'Farming', 'Warehouse Operations'],
                 description: 'A comprehensive warehouse management system designed specifically for small-scale farmers in Uganda. This application allows farmers to track their inventory across multiple warehouse locations, monitor stock levels, and generate detailed reports.',
                 challenges: 'The client was struggling with manual inventory tracking which led to significant losses due to spoilage and misplaced stock. They needed a digital solution that was affordable, easy to use on mobile devices, and could work with intermittent internet connectivity.',
-                solution: 'I built a progressive web application using Laravel as the backend and Vue.js for the frontend. The system includes features like barcode scanning, low-stock alerts, expiry date tracking, and offline-first design. The interface was designed to be intuitive for users with limited technical experience.',
+                solution: 'I built a custom web application with features like barcode scanning, low-stock alerts, expiry date tracking, and offline-first design. The interface was designed to be intuitive for users with limited technical experience.',
                 results: 'Inventory losses reduced by 30% within the first 3 months of implementation. The client reported improved efficiency in stock management and better decision-making based on real-time data. The system is now being used across 5 warehouse locations with over 20 staff members.'
             },
             'real-estate-platform': {
@@ -101,22 +101,22 @@ export default {
                 tagline: 'Property listing and management for agents',
                 fromColor: 'from-blue-400',
                 toColor: 'to-blue-600',
-                technologies: ['Vue.js', 'Laravel', 'Inertia.js', 'PostgreSQL'],
-                description: 'A modern property listing and management platform inspired by Funda, designed for real estate agents in Uganda. The platform allows agents to list properties, manage client inquiries, and track sales performance.',
+                technologies: ['Property Listings', 'Real Estate', 'Online Sales'],
+                description: 'A modern property listing and management platform designed for real estate agents in Uganda. The platform allows agents to list properties, manage client inquiries, and track sales performance.',
                 challenges: 'Real estate agents in Uganda lacked a centralized platform to showcase their properties. They were relying on scattered listings across various platforms, making it difficult to manage and track leads effectively.',
                 solution: 'I developed a full-featured real estate platform with property search and filtering, high-quality image galleries, virtual tours, lead management, and analytics. The platform includes a mobile-responsive design and integration with WhatsApp for instant client communication.',
                 results: 'Property listing views increased by 40% within the first month. The client reported a 25% increase in qualified leads and a streamlined sales process. The platform now hosts over 500 active property listings.'
             },
-            'api-integration': {
-                title: 'API Integration Hub',
-                tagline: 'Connecting legacy systems with modern APIs',
+            'airport-platform': {
+                title: 'Airport Information Platform',
+                tagline: 'Crowdsourced airport navigation for travelers',
                 fromColor: 'from-purple-400',
                 toColor: 'to-purple-600',
-                technologies: ['Laravel', 'REST API', 'JSON', 'Queue Workers'],
-                description: 'A robust API integration solution that connects the client\'s legacy enterprise systems with modern cloud-based services. This allows for seamless data synchronization between old and new systems without requiring a complete infrastructure overhaul.',
-                challenges: 'The client had multiple legacy systems that couldn\'t communicate with each other or with newer cloud services. Manual data entry between systems was time-consuming and error-prone, leading to data inconsistencies.',
-                solution: 'I designed a middleware API layer that acts as a bridge between legacy and modern systems. It includes data transformation, validation, error handling, and asynchronous processing. The API supports RESTful endpoints and webhooks for real-time data synchronization.',
-                results: 'Data entry time reduced by 60%. The client saved approximately 20 hours per week in manual data processing. Error rates in data consistency dropped to nearly zero, and the system now handles over 10,000 API requests daily.'
+                technologies: ['Airport Navigation', 'Travel Information', 'Crowdsourcing'],
+                description: 'A crowdsourced airport information platform that helps travelers worldwide find amenities, facilities, and services at any airport. Users can search for airports and find information about restaurants, shops, restrooms, gates, and other airport facilities.',
+                challenges: 'Travelers often struggle to find specific amenities and services at unfamiliar airports. Existing solutions were either incomplete or required extensive manual data entry. The challenge was creating a system that could crowdsource reliable information from travelers worldwide.',
+                solution: 'I built a platform that allows users to contribute and verify airport information. The system includes a verification mechanism where information added by multiple users is marked as reliable. Users can search by airport name, code, or location, and find detailed information with interactive maps.',
+                results: 'The platform now covers over 50 major airports worldwide with thousands of verified amenities. User engagement is high with travelers actively contributing and verifying information, creating a self-sustaining ecosystem of up-to-date airport data.'
             }
         }
         

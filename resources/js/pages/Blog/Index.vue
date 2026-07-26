@@ -69,18 +69,18 @@
                             <div class="hb-blog-card-image hb-blog-image-2"></div>
                             <div class="hb-blog-card-content">
                                 <div class="hb-blog-meta">
-                                    <span class="hb-blog-category">API Integration</span>
+                                    <span class="hb-blog-category">Business Integration</span>
                                     <span class="hb-blog-date">April 20, 2026 • 6 min read</span>
                                 </div>
                                 <h3 class="hb-blog-card-title">
-                                    <router-link to="/blog/api-integration-benefits">
-                                        How API Integrations Can Transform Your Business
+                                    <router-link to="/blog/business-integration-benefits">
+                                        How System Integration Can Transform Your Business
                                     </router-link>
                                 </h3>
                                 <p class="hb-blog-card-excerpt">
-                                    Explore the benefits of connecting your systems and tools through APIs for better efficiency.
+                                    Explore the benefits of connecting your systems and tools for better efficiency.
                                 </p>
-                                <router-link to="/blog/api-integration-benefits" class="hb-blog-card-link">
+                                <router-link to="/blog/business-integration-benefits" class="hb-blog-card-link">
                                     Read more
                                 </router-link>
                             </div>
@@ -90,18 +90,18 @@
                             <div class="hb-blog-card-image hb-blog-image-3"></div>
                             <div class="hb-blog-card-content">
                                 <div class="hb-blog-meta">
-                                    <span class="hb-blog-category">Headless</span>
+                                    <span class="hb-blog-category">Technology</span>
                                     <span class="hb-blog-date">April 10, 2026 • 5 min read</span>
                                 </div>
                                 <h3 class="hb-blog-card-title">
-                                    <router-link to="/blog/headless-web-apps">
-                                        The Future of Web Development: Headless Architectures
+                                    <router-link to="/blog/modern-business-solutions">
+                                        The Future of Business Applications
                                     </router-link>
                                 </h3>
                                 <p class="hb-blog-card-excerpt">
-                                    Discover why headless web apps are becoming the standard for modern, scalable applications.
+                                    Discover why modern web applications are becoming essential for scalable business growth.
                                 </p>
-                                <router-link to="/blog/headless-web-apps" class="hb-blog-card-link">
+                                <router-link to="/blog/modern-business-solutions" class="hb-blog-card-link">
                                     Read more
                                 </router-link>
                             </div>
@@ -111,18 +111,18 @@
                             <div class="hb-blog-card-image hb-blog-image-4"></div>
                             <div class="hb-blog-card-content">
                                 <div class="hb-blog-meta">
-                                    <span class="hb-blog-category">Laravel</span>
+                                    <span class="hb-blog-category">Business Solutions</span>
                                     <span class="hb-blog-date">March 25, 2026 • 7 min read</span>
                                 </div>
                                 <h3 class="hb-blog-card-title">
-                                    <router-link to="/blog/laravel-for-business">
-                                        Why Laravel is the Perfect Framework for Ugandan Businesses
+                                    <router-link to="/blog/business-software-benefits">
+                                        Why Custom Software is Perfect for Ugandan Businesses
                                     </router-link>
                                 </h3>
                                 <p class="hb-blog-card-excerpt">
-                                    Learn how Laravel's features make it ideal for building custom business applications in Uganda.
+                                    Learn how custom business applications can help your company grow in Uganda.
                                 </p>
-                                <router-link to="/blog/laravel-for-business" class="hb-blog-card-link">
+                                <router-link to="/blog/business-software-benefits" class="hb-blog-card-link">
                                     Read more
                                 </router-link>
                             </div>
@@ -132,18 +132,18 @@
                             <div class="hb-blog-card-image hb-blog-image-5"></div>
                             <div class="hb-blog-card-content">
                                 <div class="hb-blog-meta">
-                                    <span class="hb-blog-category">Vue.js</span>
+                                    <span class="hb-blog-category">User Experience</span>
                                     <span class="hb-blog-date">March 15, 2026 • 5 min read</span>
                                 </div>
                                 <h3 class="hb-blog-card-title">
-                                    <router-link to="/blog/vue-js-benefits">
-                                        Building Interactive UIs with Vue.js
+                                    <router-link to="/blog/user-experience-design">
+                                        Building User-Friendly Business Applications
                                     </router-link>
                                 </h3>
                                 <p class="hb-blog-card-excerpt">
-                                    A guide to creating reactive, user-friendly interfaces with Vue.js for your business applications.
+                                    A guide to creating intuitive interfaces for your business applications.
                                 </p>
-                                <router-link to="/blog/vue-js-benefits" class="hb-blog-card-link">
+                                <router-link to="/blog/user-experience-design" class="hb-blog-card-link">
                                     Read more
                                 </router-link>
                             </div>
@@ -218,7 +218,7 @@ export default {
 .hb-cta-btn { margin-top: 1rem; }
 .hb-btn { display: inline-block; padding: 0.75rem 1.5rem; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; border-radius: 0; transition: all 0.2s ease; cursor: pointer; border: 1px solid transparent; }
 .hb-btn-light { background-color: transparent; color: var(--hb-text); border: 1px solid var(--hb-text); }
-.hb-btn-light:hover { background-color: var(--hb-text); color: var(--hb-primary); }
+.hb-btn-light:hover { background-color: rgba(255, 255, 255, 0.2); color: var(--hb-primary); border-color: var(--hb-text); }
 
 /* Featured Post */
 .hb-blog-featured { display: flex; flex-direction: column; margin-bottom: 4rem; background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }

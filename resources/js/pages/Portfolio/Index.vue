@@ -22,12 +22,12 @@
                         <div class="hb-portfolio-content">
                             <h3 class="hb-portfolio-title">Warehouse Management System</h3>
                             <p class="hb-portfolio-description">
-                                Custom Laravel + Vue.js system for Ugandan farmers to track inventory across multiple locations.
+                                Custom inventory tracking system for Ugandan farmers to manage stock across multiple warehouse locations, reduce waste, and increase profits.
                             </p>
                             <div class="hb-portfolio-tags">
-                                <span class="hb-tag">Laravel</span>
-                                <span class="hb-tag">Vue.js</span>
-                                <span class="hb-tag">MySQL</span>
+                                <span class="hb-tag">Inventory</span>
+                                <span class="hb-tag">Farming</span>
+                                <span class="hb-tag">Warehouse</span>
                             </div>
                             <router-link to="/portfolio/warehouse-management" class="hb-btn hb-btn-primary hb-portfolio-btn">
                                 View Project
@@ -41,12 +41,12 @@
                         <div class="hb-portfolio-content">
                             <h3 class="hb-portfolio-title">Real Estate Platform</h3>
                             <p class="hb-portfolio-description">
-                                Funda-inspired property listing and management platform for Ugandan real estate agents.
+                                Property listing and management platform for Ugandan real estate agents to showcase, manage, and sell properties online.
                             </p>
                             <div class="hb-portfolio-tags">
-                                <span class="hb-tag">Laravel</span>
-                                <span class="hb-tag">Vue.js</span>
-                                <span class="hb-tag">Inertia</span>
+                                <span class="hb-tag">Properties</span>
+                                <span class="hb-tag">Listings</span>
+                                <span class="hb-tag">Real Estate</span>
                             </div>
                             <router-link to="/portfolio/real-estate-platform" class="hb-btn hb-btn-primary hb-portfolio-btn">
                                 View Project
@@ -58,73 +58,16 @@
                     <div class="hb-portfolio-item">
                         <div class="hb-portfolio-image hb-portfolio-image-3"></div>
                         <div class="hb-portfolio-content">
-                            <h3 class="hb-portfolio-title">E-commerce Integration</h3>
+                            <h3 class="hb-portfolio-title">Airport Information Platform</h3>
                             <p class="hb-portfolio-description">
-                                Headless e-commerce solution with custom API integrations for seamless payment processing.
+                                Crowdsourced airport navigation system helping travelers worldwide find amenities, facilities, and services at any airport.
                             </p>
                             <div class="hb-portfolio-tags">
-                                <span class="hb-tag">Laravel</span>
-                                <span class="hb-tag">API</span>
-                                <span class="hb-tag">Headless</span>
+                                <span class="hb-tag">Airports</span>
+                                <span class="hb-tag">Travel</span>
+                                <span class="hb-tag">Navigation</span>
                             </div>
-                            <router-link to="/portfolio/ecommerce-integration" class="hb-btn hb-btn-primary hb-portfolio-btn">
-                                View Project
-                            </router-link>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 4 -->
-                    <div class="hb-portfolio-item">
-                        <div class="hb-portfolio-image hb-portfolio-image-4"></div>
-                        <div class="hb-portfolio-content">
-                            <h3 class="hb-portfolio-title">Inventory Tracking</h3>
-                            <p class="hb-portfolio-description">
-                                Real-time inventory management system with barcode scanning and reporting features.
-                            </p>
-                            <div class="hb-portfolio-tags">
-                                <span class="hb-tag">Vue.js</span>
-                                <span class="hb-tag">Firebase</span>
-                                <span class="hb-tag">Mobile</span>
-                            </div>
-                            <router-link to="/portfolio/inventory-tracking" class="hb-btn hb-btn-primary hb-portfolio-btn">
-                                View Project
-                            </router-link>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 5 -->
-                    <div class="hb-portfolio-item">
-                        <div class="hb-portfolio-image hb-portfolio-image-5"></div>
-                        <div class="hb-portfolio-content">
-                            <h3 class="hb-portfolio-title">Property Management</h3>
-                            <p class="hb-portfolio-description">
-                                Comprehensive property management system for handling rentals, maintenance, and tenant communications.
-                            </p>
-                            <div class="hb-portfolio-tags">
-                                <span class="hb-tag">Laravel</span>
-                                <span class="hb-tag">Livewire</span>
-                                <span class="hb-tag">Alpine</span>
-                            </div>
-                            <router-link to="/portfolio/property-management" class="hb-btn hb-btn-primary hb-portfolio-btn">
-                                View Project
-                            </router-link>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 6 -->
-                    <div class="hb-portfolio-item">
-                        <div class="hb-portfolio-image hb-portfolio-image-6"></div>
-                        <div class="hb-portfolio-content">
-                            <h3 class="hb-portfolio-title">Customer Portal</h3>
-                            <p class="hb-portfolio-description">
-                                Self-service customer portal with order tracking, invoice management, and support tickets.
-                            </p>
-                            <div class="hb-portfolio-tags">
-                                <span class="hb-tag">Inertia</span>
-                                <span class="hb-tag">Vue.js</span>
-                                <span class="hb-tag">Tailwind</span>
-                            </div>
-                            <router-link to="/portfolio/customer-portal" class="hb-btn hb-btn-primary hb-portfolio-btn">
+                            <router-link to="/portfolio/airport-platform" class="hb-btn hb-btn-primary hb-portfolio-btn">
                                 View Project
                             </router-link>
                         </div>
@@ -193,9 +136,9 @@ export default {
 .hb-cta-btn { margin-top: 1rem; }
 .hb-btn { display: inline-block; padding: 0.5rem 1rem; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; border-radius: 0; transition: all 0.2s ease; cursor: pointer; border: 1px solid transparent; }
 .hb-btn-primary { background-color: var(--hb-text); color: var(--hb-primary); }
-.hb-btn-primary:hover { background-color: rgba(255, 255, 255, 0.9); }
+.hb-btn-primary:hover { background-color: rgba(255, 255, 255, 0.2); color: var(--hb-primary); border-color: var(--hb-text); }
 .hb-btn-light { background-color: transparent; color: var(--hb-text); border: 1px solid var(--hb-text); }
-.hb-btn-light:hover { background-color: var(--hb-text); color: var(--hb-primary); }
+.hb-btn-light:hover { background-color: rgba(255, 255, 255, 0.2); color: var(--hb-primary); border-color: var(--hb-text); }
 @media (max-width: 768px) { .hb-section { padding: 4rem 0; } .hb-portfolio-grid { grid-template-columns: 1fr; } .hb-hero-bg { opacity: 0.5; } }
 @media (max-width: 480px) { .hb-hero-title { font-size: 1.75rem; } .hb-section-title { font-size: 1.75rem; } }
 </style>

@@ -41,10 +41,10 @@
                     </div>
                     
                     <div class="hb-service-card">
-                        <h3 class="hb-service-title">Real Estate Apps</h3>
+                        <h3 class="hb-service-title">Real Estate Platforms</h3>
                         <p class="hb-service-description">
                             List, manage, and sell properties online with custom real estate platforms. 
-                            Funda-inspired solutions for agents.
+                            Perfect for agents and property managers.
                         </p>
                         <router-link to="/contact" class="hb-service-link">
                             Get a Quote
@@ -52,10 +52,10 @@
                     </div>
                     
                     <div class="hb-service-card">
-                        <h3 class="hb-service-title">API Integrations</h3>
+                        <h3 class="hb-service-title">Airport Information Systems</h3>
                         <p class="hb-service-description">
-                            Connect your legacy systems and tools seamlessly for better efficiency. 
-                            Modern API solutions.
+                            Crowdsourced airport navigation platforms helping travelers find amenities, facilities, 
+                            and services at airports worldwide.
                         </p>
                         <router-link to="/contact" class="hb-service-link">
                             Get a Quote
@@ -63,10 +63,10 @@
                     </div>
                     
                     <div class="hb-service-card">
-                        <h3 class="hb-service-title">Headless Web Apps</h3>
+                        <h3 class="hb-service-title">Business Automation</h3>
                         <p class="hb-service-description">
-                            Fast, secure, and future-proof solutions that scale with your business. 
-                            Laravel + Vue.js expertise.
+                            Streamline your operations and connect your systems for better efficiency. 
+                            Custom solutions for your business needs.
                         </p>
                         <router-link to="/contact" class="hb-service-link">
                             Get a Quote
@@ -129,7 +129,7 @@ export default {
 .hb-cta-btn { margin-top: 1rem; }
 .hb-btn { display: inline-block; padding: 0.75rem 1.5rem; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; border-radius: 0; transition: all 0.2s ease; cursor: pointer; border: 1px solid transparent; }
 .hb-btn-light { background-color: transparent; color: var(--hb-text); border: 1px solid var(--hb-text); }
-.hb-btn-light:hover { background-color: var(--hb-text); color: var(--hb-primary); }
+.hb-btn-light:hover { background-color: rgba(255, 255, 255, 0.2); color: var(--hb-primary); border-color: var(--hb-text); }
 @media (max-width: 768px) { .hb-section { padding: 4rem 0; } .hb-services-grid-large { grid-template-columns: 1fr; } .hb-hero-bg { opacity: 0.5; } }
 @media (max-width: 480px) { .hb-hero-title { font-size: 1.75rem; } .hb-section-title { font-size: 1.75rem; } }
 </style>

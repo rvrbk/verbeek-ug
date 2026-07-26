@@ -57,7 +57,7 @@
                         </router-link>
                     </div>
                     <div class="hb-service-card">
-                        <h3 class="hb-service-title">Real Estate Apps</h3>
+                        <h3 class="hb-service-title">Real Estate Platforms</h3>
                         <p class="hb-service-description">
                             List, manage, and sell properties online with custom real estate platforms.
                         </p>
@@ -66,18 +66,18 @@
                         </router-link>
                     </div>
                     <div class="hb-service-card">
-                        <h3 class="hb-service-title">API Integrations</h3>
+                        <h3 class="hb-service-title">Airport Information Systems</h3>
                         <p class="hb-service-description">
-                            Connect your legacy systems and tools seamlessly for better efficiency.
+                            Crowdsourced airport navigation platforms helping travelers find amenities and services.
                         </p>
                         <router-link to="/contact" class="hb-service-link">
                             Learn More
                         </router-link>
                     </div>
                     <div class="hb-service-card">
-                        <h3 class="hb-service-title">Headless Web Apps</h3>
+                        <h3 class="hb-service-title">Business Automation</h3>
                         <p class="hb-service-description">
-                            Fast, secure, and future-proof solutions that scale with your business.
+                            Streamline your operations and connect your systems for better efficiency.
                         </p>
                         <router-link to="/contact" class="hb-service-link">
                             Learn More
@@ -103,7 +103,7 @@
                         <div class="hb-portfolio-content">
                             <h3 class="hb-portfolio-title">Warehouse Management System</h3>
                             <p class="hb-portfolio-description">
-                                Custom Laravel + Vue.js system for Ugandan farmers to track inventory across multiple locations.
+                                Custom inventory tracking system for Ugandan farmers to manage stock across multiple warehouse locations.
                             </p>
                             <router-link to="/portfolio/warehouse-management" class="hb-btn hb-btn-primary">
                                 View Details
@@ -115,9 +115,21 @@
                         <div class="hb-portfolio-content">
                             <h3 class="hb-portfolio-title">Real Estate Platform</h3>
                             <p class="hb-portfolio-description">
-                                Funda-inspired property listing and management platform for Ugandan real estate agents.
+                                Property listing and management platform for Ugandan real estate agents to showcase and sell properties online.
                             </p>
                             <router-link to="/portfolio/real-estate-platform" class="hb-btn hb-btn-primary">
+                                View Details
+                            </router-link>
+                        </div>
+                    </div>
+                    <div class="hb-portfolio-item">
+                        <div class="hb-portfolio-image hb-portfolio-image-3"></div>
+                        <div class="hb-portfolio-content">
+                            <h3 class="hb-portfolio-title">Airport Information Platform</h3>
+                            <p class="hb-portfolio-description">
+                                Crowdsourced airport navigation system helping travelers find amenities, facilities, and services at airports worldwide.
+                            </p>
+                            <router-link to="/portfolio/airport-platform" class="hb-btn hb-btn-primary">
                                 View Details
                             </router-link>
                         </div>
@@ -133,7 +145,7 @@
                     <p class="hb-section-label text-sm tracking-widest uppercase">About Me</p>
                     <h2 class="hb-section-title">Who I Am</h2>
                     <p class="hb-about-text">
-                        I'm Rik Verbeek, a software developer based in Kampala, Uganda. I specialize in building custom web applications that solve real business problems. With expertise in Laravel, Vue.js, and headless architectures, I create fast, secure, and scalable solutions.
+                        I'm Rik Verbeek, a software developer based in Kampala, Uganda. I specialize in building custom web applications that solve real business problems. With expertise in warehouse management systems, real estate platforms, and airport information systems, I create practical, efficient solutions for Ugandan businesses.
                     </p>
                 </div>
             </div>
@@ -433,7 +445,9 @@ export default {
 }
 
 .hb-btn-primary:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--hb-primary);
+    border-color: var(--hb-text);
 }
 
 .hb-btn-light {
@@ -443,8 +457,9 @@ export default {
 }
 
 .hb-btn-light:hover {
-    background-color: var(--hb-text);
+    background-color: rgba(255, 255, 255, 0.2);
     color: var(--hb-primary);
+    border-color: var(--hb-text);
 }
 
 /* Responsive */

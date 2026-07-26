@@ -84,11 +84,10 @@
                                         :class="{ 'hb-form-input-error': errors.service }"
                                     >
                                         <option value="">Select...</option>
-                                        <option value="warehouse">Warehouse Management</option>
-                                        <option value="real-estate">Real Estate App</option>
-                                        <option value="api">API Integration</option>
-                                        <option value="headless">Headless Web App</option>
-                                        <option value="custom">Custom Solution</option>
+                                        <option value="warehouse">Warehouse Management System</option>
+                                        <option value="real-estate">Real Estate Platform</option>
+                                        <option value="airport">Airport Information System</option>
+                                        <option value="custom">Custom Business Solution</option>
                                     </select>
                                     <p v-if="errors.service" class="hb-form-error">{{ errors.service }}</p>
                                 </div>
@@ -285,10 +284,10 @@ export default {
 .hb-alert-error { background: rgba(244, 67, 54, 0.1); border: 1px solid rgba(244, 67, 54, 0.3); color: rgba(244, 67, 54, 0.8); }
 .hb-btn { display: inline-block; padding: 0.75rem 1.5rem; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; border-radius: 0; transition: all 0.2s ease; cursor: pointer; border: 1px solid transparent; }
 .hb-btn-primary { background-color: var(--hb-text); color: var(--hb-primary); }
-.hb-btn-primary:hover { background-color: rgba(255, 255, 255, 0.9); }
+.hb-btn-primary:hover { background-color: rgba(255, 255, 255, 0.2); color: var(--hb-primary); border-color: var(--hb-text); }
 .hb-btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
 .hb-btn-light { background-color: transparent; color: var(--hb-text); border: 1px solid var(--hb-text); }
-.hb-btn-light:hover { background-color: var(--hb-text); color: var(--hb-primary); }
+.hb-btn-light:hover { background-color: rgba(255, 255, 255, 0.2); color: var(--hb-primary); border-color: var(--hb-text); }
 @media (max-width: 768px) { .hb-section { padding: 4rem 0; } .hb-contact-grid { grid-template-columns: 1fr; } .hb-hero-bg { opacity: 0.5; } }
 @media (max-width: 480px) { .hb-hero-title { font-size: 1.75rem; } }
 </style>

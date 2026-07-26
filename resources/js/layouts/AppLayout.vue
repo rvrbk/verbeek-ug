@@ -362,6 +362,33 @@ export default {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Button Hover - White transparent for all buttons - using :deep() to penetrate scoped styles */
+:deep(.hb-btn:hover),
+:deep(.hb-btn-primary:hover),
+:deep(.hb-btn-light:hover),
+:deep(button:hover),
+:deep(button:not(:disabled):hover),
+:deep(input[type="submit"]:hover),
+:deep(input[type="button"]:hover) {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: var(--hb-primary) !important;
+  border-color: var(--hb-text) !important;
+}
+
+:deep(.hb-btn),
+:deep(.hb-btn-primary),
+:deep(.hb-btn-light) {
+  transition: all 0.2s ease;
+}
+
+:deep(button:disabled),
+:deep(button[disabled]),
+:deep(input[type="submit"]:disabled),
+:deep(input[type="button"]:disabled) {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .hb-footer-content {
   max-width: 1440px;
   margin: 0 auto;
