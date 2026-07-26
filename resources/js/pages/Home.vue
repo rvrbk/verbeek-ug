@@ -23,61 +23,45 @@
             </div>
             <div class="hb-hero-content text-center relative z-10">
                 <p class="hb-hero-subtitle text-sm tracking-widest uppercase">
-                    Custom Software Solutions
+                    {{ $t('hero.subtitle') }}
                 </p>
                 <h1 class="hb-hero-title">
-                    Custom Software Solutions for Ugandan Businesses
+                    {{ $t('hero.title') }}
                 </h1>
                 <p class="hb-hero-description">
-                    I build tailored web applications to help small businesses in Uganda grow. 
-                    From warehouse management to real estate platforms, I turn your challenges into digital solutions.
+                    {{ $t('hero.description') }}
                 </p>
             </div>
         </section>
 
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="hb-section">
+        <!-- Features Section -->
+        <section id="features" class="hb-section">
             <div class="hb-container">
                 <div class="hb-section-header text-center">
-                    <p class="hb-section-label text-sm tracking-widest uppercase">Client Feedback</p>
-                    <h2 class="hb-section-title">What My Clients Say</h2>
+                    <p class="hb-section-label text-sm tracking-widest uppercase">{{ $t('features.section_label') }}</p>
+                    <h2 class="hb-section-title">{{ $t('features.section_title') }}</h2>
                     <p class="hb-section-subtitle max-w-2xl mx-auto">
-                        Hear from Ugandan businesses I've helped transform with custom software solutions.
+                        {{ $t('features.section_subtitle') }}
                     </p>
                 </div>
-                <div class="hb-testimonials-grid">
-                    <div class="hb-testimonial-card">
-                        <div class="hb-testimonial-content">
-                            <p class="hb-testimonial-text">
-                                "Rik built a warehouse management system that completely transformed our operations. We now track inventory across three locations with ease, reducing waste by 40%. Highly recommended!"
-                            </p>
-                        </div>
-                        <div class="hb-testimonial-author">
-                            <p class="hb-testimonial-name">James Mugisha</p>
-                            <p class="hb-testimonial-company">Mugisha Farms, Kampala</p>
-                        </div>
+                <div class="hb-features-grid">
+                    <div class="hb-feature-card">
+                        <h3 class="hb-feature-title">{{ $t('features.expertise.title') }}</h3>
+                        <p class="hb-feature-text">
+                            {{ $t('features.expertise.text') }}
+                        </p>
                     </div>
-                    <div class="hb-testimonial-card">
-                        <div class="hb-testimonial-content">
-                            <p class="hb-testimonial-text">
-                                "Our real estate business struggled with property management until Rik created a custom platform. Now we list, manage, and sell properties 3x faster. Excellent work!"
-                            </p>
-                        </div>
-                        <div class="hb-testimonial-author">
-                            <p class="hb-testimonial-name">Sarah Nalubega</p>
-                            <p class="hb-testimonial-company">Nalubega Properties, Entebbe</p>
-                        </div>
+                    <div class="hb-feature-card">
+                        <h3 class="hb-feature-title">{{ $t('features.experience.title') }}</h3>
+                        <p class="hb-feature-text">
+                            {{ $t('features.experience.text') }}
+                        </p>
                     </div>
-                    <div class="hb-testimonial-card">
-                        <div class="hb-testimonial-content">
-                            <p class="hb-testimonial-text">
-                                "The airport information platform Rik developed helps thousands of travelers navigate airports daily. The crowdsourced approach is brilliant and the system is rock solid."
-                            </p>
-                        </div>
-                        <div class="hb-testimonial-author">
-                            <p class="hb-testimonial-name">David Okello</p>
-                            <p class="hb-testimonial-company">Travel Guide Uganda</p>
-                        </div>
+                    <div class="hb-feature-card">
+                        <h3 class="hb-feature-title">{{ $t('features.support.title') }}</h3>
+                        <p class="hb-feature-text">
+                            {{ $t('features.support.text') }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -86,20 +70,20 @@
         <!-- CTA Section -->
         <section class="hb-section hb-cta-section">
             <div class="hb-container text-center">
-                <p class="hb-section-label text-sm tracking-widest uppercase">Let's Work Together</p>
-                <h2 class="hb-section-title">Ready to Transform Your Business?</h2>
+                <p class="hb-section-label text-sm tracking-widest uppercase">{{ $t('cta.section_label') }}</p>
+                <h2 class="hb-section-title">{{ $t('cta.section_title') }}</h2>
                 <p class="hb-cta-text max-w-2xl mx-auto">
-                    Explore my services, view my portfolio, or get in touch to discuss your project. First consultation is always free.
+                    {{ $t('cta.text') }}
                 </p>
                 <div class="hb-cta-buttons">
-                    <router-link to="/services" class="hb-btn hb-btn-light">
-                        View Services
+                    <router-link to="/services" class="hb-btn hb-btn-primary">
+                        {{ $t('common.view_services') }}
                     </router-link>
-                    <router-link to="/portfolio" class="hb-btn hb-btn-light">
-                        View Portfolio
+                    <router-link to="/portfolio" class="hb-btn hb-btn-primary">
+                        {{ $t('common.view_portfolio') }}
                     </router-link>
                     <router-link to="/contact" class="hb-btn hb-btn-primary">
-                        Get a Free Consultation
+                        {{ $t('common.free_consultation') }}
                     </router-link>
                 </div>
             </div>
@@ -338,7 +322,7 @@ export default {
     color: var(--hb-text-muted);
 }
 
-/* Testimonials Section */
+/* Testimonials Section - Legacy */
 .hb-testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -384,6 +368,39 @@ export default {
     font-size: 0.875rem;
     color: var(--hb-text-muted);
     margin: 0;
+}
+
+/* Features Section */
+.hb-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.hb-feature-card {
+    padding: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.hb-feature-card:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.hb-feature-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--hb-text);
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.hb-feature-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--hb-text-muted);
 }
 
 /* CTA Section */

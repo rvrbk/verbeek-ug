@@ -16,10 +16,10 @@
                 </svg>
             </div>
             <div class="hb-hero-content text-center relative z-10">
-                <p class="hb-hero-subtitle text-sm tracking-widest uppercase">About Me</p>
-                <h1 class="hb-hero-title">Who I Am</h1>
+                <p class="hb-hero-subtitle text-sm tracking-widest uppercase">{{ $t('about.hero_subtitle') }}</p>
+                <h1 class="hb-hero-title">{{ $t('about.hero_title') }}</h1>
                 <p class="hb-hero-description">
-                    I'm Rik Verbeek, a software developer based in Kampala, Uganda. I specialize in building custom web applications that solve real business problems.
+                    {{ $t('about.hero_description') }}
                 </p>
             </div>
         </section>
@@ -29,51 +29,38 @@
             <div class="hb-container">
                 <div class="max-w-4xl mx-auto">
                     <div class="hb-about-grid">
-                        <!-- My Story -->
+                        <!-- Our Story -->
                         <div class="hb-about-card">
-                            <h2 class="hb-about-card-title">My Story</h2>
+                            <h2 class="hb-about-card-title">{{ $t('about.story_title') }}</h2>
                             <p class="hb-about-text">
-                                With several years of experience in web development, I've worked with businesses across Uganda to create custom software solutions. My journey started with a passion for solving problems through technology, and I've since helped numerous clients transform their operations through tailored web applications.
+                                {{ $t('about.story_text1') }}
                             </p>
                             <p class="hb-about-text">
-                                I specialize in building custom business solutions including warehouse management systems, real estate platforms, and airport information systems. Whether you need a simple website or a complex business application, I can help bring your vision to life.
+                                {{ $t('about.story_text2') }}
                             </p>
                         </div>
                         
                         <!-- Expertise -->
                         <div class="hb-about-card">
-                            <h2 class="hb-about-card-title">My Expertise</h2>
+                            <h2 class="hb-about-card-title">{{ $t('about.expertise_title') }}</h2>
                             <div class="hb-expertise-grid">
-                                <div class="hb-expertise-item">
-                                    <svg class="hb-expertise-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                                    </svg>
-                                    <span>Inventory Systems</span>
-                                </div>
-                                <div class="hb-expertise-item">
-                                    <svg class="hb-expertise-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                                    </svg>
-                                    <span>Property Listings</span>
-                                </div>
-                                <div class="hb-expertise-item">
-                                    <svg class="hb-expertise-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                    </svg>
-                                    <span>Location Services</span>
-                                </div>
-                                <div class="hb-expertise-item">
-                                    <svg class="hb-expertise-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                                    </svg>
-                                    <span>Data Management</span>
-                                </div>
                                 <div class="hb-expertise-item">
                                     <svg class="hb-expertise-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
-                                    <span>Business Automation</span>
+                                    <span>{{ $t('about.expertise_items.business_automation') }}</span>
+                                </div>
+                                <div class="hb-expertise-item">
+                                    <svg class="hb-expertise-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                    </svg>
+                                    <span>{{ $t('about.expertise_items.ai_solutions') }}</span>
+                                </div>
+                                <div class="hb-expertise-item">
+                                    <svg class="hb-expertise-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.28-1.25-.743-1.676M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.28-1.25.743-1.676M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 0c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                    </svg>
+                                    <span>{{ $t('about.expertise_items.community_solutions') }}</span>
                                 </div>
                             </div>
                         </div>
@@ -85,13 +72,13 @@
         <!-- CTA Section -->
         <section class="hb-section">
             <div class="hb-container text-center">
-                <p class="hb-section-label text-sm tracking-widest uppercase">Let's Talk</p>
-                <h2 class="hb-section-title">Let's work together</h2>
+                <p class="hb-section-label text-sm tracking-widest uppercase">{{ $t('cta.section_label') }}</p>
+                <h2 class="hb-section-title">{{ $t('cta.section_title') }}</h2>
                 <p class="hb-cta-text max-w-2xl mx-auto">
-                    Have a project in mind? Let's discuss how I can help your business grow with custom software.
+                    {{ $t('about.cta_text') }}
                 </p>
-                <router-link to="/contact" class="hb-btn hb-btn-light hb-cta-btn">
-                    Get in Touch
+                <router-link to="/contact" class="hb-btn hb-btn-primary hb-cta-btn">
+                    {{ $t('contact.connect_title') }}
                 </router-link>
             </div>
         </section>

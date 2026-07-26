@@ -323,8 +323,8 @@ MAIL_PORT=587
 MAIL_USERNAME=noreply@verbeek.ug
 MAIL_PASSWORD=your-smtp-password
 MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS=rik@verbeek.ug
-MAIL_FROM_NAME="Rik Verbeek"
+MAIL_FROM_ADDRESS=contact@verbeek.ug
+MAIL_FROM_NAME="Verbeek"
 ```
 
 ---
@@ -434,7 +434,7 @@ sudo chown -R www-data:www-data storage/ bootstrap/cache/
 
 Get in touch for custom software development:
 
-📧 **Email:** [rik@verbeek.ug](mailto:rik@verbeek.ug)
+📧 **Email:** [contact@verbeek.ug](mailto:contact@verbeek.ug)
 
 🌐 **Website:** [https://verbeek.ug](https://verbeek.ug)
 

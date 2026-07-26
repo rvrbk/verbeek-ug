@@ -8,23 +8,25 @@
           <span class="hb-logo-text">verbeek.ug</span>
         </a>
         
-        <!-- Navigation -->
+        <!-- Navigation - Right aligned -->
         <nav class="hb-nav">
           <router-link to="/" class="hb-nav-item" exact-active-class="hb-nav-item-active">
-            Home
+            {{ $t('nav.home') }}
           </router-link>
           <router-link to="/services" class="hb-nav-item" exact-active-class="hb-nav-item-active">
-            Services
+            {{ $t('nav.services') }}
           </router-link>
           <router-link to="/portfolio" class="hb-nav-item" exact-active-class="hb-nav-item-active">
-            Portfolio
+            {{ $t('nav.portfolio') }}
           </router-link>
           <router-link to="/about" class="hb-nav-item" exact-active-class="hb-nav-item-active">
-            About
+            {{ $t('nav.about') }}
           </router-link>
           <router-link to="/contact" class="hb-nav-item" exact-active-class="hb-nav-item-active">
-            Contact
+            {{ $t('nav.contact') }}
           </router-link>
+          <!-- Language Switcher Dropdown -->
+          <LanguageDropdown class="language-dropdown" />
         </nav>
         
         <!-- Simple Mobile Menu Button -->
@@ -39,11 +41,12 @@
     <!-- Simple Mobile Menu - Below header -->
     <div v-if="mobileMenuOpen" class="mobile-menu" @click="mobileMenuOpen = false">
       <nav class="mobile-nav" @click.stop>
-        <router-link to="/" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">Home</router-link>
-        <router-link to="/services" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">Services</router-link>
-        <router-link to="/portfolio" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">Portfolio</router-link>
-        <router-link to="/about" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">About</router-link>
-        <router-link to="/contact" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">Contact</router-link>
+        <router-link to="/" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">{{ $t('nav.home') }}</router-link>
+        <router-link to="/services" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">{{ $t('nav.services') }}</router-link>
+        <router-link to="/portfolio" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">{{ $t('nav.portfolio') }}</router-link>
+        <router-link to="/about" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">{{ $t('nav.about') }}</router-link>
+        <router-link to="/contact" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">{{ $t('nav.contact') }}</router-link>
+        <LanguageDropdown class="mobile-language-dropdown" />
       </nav>
     </div>
     
@@ -56,16 +59,12 @@
     <footer class="hb-footer">
       <div class="hb-footer-content">
         <div class="hb-footer-left">
-          <p>Rik Verbeek</p>
-          <p>Custom software for Ugandan businesses</p>
+          <p>verbeek.ug</p>
+          <p>{{ $t('footer.tagline') }}</p>
         </div>
         <div class="hb-footer-right">
-          <a href="mailto:rik@verbeek.ug" class="hb-footer-link">rik@verbeek.ug</a>
-          <span class="hb-footer-divider">|</span>
-          <a href="https://wa.me/256" class="hb-footer-link">+256 (WhatsApp)</a>
-          <span class="hb-footer-divider">|</span>
-          <span>Kampala, Uganda</span>
-          <span class="hb-footer-copyright">&copy; {{ new Date().getFullYear() }} Rik Verbeek. All rights reserved.</span>
+          <a href="https://wa.me/31650512842" class="hb-footer-link">+31 6 505 12 842 (WhatsApp)</a>
+          <span class="hb-footer-copyright">&copy; {{ new Date().getFullYear() }}. {{ $t('footer.copyright') }}</span>
         </div>
       </div>
     </footer>
@@ -75,8 +74,12 @@
 <script>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
+import LanguageDropdown from '../components/LanguageDropdown.vue'
 
 export default {
+  components: {
+    LanguageDropdown
+  },
   setup() {
     const router = useRouter()
     const route = useRoute()
@@ -209,6 +212,7 @@ export default {
   display: flex;
   gap: 2rem;
   align-items: center;
+  margin-left: auto;
 }
 
 .hb-nav-item {

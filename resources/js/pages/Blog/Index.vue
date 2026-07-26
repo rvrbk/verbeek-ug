@@ -4,11 +4,10 @@
         <section class="hb-section hb-hero-section min-h-[50vh] flex items-center justify-center">
             <div class="hb-hero-bg"></div>
             <div class="hb-hero-content text-center relative z-10">
-                <p class="hb-hero-subtitle text-sm tracking-widest uppercase">Blog</p>
-                <h1 class="hb-hero-title">Insights & Resources</h1>
+                <p class="hb-hero-subtitle text-sm tracking-widest uppercase">{{ $t('blog.hero_subtitle') }}</p>
+                <h1 class="hb-hero-title">{{ $t('blog.hero_title') }}</h1>
                 <p class="hb-hero-description">
-                    Actionable insights and tips to help Ugandan businesses leverage technology 
-                    for growth and success.
+                    {{ $t('blog.hero_description') }}
                 </p>
             </div>
         </section>
@@ -22,19 +21,19 @@
                         <div class="hb-blog-featured-image"></div>
                         <div class="hb-blog-featured-content">
                             <div class="hb-blog-meta">
-                                <span class="hb-blog-category">Warehouse Management</span>
+                                <span class="hb-blog-category">{{ $t('blog.categories.warehouse_management') }}</span>
                                 <span class="hb-blog-date">May 15, 2026 • 5 min read</span>
                             </div>
                             <h2 class="hb-blog-featured-title">
                                 <router-link to="/blog/5-signs-your-farm-needs-wms">
-                                    5 Signs Your Farm Needs a Warehouse Management System
+                                    {{ $t('blog.posts.wms_signs.title') }}
                                 </router-link>
                             </h2>
                             <p class="hb-blog-featured-excerpt">
-                                Are you losing money due to poor inventory tracking? Discover the warning signs and how a WMS can help your Ugandan farm reduce waste and increase profits.
+                                {{ $t('blog.posts.wms_signs.excerpt') }}
                             </p>
                             <router-link to="/blog/5-signs-your-farm-needs-wms" class="hb-blog-featured-link">
-                                Read more
+                                {{ $t('blog.read_more') }}
                                 <svg class="hb-blog-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
@@ -48,19 +47,19 @@
                             <div class="hb-blog-card-image hb-blog-image-1"></div>
                             <div class="hb-blog-card-content">
                                 <div class="hb-blog-meta">
-                                    <span class="hb-blog-category">Real Estate</span>
+                                    <span class="hb-blog-category">{{ $t('blog.categories.real_estate') }}</span>
                                     <span class="hb-blog-date">May 1, 2026 • 4 min read</span>
                                 </div>
                                 <h3 class="hb-blog-card-title">
                                     <router-link to="/blog/building-real-estate-platform">
-                                        Building a Real Estate Platform: Key Features for Ugandan Agents
+                                        {{ $t('blog.posts.real_estate_platform.title') }}
                                     </router-link>
                                 </h3>
                                 <p class="hb-blog-card-excerpt">
-                                    Learn what it takes to create a successful property listing platform tailored to the Ugandan market.
+                                    {{ $t('blog.posts.real_estate_platform.excerpt') }}
                                 </p>
                                 <router-link to="/blog/building-real-estate-platform" class="hb-blog-card-link">
-                                    Read more
+                                    {{ $t('blog.read_more') }}
                                 </router-link>
                             </div>
                         </article>
@@ -69,19 +68,19 @@
                             <div class="hb-blog-card-image hb-blog-image-2"></div>
                             <div class="hb-blog-card-content">
                                 <div class="hb-blog-meta">
-                                    <span class="hb-blog-category">Business Integration</span>
+                                    <span class="hb-blog-category">{{ $t('blog.categories.business_integration') }}</span>
                                     <span class="hb-blog-date">April 20, 2026 • 6 min read</span>
                                 </div>
                                 <h3 class="hb-blog-card-title">
                                     <router-link to="/blog/business-integration-benefits">
-                                        How System Integration Can Transform Your Business
+                                        {{ $t('blog.posts.business_integration.title') }}
                                     </router-link>
                                 </h3>
                                 <p class="hb-blog-card-excerpt">
-                                    Explore the benefits of connecting your systems and tools for better efficiency.
+                                    {{ $t('blog.posts.business_integration.excerpt') }}
                                 </p>
                                 <router-link to="/blog/business-integration-benefits" class="hb-blog-card-link">
-                                    Read more
+                                    {{ $t('blog.read_more') }}
                                 </router-link>
                             </div>
                         </article>
@@ -90,19 +89,19 @@
                             <div class="hb-blog-card-image hb-blog-image-3"></div>
                             <div class="hb-blog-card-content">
                                 <div class="hb-blog-meta">
-                                    <span class="hb-blog-category">Technology</span>
+                                    <span class="hb-blog-category">{{ $t('blog.categories.technology') }}</span>
                                     <span class="hb-blog-date">April 10, 2026 • 5 min read</span>
                                 </div>
                                 <h3 class="hb-blog-card-title">
                                     <router-link to="/blog/modern-business-solutions">
-                                        The Future of Business Applications
+                                        {{ $t('blog.posts.modern_apps.title') }}
                                     </router-link>
                                 </h3>
                                 <p class="hb-blog-card-excerpt">
-                                    Discover why modern web applications are becoming essential for scalable business growth.
+                                    {{ $t('blog.posts.modern_apps.excerpt') }}
                                 </p>
                                 <router-link to="/blog/modern-business-solutions" class="hb-blog-card-link">
-                                    Read more
+                                    {{ $t('blog.read_more') }}
                                 </router-link>
                             </div>
                         </article>
@@ -111,19 +110,19 @@
                             <div class="hb-blog-card-image hb-blog-image-4"></div>
                             <div class="hb-blog-card-content">
                                 <div class="hb-blog-meta">
-                                    <span class="hb-blog-category">Business Solutions</span>
+                                    <span class="hb-blog-category">{{ $t('blog.categories.business_solutions') }}</span>
                                     <span class="hb-blog-date">March 25, 2026 • 7 min read</span>
                                 </div>
                                 <h3 class="hb-blog-card-title">
                                     <router-link to="/blog/business-software-benefits">
-                                        Why Custom Software is Perfect for Ugandan Businesses
+                                        {{ $t('blog.posts.smart_software.title') }}
                                     </router-link>
                                 </h3>
                                 <p class="hb-blog-card-excerpt">
-                                    Learn how custom business applications can help your company grow in Uganda.
+                                    {{ $t('blog.posts.smart_software.excerpt') }}
                                 </p>
                                 <router-link to="/blog/business-software-benefits" class="hb-blog-card-link">
-                                    Read more
+                                    {{ $t('blog.read_more') }}
                                 </router-link>
                             </div>
                         </article>
@@ -132,19 +131,19 @@
                             <div class="hb-blog-card-image hb-blog-image-5"></div>
                             <div class="hb-blog-card-content">
                                 <div class="hb-blog-meta">
-                                    <span class="hb-blog-category">User Experience</span>
+                                    <span class="hb-blog-category">{{ $t('blog.categories.user_experience') }}</span>
                                     <span class="hb-blog-date">March 15, 2026 • 5 min read</span>
                                 </div>
                                 <h3 class="hb-blog-card-title">
                                     <router-link to="/blog/user-experience-design">
-                                        Building User-Friendly Business Applications
+                                        {{ $t('blog.posts.ux_design.title') }}
                                     </router-link>
                                 </h3>
                                 <p class="hb-blog-card-excerpt">
-                                    A guide to creating intuitive interfaces for your business applications.
+                                    {{ $t('blog.posts.ux_design.excerpt') }}
                                 </p>
                                 <router-link to="/blog/user-experience-design" class="hb-blog-card-link">
-                                    Read more
+                                    {{ $t('blog.read_more') }}
                                 </router-link>
                             </div>
                         </article>
@@ -153,19 +152,19 @@
                             <div class="hb-blog-card-image hb-blog-image-6"></div>
                             <div class="hb-blog-card-content">
                                 <div class="hb-blog-meta">
-                                    <span class="hb-blog-category">Business</span>
+                                    <span class="hb-blog-category">{{ $t('blog.categories.business') }}</span>
                                     <span class="hb-blog-date">March 1, 2026 • 4 min read</span>
                                 </div>
                                 <h3 class="hb-blog-card-title">
-                                    <router-link to="/blog/custom-software-roi">
-                                        The ROI of Custom Software: Is It Worth It?
+                                    <router-link to="/blog/smart-software-roi">
+                                        {{ $t('blog.posts.software_roi.title') }}
                                     </router-link>
                                 </h3>
                                 <p class="hb-blog-card-excerpt">
-                                    Understanding the return on investment for custom software development for your business.
+                                    {{ $t('blog.posts.software_roi.excerpt') }}
                                 </p>
-                                <router-link to="/blog/custom-software-roi" class="hb-blog-card-link">
-                                    Read more
+                                <router-link to="/blog/smart-software-roi" class="hb-blog-card-link">
+                                    {{ $t('blog.read_more') }}
                                 </router-link>
                             </div>
                         </article>
@@ -177,13 +176,13 @@
         <!-- CTA Section -->
         <section class="hb-section">
             <div class="hb-container text-center">
-                <p class="hb-section-label text-sm tracking-widest uppercase">Stay Updated</p>
-                <h2 class="hb-section-title">Want more insights?</h2>
+                <p class="hb-section-label text-sm tracking-widest uppercase">{{ $t('blog.cta.label') }}</p>
+                <h2 class="hb-section-title">{{ $t('blog.cta.title') }}</h2>
                 <p class="hb-cta-text max-w-2xl mx-auto">
-                    Subscribe to my newsletter for regular updates on technology trends and business solutions.
+                    {{ $t('blog.cta_text') }}
                 </p>
-                <router-link to="/contact" class="hb-btn hb-btn-light hb-cta-btn">
-                    Subscribe
+                <router-link to="/contact" class="hb-btn hb-btn-primary hb-cta-btn">
+                    {{ $t('blog.subscribe') }}
                 </router-link>
             </div>
         </section>

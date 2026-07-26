@@ -33,7 +33,7 @@ Route::post('/api/contact', function (Request $request) {
         \Log::error('Failed to send contact email: ' . $e->getMessage());
     }
 
-    return response()->json(['message' => 'Thank you! I will get back to you within 24 hours.']);
+    return response()->json(['message' => 'Thank you! We will get back to you within 24 hours.']);
 });
 
 // Catch all routes for Vue SPA

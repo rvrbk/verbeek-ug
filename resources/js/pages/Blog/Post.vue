@@ -4,10 +4,10 @@
         <section class="hb-hero-section min-h-[60vh] flex items-center justify-center">
             <div class="hb-hero-bg"></div>
             <div class="hb-hero-content text-center relative z-10">
-                <p class="hb-hero-subtitle text-sm tracking-widest uppercase">Blog</p>
-                <h1 class="hb-hero-title">Article Not Found</h1>
+                <p class="hb-hero-subtitle text-sm tracking-widest uppercase">{{ $t('nav.blog') }}</p>
+                <h1 class="hb-hero-title">{{ $t('blog.article_not_found') }}</h1>
                 <p class="hb-hero-description">
-                    This article doesn't exist or the URL may be incorrect. Please check the URL or browse our available articles.
+                    {{ $t('blog.article_not_found_message') }}
                 </p>
             </div>
         </section>
@@ -16,25 +16,24 @@
         <section class="hb-section">
             <div class="hb-container">
                 <div class="max-w-2xl mx-auto text-center">
-                    <router-link to="/blog" class="hb-btn hb-btn-light mb-8 inline-flex items-center">
+                    <router-link to="/blog" class="hb-btn hb-btn-primary mb-8 inline-flex items-center">
                         <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                         </svg>
-                        Back to Blog
+                        {{ $t('blog.back_to_blog') }}
                     </router-link>
                     
                     <div class="hb-card">
-                        <h2 class="hb-section-title mb-4">Available Articles</h2>
+                        <h2 class="hb-section-title mb-4">{{ $t('blog.available_articles') }}</h2>
                         <p class="text-text-muted mb-6">
-                            Browse through my collection of articles covering software development, 
-                            business solutions, and technology insights for Ugandan businesses.
+                            {{ $t('blog.available_articles_description') }}
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
                             <router-link to="/blog" class="hb-btn hb-btn-primary">
-                                View All Articles
+                                {{ $t('blog.view_all') }}
                             </router-link>
-                            <router-link to="/contact" class="hb-btn hb-btn-light">
-                                Contact Me
+                            <router-link to="/contact" class="hb-btn hb-btn-primary">
+                                {{ $t('nav.contact') }}
                             </router-link>
                         </div>
                     </div>

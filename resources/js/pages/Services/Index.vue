@@ -16,11 +16,10 @@
                 </svg>
             </div>
             <div class="hb-hero-content text-center relative z-10">
-                <p class="hb-hero-subtitle text-sm tracking-widest uppercase">Services</p>
-                <h1 class="hb-hero-title">How I Can Help Your Business</h1>
+                <p class="hb-hero-subtitle text-sm tracking-widest uppercase">{{ $t('services.hero_subtitle') }}</p>
+                <h1 class="hb-hero-title">{{ $t('services.hero_title') }}</h1>
                 <p class="hb-hero-description">
-                    From warehouse management for farmers to real estate platforms for agents, 
-                    I build custom software solutions tailored to Ugandan businesses.
+                    {{ $t('services.hero_description') }}
                 </p>
             </div>
         </section>
@@ -30,46 +29,32 @@
             <div class="hb-container">
                 <div class="hb-services-grid-large">
                     <div class="hb-service-card">
-                        <h3 class="hb-service-title">Warehouse Management</h3>
+                        <h3 class="hb-service-title">{{ $t('services.items.business_automation.title') }}</h3>
                         <p class="hb-service-description">
-                            Track inventory, reduce waste, and increase profits for small farmers in Uganda. 
-                            Modern solutions for agricultural businesses.
+                            {{ $t('services.items.business_automation.description') }}
                         </p>
                         <router-link to="/contact" class="hb-service-link">
-                            Get a Quote
+                            {{ $t('common.get_started') }}
                         </router-link>
                     </div>
                     
                     <div class="hb-service-card">
-                        <h3 class="hb-service-title">Real Estate Platforms</h3>
+                        <h3 class="hb-service-title">{{ $t('services.items.ai_solutions.title') }}</h3>
                         <p class="hb-service-description">
-                            List, manage, and sell properties online with custom real estate platforms. 
-                            Perfect for agents and property managers.
+                            {{ $t('services.items.ai_solutions.description') }}
                         </p>
                         <router-link to="/contact" class="hb-service-link">
-                            Get a Quote
+                            {{ $t('common.get_started') }}
                         </router-link>
                     </div>
                     
                     <div class="hb-service-card">
-                        <h3 class="hb-service-title">Airport Information Systems</h3>
+                        <h3 class="hb-service-title">{{ $t('services.items.community_systems.title') }}</h3>
                         <p class="hb-service-description">
-                            Crowdsourced airport navigation platforms helping travelers find amenities, facilities, 
-                            and services at airports worldwide.
+                            {{ $t('services.items.community_systems.description') }}
                         </p>
                         <router-link to="/contact" class="hb-service-link">
-                            Get a Quote
-                        </router-link>
-                    </div>
-                    
-                    <div class="hb-service-card">
-                        <h3 class="hb-service-title">Business Automation</h3>
-                        <p class="hb-service-description">
-                            Streamline your operations and connect your systems for better efficiency. 
-                            Custom solutions for your business needs.
-                        </p>
-                        <router-link to="/contact" class="hb-service-link">
-                            Get a Quote
+                            {{ $t('common.get_started') }}
                         </router-link>
                     </div>
                 </div>
@@ -79,13 +64,13 @@
         <!-- CTA Section -->
         <section class="hb-section">
             <div class="hb-container text-center">
-                <p class="hb-section-label text-sm tracking-widest uppercase">Next Steps</p>
-                <h2 class="hb-section-title">Ready to get started?</h2>
+                <p class="hb-section-label text-sm tracking-widest uppercase">{{ $t('common.get_started') }}</p>
+                <h2 class="hb-section-title">{{ $t('services.hero_title') }}</h2>
                 <p class="hb-cta-text max-w-2xl mx-auto">
-                    Let's discuss which service is right for your business. First consultation is always free.
+                    {{ $t('services.cta_text') }}
                 </p>
-                <router-link to="/contact" class="hb-btn hb-btn-light hb-cta-btn">
-                    Get a Free Consultation
+                <router-link to="/contact" class="hb-btn hb-btn-primary hb-cta-btn">
+                    {{ $t('services.cta_button') }}
                 </router-link>
             </div>
         </section>

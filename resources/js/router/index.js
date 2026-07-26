@@ -5,7 +5,7 @@ const routes = [
         path: '/',
         name: 'Home',
         component: () => import('@/pages/Home.vue'),
-        meta: { title: 'Custom Web Solutions for Ugandan Businesses | Rik Verbeek' }
+        meta: { title: 'Smart Software Solutions | Rik Verbeek' }
     },
     {
         path: '/services',
@@ -18,12 +18,6 @@ const routes = [
         name: 'Portfolio',
         component: () => import('@/pages/Portfolio/Index.vue'),
         meta: { title: 'Portfolio | Rik Verbeek - Software Developer' }
-    },
-    {
-        path: '/portfolio/:id',
-        name: 'PortfolioItem',
-        component: () => import('@/pages/Portfolio/Item.vue'),
-        meta: { title: 'Project | Rik Verbeek' }
     },
     {
         path: '/about',
@@ -66,7 +60,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    document.title = to.meta.title || 'Rik Verbeek - Software Developer for Ugandan Businesses'
+    document.title = to.meta.title || 'Rik Verbeek - Software Developer'
     next()
 })
 

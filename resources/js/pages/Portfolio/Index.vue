@@ -16,10 +16,10 @@
                 </svg>
             </div>
             <div class="hb-hero-content text-center relative z-10">
-                <p class="hb-hero-subtitle text-sm tracking-widest uppercase">Portfolio</p>
-                <h1 class="hb-hero-title">My Work</h1>
+                <p class="hb-hero-subtitle text-sm tracking-widest uppercase">{{ $t('portfolio.hero_subtitle') }}</p>
+                <h1 class="hb-hero-title">{{ $t('portfolio.hero_title') }}</h1>
                 <p class="hb-hero-description">
-                    See how I've helped Ugandan businesses transform their operations with custom software solutions.
+                    {{ $t('portfolio.hero_description') }}
                 </p>
             </div>
         </section>
@@ -28,60 +28,66 @@
         <section class="hb-section">
             <div class="hb-container">
                 <div class="hb-portfolio-grid">
-                    <!-- Project 1 -->
+                    <!-- Project 1: Crowded Airport -->
                     <div class="hb-portfolio-item">
-                        <div class="hb-portfolio-image hb-portfolio-image-1"></div>
+                        <div class="hb-portfolio-image hb-portfolio-image-1" style="height: 200px; background: #1a1a2e; display: flex; align-items: center; justify-content: center; color: #666;">
+                            [Image: {{ $t('portfolio.items.airport.title') }}]
+                        </div>
                         <div class="hb-portfolio-content">
-                            <h3 class="hb-portfolio-title">Warehouse Management System</h3>
+                            <h3 class="hb-portfolio-title">{{ $t('portfolio.items.airport.title') }}</h3>
                             <p class="hb-portfolio-description">
-                                Custom inventory tracking system for Ugandan farmers to manage stock across multiple warehouse locations, reduce waste, and increase profits.
+                                {{ $t('portfolio.items.airport.tagline') }}
                             </p>
                             <div class="hb-portfolio-tags">
-                                <span class="hb-tag">Inventory</span>
-                                <span class="hb-tag">Farming</span>
-                                <span class="hb-tag">Warehouse</span>
+                                <span class="hb-tag">{{ $t('portfolio.items.airport.tags.0') }}</span>
+                                <span class="hb-tag">{{ $t('portfolio.items.airport.tags.1') }}</span>
+                                <span class="hb-tag">{{ $t('portfolio.items.airport.tags.2') }}</span>
                             </div>
-                            <router-link to="/portfolio/warehouse-management" class="hb-btn hb-btn-primary hb-portfolio-btn">
-                                View Project
-                            </router-link>
+                            <a href="https://airport.example.com" target="_blank" class="hb-btn hb-btn-primary hb-portfolio-btn">
+                                {{ $t('common.visit_site') }}
+                            </a>
                         </div>
                     </div>
                     
-                    <!-- Project 2 -->
+                    <!-- Project 2: Warehouse Management for Farmers -->
                     <div class="hb-portfolio-item">
-                        <div class="hb-portfolio-image hb-portfolio-image-2"></div>
+                        <div class="hb-portfolio-image hb-portfolio-image-2" style="height: 200px; background: #1a1a2e; display: flex; align-items: center; justify-content: center; color: #666;">
+                            [Image: {{ $t('portfolio.items.warehouse.title') }}]
+                        </div>
                         <div class="hb-portfolio-content">
-                            <h3 class="hb-portfolio-title">Real Estate Platform</h3>
+                            <h3 class="hb-portfolio-title">{{ $t('portfolio.items.warehouse.title') }}</h3>
                             <p class="hb-portfolio-description">
-                                Property listing and management platform for Ugandan real estate agents to showcase, manage, and sell properties online.
+                                {{ $t('portfolio.items.warehouse.tagline') }}
                             </p>
                             <div class="hb-portfolio-tags">
-                                <span class="hb-tag">Properties</span>
-                                <span class="hb-tag">Listings</span>
-                                <span class="hb-tag">Real Estate</span>
+                                <span class="hb-tag">{{ $t('portfolio.items.warehouse.tags.0') }}</span>
+                                <span class="hb-tag">{{ $t('portfolio.items.warehouse.tags.1') }}</span>
+                                <span class="hb-tag">{{ $t('portfolio.items.warehouse.tags.2') }}</span>
                             </div>
-                            <router-link to="/portfolio/real-estate-platform" class="hb-btn hb-btn-primary hb-portfolio-btn">
-                                View Project
-                            </router-link>
+                            <a href="https://warehouse.example.com" target="_blank" class="hb-btn hb-btn-primary hb-portfolio-btn">
+                                {{ $t('common.visit_site') }}
+                            </a>
                         </div>
                     </div>
                     
-                    <!-- Project 3 -->
+                    <!-- Project 3: Real Estate Platform -->
                     <div class="hb-portfolio-item">
-                        <div class="hb-portfolio-image hb-portfolio-image-3"></div>
+                        <div class="hb-portfolio-image hb-portfolio-image-3" style="height: 200px; background: #1a1a2e; display: flex; align-items: center; justify-content: center; color: #666;">
+                            [Image: {{ $t('portfolio.items.real_estate.title') }}]
+                        </div>
                         <div class="hb-portfolio-content">
-                            <h3 class="hb-portfolio-title">Airport Information Platform</h3>
+                            <h3 class="hb-portfolio-title">{{ $t('portfolio.items.real_estate.title') }}</h3>
                             <p class="hb-portfolio-description">
-                                Crowdsourced airport navigation system helping travelers worldwide find amenities, facilities, and services at any airport.
+                                {{ $t('portfolio.items.real_estate.tagline') }}
                             </p>
                             <div class="hb-portfolio-tags">
-                                <span class="hb-tag">Airports</span>
-                                <span class="hb-tag">Travel</span>
-                                <span class="hb-tag">Navigation</span>
+                                <span class="hb-tag">{{ $t('portfolio.items.real_estate.tags.0') }}</span>
+                                <span class="hb-tag">{{ $t('portfolio.items.real_estate.tags.1') }}</span>
+                                <span class="hb-tag">{{ $t('portfolio.items.real_estate.tags.2') }}</span>
                             </div>
-                            <router-link to="/portfolio/airport-platform" class="hb-btn hb-btn-primary hb-portfolio-btn">
-                                View Project
-                            </router-link>
+                            <a href="https://realestate.example.com" target="_blank" class="hb-btn hb-btn-primary hb-portfolio-btn">
+                                {{ $t('common.visit_site') }}
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -91,13 +97,13 @@
         <!-- CTA Section -->
         <section class="hb-section">
             <div class="hb-container text-center">
-                <p class="hb-section-label text-sm tracking-widest uppercase">Interested?</p>
-                <h2 class="hb-section-title">Have a project in mind?</h2>
+                <p class="hb-section-label text-sm tracking-widest uppercase">{{ $t('portfolio.hero_subtitle') }}</p>
+                <h2 class="hb-section-title">{{ $t('portfolio.hero_title') }}</h2>
                 <p class="hb-cta-text max-w-2xl mx-auto">
-                    Let's discuss how I can create a custom solution for your business. First consultation is free.
+                    {{ $t('portfolio.cta_text') }}
                 </p>
-                <router-link to="/contact" class="hb-btn hb-btn-light hb-cta-btn">
-                    Get Started
+                <router-link to="/contact" class="hb-btn hb-btn-primary hb-cta-btn">
+                    {{ $t('common.get_started') }}
                 </router-link>
             </div>
         </section>
