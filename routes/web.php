@@ -12,7 +12,6 @@ Route::post('/api/contact', function (Request $request) {
         'name' => 'required|string|max:255',
         'email' => 'required|email|max:255',
         'phone' => 'nullable|string|max:50',
-        'service' => 'nullable|string|max:100',
         'message' => 'required|string',
     ]);
 
@@ -21,7 +20,7 @@ Route::post('/api/contact', function (Request $request) {
     // Send email
     try {
         Mail::raw(
-            "Name: {$validated['name']}\n\nEmail: {$validated['email']}\n\nPhone: {$validated['phone']}\n\nService: {$validated['service']}\n\nMessage: {$validated['message']}",
+            "Name: {$validated['name']}\n\nEmail: {$validated['email']}\n\nPhone: " . ($validated['phone'] ?? 'N/A') . "\n\nMessage: {$validated['message']}",
             function ($message) use ($validated) {
                 $message->to('rvrbk.dev@gmail.com');
                 $message->subject('Contact Form Submission from verbeek.ug');
