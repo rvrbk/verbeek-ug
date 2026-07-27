@@ -382,11 +382,12 @@ export default {
 .hb-feature-card {
     padding: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
 }
 
 .hb-feature-card:hover {
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
 .hb-feature-title {
