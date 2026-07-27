@@ -5,7 +5,7 @@
       <div class="hb-header-inner">
         <!-- Logo -->
         <a href="/" class="hb-logo" exact>
-          <span class="hb-logo-text">verbeek.ug</span>
+          <span class="hb-logo-text">verbeek<span class="hb-logo-dot">.</span>ug</span>
         </a>
         
         <!-- Navigation - Right aligned -->
@@ -205,6 +205,10 @@ export default {
 
 .hb-logo-text {
   display: inline-block;
+}
+
+.hb-logo-dot {
+  color: orange;
 }
 
 /* Navigation */
