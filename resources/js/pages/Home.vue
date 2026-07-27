@@ -222,11 +222,12 @@ export default {
 .hb-service-card {
     padding: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
 }
 
 .hb-service-card:hover {
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
 .hb-service-title {
@@ -253,10 +254,14 @@ export default {
     letter-spacing: 0.02em;
     text-transform: uppercase;
     transition: all 0.2s ease;
+    padding: 0.5rem 1rem;
+    background-color: rgba(245, 171, 139, 0.15);
+    border: 1px solid var(--hb-accent);
 }
 
 .hb-service-link:hover {
     color: var(--hb-text);
+    background-color: rgba(245, 171, 139, 0.25);
 }
 
 /* Portfolio Grid */
@@ -440,7 +445,7 @@ export default {
 }
 
 .hb-btn-primary {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
     color: var(--hb-text);
     border: 1px solid var(--hb-text);
 }

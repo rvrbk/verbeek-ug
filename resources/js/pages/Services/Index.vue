@@ -104,15 +104,17 @@ export default {
 .hb-section-title { font-family: Georgia, serif; font-size: clamp(1.75rem, 3vw, 2.25rem); font-weight: 400; line-height: 1.2; color: var(--hb-text); margin-bottom: 1rem; letter-spacing: -0.01em; }
 .hb-container { max-width: 1440px; margin: 0 auto; padding: 0 2rem; }
 .hb-services-grid-large { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
-.hb-service-card { padding: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease; }
-.hb-service-card:hover { background-color: rgba(255, 255, 255, 0.03); }
+.hb-service-card { padding: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.2); background-color: rgba(255, 255, 255, 0.05); transition: all 0.3s ease; }
+.hb-service-card:hover { background-color: rgba(255, 255, 255, 0.08); }
 .hb-service-title { font-family: Georgia, serif; font-size: 1.25rem; font-weight: 400; color: var(--hb-text); margin-bottom: 0.75rem; letter-spacing: -0.01em; }
 .hb-service-description { font-size: 0.95rem; line-height: 1.6; color: var(--hb-text-muted); margin-bottom: 1.5rem; }
-.hb-service-link { display: inline-block; color: var(--hb-accent); font-size: 0.875rem; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; transition: all 0.2s ease; }
-.hb-service-link:hover { color: var(--hb-text); }
+.hb-service-link { display: inline-block; color: var(--hb-accent); font-size: 0.875rem; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; transition: all 0.2s ease; padding: 0.5rem 1rem; background-color: rgba(245, 171, 139, 0.15); border: 1px solid var(--hb-accent); }
+.hb-service-link:hover { color: var(--hb-text); background-color: rgba(245, 171, 139, 0.25); }
 .hb-cta-text { font-size: 1rem; line-height: 1.6; color: var(--hb-text-muted); margin-bottom: 2rem; }
 .hb-cta-btn { margin-top: 1rem; }
 .hb-btn { display: inline-block; padding: 0.75rem 1.5rem; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; text-decoration: none; border-radius: 0; transition: all 0.2s ease; cursor: pointer; border: 1px solid transparent; }
+.hb-btn-primary { background-color: rgba(255, 255, 255, 0.15); color: var(--hb-text); border: 1px solid var(--hb-text); }
+.hb-btn-primary:hover { background-color: rgba(255, 255, 255, 0.2); color: var(--hb-primary); border-color: #ffffff; }
 .hb-btn-light { background-color: transparent; color: var(--hb-text); border: 1px solid var(--hb-text); }
 .hb-btn-light:hover { background-color: rgba(255, 255, 255, 0.2); color: var(--hb-primary); border-color: var(--hb-text); }
 @media (max-width: 768px) { .hb-section { padding: 4rem 0; } .hb-services-grid-large { grid-template-columns: 1fr; } .hb-hero-bg { opacity: 0.5; } }
