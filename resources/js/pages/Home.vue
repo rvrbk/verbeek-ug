@@ -439,14 +439,15 @@ export default {
 }
 
 .hb-btn-primary {
-    background-color: var(--hb-text);
-    color: var(--hb-primary);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--hb-text);
+    border: 1px solid var(--hb-text);
 }
 
 .hb-btn-primary:hover {
     background-color: rgba(255, 255, 255, 0.2);
     color: var(--hb-primary);
-    border-color: var(--hb-text);
+    border-color: #ffffff;
 }
 
 .hb-btn-light {

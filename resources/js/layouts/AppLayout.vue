@@ -376,7 +376,14 @@ export default {
 :deep(input[type="button"]:hover) {
   background-color: rgba(255, 255, 255, 0.2) !important;
   color: var(--hb-primary) !important;
-  border-color: var(--hb-text) !important;
+  border-color: #ffffff !important;
+}
+
+/* Button non-hover state for primary buttons */
+:deep(.hb-btn-primary) {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--hb-text) !important;
+  border: 1px solid var(--hb-text) !important;
 }
 
 :deep(.hb-btn),
