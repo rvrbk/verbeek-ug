@@ -30,8 +30,10 @@
                 <div class="hb-portfolio-grid">
                     <!-- Project 1: Crowded Airport -->
                     <div class="hb-portfolio-item">
-                        <div class="hb-portfolio-image hb-portfolio-image-1" style="height: 200px; background: #1a1a2e; display: flex; align-items: center; justify-content: center; color: #666;">
-                            [Image: {{ $t('portfolio.items.airport.title') }}]
+                        <div class="hb-portfolio-image">
+                            <img :src="crowdedAirportImage"
+                                 :alt="$t('portfolio.items.airport.title')" 
+                                 class="h-full w-full object-cover">
                         </div>
                         <div class="hb-portfolio-content">
                             <h3 class="hb-portfolio-title">{{ $t('portfolio.items.airport.title') }}</h3>
@@ -43,7 +45,7 @@
                                 <span class="hb-tag">{{ $t('portfolio.items.airport.tags.1') }}</span>
                                 <span class="hb-tag">{{ $t('portfolio.items.airport.tags.2') }}</span>
                             </div>
-                            <a href="https://airport.example.com" target="_blank" class="hb-btn hb-btn-primary hb-portfolio-btn">
+                            <a href="https://crowded-airport.com" target="_blank" class="hb-btn hb-btn-primary hb-portfolio-btn">
                                 {{ $t('common.visit_site') }}
                             </a>
                         </div>
@@ -51,8 +53,10 @@
                     
                     <!-- Project 2: Warehouse Management for Farmers -->
                     <div class="hb-portfolio-item">
-                        <div class="hb-portfolio-image hb-portfolio-image-2" style="height: 200px; background: #1a1a2e; display: flex; align-items: center; justify-content: center; color: #666;">
-                            [Image: {{ $t('portfolio.items.warehouse.title') }}]
+                        <div class="hb-portfolio-image">
+                            <img :src="warehouseImage"
+                                 :alt="$t('portfolio.items.warehouse.title')" 
+                                 class="h-full w-full object-cover">
                         </div>
                         <div class="hb-portfolio-content">
                             <h3 class="hb-portfolio-title">{{ $t('portfolio.items.warehouse.title') }}</h3>
@@ -64,16 +68,15 @@
                                 <span class="hb-tag">{{ $t('portfolio.items.warehouse.tags.1') }}</span>
                                 <span class="hb-tag">{{ $t('portfolio.items.warehouse.tags.2') }}</span>
                             </div>
-                            <a href="https://warehouse.example.com" target="_blank" class="hb-btn hb-btn-primary hb-portfolio-btn">
-                                {{ $t('common.visit_site') }}
-                            </a>
                         </div>
                     </div>
                     
                     <!-- Project 3: Real Estate Platform -->
                     <div class="hb-portfolio-item">
-                        <div class="hb-portfolio-image hb-portfolio-image-3" style="height: 200px; background: #1a1a2e; display: flex; align-items: center; justify-content: center; color: #666;">
-                            [Image: {{ $t('portfolio.items.real_estate.title') }}]
+                        <div class="hb-portfolio-image">
+                            <img :src="estatesImage"
+                                 :alt="$t('portfolio.items.real_estate.title')" 
+                                 class="h-full w-full object-cover">
                         </div>
                         <div class="hb-portfolio-content">
                             <h3 class="hb-portfolio-title">{{ $t('portfolio.items.real_estate.title') }}</h3>
@@ -85,7 +88,7 @@
                                 <span class="hb-tag">{{ $t('portfolio.items.real_estate.tags.1') }}</span>
                                 <span class="hb-tag">{{ $t('portfolio.items.real_estate.tags.2') }}</span>
                             </div>
-                            <a href="https://realestate.example.com" target="_blank" class="hb-btn hb-btn-primary hb-portfolio-btn">
+                            <a href="https://real-estates.verbeek.ug/" target="_blank" class="hb-btn hb-btn-primary hb-portfolio-btn">
                                 {{ $t('common.visit_site') }}
                             </a>
                         </div>
@@ -112,7 +115,14 @@
 
 <script>
 export default {
-    name: 'Portfolio'
+    name: 'Portfolio',
+    data() {
+        return {
+            crowdedAirportImage: new URL('/images/portfolio/crowded-airport.png', window.location.origin).href,
+            warehouseImage: new URL('/images/portfolio/warehouse.png', window.location.origin).href,
+            estatesImage: new URL('/images/portfolio/estates.png', window.location.origin).href
+        }
+    }
 }
 </script>
 
@@ -137,13 +147,8 @@ export default {
 .hb-portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
 .hb-portfolio-item { background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); overflow: hidden; transition: all 0.3s ease; }
 .hb-portfolio-item:hover { background-color: rgba(255, 255, 255, 0.08); }
-.hb-portfolio-image { height: 200px; background-size: cover; background-position: center; }
-.hb-portfolio-image-1 { background: linear-gradient(135deg, #003885 0%, #0050a0 100%); }
-.hb-portfolio-image-2 { background: linear-gradient(135deg, #0050a0 0%, #003885 100%); }
-.hb-portfolio-image-3 { background: linear-gradient(135deg, #003885 0%, #0060a0 100%); }
-.hb-portfolio-image-4 { background: linear-gradient(135deg, #0060a0 0%, #003885 100%); }
-.hb-portfolio-image-5 { background: linear-gradient(135deg, #003885 0%, #0070a0 100%); }
-.hb-portfolio-image-6 { background: linear-gradient(135deg, #0070a0 0%, #003885 100%); }
+.hb-portfolio-image { height: 200px; background-size: cover; background-position: center; overflow: hidden; }
+.hb-portfolio-image img { width: 100%; height: 100%; object-fit: cover; }
 .hb-portfolio-content { padding: 1.5rem; }
 .hb-portfolio-title { font-family: Georgia, serif; font-size: 1.25rem; font-weight: 400; color: var(--hb-text); margin-bottom: 0.75rem; letter-spacing: -0.01em; }
 .hb-portfolio-description { font-size: 0.95rem; line-height: 1.6; color: var(--hb-text-muted); margin-bottom: 1rem; }
