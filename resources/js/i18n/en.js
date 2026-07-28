@@ -26,7 +26,7 @@ export default {
     // Hero Section (Home)
     hero: {
         subtitle: 'Smart Software Solutions',
-        title: 'Smart software solutions for smart businesses',
+        title: 'Smart software for smart businesses',
         description: 'We build innovative, tailored web applications that help businesses grow. We turn your challenges into smart digital solutions.'
     },
     

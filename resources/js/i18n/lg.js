@@ -26,7 +26,7 @@ export default {
     // Hero Section (Home)
     hero: {
         subtitle: 'Ebifananyizo Bya Softwaare Bya Nnyono',
-        title: 'Ebifananyizo bya softwaare bya nnyono bwe bitusobola',
+        title: 'Softwaare ennyono bwe bitusobola',
         description: 'Tukola ebifananyizo bya web ebyetagisa ebibuga okukula. Tukyusa ebikwata ku ebifananyizo bya softwaare bya nnyono.'
     },
     
