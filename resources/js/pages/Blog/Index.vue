@@ -44,27 +44,6 @@
                     <!-- Blog Posts Grid -->
                     <div class="hb-blog-grid">
                         <article class="hb-blog-card">
-                            <div class="hb-blog-card-image hb-blog-image-1"></div>
-                            <div class="hb-blog-card-content">
-                                <div class="hb-blog-meta">
-                                    <span class="hb-blog-category">{{ $t('blog.categories.real_estate') }}</span>
-                                    <span class="hb-blog-date">May 1, 2026 • 4 min read</span>
-                                </div>
-                                <h3 class="hb-blog-card-title">
-                                    <router-link to="/blog/building-real-estate-platform">
-                                        {{ $t('blog.posts.real_estate_platform.title') }}
-                                    </router-link>
-                                </h3>
-                                <p class="hb-blog-card-excerpt">
-                                    {{ $t('blog.posts.real_estate_platform.excerpt') }}
-                                </p>
-                                <router-link to="/blog/building-real-estate-platform" class="hb-blog-card-link">
-                                    {{ $t('blog.read_more') }}
-                                </router-link>
-                            </div>
-                        </article>
-
-                        <article class="hb-blog-card">
                             <div class="hb-blog-card-image hb-blog-image-2"></div>
                             <div class="hb-blog-card-content">
                                 <div class="hb-blog-meta">

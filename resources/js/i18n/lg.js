@@ -116,11 +116,6 @@ export default {
                 tagline: 'Okulabiriza ebintu ebyokulabiriza ku byokufuna',
                 tags: ['Okukola Ebintu', 'Okufuna', 'Okwegga ku Ofice']
             },
-            real_estate: {
-                title: 'Enkola Yokulabiriza Enfuma',
-                tagline: 'Okulabiriza nokusobozesa enfuma ku ssomero olwabantu oluvumula baalimo, baagenda nokubaawo',
-                tags: ['Ebyabantu', 'Enfuma', 'Ebifananyizo']
-            },
             airport: {
                 title: 'Enkola Yokulabiriza Enkola Zokufuna',
                 tagline: 'Okulabiriza obufunze obwokulemberwa ku ssomero olwabantu oluvumula baafunye',

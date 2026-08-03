@@ -71,28 +71,7 @@
                         </div>
                     </div>
                     
-                    <!-- Project 3: Real Estate Platform -->
-                    <div class="hb-portfolio-item">
-                        <div class="hb-portfolio-image">
-                            <img :src="estatesImage"
-                                 :alt="$t('portfolio.items.real_estate.title')" 
-                                 class="h-full w-full object-cover">
-                        </div>
-                        <div class="hb-portfolio-content">
-                            <h3 class="hb-portfolio-title">{{ $t('portfolio.items.real_estate.title') }}</h3>
-                            <p class="hb-portfolio-description">
-                                {{ $t('portfolio.items.real_estate.tagline') }}
-                            </p>
-                            <div class="hb-portfolio-tags">
-                                <span class="hb-tag">{{ $t('portfolio.items.real_estate.tags.0') }}</span>
-                                <span class="hb-tag">{{ $t('portfolio.items.real_estate.tags.1') }}</span>
-                                <span class="hb-tag">{{ $t('portfolio.items.real_estate.tags.2') }}</span>
-                            </div>
-                            <a href="https://real-estates.verbeek.ug/" target="_blank" class="hb-btn hb-btn-primary hb-portfolio-btn">
-                                {{ $t('common.visit_site') }}
-                            </a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
@@ -119,8 +98,7 @@ export default {
     data() {
         return {
             crowdedAirportImage: new URL('/images/portfolio/crowded-airport.png', window.location.origin).href,
-            warehouseImage: new URL('/images/portfolio/warehouse.png', window.location.origin).href,
-            estatesImage: new URL('/images/portfolio/estates.png', window.location.origin).href
+            warehouseImage: new URL('/images/portfolio/warehouse.png', window.location.origin).href
         }
     }
 }

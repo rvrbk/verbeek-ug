@@ -117,11 +117,6 @@ export default {
                 tagline: 'Inventory tracking with offline capabilities',
                 tags: ['Inventory', 'Farming', 'Offline']
             },
-            real_estate: {
-                title: 'Real Estate Platform',
-                tagline: 'Property marketplace connecting landlords, buyers and renters',
-                tags: ['Community', 'Real Estate', 'Properties']
-            },
             airport: {
                 title: 'Crowded Airport Platform',
                 tagline: 'Crowd sourced airport navigation platform for travelers',
@@ -189,7 +184,6 @@ export default {
         
         categories: {
             warehouse_management: 'Warehouse Management',
-            real_estate: 'Real Estate',
             business_integration: 'Business Integration',
             technology: 'Technology',
             business_solutions: 'Business Solutions',
@@ -201,10 +195,6 @@ export default {
             wms_signs: {
                 title: '5 Signs Your Farm Needs a Warehouse Management System',
                 excerpt: 'Are you losing money due to poor inventory tracking? Discover the warning signs and how a WMS can help your farm reduce waste and increase profits.'
-            },
-            real_estate_platform: {
-                title: 'Building a Real Estate Platform: Key Features for Agents',
-                excerpt: 'Learn what it takes to create a successful property listing platform tailored to the market.'
             },
             business_integration: {
                 title: 'How System Integration Can Transform Your Business',
