@@ -111,15 +111,15 @@ export default {
         
         // Portfolio items
         items: {
+            prompt_tool: {
+                title: 'Prompt a Tool',
+                tagline: 'Generate extensive prompts for non-technical entrepreneurs',
+                tags: ['AI', 'Prompts', 'Entrepreneurs']
+            },
             warehouse: {
                 title: 'Nkola Yokulabiriza Enkola ku byokufuna',
                 tagline: 'Okulabiriza ebintu ebyokulabiriza ku byokufuna',
                 tags: ['Okukola Ebintu', 'Okufuna', 'Okwegga ku Ofice']
-            },
-            airport: {
-                title: 'Enkola Yokulabiriza Enkola Zokufuna',
-                tagline: 'Okulabiriza obufunze obwokulemberwa ku ssomero olwabantu oluvumula baafunye',
-                tags: ['Ebyabantu', 'Ebifunye', 'Okugenda']
             }
         }
     },

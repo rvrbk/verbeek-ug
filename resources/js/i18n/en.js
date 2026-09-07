@@ -112,15 +112,15 @@ export default {
         
         // Portfolio items
         items: {
+            prompt_tool: {
+                title: 'Prompt a Tool',
+                tagline: 'Generate extensive prompts for non-technical entrepreneurs',
+                tags: ['AI', 'Prompts', 'Entrepreneurs']
+            },
             warehouse: {
                 title: 'Warehouse Management for Farmers',
                 tagline: 'Inventory tracking with offline capabilities',
                 tags: ['Inventory', 'Farming', 'Offline']
-            },
-            airport: {
-                title: 'Crowded Airport Platform',
-                tagline: 'Crowd sourced airport navigation platform for travelers',
-                tags: ['Community', 'Airports', 'Travel']
             }
         }
     },

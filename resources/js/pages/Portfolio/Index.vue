@@ -28,24 +28,24 @@
         <section class="hb-section">
             <div class="hb-container">
                 <div class="hb-portfolio-grid">
-                    <!-- Project 1: Crowded Airport -->
+                    <!-- Project 1: Prompt a Tool -->
                     <div class="hb-portfolio-item">
                         <div class="hb-portfolio-image">
-                            <img :src="crowdedAirportImage"
-                                 :alt="$t('portfolio.items.airport.title')" 
+                            <img :src="promptToolImage"
+                                 :alt="$t('portfolio.items.prompt_tool.title')" 
                                  class="h-full w-full object-cover">
                         </div>
                         <div class="hb-portfolio-content">
-                            <h3 class="hb-portfolio-title">{{ $t('portfolio.items.airport.title') }}</h3>
+                            <h3 class="hb-portfolio-title">{{ $t('portfolio.items.prompt_tool.title') }}</h3>
                             <p class="hb-portfolio-description">
-                                {{ $t('portfolio.items.airport.tagline') }}
+                                {{ $t('portfolio.items.prompt_tool.tagline') }}
                             </p>
                             <div class="hb-portfolio-tags">
-                                <span class="hb-tag">{{ $t('portfolio.items.airport.tags.0') }}</span>
-                                <span class="hb-tag">{{ $t('portfolio.items.airport.tags.1') }}</span>
-                                <span class="hb-tag">{{ $t('portfolio.items.airport.tags.2') }}</span>
+                                <span class="hb-tag">{{ $t('portfolio.items.prompt_tool.tags.0') }}</span>
+                                <span class="hb-tag">{{ $t('portfolio.items.prompt_tool.tags.1') }}</span>
+                                <span class="hb-tag">{{ $t('portfolio.items.prompt_tool.tags.2') }}</span>
                             </div>
-                            <a href="https://crowded-airport.com" target="_blank" class="hb-btn hb-btn-primary hb-portfolio-btn">
+                            <a href="https://prompt-a-tool.com" target="_blank" class="hb-btn hb-btn-primary hb-portfolio-btn">
                                 {{ $t('common.visit_site') }}
                             </a>
                         </div>
@@ -70,7 +70,6 @@
                             </div>
                         </div>
                     </div>
-                    
 
                 </div>
             </div>
@@ -97,7 +96,7 @@ export default {
     name: 'Portfolio',
     data() {
         return {
-            crowdedAirportImage: new URL('/images/portfolio/crowded-airport.png', window.location.origin).href,
+            promptToolImage: new URL('/images/portfolio/prompt.png', window.location.origin).href,
             warehouseImage: new URL('/images/portfolio/warehouse.png', window.location.origin).href
         }
     }
