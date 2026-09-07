@@ -2,14 +2,14 @@
 
 # Verbeek.ug
 
-**Professional Software Development for Ugandan Businesses**
+**Professional Software Development for Businesses**
 
 [![Laravel](https://img.shields.io/badge/Laravel-11.x-FF2D20?logo=laravel&logoColor=white&style=flat-square)](https://laravel.com)
 [![Vue.js](https://img.shields.io/badge/Vue.js-3.x-4FC08D?logo=vuedotjs&logoColor=white&style=flat-square)](https://vuejs.org)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.x-06B6D4?logo=tailwindcss&logoColor=white&style=flat-square)](https://tailwindcss.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-*A modern portfolio website built with Laravel & Vue.js to showcase custom web solutions for farmers, real estate, and small enterprises in Uganda.*
+*A modern portfolio website built with Laravel & Vue.js to showcase custom web solutions for farmers, communities, and businesses.*
 
 </div>
 
@@ -19,7 +19,7 @@
 
 Verbeek.ug is a **Single Page Application (SPA)** that combines Laravel's robust backend capabilities with Vue.js's dynamic frontend. This professional portfolio serves as a central hub to:
 
-- Showcase tailored software solutions for Ugandan businesses
+- Showcase tailored software solutions for businesses
 - Present case studies with measurable outcomes
 - Provide easy contact options for potential clients
 - Share industry insights through blog content

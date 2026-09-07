@@ -135,7 +135,7 @@ export default {
         form_description: 'Fill out the form below and we\'ll get back to you within 24 hours.',
         
         connect_title: 'Connect',
-        location: 'Based in Kampala',
+        location: 'Worldwide Service',
         
         success_message: 'Thank you! We will get back to you within 24 hours.'
     },
@@ -156,7 +156,7 @@ export default {
     contact_info: {
         email: 'Email',
         whatsapp: 'WhatsApp',
-        location: 'Based in Kampala',
+        location: 'Worldwide Service',
         linkedin: 'LinkedIn',
         github: 'GitHub'
     },

@@ -134,7 +134,7 @@ export default {
         form_description: 'Ggweka foomu eno naye tulikukwatagga mu masaa asatu.',
         
         connect_title: 'Tumwanyise',
-        location: 'Tuli mu Kampala',
+        location: 'Ku nsobe zonna',
         
         success_message: 'Webale! Tulikukwatagga mu masaa asatu.'
     },
@@ -155,7 +155,7 @@ export default {
     contact_info: {
         email: 'Imeeyi',
         whatsapp: 'WhatsApp',
-        location: 'Tuli mu Kampala',
+        location: 'Ku nsobe zonna',
         linkedin: 'LinkedIn',
         github: 'GitHub'
     },

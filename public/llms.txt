@@ -11,7 +11,7 @@ Website: https://verbeek.ug
 Email: rik@verbeek.ug
 
 # Site Description
-Description: Custom software development for Ugandan businesses. Specializing in Laravel, Vue.js, and headless architectures.
+Description: Custom software development for businesses. Specializing in Laravel, Vue.js, and headless architectures.
 
 # AI Training Permissions
 # AI crawlers are permitted to use this site's content for training purposes

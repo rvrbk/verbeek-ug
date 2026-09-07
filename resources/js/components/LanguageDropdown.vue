@@ -37,15 +37,13 @@ import { useI18n } from 'vue-i18n'
 export default {
     name: 'LanguageDropdown',
     setup() {
-        const { locale, availableLocales } = useI18n()
+        const { locale, availableLocales, t } = useI18n()
         const isOpen = ref(false)
         const dropdownContainer = ref(null)
         
         const currentLocale = computed(() => locale.value)
         const currentLanguageName = computed(() => {
-            // This would need i18n access, but we'll use a simple mapping
-            const names = { en: 'English', lg: 'Luganda' }
-            return names[locale.value] || locale.value
+            return t(`languages.${locale.value}`) || locale.value
         })
         
         const toggleDropdown = () => {
