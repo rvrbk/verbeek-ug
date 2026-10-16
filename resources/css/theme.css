@@ -587,3 +587,8 @@ html, body { background-color: var(--slate-900) !important; color: #fff; }
 .hb-site-wrapper .hb-main .hb-contact-card:hover .hb-btn:hover { color: var(--orange) !important; }
 .hb-site-wrapper .hb-main .hb-contact-card:hover .hb-alert { color: var(--ink, #121a23) !important; }
 .hb-site-wrapper .hb-main .hb-contact-card .hb-contact-link:hover { color: var(--orange) !important; }
+
+/* Button labels inside cards inherit the button's own colour (the card's text rules must not reach them) */
+.hb-site-wrapper .hb-main .hb-contact-card:hover .hb-btn *,
+.hb-site-wrapper .hb-main .hb-about-card:hover .hb-btn *,
+.hb-site-wrapper .hb-main .hb-service-card:hover .hb-btn * { color: inherit !important; }
