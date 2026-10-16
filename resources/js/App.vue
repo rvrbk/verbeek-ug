@@ -1,7 +1,11 @@
 <template>
-    <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div class="min-h-screen">
         <AppLayout>
-            <router-view />
+            <router-view v-slot="{ Component }">
+                <transition name="page" mode="out-in">
+                    <component :is="Component" />
+                </transition>
+            </router-view>
         </AppLayout>
     </div>
 </template>

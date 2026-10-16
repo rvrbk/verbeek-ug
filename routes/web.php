@@ -37,6 +37,6 @@ Route::post('/api/contact', function (Request $request) {
 });
 
 // Catch all routes for Vue SPA
-Route::get('/{any?}', function () {
-    return view('welcome');
+Route::get('/{any?}', function (Request $request, ?string $any = null) {
+    return view('welcome', ['seo' => \App\Support\Seo::forPath($any ?? '')]);
 })->where('any', '.*');

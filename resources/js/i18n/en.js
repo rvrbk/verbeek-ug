@@ -9,6 +9,16 @@ export default {
         contact: 'Contact'
     },
     
+    // SEO (page titles and descriptions)
+    seo: {
+        home: { title: 'verbeek.ug | Custom Software Solutions for Businesses', description: 'Custom software for businesses: business automation, AI solutions, community platforms and consultancy. Built by verbeek.ug software solutions.' },
+        services: { title: 'Services | verbeek.ug software solutions', description: 'Business automation, AI solutions, community crowd sourced platforms and independent software consultancy, tailored to your business.' },
+        portfolio: { title: 'Portfolio | verbeek.ug software solutions', description: 'Platforms we have built and run: Prompt a Tool, Collective Canvas and Crowded Airport, plus MyCanopy, property listings for Uganda, currently in development.' },
+        about: { title: 'About | verbeek.ug software solutions', description: 'Who we are, how we work and what we specialise in: smart software solutions that solve real business problems.' },
+        contact: { title: 'Contact | verbeek.ug software solutions', description: 'Get in touch for a free first consultation about your software project.' },
+        blog: { title: 'Blog | verbeek.ug software solutions', description: 'Articles and updates from verbeek.ug software solutions.' }
+    },
+
     // Common
     common: {
         learn_more: 'Learn More',
@@ -30,6 +40,26 @@ export default {
         description: 'We build innovative, tailored web applications that help businesses grow. We turn your challenges into smart digital solutions.'
     },
     
+    // Stats strip (Home)
+    stats: {
+        years: 'Years of experience',
+        platforms: 'Live platforms',
+        languages: 'Languages on Prompt a Tool'
+    },
+
+    // Process (Home)
+    process: {
+        label: 'How we work',
+        title: 'From first call to launch and beyond',
+        subtitle: 'A simple, transparent process, so you always know what happens next.',
+        steps: [
+            { title: 'Discover', text: 'We listen, ask the right questions and agree what success looks like.' },
+            { title: 'Design', text: 'A clear plan and a simple prototype, so you can see the idea before we build it.' },
+            { title: 'Build', text: 'We build in small steps and share progress often, so there are no surprises.' },
+            { title: 'Support', text: 'We launch, fix and improve, with 3 months of free bug fixes included.' }
+        ]
+    },
+
     // Features Section (Home)
     features: {
         section_label: 'Why Choose Us',
@@ -71,8 +101,10 @@ export default {
         expertise_items: {
             business_automation: 'Business Automation',
             ai_solutions: 'AI Solutions',
-            community_solutions: 'Community Crowd Sourced Solutions'
+            community_solutions: 'Community Crowd Sourced Solutions',
+            consultancy: 'Consultancy'
         },
+        expertise_note: 'Not sure which one fits your business? We will help you work it out in a free first consultation.',
         
         cta_text: 'Have a project in mind? Let\'s discuss how we can help your business grow with smart software.'
     },
@@ -85,6 +117,18 @@ export default {
         
         cta_text: 'Let\'s discuss which service is right for your business. First consultation is always free.',
         cta_button: 'Get a Free Consultation',
+
+        consultancy: {
+            label: 'Consultancy',
+            title: 'Advice before you build',
+            text: 'Good software starts with the right question. We help you understand what you actually need, what it will take and what to leave out, whether or not you end up working with us to build it.',
+            points: [
+                { title: 'Discovery & scoping', text: 'We turn a vague idea or a business pain point into a clear, prioritised plan.' },
+                { title: 'Technical review', text: 'An honest second opinion on your existing systems, architecture or a quote you have received.' },
+                { title: 'AI & automation roadmap', text: 'Where AI and automation will really save you time, and where they will not.' },
+                { title: 'Hands-on guidance', text: 'Ongoing support for your team while you build, with practical advice rather than slide decks.' }
+            ]
+        },
         
         items: {
             business_automation: {
@@ -98,6 +142,10 @@ export default {
             community_systems: {
                 title: 'Community Crowd Sourced Solutions',
                 description: 'Build connected communities with crowd sourced digital platforms. Engage users, share information, and collaborate effectively.'
+            },
+            consultancy: {
+                title: 'Consultancy',
+                description: 'Not sure where to start? Get practical, independent advice on your software, processes and where AI and automation can help, before you commit to building anything.'
             }
         }
     },
@@ -106,21 +154,60 @@ export default {
     portfolio: {
         hero_subtitle: 'Portfolio',
         hero_title: 'Our Work',
-        hero_description: 'See how we\'ve helped communities and businesses transform their operations with smart software solutions.',
+        hero_description: 'See the platforms we have built and run: an AI prompt generator for entrepreneurs and a collaborative drawing game.',
         
         cta_text: 'Let\'s discuss how we can create a smart solution for your business or community.',
         
+        wip: {
+            label: 'In the works',
+            title: 'What we are working on',
+            subtitle: 'New platforms currently taking shape. Early versions are already live.',
+            status: 'In development',
+            title_item: 'MyCanopy',
+            tagline: 'Property listings across Uganda, on a map',
+            description: 'MyCanopy helps people find properties for rent and sale across Uganda. Browse listings on an interactive map, narrow them down by district, city, price and number of bedrooms, and filter by apartments, houses, land or commercial space. It is available in English and Luganda, and we are growing the listings as we go.',
+            features: [
+                'Quick map search across Uganda',
+                'Filters for location, price, bedrooms and property type',
+                'Rent and sale listings in English and Luganda'
+            ],
+            tags: ['Property', 'Maps', 'Uganda']
+        },
+
         // Portfolio items
         items: {
             prompt_tool: {
                 title: 'Prompt a Tool',
-                tagline: 'Generate extensive prompts for non-technical entrepreneurs',
+                tagline: 'Turn an app idea into ready-to-use AI prompts',
+                description: 'Describe your app idea in plain language, choose a platform (web, iOS, Android or both) and Prompt a Tool generates tailored prompts, roles, agents and skills for your application. It lets non-technical entrepreneurs start building without having to learn how to write prompts.',
+                features: [
+                    'Guided questions instead of a blank page',
+                    'Prompts, roles, agents and skills for your specific app',
+                    'Available in 10 languages, including Luganda and Swahili'
+                ],
                 tags: ['AI', 'Prompts', 'Entrepreneurs']
             },
-            warehouse: {
-                title: 'Warehouse Management for Farmers',
-                tagline: 'Inventory tracking with offline capabilities',
-                tags: ['Inventory', 'Farming', 'Offline']
+            collective_canvas: {
+                title: 'Collective Canvas',
+                tagline: 'Draw blind. Reveal together.',
+                description: 'A collaborative drawing game on one shared canvas. Everyone adds their own piece without seeing what the others drew, and the full picture is only revealed once everyone is done. Every drawing earns points, and a leaderboard ranks the most prolific collective artists.',
+                features: [
+                    'Blind drawing: nobody sees the whole picture until the reveal',
+                    'Points, levels, badges and a leaderboard',
+                    'Live updates, with sign-in through Google or email'
+                ],
+                tags: ['Game', 'Community', 'Real-time']
+            },
+            crowded_airport: {
+                title: 'Crowded Airport',
+                tagline: 'Find your way on any airport in the world',
+                description: 'Never get lost at the airport again. Pick any airport on an interactive world map, tap "Where am I?" and get your bearings, so you can find your way around before you are rushing for a gate.',
+                features: [
+                    'Choose from airports around the world',
+                    'A simple "Where am I?" button to get your bearings',
+                    'Built on open OpenStreetMap data'
+                ],
+                tags: ['Travel', 'Maps', 'Navigation']
             }
         }
     },

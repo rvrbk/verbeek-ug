@@ -9,6 +9,16 @@ export default {
         contact: 'Tumwanyise'
     },
     
+    // SEO (page titles and descriptions)
+    seo: {
+        home: { title: 'verbeek.ug | Software ey\'enjawulo eri bizinensi', description: 'Software ey\'enjawulo eri bizinensi: okukola emirimu mu ngeri ey\'otoma, AI, pulatifomu z\'abantu n\'okuwabula. Ekoleddwa verbeek.ug software solutions.' },
+        services: { title: 'Obuweereza | verbeek.ug software solutions', description: 'Okukola emirimu mu ngeri ey\'otoma, AI, pulatifomu z\'abantu n\'okuwabula ku software, nga bikwatagana ne bizinensi yo.' },
+        portfolio: { title: 'Bye Tukoze | verbeek.ug software solutions', description: 'Pulatifomu ze twazimba: Prompt a Tool, Collective Canvas ne Crowded Airport, ne MyCanopy ekyakolebwako.' },
+        about: { title: 'Ebitukwatako | verbeek.ug software solutions', description: 'Abo be tuli, engeri gye tukolamu n\'ebyo bye tukugu: software ennungi ezigonjoola ebizibu bya bizinensi.' },
+        contact: { title: 'Tukwatagane | verbeek.ug software solutions', description: 'Tukwatagane okufuna okuteesa okusooka okw\'obwereere ku pulojekiti yo eya software.' },
+        blog: { title: 'Blog | verbeek.ug software solutions', description: 'Ebiwandiiko n\'amawulire okuva ku verbeek.ug software solutions.' }
+    },
+
     // Common
     common: {
         learn_more: 'Jjukira Bwongole',
@@ -30,6 +40,26 @@ export default {
         description: 'Tukola ebifananyizo bya web ebyetagisa ebibuga okukula. Tukyusa ebikwata ku ebifananyizo bya softwaare bya nnyono.'
     },
     
+    // Stats strip (Home)
+    stats: {
+        years: 'Emyaka egy\'obumanyi',
+        platforms: 'Pulatifomu ezikola',
+        languages: 'Ennimi ku Prompt a Tool'
+    },
+
+    // Process (Home)
+    process: {
+        label: 'Engeri gye tukolamu',
+        title: 'Okuva ku kuyita okwasooka okutuuka ku kutandika n\'okweyongerayo',
+        subtitle: 'Enkola ennyangu era eyeeyoleka, osobole okumanya ekiddako.',
+        steps: [
+            { title: 'Okuzuula', text: 'Tuwuliriza, tubuuza ebibuuzo ebituufu, ne tukkiriziganya ku ky\'obuwanguzi.' },
+            { title: 'Okukola enteekateeka', text: 'Enteekateeka entegeerekeka n\'ekyokulabirako ekyangu, olabe ekirowoozo nga tetunnaba kuzimba.' },
+            { title: 'Okuzimba', text: 'Tuzimba mpolampola era tukubuulira buli kaseera ebigenda mu maaso, nga tewali kyewuunyo.' },
+            { title: 'Okuwagira', text: 'Tutandika, tutereeza era tulongoosa, nga kuliko emyezi 3 egy\'okutereeza ensobi mu bwereere.' }
+        ]
+    },
+
     // Features Section (Home)
     features: {
         section_label: 'Lwaki Tulonda Tuwe',
@@ -70,8 +100,10 @@ export default {
         expertise_items: {
             business_automation: 'Okukozesa Ebikwata Ku Buwumbi',
             ai_solutions: 'Ebifananyizo Bya AI',
-            community_solutions: 'Ebifananyizo Byokulemberwa'
+            community_solutions: 'Ebifananyizo Byokulemberwa',
+            consultancy: 'Okuwabula'
         },
+        expertise_note: 'Tomanyi kiruwa ekikutuukira? Tujja kukuyamba okukizuula mu kuteesa okusooka okw\'obwereere.',
         
         cta_text: 'Oli na kifuna ekyokubala? Tujjukire lwaki tukozesa okukola ebibuga byo okudduka naddala ebifananyizo bya softwaare bya nnyono.'
     },
@@ -84,6 +116,18 @@ export default {
         
         cta_text: 'Tujjukire lwaki kifananyo kye kifuna ebibuga byo. Okusabira kwokulabiriza kubugwaada kubwa buli kiseera.',
         cta_button: 'Kusabira Kwokulabiriza Kubugwaada',
+
+        consultancy: {
+            label: 'Okuwabula',
+            title: 'Amagezi nga tonnazimba',
+            text: 'Software ennungi etandika n\'ekibuuzo ekituufu. Tukuyamba okutegeera by\'olina ddala okwetaaga, ebyetaagisa n\'ebiteetaagisa, ne bwe tutaakole wamu okuzimba.',
+            points: [
+                { title: 'Okunoonyereza n\'okuteekateeka', text: 'Tufuula ekirowoozo oba ekizibu ky\'obizinensi okuba enteekateeka entegeerekeka.' },
+                { title: 'Okwekebejja tekinologiya', text: 'Endowooza ey\'amazima ku nkola zo eziriwo oba ku muwendo gw\'ofunye.' },
+                { title: 'Ekkubo lya AI n\'okukola mu ngeri ey\'otoma', text: 'Wa AI w\'ejja okukuwonya obudde, ne wa w\'etajja.' },
+                { title: 'Obuyambi obw\'omu ngalo', text: 'Okuwagira ttiimu yo nga muzimba, n\'amagezi ag\'omugaso so si bigambo bya mpisa bwokka.' }
+            ]
+        },
         
         items: {
             business_automation: {
@@ -97,6 +141,10 @@ export default {
             community_systems: {
                 title: 'Ebifananyizo Byokulemberwa',
                 description: 'Kola ssomero ezikulemberwa naddala ebifananyizo bya digital. Kozesa abantu okwetaaga, okwengera obufunze, naddala okwumanya naddala.'
+            },
+            consultancy: {
+                title: 'Okuwabula',
+                description: 'Tomanyi w\'otandikira? Funa amagezi ag\'omugaso, ag\'obwannannyini ku software yo, enkola zo, ne wetegeerera AI n\'okukola mu ngeri ey\'otoma we biyinza okukuyamba, nga tonnatandika kukola.'
             }
         }
     },
@@ -105,21 +153,60 @@ export default {
     portfolio: {
         hero_subtitle: 'Ebifananyizo Byaffe',
         hero_title: 'Bikola Byaffe',
-        hero_description: 'Jjukira lwaki tukulabirize abibuga naddala ssomero okutandika ebyo byabyo naddala ebifananyizo bya softwaare bya nnyono.',
+        hero_description: 'Laba pulatifomu ze twazimba era ze tuddukanya: ekikozesebwa kya AI eky\'okukola prompts eky\'bannabizinensi, n\'omuzannyo gw\'okusiiga ekifaananyi ekimu abantu bangi.',
         
         cta_text: 'Tujjukire lwaki tukozesa okukola kifananyo kye kifuna ebibuga byo njogera ssomero.',
         
+        wip: {
+            label: 'Bye tukola kati',
+            title: 'Bye tutambulizaako',
+            subtitle: 'Pulatifomu empya ezikyakolebwako. Enkola ezisooka zaatandika dda okukozesebwa.',
+            status: 'Ekyakolebwako',
+            title_item: 'MyCanopy',
+            tagline: 'Ebizimbe n\'ettaka mu Uganda yonna, ku maapu',
+            description: 'MyCanopy ekuyamba okuzuula ebizimbe n\'ettaka eby\'okupangisa n\'okutunda mu Uganda yonna. Noonya ku maapu, ozuule nga ogoberera disitulikiti, ekibuga, omuwendo n\'ebisenge, era olonde amayumba, ebizimbe eby\'ennyumba z\'okupangisa, ettaka oba ebifo eby\'obusuubuzi. Kiriko mu Lungereza ne mu Luganda, era tweyongera okugattako ebisookera ddala.',
+            features: [
+                'Okunoonya amangu ku maapu mu Uganda yonna',
+                'Okulonda ku kifo, omuwendo, ebisenge n\'ekika ky\'ekizimbe',
+                'Ebipangisibwa n\'ebitundibwa mu Lungereza ne mu Luganda'
+            ],
+            tags: ['Ebizimbe', 'Amaapu', 'Uganda']
+        },
+
         // Portfolio items
         items: {
             prompt_tool: {
                 title: 'Prompt a Tool',
-                tagline: 'Generate extensive prompts for non-technical entrepreneurs',
-                tags: ['AI', 'Prompts', 'Entrepreneurs']
+                tagline: 'Fuula ekirowoozo kya app yo prompts za AI ezituukiridde',
+                description: 'Nnyonnyola ekirowoozo kya app yo mu bigambo ebyangu, londa pulatifomu (web, iOS, Android oba zombi), olwo Prompt a Tool ekukolera prompts, roles, agents ne skills ebikwatagana n\'app yo. Kiyamba bannannyini bizinensi abatali ba tekinologiya okutandika okukola nga tebamanyi kuwandiika prompts.',
+                features: [
+                    'Ebibuuzo ebikuluŋŋamya mu kifo ky\'olupapula olweru',
+                    'Prompts, roles, agents ne skills eby\'app yo yennyini',
+                    'Kiriko ennimi 10, nga mw\'otwalidde Oluganda n\'Oswahili'
+                ],
+                tags: ['AI', 'Prompts', 'Bannabizinensi']
             },
-            warehouse: {
-                title: 'Nkola Yokulabiriza Enkola ku byokufuna',
-                tagline: 'Okulabiriza ebintu ebyokulabiriza ku byokufuna',
-                tags: ['Okukola Ebintu', 'Okufuna', 'Okwegga ku Ofice']
+            collective_canvas: {
+                title: 'Collective Canvas',
+                tagline: 'Siiga nga tolaba. Mulabe wamu.',
+                description: 'Muzannyo gwa kusiiga ekifaananyi ekimu abantu bangi. Buli omu agattako ekitundu kye nga talaba balala bye basiize, era ekifaananyi ekijjuvu kirabika bwe bamala bonna. Buli kifaananyi ky\'oweereza kikuwa obubonero, ate olukalala lw\'abasinga (leaderboard) lulaga abasiize ebisinga.',
+                features: [
+                    'Siiga nga tolaba: tewali alaba kifaananyi kyonna okutuusa lwe kiggulwa',
+                    'Obubonero, emitendera, badges ne leaderboard',
+                    'Okulaba ebipya mangu ago, n\'okuyingira ne Google oba email'
+                ],
+                tags: ['Omuzannyo', 'Abantu', 'Mangu ago']
+            },
+            crowded_airport: {
+                title: 'Crowded Airport',
+                tagline: 'Zuula ekkubo mu kisaawe ky\'ennyonyi kyonna ku nsi',
+                description: 'Tokyayinga nate mu kisaawe ky\'ennyonyi. Londa ekisaawe kyonna ku maapu y\'ensi yonna, nyiga "Where am I?" olabe w\'oli, osobole okumanya ekkubo nga tonnaba kukka lubiri okutuuka ku gate yo.',
+                features: [
+                    'Londa mu bisaawe by\'ennyonyi eby\'ensi yonna',
+                    'Ekibonero kimu ekyangu ekya "Where am I?" okumanya w\'oli',
+                    'Kizimbibbwa ku data ya OpenStreetMap ey\'obwereere'
+                ],
+                tags: ['Okutambula', 'Amaapu', 'Okuzuula ekkubo']
             }
         }
     },

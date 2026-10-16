@@ -1,7 +1,8 @@
 <template>
   <div class="hb-site-wrapper">
     <!-- Header -->
-    <header class="hb-header">
+    <div class="hb-progress" aria-hidden="true"></div>
+    <header class="hb-header" :class="{ 'hb-header-scrolled': scrolled }">
       <div class="hb-header-inner">
         <!-- Logo -->
         <a href="/" class="hb-logo" exact>
@@ -75,6 +76,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import LanguageDropdown from '../components/LanguageDropdown.vue'
+import { initMotion } from '../motion'
 
 export default {
   components: {
@@ -85,6 +87,7 @@ export default {
     const route = useRoute()
     const mobileMenuOpen = ref(false)
     const currentSection = ref('')
+    const scrolled = ref(false)
     
     const navigateToSection = (sectionId) => {
       currentSection.value = sectionId
@@ -131,8 +134,51 @@ export default {
       }
     }
     
+    // ---- Motion: scroll progress, parallax vars, reveal-on-scroll ----
+    let raf = 0
+    const onScrollFrame = () => {
+      raf = 0
+      const y = window.scrollY
+      const max = document.documentElement.scrollHeight - window.innerHeight
+      const root = document.documentElement.style
+      root.setProperty('--sy', y.toFixed(1))
+      root.setProperty('--progress', max > 0 ? (y / max).toFixed(4) : '0')
+      scrolled.value = y > 24
+    }
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(onScrollFrame) }
+
+    const REVEAL = '.hb-section-header, .hb-wip-header, .hb-feature-card, .hb-service-card, .hb-about-card, .hb-contact-card, .hb-expertise-item, .hb-consultancy-point, .hb-project, .hb-cta-section .hb-container, .hb-about-grid > *, .hb-contact-grid > *, .hb-blog-card'
+    let io = null
+    let mo = null
+    const scan = () => {
+      document.querySelectorAll(REVEAL).forEach((el) => {
+        if (el.dataset.mo) return
+        el.dataset.mo = '1'
+        const sibs = el.parentElement ? Array.from(el.parentElement.children).filter((c) => c.matches(REVEAL)) : []
+        el.style.setProperty('--d', Math.max(0, sibs.indexOf(el)) * 110 + 'ms')
+        el.classList.add('mo')
+        io.observe(el)
+      })
+    }
+    const setupReveal = () => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return
+      io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add('mo-in'); io.unobserve(e.target) }
+        })
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' })
+      scan()
+      let t = 0
+      mo = new MutationObserver(() => { clearTimeout(t); t = setTimeout(scan, 60) })
+      mo.observe(document.querySelector('.hb-main'), { childList: true, subtree: true })
+    }
+
     onMounted(() => {
       window.addEventListener('scroll', handleScroll)
+      window.addEventListener('scroll', onScroll, { passive: true })
+      onScrollFrame()
+      setupReveal()
+      initMotion()
       handleScroll()
       
       if (route.hash) {
@@ -142,10 +188,13 @@ export default {
     
     onUnmounted(() => {
       window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('scroll', onScroll)
+      io && io.disconnect()
+      mo && mo.disconnect()
       document.body.style.overflow = ''
     })
     
-    return { mobileMenuOpen, currentSection, navigateToSection, toggleMobileMenu, closeMobileMenu, route }
+    return { scrolled, mobileMenuOpen, currentSection, navigateToSection, toggleMobileMenu, closeMobileMenu, route }
   }
 }
 </script>

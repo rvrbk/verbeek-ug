@@ -24,54 +24,100 @@
             </div>
         </section>
 
-        <!-- Portfolio Grid -->
+        <!-- Projects -->
         <section class="hb-section">
             <div class="hb-container">
-                <div class="hb-portfolio-grid">
-                    <!-- Project 1: Prompt a Tool -->
-                    <div class="hb-portfolio-item">
-                        <div class="hb-portfolio-image">
-                            <img :src="promptToolImage"
-                                 :alt="$t('portfolio.items.prompt_tool.title')" 
-                                 class="h-full w-full object-cover">
-                        </div>
-                        <div class="hb-portfolio-content">
+                <div class="hb-projects">
+                    <article class="hb-project">
+                        <a href="https://prompt-a-tool.com" target="_blank" rel="noopener" class="hb-project-media" :aria-label="$t('portfolio.items.prompt_tool.title')">
+                            <PromptVisual />
+                        </a>
+                        <div class="hb-project-body">
                             <h3 class="hb-portfolio-title">{{ $t('portfolio.items.prompt_tool.title') }}</h3>
-                            <p class="hb-portfolio-description">
-                                {{ $t('portfolio.items.prompt_tool.tagline') }}
-                            </p>
+                            <p class="hb-project-tagline">{{ $t('portfolio.items.prompt_tool.tagline') }}</p>
+                            <p class="hb-portfolio-description">{{ $t('portfolio.items.prompt_tool.description') }}</p>
+                            <ul class="hb-project-features">
+                                <li v-for="n in 3" :key="n">{{ $t('portfolio.items.prompt_tool.features.' + (n - 1)) }}</li>
+                            </ul>
                             <div class="hb-portfolio-tags">
-                                <span class="hb-tag">{{ $t('portfolio.items.prompt_tool.tags.0') }}</span>
-                                <span class="hb-tag">{{ $t('portfolio.items.prompt_tool.tags.1') }}</span>
-                                <span class="hb-tag">{{ $t('portfolio.items.prompt_tool.tags.2') }}</span>
+                                <span v-for="n in 3" :key="n" class="hb-tag">{{ $t('portfolio.items.prompt_tool.tags.' + (n - 1)) }}</span>
                             </div>
-                            <a href="https://prompt-a-tool.com" target="_blank" class="hb-btn hb-btn-primary hb-portfolio-btn">
+                            <a href="https://prompt-a-tool.com" target="_blank" rel="noopener" class="hb-btn hb-btn-primary hb-portfolio-btn">
                                 {{ $t('common.visit_site') }}
                             </a>
                         </div>
-                    </div>
-                    
-                    <!-- Project 2: Warehouse Management for Farmers -->
-                    <div class="hb-portfolio-item">
-                        <div class="hb-portfolio-image">
-                            <img :src="warehouseImage"
-                                 :alt="$t('portfolio.items.warehouse.title')" 
-                                 class="h-full w-full object-cover">
-                        </div>
-                        <div class="hb-portfolio-content">
-                            <h3 class="hb-portfolio-title">{{ $t('portfolio.items.warehouse.title') }}</h3>
-                            <p class="hb-portfolio-description">
-                                {{ $t('portfolio.items.warehouse.tagline') }}
-                            </p>
-                            <div class="hb-portfolio-tags">
-                                <span class="hb-tag">{{ $t('portfolio.items.warehouse.tags.0') }}</span>
-                                <span class="hb-tag">{{ $t('portfolio.items.warehouse.tags.1') }}</span>
-                                <span class="hb-tag">{{ $t('portfolio.items.warehouse.tags.2') }}</span>
-                            </div>
-                        </div>
-                    </div>
+                    </article>
 
+                    <article class="hb-project">
+                        <a href="https://collective-canvas.verbeek.ug" target="_blank" rel="noopener" class="hb-project-media" :aria-label="$t('portfolio.items.collective_canvas.title')">
+                            <CanvasVisual />
+                        </a>
+                        <div class="hb-project-body">
+                            <h3 class="hb-portfolio-title">{{ $t('portfolio.items.collective_canvas.title') }}</h3>
+                            <p class="hb-project-tagline">{{ $t('portfolio.items.collective_canvas.tagline') }}</p>
+                            <p class="hb-portfolio-description">{{ $t('portfolio.items.collective_canvas.description') }}</p>
+                            <ul class="hb-project-features">
+                                <li v-for="n in 3" :key="n">{{ $t('portfolio.items.collective_canvas.features.' + (n - 1)) }}</li>
+                            </ul>
+                            <div class="hb-portfolio-tags">
+                                <span v-for="n in 3" :key="n" class="hb-tag">{{ $t('portfolio.items.collective_canvas.tags.' + (n - 1)) }}</span>
+                            </div>
+                            <a href="https://collective-canvas.verbeek.ug" target="_blank" rel="noopener" class="hb-btn hb-btn-primary hb-portfolio-btn">
+                                {{ $t('common.visit_site') }}
+                            </a>
+                        </div>
+                    </article>
+                    <article class="hb-project">
+                        <a href="https://crowded-airport.com" target="_blank" rel="noopener" class="hb-project-media" :aria-label="$t('portfolio.items.crowded_airport.title')">
+                            <AirportVisual />
+                        </a>
+                        <div class="hb-project-body">
+                            <h3 class="hb-portfolio-title">{{ $t('portfolio.items.crowded_airport.title') }}</h3>
+                            <p class="hb-project-tagline">{{ $t('portfolio.items.crowded_airport.tagline') }}</p>
+                            <p class="hb-portfolio-description">{{ $t('portfolio.items.crowded_airport.description') }}</p>
+                            <ul class="hb-project-features">
+                                <li v-for="n in 3" :key="n">{{ $t('portfolio.items.crowded_airport.features.' + (n - 1)) }}</li>
+                            </ul>
+                            <div class="hb-portfolio-tags">
+                                <span v-for="n in 3" :key="n" class="hb-tag">{{ $t('portfolio.items.crowded_airport.tags.' + (n - 1)) }}</span>
+                            </div>
+                            <a href="https://crowded-airport.com" target="_blank" rel="noopener" class="hb-btn hb-btn-primary hb-portfolio-btn">
+                                {{ $t('common.visit_site') }}
+                            </a>
+                        </div>
+                    </article>
                 </div>
+            </div>
+        </section>
+
+        <!-- In the works -->
+        <section class="hb-section hb-wip">
+            <div class="hb-container">
+                <div class="hb-wip-header">
+                    <p class="hb-section-label text-sm tracking-widest uppercase">{{ $t('portfolio.wip.label') }}</p>
+                    <h2 class="hb-section-title">{{ $t('portfolio.wip.title') }}</h2>
+                    <p class="hb-section-subtitle">{{ $t('portfolio.wip.subtitle') }}</p>
+                </div>
+                <article class="hb-project hb-project-wip">
+                    <a href="https://mycanopy.ug" target="_blank" rel="noopener" class="hb-project-media" :aria-label="$t('portfolio.wip.title_item')">
+                        <MapVisual />
+                    </a>
+                    <div class="hb-project-body">
+                        <span class="hb-status"><i></i>{{ $t('portfolio.wip.status') }}</span>
+                        <h3 class="hb-portfolio-title">{{ $t('portfolio.wip.title_item') }}</h3>
+                        <p class="hb-project-tagline">{{ $t('portfolio.wip.tagline') }}</p>
+                        <p class="hb-portfolio-description">{{ $t('portfolio.wip.description') }}</p>
+                        <ul class="hb-project-features">
+                            <li v-for="n in 3" :key="n">{{ $t('portfolio.wip.features.' + (n - 1)) }}</li>
+                        </ul>
+                        <div class="hb-portfolio-tags">
+                            <span v-for="n in 3" :key="n" class="hb-tag">{{ $t('portfolio.wip.tags.' + (n - 1)) }}</span>
+                        </div>
+                        <a href="https://mycanopy.ug" target="_blank" rel="noopener" class="hb-btn hb-btn-primary hb-portfolio-btn">
+                            {{ $t('common.visit_site') }}
+                        </a>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -92,14 +138,14 @@
 </template>
 
 <script>
+import PromptVisual from '../../components/PromptVisual.vue'
+import CanvasVisual from '../../components/CanvasVisual.vue'
+import AirportVisual from '../../components/AirportVisual.vue'
+import MapVisual from '../../components/MapVisual.vue'
+
 export default {
     name: 'Portfolio',
-    data() {
-        return {
-            promptToolImage: new URL('/images/portfolio/prompt.png', window.location.origin).href,
-            warehouseImage: new URL('/images/portfolio/warehouse.png', window.location.origin).href
-        }
-    }
+    components: { PromptVisual, CanvasVisual, AirportVisual, MapVisual }
 }
 </script>
 
@@ -141,4 +187,32 @@ export default {
 .hb-btn-light:hover { background-color: rgba(255, 255, 255, 0.2); color: var(--hb-primary); border-color: var(--hb-text); }
 @media (max-width: 768px) { .hb-section { padding: 4rem 0; } .hb-portfolio-grid { grid-template-columns: 1fr; } .hb-hero-bg { opacity: 0.5; } }
 @media (max-width: 480px) { .hb-hero-title { font-size: 1.75rem; } .hb-section-title { font-size: 1.75rem; } }
+
+.hb-projects { display: flex; flex-direction: column; gap: 5rem; }
+.hb-project { display: grid; grid-template-columns: 1.15fr 1fr; gap: 3.5rem; align-items: center; }
+.hb-project:nth-child(even) .hb-project-media { order: 2; }
+.hb-project-media { display: block; }
+.hb-browser { border: 1px solid rgba(169, 183, 198, 0.3); border-radius: 6px; overflow: hidden; background: #fff; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35); transition: transform 0.3s ease; }
+.hb-project-media:hover .hb-browser { transform: translateY(-6px); }
+.hb-browser-bar { display: flex; align-items: center; gap: 6px; padding: 0.6rem 0.9rem; background: #2e3d4f; }
+.hb-browser-bar i { width: 10px; height: 10px; border-radius: 50%; background: rgba(255, 255, 255, 0.3); }
+.hb-browser-bar i:first-child { background: #ff7a1a; }
+.hb-browser-bar span { margin-left: 0.75rem; font-size: 0.75rem; color: #a9b7c6; letter-spacing: 0.03em; }
+.hb-browser img { display: block; width: 100%; height: auto; }
+.hb-project-tagline { color: #ff7a1a; font-weight: 700; letter-spacing: 0.02em; margin-bottom: 1rem; }
+.hb-project-body .hb-portfolio-title { font-size: clamp(1.8rem, 3vw, 2.4rem) !important; margin-bottom: 0.4rem; }
+.hb-project-features { list-style: none; padding: 0; margin: 0 0 1.5rem; display: grid; gap: 0.6rem; }
+.hb-project-features li { position: relative; padding-left: 1.5rem; color: var(--hb-text); font-size: 0.95rem; line-height: 1.5; }
+.hb-project-features li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 0.7rem; height: 2px; background: #ff7a1a; }
+@media (max-width: 900px) {
+    .hb-project { grid-template-columns: 1fr; gap: 1.75rem; }
+    .hb-project:nth-child(even) .hb-project-media { order: 0; }
+    .hb-projects { gap: 3.5rem; }
+}
+.hb-wip { background: #212e3c; border-top: 1px solid rgba(169, 183, 198, 0.14); }
+.hb-wip-header { max-width: 40rem; margin-bottom: 3rem; }
+.hb-status { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #ff7a1a; border: 1px solid rgba(255, 122, 26, 0.5); padding: 0.3rem 0.8rem; margin-bottom: 1rem; }
+.hb-status i { width: 7px; height: 7px; border-radius: 50%; background: #ff7a1a; animation: hb-pulse 1.6s ease-in-out infinite; }
+@keyframes hb-pulse { 50% { opacity: 0.25; } }
+@media (prefers-reduced-motion: reduce) { .hb-status i { animation: none; } }
 </style>

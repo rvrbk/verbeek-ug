@@ -31,6 +31,79 @@
                 <p class="hb-hero-description">
                     {{ $t('hero.description') }}
                 </p>
+                <div class="hb-hero-actions">
+                    <router-link to="/contact" class="hb-btn hb-btn-primary">{{ $t('common.free_consultation') }}</router-link>
+                    <router-link to="/portfolio" class="hb-btn hb-btn-ghost">{{ $t('common.view_portfolio') }}</router-link>
+                </div>
+            </div>
+            <div class="hb-collage" aria-hidden="true">
+                <div class="hb-collage-item hb-collage-a"><PromptVisual /></div>
+                <div class="hb-collage-item hb-collage-b"><CanvasVisual /></div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <div class="hb-stats">
+            <div class="hb-container hb-stats-grid">
+                <div class="hb-stat"><b data-count="20" data-suffix="+">20+</b><span>{{ $t('stats.years') }}</span></div>
+                <div class="hb-stat"><b data-count="3">3</b><span>{{ $t('stats.platforms') }}</span></div>
+                <div class="hb-stat"><b data-count="10">10</b><span>{{ $t('stats.languages') }}</span></div>
+            </div>
+        </div>
+
+        <!-- Services overview -->
+        <section class="hb-section hb-overview">
+            <div class="hb-container">
+                <div class="hb-section-header">
+                    <p class="hb-section-label text-sm tracking-widest uppercase">{{ $t('nav.services') }}</p>
+                    <h2 class="hb-section-title">{{ $t('services.hero_title') }}</h2>
+                    <p class="hb-section-subtitle">{{ $t('services.hero_description') }}</p>
+                </div>
+                <div class="hb-overview-grid">
+                    <router-link v-for="k in ['business_automation', 'ai_solutions', 'community_systems', 'consultancy']" :key="k" to="/services" class="hb-service-card hb-overview-card">
+                        <h3 class="hb-service-title">{{ $t('services.items.' + k + '.title') }}</h3>
+                        <p class="hb-service-description">{{ $t('services.items.' + k + '.description') }}</p>
+                        <span class="hb-overview-more">{{ $t('common.learn_more') }} &rarr;</span>
+                    </router-link>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured work -->
+        <section class="hb-section hb-featured">
+            <div class="hb-container">
+                <div class="hb-section-header">
+                    <p class="hb-section-label text-sm tracking-widest uppercase">{{ $t('nav.portfolio') }}</p>
+                    <h2 class="hb-section-title">{{ $t('portfolio.hero_title') }}</h2>
+                    <p class="hb-section-subtitle">{{ $t('portfolio.hero_description') }}</p>
+                </div>
+                <div class="hb-work-grid">
+                    <router-link v-for="w in [['prompt_tool', 'PromptVisual'], ['collective_canvas', 'CanvasVisual'], ['crowded_airport', 'AirportVisual']]" :key="w[0]" to="/portfolio" class="hb-work-card">
+                        <div class="hb-work-visual"><div class="hb-work-scale"><component :is="w[1]" /></div></div>
+                        <h3 class="hb-work-title">{{ $t('portfolio.items.' + w[0] + '.title') }}</h3>
+                        <p class="hb-work-tagline">{{ $t('portfolio.items.' + w[0] + '.tagline') }}</p>
+                    </router-link>
+                </div>
+                <div class="hb-work-more">
+                    <router-link to="/portfolio" class="hb-btn hb-btn-primary">{{ $t('common.view_portfolio') }}</router-link>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section class="hb-section hb-process">
+            <div class="hb-container">
+                <div class="hb-section-header">
+                    <p class="hb-section-label text-sm tracking-widest uppercase">{{ $t('process.label') }}</p>
+                    <h2 class="hb-section-title">{{ $t('process.title') }}</h2>
+                    <p class="hb-section-subtitle">{{ $t('process.subtitle') }}</p>
+                </div>
+                <ol class="hb-process-grid">
+                    <li v-for="n in 4" :key="n" class="hb-process-step">
+                        <h3>{{ $t('process.steps.' + (n - 1) + '.title') }}</h3>
+                        <p>{{ $t('process.steps.' + (n - 1) + '.text') }}</p>
+                    </li>
+                </ol>
             </div>
         </section>
 
@@ -92,8 +165,13 @@
 </template>
 
 <script>
+import PromptVisual from '../components/PromptVisual.vue'
+import CanvasVisual from '../components/CanvasVisual.vue'
+import AirportVisual from '../components/AirportVisual.vue'
+
 export default {
-    name: 'Home'
+    name: 'Home',
+    components: { PromptVisual, CanvasVisual, AirportVisual }
 }
 </script>
 

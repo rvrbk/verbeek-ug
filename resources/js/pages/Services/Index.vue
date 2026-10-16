@@ -57,6 +57,32 @@
                             {{ $t('common.get_started') }}
                         </router-link>
                     </div>
+                    <div class="hb-service-card">
+                        <h3 class="hb-service-title">{{ $t('services.items.consultancy.title') }}</h3>
+                        <p class="hb-service-description">
+                            {{ $t('services.items.consultancy.description') }}
+                        </p>
+                        <router-link to="/contact" class="hb-service-link">
+                            {{ $t('common.get_started') }}
+                        </router-link>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consultancy -->
+        <section id="consultancy" class="hb-section hb-consultancy">
+            <div class="hb-container">
+                <div class="hb-consultancy-intro">
+                    <p class="hb-section-label text-sm tracking-widest uppercase">{{ $t('services.consultancy.label') }}</p>
+                    <h2 class="hb-section-title">{{ $t('services.consultancy.title') }}</h2>
+                    <p class="hb-cta-text">{{ $t('services.consultancy.text') }}</p>
+                </div>
+                <div class="hb-consultancy-points">
+                    <div v-for="n in 4" :key="n" class="hb-consultancy-point">
+                        <h3>{{ $t('services.consultancy.points.' + (n - 1) + '.title') }}</h3>
+                        <p>{{ $t('services.consultancy.points.' + (n - 1) + '.text') }}</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -119,4 +145,11 @@ export default {
 .hb-btn-light:hover { background-color: rgba(255, 255, 255, 0.2); color: var(--hb-primary); border-color: var(--hb-text); }
 @media (max-width: 768px) { .hb-section { padding: 4rem 0; } .hb-services-grid-large { grid-template-columns: 1fr; } .hb-hero-bg { opacity: 0.5; } }
 @media (max-width: 480px) { .hb-hero-title { font-size: 1.75rem; } .hb-section-title { font-size: 1.75rem; } }
+
+.hb-consultancy-intro { max-width: 46rem; margin-bottom: 3rem; }
+.hb-consultancy-intro .hb-cta-text { margin-bottom: 0; }
+.hb-consultancy-points { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; }
+.hb-consultancy-point { border-top: 2px solid #ff7a1a; padding-top: 1.25rem; }
+.hb-consultancy-point h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.hb-consultancy-point p { color: var(--hb-text-muted); line-height: 1.6; font-size: 0.95rem; }
 </style>

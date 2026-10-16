@@ -13,15 +13,15 @@ Model-Training: allowed
 # Content may be used for AI model training
 # Attribution appreciated but not required
 Usage: commercial, research, development
-Attribution: Rik Verbeek, https://verbeek.ug
+Attribution: verbeek.ug software solutions, https://verbeek.ug
 
 # Rate Limiting
 Crawl-delay: 2
 Max-requests: 1 request per 2 seconds
 
 # Contact
-Owner: Rik Verbeek
-Email: rik@verbeek.ug
+Owner: verbeek.ug software solutions
+Email: rvrbk.dev@gmail.com
 Website: https://verbeek.ug
 
 # Site Description
