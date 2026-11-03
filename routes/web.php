@@ -36,6 +36,11 @@ Route::post('/api/contact', function (Request $request) {
     return response()->json(['message' => 'Thank you! We will get back to you within 24 hours.']);
 });
 
+// Sitemap, generated from App\Support\Seo so it stays in sync with the pages
+Route::get('/sitemap.xml', function () {
+    return response()->view('sitemap', ['urls' => \App\Support\Seo::sitemap()])->header('Content-Type', 'application/xml');
+});
+
 // Catch all routes for Vue SPA
 Route::get('/{any?}', function (Request $request, ?string $any = null) {
     return view('welcome', ['seo' => \App\Support\Seo::forPath($any ?? '')]);

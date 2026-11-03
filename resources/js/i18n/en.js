@@ -11,10 +11,10 @@ export default {
     
     // SEO (page titles and descriptions)
     seo: {
-        home: { title: 'verbeek.ug | Custom Software Solutions for Businesses', description: 'Custom software for businesses: business automation, AI solutions, community platforms and consultancy. Built by verbeek.ug software solutions.' },
+        home: { title: 'verbeek.ug | Custom Software Solutions for Businesses', description: 'Custom software for businesses across Africa: business automation, AI solutions, community platforms and consultancy. Built by verbeek.ug software solutions.' },
         services: { title: 'Services | verbeek.ug software solutions', description: 'Business automation, AI solutions, community crowd sourced platforms and independent software consultancy, tailored to your business.' },
         portfolio: { title: 'Portfolio | verbeek.ug software solutions', description: 'Platforms we have built and run: Prompt a Tool, Collective Canvas and Crowded Airport, plus MyCanopy, property listings for Uganda, currently in development.' },
-        about: { title: 'About | verbeek.ug software solutions', description: 'Who we are, how we work and what we specialise in: smart software solutions that solve real business problems.' },
+        about: { title: 'About | verbeek.ug software solutions', description: 'Who we are, how we work and what we specialise in: smart software solutions that solve real business problems for businesses across Africa.' },
         contact: { title: 'Contact | verbeek.ug software solutions', description: 'Get in touch for a free first consultation about your software project.' },
         blog: { title: 'Blog | verbeek.ug software solutions', description: 'Articles and updates from verbeek.ug software solutions.' }
     },

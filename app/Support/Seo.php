@@ -14,7 +14,7 @@ class Seo
     private const PAGES = [
         '' => [
             'title' => 'verbeek.ug | Custom Software Solutions for Businesses',
-            'description' => 'Custom software for businesses: business automation, AI solutions, community platforms and consultancy. Built by verbeek.ug software solutions.',
+            'description' => 'Custom software for businesses across Africa: business automation, AI solutions, community platforms and consultancy. Built by verbeek.ug software solutions.',
         ],
         'services' => [
             'title' => 'Services | verbeek.ug software solutions',
@@ -26,7 +26,7 @@ class Seo
         ],
         'about' => [
             'title' => 'About | verbeek.ug software solutions',
-            'description' => 'Who we are, how we work and what we specialise in: smart software solutions that solve real business problems.',
+            'description' => 'Who we are, how we work and what we specialise in: smart software solutions that solve real business problems for businesses across Africa.',
         ],
         'contact' => [
             'title' => 'Contact | verbeek.ug software solutions',
@@ -66,16 +66,46 @@ class Seo
         ];
     }
 
+    /** Page key => the Vue page whose modification time stands in for the page's last change. */
+    private const SOURCES = [
+        '' => 'Home.vue',
+        'services' => 'Services/Index.vue',
+        'portfolio' => 'Portfolio/Index.vue',
+        'about' => 'About/Index.vue',
+        'contact' => 'Contact/Index.vue',
+        'blog' => 'Blog/Index.vue',
+    ];
+
+    public static function lastModified(string $key): string
+    {
+        $file = resource_path('js/pages/' . (self::SOURCES[str_starts_with($key, 'blog/') ? 'blog' : $key] ?? self::SOURCES['']));
+
+        return date('Y-m-d', is_file($file) ? filemtime($file) : time());
+    }
+
+    /** Sitemap entries: [url, lastmod, changefreq, priority]. */
+    public static function sitemap(): array
+    {
+        $meta = ['' => ['monthly', '1.0'], 'services' => ['monthly', '0.9'], 'portfolio' => ['monthly', '0.9'], 'about' => ['yearly', '0.6'], 'contact' => ['yearly', '0.7']];
+
+        return array_map(fn ($key, $m) => [self::SITE . ($key === '' ? '/' : '/' . $key), self::lastModified($key), $m[0], $m[1]], array_keys($meta), $meta);
+    }
+
     private static function schema(string $key, string $canonical, array $page): array
     {
         $org = [
-            '@type' => 'Organization',
+            '@type' => ['Organization', 'ProfessionalService'],
             '@id' => self::SITE . '/#organization',
             'name' => self::NAME,
             'alternateName' => 'verbeek.ug',
+            'description' => 'Custom software, business automation, AI solutions, community platforms and consultancy for businesses across Africa.',
             'url' => self::SITE,
             'logo' => self::SITE . '/logo.png',
             'email' => 'rvrbk.dev@gmail.com',
+            'areaServed' => ['@type' => 'Continent', 'name' => 'Africa'],
+            'serviceType' => array_column(self::SERVICES, 0),
+            'founder' => ['@id' => self::SITE . '/#founder'],
+            'sameAs' => ['https://github.com/rvrbk'],
             'contactPoint' => [
                 '@type' => 'ContactPoint',
                 'contactType' => 'customer support',
@@ -84,8 +114,18 @@ class Seo
             ],
         ];
 
+        $founder = [
+            '@type' => 'Person',
+            '@id' => self::SITE . '/#founder',
+            'name' => 'Rik Verbeek',
+            'jobTitle' => 'Founder and software developer',
+            'worksFor' => ['@id' => self::SITE . '/#organization'],
+            'sameAs' => ['https://github.com/rvrbk'],
+        ];
+
         $graph = [
             $org,
+            $founder,
             [
                 '@type' => 'WebSite',
                 '@id' => self::SITE . '/#website',
@@ -102,8 +142,13 @@ class Seo
                 'description' => $page['description'],
                 'isPartOf' => ['@id' => self::SITE . '/#website'],
                 'about' => ['@id' => self::SITE . '/#organization'],
+                'dateModified' => self::lastModified($key),
             ],
         ];
+
+        if ($key === 'about') {
+            $graph[2]['mainEntity'] = ['@id' => self::SITE . '/#founder'];
+        }
 
         if ($key === 'services') {
             $graph[] = [

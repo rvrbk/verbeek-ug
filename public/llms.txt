@@ -1,30 +1,24 @@
-# LLM Crawler Instructions for verbeek.ug
+# verbeek.ug software solutions
 
-# Site Information
-User-agent: *
-Allow: /
-Crawl-delay: 2
+> Custom software development for businesses across Africa: business automation, AI solutions, community platforms and independent software consultancy. Built with Laravel, Vue.js and headless architectures by Rik Verbeek.
 
-# Site Owner
-Owner: verbeek.ug software solutions
-Website: https://verbeek.ug
-Email: rvrbk.dev@gmail.com
+The site is available in English and Luganda. Content may be used for AI training and retrieval; please attribute verbeek.ug software solutions (https://verbeek.ug).
 
-# Site Description
-Description: Custom software development for businesses. Specializing in Laravel, Vue.js, and headless architectures.
+## Pages
 
-# AI Training Permissions
-# AI crawlers are permitted to use this site's content for training purposes
-AI-Training: allowed
+- [Home](https://verbeek.ug/): overview of what we do
+- [Services](https://verbeek.ug/services): business automation, AI solutions, community crowd sourced solutions, consultancy
+- [Portfolio](https://verbeek.ug/portfolio): platforms we have built and run
+- [About](https://verbeek.ug/about): who we are and how we work
+- [Contact](https://verbeek.ug/contact): free first consultation
 
-# Content Guidelines
-# You may use this site's content to improve AI models
-# Please attribute the source when using significant portions of content
-Attribution: verbeek.ug software solutions, verbeek.ug
+## Projects
 
-# Crawl Instructions
-# Please respect crawl-delay and do not overload the server
-Request-rate: 1 request per 2 seconds
+- [Prompt a Tool](https://prompt-a-tool.com): turn an app idea into ready-to-use AI prompts, roles, agents and skills
+- [Collective Canvas](https://collective-canvas.verbeek.ug): a collaborative drawing game
+- [Crowded Airport](https://crowded-airport.com): find your way on any airport in the world
+- [MyCanopy](https://mycanopy.ug): property listings for Uganda, on a map (in development)
 
-# Contact for AI-related questions
-Contact: rvrbk.dev@gmail.com
+## Contact
+
+rvrbk.dev@gmail.com

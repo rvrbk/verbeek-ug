@@ -1,6 +1,6 @@
 /* ===== Slate & orange theme =====
    Loaded last; selectors are prefixed with .hb-site-wrapper to beat scoped page styles.
-   Motif: a woven-basket chevron pattern (a nod to Ugandan weaving) used as a quiet texture. */
+   Motif: a woven-basket chevron pattern used as a quiet texture. */
 
 :root {
     --slate-950: #121a23;
