@@ -47,7 +47,7 @@
             <div class="hb-container hb-stats-grid">
                 <div class="hb-stat"><b data-count="20" data-suffix="+">20+</b><span>{{ $t('stats.years') }}</span></div>
                 <div class="hb-stat"><b data-count="3">3</b><span>{{ $t('stats.platforms') }}</span></div>
-                <div class="hb-stat"><b data-count="10">10</b><span>{{ $t('stats.languages') }}</span></div>
+                <div class="hb-stat"><b data-count="800" data-suffix="+">800+</b><span>{{ $t('stats.jobs') }}</span></div>
             </div>
         </div>
 

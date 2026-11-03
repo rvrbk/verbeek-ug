@@ -44,7 +44,7 @@ export default {
     stats: {
         years: 'Years of experience',
         platforms: 'Live platforms',
-        languages: 'Languages on Prompt a Tool'
+        jobs: 'Job postings scanned by Job Scout'
     },
 
     // Process (Home)
@@ -194,7 +194,7 @@ export default {
                 features: [
                     'Guided questions instead of a blank page',
                     'Prompts, roles, agents and skills for your specific app',
-                    'Numbers from Job Scout: 800+ job postings scanned and 20 tailored documents generated'
+                    'Available in 10 languages, including Luganda and Swahili'
                 ],
                 tags: ['AI', 'Prompts', 'Entrepreneurs']
             },

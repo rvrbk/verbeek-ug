@@ -43,8 +43,7 @@ export default {
     // Stats strip (Home)
     stats: {
         years: 'Emyaka egy\'obumanyi',
-        platforms: 'Pulatifomu ezikola',
-        languages: 'Ennimi ku Prompt a Tool'
+        platforms: 'Pulatifomu ezikola'
     },
 
     // Process (Home)
@@ -181,7 +180,8 @@ export default {
                 description: 'Nnyonnyola ekirowoozo kya app yo mu bigambo ebyangu, londa pulatifomu (web, iOS, Android oba zombi), olwo Prompt a Tool ekukolera prompts, roles, agents ne skills ebikwatagana n\'app yo. Kiyamba bannannyini bizinensi abatali ba tekinologiya okutandika okukola nga tebamanyi kuwandiika prompts.',
                 features: [
                     'Ebibuuzo ebikuluŋŋamya mu kifo ky\'olupapula olweru',
-                    'Prompts, roles, agents ne skills eby\'app yo yennyini'
+                    'Prompts, roles, agents ne skills eby\'app yo yennyini',
+                    'Kiriko ennimi 10, nga mw\'otwalidde Oluganda n\'Oswahili'
                 ],
                 tags: ['AI', 'Prompts', 'Bannabizinensi']
             },
