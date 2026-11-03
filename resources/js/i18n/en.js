@@ -171,7 +171,18 @@ export default {
                 'Filters for location, price, bedrooms and property type',
                 'Rent and sale listings in English and Luganda'
             ],
-            tags: ['Property', 'Maps', 'Uganda']
+            tags: ['Property', 'Maps', 'Uganda'],
+            job_scout: {
+                title_item: 'Job Scout',
+                tagline: 'A job search assistant that only claims what is true',
+                description: 'Job Scout searches job boards for roles that fit your preferences, scores each posting against your profile and writes a tailored CV and cover letter for the ones you pick. Every statement in a generated document is checked against a ledger of facts about you, so nothing is made up.',
+                features: [
+                    'Searches job boards and scores each match against your profile',
+                    'Tailored CVs and cover letters for the roles you choose',
+                    'Every claim in a document is checked against your own facts'
+                ],
+                tags: ['AI', 'Jobs', 'Automation']
+            }
         },
 
         // Portfolio items
@@ -183,7 +194,7 @@ export default {
                 features: [
                     'Guided questions instead of a blank page',
                     'Prompts, roles, agents and skills for your specific app',
-                    'Available in 10 languages, including Luganda and Swahili'
+                    'Numbers from Job Scout: 800+ job postings scanned and 20 tailored documents generated'
                 ],
                 tags: ['AI', 'Prompts', 'Entrepreneurs']
             },

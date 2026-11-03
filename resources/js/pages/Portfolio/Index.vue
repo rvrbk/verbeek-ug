@@ -98,7 +98,8 @@
                     <h2 class="hb-section-title">{{ $t('portfolio.wip.title') }}</h2>
                     <p class="hb-section-subtitle">{{ $t('portfolio.wip.subtitle') }}</p>
                 </div>
-                <article class="hb-project hb-project-wip">
+                <div class="hb-wip-grid">
+                <article class="hb-project hb-project-wip hb-project-stack">
                     <a href="https://mycanopy.ug" target="_blank" rel="noopener" class="hb-project-media" :aria-label="$t('portfolio.wip.title_item')">
                         <MapVisual />
                     </a>
@@ -118,6 +119,24 @@
                         </a>
                     </div>
                 </article>
+                <article class="hb-project hb-project-wip hb-project-stack">
+                    <div class="hb-project-media">
+                        <JobVisual />
+                    </div>
+                    <div class="hb-project-body">
+                        <span class="hb-status"><i></i>{{ $t('portfolio.wip.status') }}</span>
+                        <h3 class="hb-portfolio-title">{{ $t('portfolio.wip.job_scout.title_item') }}</h3>
+                        <p class="hb-project-tagline">{{ $t('portfolio.wip.job_scout.tagline') }}</p>
+                        <p class="hb-portfolio-description">{{ $t('portfolio.wip.job_scout.description') }}</p>
+                        <ul class="hb-project-features">
+                            <li v-for="n in 3" :key="n">{{ $t('portfolio.wip.job_scout.features.' + (n - 1)) }}</li>
+                        </ul>
+                        <div class="hb-portfolio-tags">
+                            <span v-for="n in 3" :key="n" class="hb-tag">{{ $t('portfolio.wip.job_scout.tags.' + (n - 1)) }}</span>
+                        </div>
+                    </div>
+                </article>
+                </div>
             </div>
         </section>
 
@@ -142,10 +161,11 @@ import PromptVisual from '../../components/PromptVisual.vue'
 import CanvasVisual from '../../components/CanvasVisual.vue'
 import AirportVisual from '../../components/AirportVisual.vue'
 import MapVisual from '../../components/MapVisual.vue'
+import JobVisual from '../../components/JobVisual.vue'
 
 export default {
     name: 'Portfolio',
-    components: { PromptVisual, CanvasVisual, AirportVisual, MapVisual }
+    components: { PromptVisual, CanvasVisual, AirportVisual, MapVisual, JobVisual }
 }
 </script>
 
@@ -210,6 +230,9 @@ export default {
     .hb-projects { gap: 3.5rem; }
 }
 .hb-wip { background: #212e3c; border-top: 1px solid rgba(169, 183, 198, 0.14); }
+.hb-wip-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3rem; align-items: start; }
+.hb-project-stack { grid-template-columns: 1fr; gap: 1.75rem; }
+@media (max-width: 960px) { .hb-wip-grid { grid-template-columns: 1fr; gap: 3.5rem; } }
 .hb-wip-header { max-width: 40rem; margin-bottom: 3rem; }
 .hb-status { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #ff7a1a; border: 1px solid rgba(255, 122, 26, 0.5); padding: 0.3rem 0.8rem; margin-bottom: 1rem; }
 .hb-status i { width: 7px; height: 7px; border-radius: 50%; background: #ff7a1a; animation: hb-pulse 1.6s ease-in-out infinite; }
