@@ -68,7 +68,7 @@
           <p>{{ $t('footer.tagline') }}</p>
         </div>
         <div class="hb-footer-right">
-          <a href="https://wa.me/31650512842" class="hb-footer-link">+31 6 505 12 842 (WhatsApp)</a>
+          <a href="mailto:info@verbeek.ug" class="hb-footer-link">info@verbeek.ug</a>
           <span class="hb-footer-copyright">&copy; {{ new Date().getFullYear() }}. {{ $t('footer.copyright') }}</span>
         </div>
       </div>
