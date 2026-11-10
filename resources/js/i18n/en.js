@@ -160,7 +160,7 @@ export default {
     portfolio: {
         hero_subtitle: 'Portfolio',
         hero_title: 'Our Work',
-        hero_description: 'See the platforms we have built and run: an AI prompt generator for entrepreneurs and a collaborative drawing game.',
+        hero_description: 'See the platforms we have built and run: an AI prompt generator for entrepreneurs, an airport wayfinder and a job search assistant.',
         
         cta_text: 'Let\'s discuss how we can create a smart solution for your business or community.',
         

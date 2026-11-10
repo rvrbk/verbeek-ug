@@ -38,7 +38,7 @@
             </div>
             <div class="hb-collage" aria-hidden="true">
                 <div class="hb-collage-item hb-collage-a"><PromptVisual /></div>
-                <div class="hb-collage-item hb-collage-b"><CanvasVisual /></div>
+                <div class="hb-collage-item hb-collage-b"><JobVisual /></div>
             </div>
         </section>
 
@@ -184,14 +184,13 @@
 
 <script>
 import PromptVisual from '../components/PromptVisual.vue'
-import CanvasVisual from '../components/CanvasVisual.vue'
 import AirportVisual from '../components/AirportVisual.vue'
 import JobVisual from '../components/JobVisual.vue'
 import solutions from '../i18n/solutions.en.json'
 
 export default {
     name: 'Home',
-    components: { PromptVisual, CanvasVisual, AirportVisual, JobVisual },
+    components: { PromptVisual, AirportVisual, JobVisual },
     data() {
         return { solutionSlugs: solutions.order }
     }

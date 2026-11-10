@@ -158,7 +158,7 @@ export default {
     portfolio: {
         hero_subtitle: 'Ebifananyizo Byaffe',
         hero_title: 'Bikola Byaffe',
-        hero_description: 'Laba pulatifomu ze twazimba era ze tuddukanya: ekikozesebwa kya AI eky\'okukola prompts eky\'bannabizinensi, n\'omuzannyo gw\'okusiiga ekifaananyi ekimu abantu bangi.',
+        hero_description: 'Laba pulatifomu ze twazimba era ze tuddukanya: ekikozesebwa kya AI eky\'okukola prompts eky\'bannabizinensi, ekikulaga ekkubo mu bisaawe by\'ennyonyi, n\'omuyambi w\'okunoonya emirimu.',
         
         cta_text: 'Tujjukire lwaki tukozesa okukola kifananyo kye kifuna ebibuga byo njogera ssomero.',
         

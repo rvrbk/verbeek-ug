@@ -438,13 +438,14 @@ html, body { background-color: var(--slate-900) !important; color: #fff; }
 .hb-collage { position: absolute; right: 3rem; top: 52%; width: 640px; height: 580px; translate: 0 -50%; z-index: 1; pointer-events: none; }
 .hb-collage-item { position: absolute; width: 560px; transform-origin: 0 0; }
 .hb-collage-a { left: 190px; top: 0; transform: scale(0.78) rotate(2deg); animation: collage-a 8s ease-in-out infinite; }
-.hb-collage-b { left: 0; top: 300px; transform: scale(0.62) rotate(-3deg); animation: collage-b 9s -3s ease-in-out infinite; }
+.hb-collage-b { left: 0; top: 290px; transform: scale(0.72) rotate(-3deg); animation: collage-b 9s -3s ease-in-out infinite; }
 @keyframes collage-a { 50% { translate: 0 -12px; } }
 @keyframes collage-b { 50% { translate: 0 10px; } }
 @media (max-width: 1320px) { .hb-collage { right: 0; scale: 0.82; transform-origin: right center; } }
 @media (max-width: 1100px) { .hb-collage { display: none; } .hb-site-wrapper #hero.hb-hero-section { min-height: 0 !important; } }
 @media (prefers-reduced-motion: reduce) { .hb-collage-item { animation: none; } }
 .hb-collage .pv-langs { display: none; }
+.hb-site-wrapper .hb-collage .jv { aspect-ratio: 1.4; }
 
 /* =====================  TILE HOVER: orange fill wipe  =====================
    No movement: an orange panel rises from the bottom edge and the text flips to dark. */
