@@ -17,6 +17,18 @@ Route::post('/api/contact', function (Request $request) {
 
     \Log::info('Contact form validated', ['data' => $validated]);
 
+    // Keep our own copy first, so a submission survives even if email delivery fails
+    // (Brevo accepting a message does not mean it reached the inbox).
+    try {
+        file_put_contents(
+            storage_path('app/contact-submissions.jsonl'),
+            json_encode(['received_at' => now()->toIso8601String()] + $validated, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . "\n",
+            FILE_APPEND | LOCK_EX
+        );
+    } catch (\Throwable $e) {
+        \Log::error('Failed to store contact submission: ' . $e->getMessage());
+    }
+
     // Send email
     try {
         Mail::raw(
