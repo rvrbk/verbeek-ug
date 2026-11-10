@@ -30,6 +30,7 @@ Route::post('/api/contact', function (Request $request) {
     }
 
     // Send email
+    $mailStatus = 'sent (accepted by mail server)';
     try {
         Mail::raw(
             "Name: {$validated['name']}\n\nEmail: {$validated['email']}\n\nPhone: " . ($validated['phone'] ?? 'N/A') . "\n\nMessage: {$validated['message']}",
@@ -41,7 +42,38 @@ Route::post('/api/contact', function (Request $request) {
         );
         \Log::info('Contact email sent successfully');
     } catch (\Exception $e) {
+        $mailStatus = 'FAILED: ' . $e->getMessage();
         \Log::error('Failed to send contact email: ' . $e->getMessage());
+    }
+
+    // Always notify via Telegram, whether or not the email went out
+    $token = config('services.telegram.bot_token');
+    $chatId = config('services.telegram.chat_id');
+    if ($token && $chatId) {
+        try {
+            $text = "New contact form message on verbeek.ug\n\n"
+                . "Name: {$validated['name']}\n"
+                . "Email: {$validated['email']}\n"
+                . "Phone: " . ($validated['phone'] ?? 'N/A') . "\n"
+                . "Email delivery: {$mailStatus}\n\n"
+                . $validated['message'];
+
+            // Telegram allows 4096 characters per message; send longer ones in parts
+            foreach (mb_str_split($text, 4000) as $part) {
+                \Illuminate\Support\Facades\Http::timeout(10)
+                    ->post("https://api.telegram.org/bot{$token}/sendMessage", [
+                        'chat_id' => $chatId,
+                        'text' => $part,
+                        'disable_web_page_preview' => true,
+                    ])
+                    ->throw();
+            }
+        } catch (\Throwable $e) {
+            // Never log the exception message here: it can contain the bot token in the URL
+            \Log::error('Failed to send Telegram notification: ' . class_basename($e));
+        }
+    } else {
+        \Log::warning('Telegram notification skipped: TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set');
     }
 
     return response()->json(['message' => 'Thank you! We will get back to you within 24 hours.']);
