@@ -43,5 +43,7 @@ Route::get('/sitemap.xml', function () {
 
 // Catch all routes for Vue SPA
 Route::get('/{any?}', function (Request $request, ?string $any = null) {
-    return view('welcome', ['seo' => \App\Support\Seo::forPath($any ?? '')]);
+    $seo = \App\Support\Seo::forPath($any ?? '');
+
+    return response()->view('welcome', ['seo' => $seo], $seo['status']);
 })->where('any', '.*');

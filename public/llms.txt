@@ -8,14 +8,20 @@ The site is available in English and Luganda. Content may be used for AI trainin
 
 - [Home](https://verbeek.ug/): overview of what we do
 - [Services](https://verbeek.ug/services): business automation, AI solutions, community crowd sourced solutions, consultancy
+- [Solutions](https://verbeek.ug/solutions): real problems we solve for African businesses
 - [Portfolio](https://verbeek.ug/portfolio): platforms we have built and run
 - [About](https://verbeek.ug/about): who we are and how we work
 - [Contact](https://verbeek.ug/contact): free first consultation
 
+## Solutions
+
+- [Mobile money integration](https://verbeek.ug/solutions/mobile-money-integration): accept and send MTN MoMo and Airtel Money payments from a website or system, with automatic reconciliation
+- [Replace paper books and Excel](https://verbeek.ug/solutions/inventory-and-records-software): software for stock, sales, fees, loans and member records, with reports and an audit trail
+- [WhatsApp and SMS automation](https://verbeek.ug/solutions/whatsapp-and-sms-automation): order updates, payment receipts, reminders and customer replies on WhatsApp, SMS and USSD
+
 ## Projects
 
 - [Prompt a Tool](https://prompt-a-tool.com): turn an app idea into ready-to-use AI prompts, roles, agents and skills
-- [Collective Canvas](https://collective-canvas.verbeek.ug): a collaborative drawing game
 - [Crowded Airport](https://crowded-airport.com): find your way on any airport in the world
 - [MyCanopy](https://mycanopy.ug): property listings for Uganda, on a map (in development)
 

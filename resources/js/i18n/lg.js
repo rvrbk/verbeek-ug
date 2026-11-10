@@ -1,8 +1,11 @@
+import solutions from './solutions.lg.json'
+
 export default {
     // Navigation
     nav: {
         home: 'Akawungeezi',
         services: 'Ebifananyizo',
+        solutions: 'Ebigonjoola',
         portfolio: 'Ebifananyizo Byaffe',
         about: 'Ebyaffe',
         blog: 'Emagazi',
@@ -13,11 +16,14 @@ export default {
     seo: {
         home: { title: 'verbeek.ug | Software ey\'enjawulo eri bizinensi', description: 'Software ey\'enjawulo eri bizinensi: okukola emirimu mu ngeri ey\'otoma, AI, pulatifomu z\'abantu n\'okuwabula. Ekoleddwa verbeek.ug software solutions.' },
         services: { title: 'Obuweereza | verbeek.ug software solutions', description: 'Okukola emirimu mu ngeri ey\'otoma, AI, pulatifomu z\'abantu n\'okuwabula ku software, nga bikwatagana ne bizinensi yo.' },
-        portfolio: { title: 'Bye Tukoze | verbeek.ug software solutions', description: 'Pulatifomu ze twazimba: Prompt a Tool, Collective Canvas ne Crowded Airport, ne MyCanopy ekyakolebwako.' },
+        portfolio: { title: 'Bye Tukoze | verbeek.ug software solutions', description: 'Pulatifomu ze twazimba: Prompt a Tool, Crowded Airport ne Job Scout, ne MyCanopy ekyakolebwako.' },
         about: { title: 'Ebitukwatako | verbeek.ug software solutions', description: 'Abo be tuli, engeri gye tukolamu n\'ebyo bye tukugu: software ennungi ezigonjoola ebizibu bya bizinensi.' },
         contact: { title: 'Tukwatagane | verbeek.ug software solutions', description: 'Tukwatagane okufuna okuteesa okusooka okw\'obwereere ku pulojekiti yo eya software.' },
         blog: { title: 'Blog | verbeek.ug software solutions', description: 'Ebiwandiiko n\'amawulire okuva ku verbeek.ug software solutions.' }
     },
+
+    // Solutions pages (full Luganda text, same structure as solutions.en.json)
+    solutions,
 
     // Common
     common: {
@@ -184,17 +190,6 @@ export default {
                     'Kiriko ennimi 10, nga mw\'otwalidde Oluganda n\'Oswahili'
                 ],
                 tags: ['AI', 'Prompts', 'Bannabizinensi']
-            },
-            collective_canvas: {
-                title: 'Collective Canvas',
-                tagline: 'Siiga nga tolaba. Mulabe wamu.',
-                description: 'Muzannyo gwa kusiiga ekifaananyi ekimu abantu bangi. Buli omu agattako ekitundu kye nga talaba balala bye basiize, era ekifaananyi ekijjuvu kirabika bwe bamala bonna. Buli kifaananyi ky\'oweereza kikuwa obubonero, ate olukalala lw\'abasinga (leaderboard) lulaga abasiize ebisinga.',
-                features: [
-                    'Siiga nga tolaba: tewali alaba kifaananyi kyonna okutuusa lwe kiggulwa',
-                    'Obubonero, emitendera, badges ne leaderboard',
-                    'Okulaba ebipya mangu ago, n\'okuyingira ne Google oba email'
-                ],
-                tags: ['Omuzannyo', 'Abantu', 'Mangu ago']
             },
             crowded_airport: {
                 title: 'Crowded Airport',

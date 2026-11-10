@@ -37,7 +37,7 @@
         <script type="application/ld+json">{!! json_encode($seo['schema'], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) !!}</script>
 
         <!-- Crawler directives (AI/LLM instructions live in /llms.txt and /ai.txt) -->
-        <meta name="robots" content="index, follow">
+        <meta name="robots" content="{{ $seo['robots'] }}">
 
         <meta name="theme-color" content="#18222d">
 
@@ -62,5 +62,8 @@
     </head>
     <body class="bg-white dark:bg-black text-gray-800 dark:text-white">
         <div id="app"></div>
+        @if (! empty($seo['prerender']))
+            <noscript>{!! $seo['prerender'] !!}</noscript>
+        @endif
     </body>
 </html>

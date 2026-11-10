@@ -1,8 +1,11 @@
+import solutions from './solutions.en.json'
+
 export default {
     // Navigation
     nav: {
         home: 'Home',
         services: 'Services',
+        solutions: 'Solutions',
         portfolio: 'Portfolio',
         about: 'About',
         blog: 'Blog',
@@ -13,11 +16,14 @@ export default {
     seo: {
         home: { title: 'verbeek.ug | Custom Software Solutions for Businesses', description: 'Custom software for businesses across Africa: business automation, AI solutions, community platforms and consultancy. Built by verbeek.ug software solutions.' },
         services: { title: 'Services | verbeek.ug software solutions', description: 'Business automation, AI solutions, community crowd sourced platforms and independent software consultancy, tailored to your business.' },
-        portfolio: { title: 'Portfolio | verbeek.ug software solutions', description: 'Platforms we have built and run: Prompt a Tool, Collective Canvas and Crowded Airport, plus MyCanopy, property listings for Uganda, currently in development.' },
+        portfolio: { title: 'Portfolio | verbeek.ug software solutions', description: 'Platforms we have built and run: Prompt a Tool, Crowded Airport and Job Scout, plus MyCanopy, property listings for Uganda, currently in development.' },
         about: { title: 'About | verbeek.ug software solutions', description: 'Who we are, how we work and what we specialise in: smart software solutions that solve real business problems for businesses across Africa.' },
         contact: { title: 'Contact | verbeek.ug software solutions', description: 'Get in touch for a free first consultation about your software project.' },
         blog: { title: 'Blog | verbeek.ug software solutions', description: 'Articles and updates from verbeek.ug software solutions.' }
     },
+
+    // Solutions pages (shared with the server-side SEO layer, see App\Support\Seo)
+    solutions,
 
     // Common
     common: {
@@ -171,18 +177,7 @@ export default {
                 'Filters for location, price, bedrooms and property type',
                 'Rent and sale listings in English and Luganda'
             ],
-            tags: ['Property', 'Maps', 'Uganda'],
-            job_scout: {
-                title_item: 'Job Scout',
-                tagline: 'A job search assistant that only claims what is true',
-                description: 'Job Scout searches job boards for roles that fit your preferences, scores each posting against your profile and writes a tailored CV and cover letter for the ones you pick. Every statement in a generated document is checked against a ledger of facts about you, so nothing is made up.',
-                features: [
-                    'Searches job boards and scores each match against your profile',
-                    'Tailored CVs and cover letters for the roles you choose',
-                    'Every claim in a document is checked against your own facts'
-                ],
-                tags: ['AI', 'Jobs', 'Automation']
-            }
+            tags: ['Property', 'Maps', 'Uganda']
         },
 
         // Portfolio items
@@ -198,16 +193,16 @@ export default {
                 ],
                 tags: ['AI', 'Prompts', 'Entrepreneurs']
             },
-            collective_canvas: {
-                title: 'Collective Canvas',
-                tagline: 'Draw blind. Reveal together.',
-                description: 'A collaborative drawing game on one shared canvas. Everyone adds their own piece without seeing what the others drew, and the full picture is only revealed once everyone is done. Every drawing earns points, and a leaderboard ranks the most prolific collective artists.',
+            job_scout: {
+                title: 'Job Scout',
+                tagline: 'A job search assistant that only claims what is true',
+                description: 'Job Scout searches job boards for roles that fit your preferences, scores each posting against your profile and writes a tailored CV and cover letter for the ones you pick. Every statement in a generated document is checked against a ledger of facts about you, so nothing is made up.',
                 features: [
-                    'Blind drawing: nobody sees the whole picture until the reveal',
-                    'Points, levels, badges and a leaderboard',
-                    'Live updates, with sign-in through Google or email'
+                    'Searches job boards and scores each match against your profile',
+                    'Tailored CVs and cover letters for the roles you choose',
+                    'Every claim in a document is checked against your own facts'
                 ],
-                tags: ['Game', 'Community', 'Real-time']
+                tags: ['AI', 'Jobs', 'Automation']
             },
             crowded_airport: {
                 title: 'Crowded Airport',

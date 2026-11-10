@@ -1,0 +1,299 @@
+{
+    "labels": {
+        "home": "Home",
+        "solutions": "Solutions",
+        "problem": "The problem",
+        "costs": "What it costs you today",
+        "approach": "How we solve it",
+        "tech": "What it is built with",
+        "faq": "Frequently asked questions",
+        "related": "Related solutions",
+        "read_more": "Read more",
+        "step": "Step",
+        "cta_label": "Free first consultation",
+        "cta_title": "Tell us about your situation",
+        "cta_text": "Describe the problem in a few lines. We will tell you honestly whether software is the right answer, what it would involve and what to leave out. The first consultation is always free.",
+        "cta_button": "Get a free consultation",
+        "all_solutions": "All solutions"
+    },
+    "index": {
+        "seo": {
+            "title": "Software Solutions for African Businesses | verbeek.ug",
+            "description": "Mobile money integration, inventory and records software, and WhatsApp and SMS automation for businesses in Uganda and across Africa."
+        },
+        "hero_subtitle": "Solutions",
+        "hero_title": "Real problems, solved with software",
+        "hero_description": "Practical software for the problems African businesses actually face: getting paid with mobile money, keeping reliable records and talking to customers at scale.",
+        "intro": "Every business we speak to has a version of the same few problems. Payments that someone has to check by hand. Records that live in a notebook or a spreadsheet. Customers who message at night and wait for an answer. Pick the one that sounds like yours to see how we would approach it, or tell us about something different."
+    },
+    "order": [
+        "mobile-money-integration",
+        "inventory-and-records-software",
+        "whatsapp-and-sms-automation"
+    ],
+    "pages": {
+        "mobile-money-integration": {
+            "card_title": "Mobile money integration",
+            "summary": "Take MTN MoMo and Airtel Money payments straight into your website or system, so every payment matches an order automatically.",
+            "seo": {
+                "title": "Mobile Money Integration Uganda: MTN MoMo, Airtel | verbeek.ug",
+                "description": "Accept and send MTN MoMo and Airtel Money payments from your website or app, with automatic receipts and reconciliation. For Ugandan businesses."
+            },
+            "h1": "Mobile money integration for Ugandan businesses",
+            "lead": "Take MTN MoMo and Airtel Money payments straight into your website, app or system, so every payment is matched to an order automatically instead of someone checking a phone.",
+            "problem": {
+                "paragraphs": [
+                    "Most Ugandan customers pay with mobile money, but many businesses still collect it by hand. The customer sends money to a number, sends a message or a screenshot, and someone checks the phone to confirm it arrived before the order is released.",
+                    "That works at five orders a day. At fifty it breaks: payments are missed or confirmed twice, the wrong amount is accepted, staff become the bottleneck, and at month end nobody can say which payment belongs to which order."
+                ]
+            },
+            "costs": {
+                "items": [
+                    "Staff time spent checking phones, statements and WhatsApp screenshots",
+                    "Orders delayed or lost because payment is not confirmed quickly",
+                    "Fake or edited payment screenshots, and payments that never arrived",
+                    "Money you cannot trace to an invoice at month end",
+                    "Refunds and customer disputes settled from memory"
+                ]
+            },
+            "approach": {
+                "steps": [
+                    {
+                        "title": "Agree the flow",
+                        "text": "Do you collect from customers, pay out to suppliers, staff or farmers, or both? Which networks, and which system needs to know when money moves?"
+                    },
+                    {
+                        "title": "Choose the route",
+                        "text": "Connect directly to the MTN MoMo and Airtel Money APIs, or go through an aggregator such as Flutterwave, Pesapal or DPO when you also want card payments. We explain the trade-offs in fees, setup time and coverage before you decide."
+                    },
+                    {
+                        "title": "Build and test in the sandbox",
+                        "text": "The customer gets a prompt on their phone and approves with their PIN. Your system receives the result by callback, and also checks the status itself in case a callback is lost."
+                    },
+                    {
+                        "title": "Make it safe",
+                        "text": "Every payment request is made only once, even if a customer taps twice or a network call is retried. Amounts are checked against the order, callbacks are verified and every event is logged."
+                    },
+                    {
+                        "title": "Go live and reconcile",
+                        "text": "We help you through the provider's go-live steps, then add a daily reconciliation report that matches provider records to your orders and flags anything that does not line up."
+                    }
+                ]
+            },
+            "tech": {
+                "intro": "What this usually involves:",
+                "items": [
+                    "MTN MoMo Collections and Disbursements APIs",
+                    "Airtel Money collection and disbursement APIs",
+                    "Aggregators such as Flutterwave, Pesapal and DPO, for cards and several networks in one integration",
+                    "Callbacks (webhooks) plus status checks as a fallback",
+                    "Phone number validation and normalisation to the international 256 format",
+                    "Laravel queues for retries, and a ledger of every payment event",
+                    "Receipts by email, SMS or WhatsApp"
+                ]
+            },
+            "faq": [
+                {
+                    "q": "Which mobile money networks can you integrate?",
+                    "a": "MTN MoMo and Airtel Money, the two main networks in Uganda, either directly or through an aggregator. The best route depends on your volumes, whether you also need card payments and how fast you need to launch."
+                },
+                {
+                    "q": "How long does a mobile money integration take?",
+                    "a": "Building and testing a standard collection flow against the provider's sandbox is often a matter of a few weeks. The provider's approval to go live is outside our control and can take longer, so we start that paperwork early."
+                },
+                {
+                    "q": "Do I need a registered business?",
+                    "a": "Providers generally require a registered business and a merchant or business account before they approve live access. Requirements differ per provider and change over time, so we tell you what you will need in the free first consultation."
+                },
+                {
+                    "q": "What if the customer's internet is slow?",
+                    "a": "The payment prompt reaches the customer's phone through the mobile network, and your page only has to wait for the result. If the connection drops, your system keeps checking and updates the order as soon as the result is known."
+                },
+                {
+                    "q": "Is it secure?",
+                    "a": "Customers enter their PIN on their own phone and never on your site. Your system only stores references and amounts. We also verify callbacks, keep API credentials out of the code and log every payment event so it can be audited."
+                },
+                {
+                    "q": "Can you pay out as well as collect?",
+                    "a": "Yes. Disbursements let you pay staff, suppliers, farmers or refunds straight to a mobile money number, with approvals and limits so that no single person can send money alone."
+                }
+            ],
+            "related": ["inventory-and-records-software", "whatsapp-and-sms-automation"]
+        },
+        "inventory-and-records-software": {
+            "card_title": "Replace paper books and Excel",
+            "summary": "Simple software for stock, sales, school fees, loans and member records, with clear reports and a trail of who changed what.",
+            "seo": {
+                "title": "Inventory & Business Software Uganda | verbeek.ug",
+                "description": "Replace paper books and Excel with simple software for stock, sales, fees and member records. Works on a phone, with clear reports. For Ugandan businesses."
+            },
+            "h1": "Replace paper books and Excel with software that fits how you work",
+            "lead": "Know what is in your store, who owes you money and what happened today, from a phone or a laptop, without relying on one notebook or one person's memory.",
+            "problem": {
+                "paragraphs": [
+                    "Many shops, warehouses, schools, clinics, cooperatives and SACCOs still run on paper ledgers and spreadsheets. They are cheap and familiar, but they depend on one person's memory and one person's computer.",
+                    "When the book is lost, the file is overwritten or the person who knows the system leaves, the records go with them. And because nobody sees the numbers until the end of the month, losses go unnoticed for weeks."
+                ]
+            },
+            "costs": {
+                "items": [
+                    "Stock that disappears without anyone noticing, or runs out when customers need it",
+                    "Fees, loans or contributions that are owed but never followed up",
+                    "Hours every month spent copying numbers between books and spreadsheets",
+                    "Branches or staff reporting different numbers",
+                    "No proof of who changed what, and no clean records for a bank, funder or the tax authority"
+                ]
+            },
+            "approach": {
+                "steps": [
+                    {
+                        "title": "Start with how you work today",
+                        "text": "We look at your books and sheets and write down the real rules: who sells, who approves, what counts as stock and which reports you actually need."
+                    },
+                    {
+                        "title": "Build the smallest useful version",
+                        "text": "Usually one core job first, such as recording stock in and out, or fees paid and owed. Staff use it from a phone or a computer, with the same words they already use."
+                    },
+                    {
+                        "title": "Move your data across",
+                        "text": "We clean and import your existing spreadsheets, so you start with your real history instead of from zero."
+                    },
+                    {
+                        "title": "Add control",
+                        "text": "Roles and permissions, an audit trail of every change, and approvals for things like discounts, write-offs and loans."
+                    },
+                    {
+                        "title": "Reports that answer questions",
+                        "text": "Stock levels, daily sales, who owes what and branch comparisons, with exports to Excel and PDF for anyone who still wants a printout."
+                    }
+                ]
+            },
+            "tech": {
+                "intro": "What this usually involves:",
+                "items": [
+                    "A web app that works on a phone, a laptop or both",
+                    "Light pages that load quickly on mobile data, with offline entry that syncs later when the work needs it",
+                    "Roles, permissions and a full audit log",
+                    "Import from Excel, and export to Excel and PDF",
+                    "Mobile money payments recorded automatically against invoices or fees",
+                    "Integration with URA EFRIS e-invoicing where your business is required to use it",
+                    "Barcode scanning, multiple branches and low-stock alerts"
+                ]
+            },
+            "faq": [
+                {
+                    "q": "Will my staff cope if they are used to paper?",
+                    "a": "That is the main thing we design for. We keep screens simple, use your own terms and train your team. Many businesses run paper and the new system side by side for a short while until everyone is comfortable."
+                },
+                {
+                    "q": "Can I keep using Excel?",
+                    "a": "Yes. We import from Excel to get you started, and every report can be exported back to Excel whenever you want it."
+                },
+                {
+                    "q": "Do we need a constant internet connection?",
+                    "a": "The system is built to stay light on mobile data. If your work needs it, for example at a market stall or a rural site, we can add offline entry that syncs when the connection returns."
+                },
+                {
+                    "q": "What if I only need stock tracking, not a full system?",
+                    "a": "Then that is what we build. Starting with one job and growing later is cheaper and safer than a large system that nobody uses."
+                },
+                {
+                    "q": "Who owns the data and the software?",
+                    "a": "Your business data belongs to you and can be exported at any time. We agree who owns the software itself at the start of the project, in writing."
+                },
+                {
+                    "q": "Would ready-made software be a better option?",
+                    "a": "Sometimes. If an existing product already fits, we will say so in the free first consultation. We build custom software when your process is specific, or when existing tools are too expensive, too complex or do not handle mobile money and local needs."
+                }
+            ],
+            "related": ["mobile-money-integration", "whatsapp-and-sms-automation"]
+        },
+        "whatsapp-and-sms-automation": {
+            "card_title": "WhatsApp and SMS automation",
+            "summary": "Send order updates, payment receipts and reminders automatically, and answer common questions without anyone glued to the phone.",
+            "seo": {
+                "title": "WhatsApp & SMS Automation for Businesses in Uganda | verbeek.ug",
+                "description": "Automate order updates, payment receipts, appointment reminders and customer replies on WhatsApp and SMS. Built for Ugandan and African businesses."
+            },
+            "h1": "WhatsApp and SMS automation for businesses in Uganda",
+            "lead": "Meet customers where they already are. Send order updates, payment receipts and reminders automatically, and answer common questions without someone being on the phone all day.",
+            "problem": {
+                "paragraphs": [
+                    "For most Ugandan businesses, WhatsApp is the shop front. Orders, questions, payment proofs and complaints all arrive in one chat, mixed with personal messages and answered by whoever has the phone.",
+                    "Messages go unanswered in the evening, orders get lost between chats, customers forget appointments and the owner becomes the help desk. SMS reaches customers without smartphones, but sending it one message at a time does not scale."
+                ]
+            },
+            "costs": {
+                "items": [
+                    "Customers who message after hours and buy somewhere else",
+                    "No-shows because nobody sent a reminder",
+                    "Orders and payment details copied by hand from chat into a book",
+                    "The same ten questions answered again every day",
+                    "No record of what was promised to whom"
+                ]
+            },
+            "approach": {
+                "steps": [
+                    {
+                        "title": "Map the conversations",
+                        "text": "We list the messages you send and receive most, and decide which should be automatic, which need a person and what that person needs to see."
+                    },
+                    {
+                        "title": "Connect the channels",
+                        "text": "WhatsApp through the official WhatsApp Business Platform, and SMS or USSD through a provider such as Africa's Talking, so customers without smartphones are included."
+                    },
+                    {
+                        "title": "Automate the routine",
+                        "text": "Order confirmations, payment receipts, delivery updates, appointment reminders and answers to common questions, written in your voice and in English or Luganda."
+                    },
+                    {
+                        "title": "Hand over to people smoothly",
+                        "text": "Anything the system cannot answer goes to a shared inbox with the full history, so a person can pick up exactly where the automation stopped."
+                    },
+                    {
+                        "title": "Connect it to your business",
+                        "text": "Messages are linked to your orders, stock and payments, so a confirmed mobile money payment can send the receipt on its own."
+                    }
+                ]
+            },
+            "tech": {
+                "intro": "What this usually involves:",
+                "items": [
+                    "The WhatsApp Business Platform (Cloud API) with approved message templates",
+                    "SMS and USSD through Africa's Talking or a similar provider",
+                    "A shared inbox with a handover from automation to a person",
+                    "An optional AI assistant that answers from your own price list and FAQs, and hands over when it is unsure",
+                    "Triggers from your orders, payments and appointments",
+                    "Opt-in and opt-out handling so customers stay in control"
+                ]
+            },
+            "faq": [
+                {
+                    "q": "Do I need the official WhatsApp Business API?",
+                    "a": "For automatic messages at any scale, yes. The normal WhatsApp apps are not meant for automated or bulk sending, and using them that way risks your number being banned. The official platform is the safe route, and we set it up with you."
+                },
+                {
+                    "q": "Can WhatsApp message customers first?",
+                    "a": "Yes, but outside the 24 hours after a customer's last message, WhatsApp requires pre-approved message templates, such as order updates or reminders. We write them and submit them for approval."
+                },
+                {
+                    "q": "Will customers feel they are talking to a robot?",
+                    "a": "Automatic messages are the useful kind: confirmations, receipts and reminders. Where a reply needs judgement, a person takes over. If you add an AI assistant, we set it to say what it is and to hand over rather than guess."
+                },
+                {
+                    "q": "Can you reach customers without smartphones?",
+                    "a": "Yes, through SMS and USSD menus, which work on any phone, including basic handsets."
+                },
+                {
+                    "q": "What does it cost to run?",
+                    "a": "Running costs are mainly the per-message fees charged by WhatsApp and by SMS providers, plus hosting. We estimate them from your expected message volume before you commit."
+                },
+                {
+                    "q": "Can this connect to mobile money?",
+                    "a": "Yes. A confirmed MTN MoMo or Airtel Money payment can send the customer a receipt and update the order automatically."
+                }
+            ],
+            "related": ["mobile-money-integration", "inventory-and-records-software"]
+        }
+    }
+}

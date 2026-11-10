@@ -1,0 +1,291 @@
+{
+    "labels": {
+        "home": "Akawungeezi",
+        "solutions": "Ebigonjoola",
+        "problem": "Ekizibu",
+        "costs": "Kye ofiirwa kati",
+        "approach": "Engeri gye tukigonjoolamu",
+        "tech": "Kye kikoleddwa nakyo",
+        "faq": "Ebibuuzo ebibuuzibwa ennyo",
+        "related": "Ebigonjoola ebikwatagana",
+        "read_more": "Soma ebisingawo",
+        "step": "Ekiddaala",
+        "cta_label": "Okuteesa okusooka okw'obwereere",
+        "cta_title": "Tubuulire ku mbeera yo",
+        "cta_text": "Nnyonnyola ekizibu mu bigambo bitono. Tujja kukugamba mu bwesimbu oba software y'engeri entuufu, kye kyetaagisa n'ebyo by'olina okuleka. Okuteesa okusooka kwa bwereere bulijjo.",
+        "cta_button": "Funa okuteesa okw'obwereere",
+        "all_solutions": "Ebigonjoola byonna"
+    },
+    "index": {
+        "seo": {
+            "title": "Software eri bizinensi mu Africa | verbeek.ug",
+            "description": "Mobile money, software y'ebiwandiiko ne WhatsApp ne SMS mu ngeri ey'otoma eri bizinensi mu Uganda ne Africa yonna."
+        },
+        "hero_subtitle": "Ebigonjoola",
+        "hero_title": "Ebizibu ebituufu, bigonjoolebwa na software",
+        "hero_description": "Software ennyangu eri ebizibu bya bizinensi ebituufu: okufuna ssente ku mobile money, okukuuma ebiwandiiko n'okwogera n'abaguzi ku WhatsApp ne SMS.",
+        "intro": "Buli bizinensi gye twogeddeko erina ebizibu bye bimu. Ssente eziteekwa okukebererwa n'engalo. Ebiwandiiko ebiri mu kitabo oba mu spreadsheet. Abaguzi abawandiika ekiro ne balindirira eky'okuddamu. Londa ekifaananako ekyo ekyammwe, olabe engeri gye tuyinza okukigonjoolamu, oba otubuulire ku kintu ekirala."
+    },
+    "pages": {
+        "mobile-money-integration": {
+            "card_title": "Mobile money mu bizinensi yo",
+            "summary": "Funa ssente za MTN MoMo ne Airtel Money butereevu mu website oba system yo, buli ssente ng'ekwatagana n'oda yaayo yokka.",
+            "seo": {
+                "title": "Mobile Money mu Uganda: MTN MoMo ne Airtel | verbeek.ug",
+                "description": "Funa era otume ssente za MTN MoMo ne Airtel Money okuva mu website oba app yo, nga receipt n'okukwataganya biri mu ngeri ey'otoma. Eri bizinensi mu Uganda."
+            },
+            "h1": "Mobile money mu bizinensi z'omu Uganda",
+            "lead": "Funa ssente za MTN MoMo ne Airtel Money butereevu mu website, app oba system yo, buli ssente ekwatagane n'oda yaayo yokka, mu kifo ky'omuntu okutunuulira essimu.",
+            "problem": {
+                "paragraphs": [
+                    "Abaguzi abasinga mu Uganda basasula na mobile money, naye bizinensi nnyingi zikyagifuna n'engalo. Omuguzi atuma ssente ku nnamba, n'atuma obubaka oba screenshot, era omuntu atunuulira essimu okukakasa nti ssente ziyingidde nga oda tennaweebwa.",
+                    "Ekyo kikola ng'oda ziri ttaano buli lunaku. Zibeera amakumi ataano kiremererwa: ssente ezimu ziwabula oba zikakasibwa emirundi ebiri, omuwendo ogutali gwa nnyini gukkirizibwa, abakozi bafuuka ekiziyiza, era ku nkomerero y'omwezi tewali ayinza kugamba ssente ki ezikwata ku oda ki."
+                ]
+            },
+            "costs": {
+                "items": [
+                    "Ekiseera ky'abakozi ekimala nga batunuulira amasimu, ebiwandiiko bya bbanka ne screenshot za WhatsApp",
+                    "Oda ezikereezebwa oba ezifiirwa kubanga ssente tezikakasibwa mangu",
+                    "Screenshot ez'obulimba oba ezikyusiddwa, ne ssente ezitaatuuka",
+                    "Ssente ze toyinza kulaga ziva ku invoice ki ku nkomerero y'omwezi",
+                    "Okuzzaayo ssente n'enkaayana z'abaguzi ebimalibwawo ng'oyiyiza"
+                ]
+            },
+            "approach": {
+                "steps": [
+                    {
+                        "title": "Tukkiriziganye ku nkola",
+                        "text": "Ofuna ssente okuva ku baguzi, osasula abagabi, abakozi oba abalimi, oba byombi? Network ki, era system ki erina okumanya ssente we zitambulira?"
+                    },
+                    {
+                        "title": "Londa ekkubo",
+                        "text": "Weegatte butereevu ku MTN MoMo ne Airtel Money API, oba ng'oyita mu aggregator nga Flutterwave, Pesapal oba DPO ng'oyagala n'okusasula na kaadi. Tunnyonnyola ebirungi n'ebibi mu ssente, ekiseera n'obuwanvu bw'okubikola nga tonnasalawo."
+                    },
+                    {
+                        "title": "Zimba era ogezese mu sandbox",
+                        "text": "Omuguzi afuna obubaka ku ssimu ye n'akkiriza ne PIN ye. System yo efuna ekyavaamu okuyita mu callback, era nayo ekebera embeera yaayo ng'enkola ya callback esubuddwa."
+                    },
+                    {
+                        "title": "Kikuume",
+                        "text": "Buli kusaba kwa kusasula kukolebwa omulundi gumu gwokka, newankubadde omuguzi akuba emirundi ebiri oba network call eddibwamu. Omuwendo gukeberebwa ku oda, callback zikakasibwa era buli kintu kiwandiikibwa."
+                    },
+                    {
+                        "title": "Tandika era okwataganye",
+                        "text": "Tukuyamba mu ntambwe z'oyo agaba obuweereza okukkiriza okutandika, ne tuteekawo lipoota ya buli lunaku ekwataganya ebiwandiiko bya provider ne oda zo n'eraga ebitakwatagana."
+                    }
+                ]
+            },
+            "tech": {
+                "intro": "Kino kitera okubaamu:",
+                "items": [
+                    "MTN MoMo Collections ne Disbursements API",
+                    "Airtel Money collection ne disbursement API",
+                    "Aggregators nga Flutterwave, Pesapal ne DPO, ku kaadi ne network nnyingi mu kuyunga kumu",
+                    "Callback (webhook) n'okukebera embeera ng'enkola endala",
+                    "Okukebera n'okutegeka nnamba z'essimu mu mutendera gw'ensi yonna ogwa 256",
+                    "Laravel queues ku kuddamu okugezaako, ne ledger ya buli kintu ekibaddewo ku ssente",
+                    "Receipt ku email, SMS oba WhatsApp"
+                ]
+            },
+            "faq": [
+                {
+                    "q": "Mobile money networks ki ze muyinza okuyunga?",
+                    "a": "MTN MoMo ne Airtel Money, networks bbiri ezisinga mu Uganda, butereevu oba okuyita mu aggregator. Ekkubo erisinga obulungi liva ku muwendo gw'ossa, oba weetaaga n'okusasula na kaadi, n'engeri gy'oyagala okutandika amangu."
+                },
+                {
+                    "q": "Mobile money integration ewangaala bbanga ki?",
+                    "a": "Okuzimba n'okugezesa enkola eya bulijjo ey'okufuna ssente mu sandbox ya provider kitera okutwala wiiki ntono. Okukkirizibwa kwa provider okutandika kuli bweru wa buyinza bwaffe era kuyinza okutwala ebbanga, kale tutandika empapula amangu."
+                },
+                {
+                    "q": "Nteekwa okuba ne bizinensi eyewandiisizza?",
+                    "a": "Providers batera okwetaaga bizinensi eyewandiisizza ne merchant oba business account nga tebannakukkiriza kutandika. Ebyetaagisa bikyuka okusinziira ku provider n'ekiseera, kale tukubuulira by'onoyetaaga mu kuteesa okusooka okw'obwereere."
+                },
+                {
+                    "q": "Kiki ekibaawo internet y'omuguzi bw'eba ya mpola?",
+                    "a": "Obubaka bw'okusasula butuuka ku ssimu y'omuguzi okuyita mu network ya mobile, ne page yo erindirira ekyavaamu kyokka. Connection bw'ebula, system yo egenda mu maaso n'okukebera era n'ekyusa oda ekyavaamu bwe kimanyibwa."
+                },
+                {
+                    "q": "Kiri bukuumi?",
+                    "a": "Abaguzi bateeka PIN zaabwe ku ssimu zaabwe ne batazitekako ku site yo. System yo etereka ebikwata ku nnamba n'omuwendo byokka. Tukakasa era callback, tukuuma API credentials ebweru wa code, ne tuwandiika buli kintu ku ssente osobole okukigenda okukebera."
+                },
+                {
+                    "q": "Muyinza okusasula n'okufuna?",
+                    "a": "Weewaawo. Disbursements zikuyamba okusasula abakozi, abagabi, abalimi oba okuzzaayo ssente butereevu ku nnamba ya mobile money, nga waliwo okukkiriza n'ebikomo omuntu omu aleme okutuma ssente yekka."
+                }
+            ]
+        },
+        "inventory-and-records-software": {
+            "card_title": "Ddamu ebitabo by'empapula ne Excel",
+            "summary": "Software ennyangu ey'ebyamaguzi, okutunda, ebisale by'essomero, looni n'ebiwandiiko by'abammemba, nga biriko lipoota ennyonnyofu.",
+            "seo": {
+                "title": "Software y'Ebyamaguzi ne Bizinensi mu Uganda | verbeek.ug",
+                "description": "Ddamu ebitabo by'empapula ne Excel n'software ennyangu ey'ebyamaguzi, okutunda, ebisale n'ebiwandiiko by'abammemba. Ekola ku ssimu, ne lipoota ennyonnyofu."
+            },
+            "h1": "Ddamu ebitabo by'empapula ne Excel n'software etuukana n'engeri gy'okolamu",
+            "lead": "Manya ebiri mu sitoowa yo, abakubanja n'ebyabaddewo leero, okuva ku ssimu oba laptop, nga totunuulidde kitabo kimu oba okujjukira kw'omuntu omu.",
+            "problem": {
+                "paragraphs": [
+                    "Amaduuka mangi, amawanika, amasomero, amalwaliro, ebibiina by'abalimi ne SACCOs bikyakozesa ebitabo by'empapula ne spreadsheets. Bya buseere era bimanyiddwa, naye bisinziira ku kujjukira kw'omuntu omu ne kompyuta y'omuntu omu.",
+                    "Ekitabo bwe kibula, fayiro bw'ekyusibwa oba omuntu amanyi enkola bw'agenda, ebiwandiiko bigenda naye. Era kubanga tewali alaba bibalo okutuusa ku nkomerero y'omwezi, okufiirwa kumala wiiki nga tekumanyiddwa."
+                ]
+            },
+            "costs": {
+                "items": [
+                    "Ebyamaguzi ebibula nga tewali amanyi, oba ebiggwaawo ng'abaguzi babyetaaga",
+                    "Ebisale, looni oba ebyetaagibwa ebitagobererwa",
+                    "Essaawa buli mwezi ezimala nga bakoppa ebibalo wakati w'ebitabo ne spreadsheets",
+                    "Amatabi oba abakozi abawa ebibalo ebyawukana",
+                    "Tewali bukakafu bw'ani yakyusa ki, era tewali biwandiiko birungi eri bbanka, omuwa ssente oba abakuyi b'omusolo"
+                ]
+            },
+            "approach": {
+                "steps": [
+                    {
+                        "title": "Tutandikira ku ngeri gy'okolamu kati",
+                        "text": "Tulaba ebitabo byo ne sheets ne tuwandiika amateeka amatuufu: ani atunda, ani akkiriza, kiki ekibalibwa ng'ebyamaguzi, ne lipoota ki z'weetaaga ddala."
+                    },
+                    {
+                        "title": "Tuzimba enkola entono esinga okugasa",
+                        "text": "Kitera okuba omulimu gumu ogw'omutima okusooka, nga okuwandiika ebyamaguzi ebiyingira n'ebiggyamu, oba ebisale ebisasuddwa n'ebikyabanjibwa. Abakozi bagikozesa ku ssimu oba kompyuta, n'ebigambo bye bamanyi."
+                    },
+                    {
+                        "title": "Tuteeka data yo mu system",
+                        "text": "Tusuuza ne tuteeka spreadsheets zo ezaliwo, osobole okutandika n'ebyafaayo byo ebituufu mu kifo ky'okuva ku busa."
+                    },
+                    {
+                        "title": "Tugattako okufuga",
+                        "text": "Emirimu, okukkiriza, ekitabo ky'ebikyusiddwa byonna (audit trail), n'okukkiriza ku bintu nga ddiscount, okuggyawo ebyamaguzi n'ebbanja."
+                    },
+                    {
+                        "title": "Lipoota eziddamu ebibuuzo",
+                        "text": "Ebyamaguzi ebiriwo, okutunda okwa buli lunaku, ani abanjibwa ki n'okugerageranya amatabi, nga bisobola okuggyibwa mu Excel ne PDF eri oyo ayagala okubiwandiika ku lupapula."
+                    }
+                ]
+            },
+            "tech": {
+                "intro": "Kino kitera okubaamu:",
+                "items": [
+                    "Web app ekola ku ssimu, laptop oba byombi",
+                    "Empapula ennyangu ezigguka amangu ku mobile data, n'okuyingiza ebintu nga tolina internet nga biwerezebwa oluvannyuma omulimu bwe gukyetaaga",
+                    "Emirimu, okukkiriza ne audit log enzijuvu",
+                    "Okuyingiza okuva mu Excel, n'okuggyayo mu Excel ne PDF",
+                    "Ssente za mobile money ziwandiikibwa mu ngeri ey'otoma ku invoice oba ebisale",
+                    "Okuyunga ne URA EFRIS e-invoicing bizinensi yo bw'erina okugikozesa",
+                    "Okusoma barcode, amatabi mangi n'okulabula ebyamaguzi nga biweddewo"
+                ]
+            },
+            "faq": [
+                {
+                    "q": "Abakozi bange bajja kusobola nga bamanyidde empapula?",
+                    "a": "Ekyo kye tusinga okussaako omwoyo. Tukuuma screens nnyangu, tukozesa ebigambo byammwe, ne tuyigiriza ttiimu yo. Bizinensi nnyingi zikozesa empapula ne system empya wamu okumala akaseera okutuusa bonna we baddira obuganzi."
+                },
+                {
+                    "q": "Nsobola okweyongera okukozesa Excel?",
+                    "a": "Weewaawo. Tuyingiza okuva mu Excel okukutandikiza, era buli lipoota esobola okuggyibwa mu Excel buli lw'ogyetaaga."
+                },
+                {
+                    "q": "Twetaaga internet buli kiseera?",
+                    "a": "System ekoleddwa okuba nnyangu ku mobile data. Omulimu gwo bwe gukyetaaga, ng'ku katale oba mu byalo, tusobola okugattako okuyingiza ebintu nga tolina internet nga biwerezebwa connection bw'ezzaawo."
+                },
+                {
+                    "q": "Kiki ekiribaawo bwe nneetaaga okugoberera ebyamaguzi byokka, so si system enzijuvu?",
+                    "a": "Olwo ekyo kye tuzimba. Okutandika n'omulimu gumu n'okukulaakulana oluvannyuma kya buseere era kikuumibwa okusinga system ennene etekozesebwa muntu yenna."
+                },
+                {
+                    "q": "Ani nannyini data ne software?",
+                    "a": "Data ya bizinensi yo ya yiyo era esobola okuggyibwa buli kiseera. Tukkiriziganya ku nannyini software yennyini ku ntandikwa ya pulojekiti, nga kiwandiikiddwa."
+                },
+                {
+                    "q": "Software eyaliwo eyinza okuba esinga?",
+                    "a": "Oluusi. Product eriwo bw'eba ekutuukira, tujja kukugamba mu kuteesa okusooka okw'obwereere. Tuzimba software ey'enjawulo ng'enkola yo yeetongodde, oba ng'ebikozesebwa ebiriwo bya buseere nnyo, bizibu nnyo oba tebikwata ku mobile money n'ebyetaago by'ewaffe."
+                }
+            ]
+        },
+        "whatsapp-and-sms-automation": {
+            "card_title": "WhatsApp ne SMS mu ngeri ey'otoma",
+            "summary": "Weereza ebikakasa ku oda, receipt n'okujjukiza mu ngeri ey'otoma, era oddemu ebibuuzo ebya bulijjo nga tewali muntu atuula ku ssimu.",
+            "seo": {
+                "title": "WhatsApp ne SMS mu ngeri ey'otoma eri bizinensi mu Uganda | verbeek.ug",
+                "description": "Weereza ebikakasa ku oda, receipt z'okusasula, okujjukiza n'eby'okuddamu abaguzi ku WhatsApp ne SMS mu ngeri ey'otoma. Eri bizinensi mu Uganda ne Africa."
+            },
+            "h1": "WhatsApp ne SMS mu ngeri ey'otoma eri bizinensi mu Uganda",
+            "lead": "Zuula abaguzi gye bali dda. Weereza ebikakasa ku oda, receipt z'okusasula n'okujjukiza mu ngeri ey'otoma, era oddemu ebibuuzo ebya bulijjo nga tewali muntu abeera ku ssimu olunaku lwonna.",
+            "problem": {
+                "paragraphs": [
+                    "Eri bizinensi nnyingi mu Uganda, WhatsApp ye dduuka. Oda, ebibuuzo, obukakafu bw'okusasula n'okwemulugunya byonna biyingira mu chat emu, nga bitabuddwa n'obubaka obw'obuntu, era ebizzibwamu oyo alina essimu.",
+                    "Obubaka bubula ekiro nga tebuddiddwamu, oda zibula wakati wa chat, abaguzi beerabira okulaba, era nnyini bizinensi afuuka help desk. SMS etuuka ku baguzi abatalina smartphone, naye okugiweereza omu ku omu tekola ku muwendo omunene."
+                ]
+            },
+            "costs": {
+                "items": [
+                    "Abaguzi abawandiika ekiro ne bagula awalala",
+                    "Abatajja kubanga tewali yajjukiza",
+                    "Oda n'ebikwata ku kusasula ebikoppebwa n'engalo okuva mu chat okuyingira mu kitabo",
+                    "Ebibuuzo ebyo kkumi ebiddibwamu buli lunaku",
+                    "Tewali kiwandiiko kiraga kye kyasuubizibwa ani"
+                ]
+            },
+            "approach": {
+                "steps": [
+                    {
+                        "title": "Tuwandiika emboozi",
+                        "text": "Tuwandiika obubaka bw'otuma era ofuna ennyo, ne tusalawo obuteekwa okuba obw'otoma, obwetaaga omuntu, n'ekyo omuntu ono ky'ateekwa okulaba."
+                    },
+                    {
+                        "title": "Tuyunga ebyuma",
+                        "text": "WhatsApp okuyita mu WhatsApp Business Platform eya official, ne SMS oba USSD okuyita mu provider nga Africa's Talking, abaguzi abatalina smartphone nabo basobole okutuukibwako."
+                    },
+                    {
+                        "title": "Tukola ebya bulijjo mu ngeri ey'otoma",
+                        "text": "Okukakasa oda, receipt z'okusasula, amawulire g'okutuusa, okujjukiza ku biseera by'okulaba n'eby'okuddamu ebibuuzo ebya bulijjo, nga biwandiikiddwa mu ddoboozi lyo era mu Luganda oba Olungereza."
+                    },
+                    {
+                        "title": "Tuwa abantu omulimu bulungi",
+                        "text": "Ekintu kyonna system ky'etasobola kuddamu kigenda mu shared inbox n'ebyafaayo byonna, omuntu asobole okweyongerayo we kyaweddeyo."
+                    },
+                    {
+                        "title": "Tukigatta ku bizinensi yo",
+                        "text": "Obubaka bukwatagana ne oda, ebyamaguzi n'ebisasuddwa, ssente za mobile money ezikakasiddwa ziyinza okutuma receipt zokka."
+                    }
+                ]
+            },
+            "tech": {
+                "intro": "Kino kitera okubaamu:",
+                "items": [
+                    "WhatsApp Business Platform (Cloud API) n'obubaka obukkirizibwa (message templates)",
+                    "SMS ne USSD okuyita mu Africa's Talking oba provider ayinza okugifaanana",
+                    "Shared inbox ng'okuva ku otoma okudda ku muntu kuliwo",
+                    "AI assistant ey'okwesalirawo eddamu okuva ku price list yo ne FAQs, era eddayo eri omuntu bw'etakakasa",
+                    "Okutandika okuva ku oda, ebisasuddwa n'ebiseera by'okulaba",
+                    "Okukkiriza n'okugaana obubaka, abaguzi basigale nga be bafuga"
+                ]
+            },
+            "faq": [
+                {
+                    "q": "Nneetaaga WhatsApp Business API eya official?",
+                    "a": "Eri obubaka obw'otoma ku muwendo omunene, weewaawo. WhatsApp apps eza bulijjo tezikoleddwa kutuma bubaka bwa otoma oba bungi, era okuzikozesa bwe tutyo kiyinza okuleetera nnamba yo okuggalwa. Platform eya official ye kkubo erirungi, era tugitegeka naawe."
+                },
+                {
+                    "q": "WhatsApp esobola okuwandiikira abaguzi nga bwe basooka?",
+                    "a": "Weewaawo, naye ng'essaawa 24 ziyiseewo okuva ku bubaka bw'omuguzi obwasembayo, WhatsApp yeetaaga message templates ezikkiriziddwa nga bukyali, nga amawulire ga oda oba okujjukiza. Tuziwandiika ne tuzitwala okukkirizibwa."
+                },
+                {
+                    "q": "Abaguzi bajja kuwulira nga boogera ne robot?",
+                    "a": "Obubaka obw'otoma bwe bugasa: okukakasa, receipt n'okujjukiza. Eky'okuddamu we kyetaaga okusalawo, omuntu akikwata. Bw'ogattako AI assistant, tugitegeka okwogera ky'eri n'okuddayo eri omuntu mu kifo ky'okuteebereza."
+                },
+                {
+                    "q": "Muyinza okutuuka ku baguzi abatalina smartphone?",
+                    "a": "Weewaawo, okuyita mu SMS ne USSD menus, ezikola ku ssimu yonna, n'ezo ez'obuntu."
+                },
+                {
+                    "q": "Ewooza ssente mmeka okugikozesa?",
+                    "a": "Ssente ezikozesebwa kwe kusasula buli bubaka ku WhatsApp ne ku SMS providers, n'ekifo ky'okuterekamu (hosting). Tuzibalirira okusinziira ku muwendo gw'obubaka bw'osuubira nga tonnasalawo."
+                },
+                {
+                    "q": "Kino kisobola okuyungibwa ku mobile money?",
+                    "a": "Weewaawo. Ssente za MTN MoMo oba Airtel Money ezikakasiddwa ziyinza okutuma omuguzi receipt n'okuzza oda obuggya mu ngeri ey'otoma."
+                }
+            ]
+        }
+    }
+}

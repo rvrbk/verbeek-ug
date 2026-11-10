@@ -69,6 +69,24 @@
             </div>
         </section>
 
+        <!-- Solutions -->
+        <section class="hb-section hb-overview">
+            <div class="hb-container">
+                <div class="hb-section-header">
+                    <p class="hb-section-label text-sm tracking-widest uppercase">{{ $t('nav.solutions') }}</p>
+                    <h2 class="hb-section-title">{{ $t('solutions.index.hero_title') }}</h2>
+                    <p class="hb-section-subtitle">{{ $t('solutions.index.hero_description') }}</p>
+                </div>
+                <div class="hb-overview-grid hb-overview-grid-3">
+                    <router-link v-for="slug in solutionSlugs" :key="slug" :to="'/solutions/' + slug" class="hb-service-card hb-overview-card">
+                        <h3 class="hb-service-title">{{ $t('solutions.pages.' + slug + '.card_title') }}</h3>
+                        <p class="hb-service-description">{{ $t('solutions.pages.' + slug + '.summary') }}</p>
+                        <span class="hb-overview-more">{{ $t('solutions.labels.read_more') }} &rarr;</span>
+                    </router-link>
+                </div>
+            </div>
+        </section>
+
         <!-- Featured work -->
         <section class="hb-section hb-featured">
             <div class="hb-container">
@@ -78,7 +96,7 @@
                     <p class="hb-section-subtitle">{{ $t('portfolio.hero_description') }}</p>
                 </div>
                 <div class="hb-work-grid">
-                    <router-link v-for="w in [['prompt_tool', 'PromptVisual'], ['collective_canvas', 'CanvasVisual'], ['crowded_airport', 'AirportVisual']]" :key="w[0]" to="/portfolio" class="hb-work-card">
+                    <router-link v-for="w in [['prompt_tool', 'PromptVisual'], ['job_scout', 'JobVisual'], ['crowded_airport', 'AirportVisual']]" :key="w[0]" to="/portfolio" class="hb-work-card">
                         <div class="hb-work-visual"><div class="hb-work-scale"><component :is="w[1]" /></div></div>
                         <h3 class="hb-work-title">{{ $t('portfolio.items.' + w[0] + '.title') }}</h3>
                         <p class="hb-work-tagline">{{ $t('portfolio.items.' + w[0] + '.tagline') }}</p>
@@ -168,10 +186,15 @@
 import PromptVisual from '../components/PromptVisual.vue'
 import CanvasVisual from '../components/CanvasVisual.vue'
 import AirportVisual from '../components/AirportVisual.vue'
+import JobVisual from '../components/JobVisual.vue'
+import solutions from '../i18n/solutions.en.json'
 
 export default {
     name: 'Home',
-    components: { PromptVisual, CanvasVisual, AirportVisual }
+    components: { PromptVisual, CanvasVisual, AirportVisual, JobVisual },
+    data() {
+        return { solutionSlugs: solutions.order }
+    }
 }
 </script>
 

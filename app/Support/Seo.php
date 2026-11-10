@@ -22,7 +22,7 @@ class Seo
         ],
         'portfolio' => [
             'title' => 'Portfolio | verbeek.ug software solutions',
-            'description' => 'Platforms we have built and run: Prompt a Tool, Collective Canvas and Crowded Airport, plus MyCanopy, property listings for Uganda, currently in development.',
+            'description' => 'Platforms we have built and run: Prompt a Tool, Crowded Airport and Job Scout, plus MyCanopy, property listings for Uganda, currently in development.',
         ],
         'about' => [
             'title' => 'About | verbeek.ug software solutions',
@@ -47,14 +47,48 @@ class Seo
 
     private const APPS = [
         ['Prompt a Tool', 'https://prompt-a-tool.com', 'BusinessApplication', 'Turn an app idea into ready-to-use AI prompts, roles, agents and skills.'],
-        ['Collective Canvas', 'https://collective-canvas.verbeek.ug', 'GameApplication', 'A collaborative drawing game: draw blind, reveal together.'],
         ['Crowded Airport', 'https://crowded-airport.com', 'TravelApplication', 'Find your way on any airport in the world.'],
     ];
+
+    /** The solutions content, shared with the Vue pages (resources/js/i18n/solutions.en.json). */
+    public static function solutions(): array
+    {
+        static $data = null;
+
+        return $data ??= json_decode(file_get_contents(self::solutionsFile()), true, 512, JSON_THROW_ON_ERROR);
+    }
+
+    private static function solutionsFile(): string
+    {
+        return resource_path('js/i18n/solutions.en.json');
+    }
 
     public static function forPath(string $path): array
     {
         $key = trim($path, '/');
-        $page = self::PAGES[$key] ?? (str_starts_with($key, 'blog/') ? self::PAGES['blog'] : self::PAGES['']);
+        $robots = 'index, follow';
+        $status = 200;
+        $solution = null;
+
+        if ($key === 'solutions') {
+            $page = self::solutions()['index']['seo'];
+        } elseif (str_starts_with($key, 'solutions/')) {
+            $slug = substr($key, strlen('solutions/'));
+            $solution = self::solutions()['pages'][$slug] ?? null;
+
+            if ($solution) {
+                $page = $solution['seo'];
+            } else {
+                // Unknown solution: a real 404 that stays out of the index; the Vue app redirects visitors to the overview
+                $page = self::solutions()['index']['seo'];
+                $key = 'solutions';
+                $robots = 'noindex, follow';
+                $status = 404;
+            }
+        } else {
+            $page = self::PAGES[$key] ?? (str_starts_with($key, 'blog/') ? self::PAGES['blog'] : self::PAGES['']);
+        }
+
         $canonical = self::SITE . ($key === '' ? '' : '/' . $key);
 
         return [
@@ -62,8 +96,28 @@ class Seo
             'description' => $page['description'],
             'canonical' => $canonical,
             'image' => self::SITE . '/images/og-image.jpg',
-            'schema' => self::schema($key, $canonical, $page),
+            'robots' => $robots,
+            'status' => $status,
+            'schema' => self::schema($key, $canonical, $page, $solution),
+            'prerender' => self::prerender($key, $solution),
         ];
+    }
+
+    /**
+     * Plain HTML of the same content the Vue page shows, for crawlers and AI bots that do not run JavaScript.
+     * Rendered inside <noscript>, so people with JavaScript never see it twice.
+     */
+    private static function prerender(string $key, ?array $solution): ?string
+    {
+        if ($key !== 'solutions' && ! $solution) {
+            return null;
+        }
+
+        return view('solutions-prerender', [
+            'data' => self::solutions(),
+            'slug' => $solution ? substr($key, strlen('solutions/')) : null,
+            'page' => $solution,
+        ])->render();
     }
 
     /** Page key => the Vue page whose modification time stands in for the page's last change. */
@@ -78,6 +132,10 @@ class Seo
 
     public static function lastModified(string $key): string
     {
+        if ($key === 'solutions' || str_starts_with($key, 'solutions/')) {
+            return date('Y-m-d', filemtime(self::solutionsFile()) ?: time());
+        }
+
         $file = resource_path('js/pages/' . (self::SOURCES[str_starts_with($key, 'blog/') ? 'blog' : $key] ?? self::SOURCES['']));
 
         return date('Y-m-d', is_file($file) ? filemtime($file) : time());
@@ -86,12 +144,16 @@ class Seo
     /** Sitemap entries: [url, lastmod, changefreq, priority]. */
     public static function sitemap(): array
     {
-        $meta = ['' => ['monthly', '1.0'], 'services' => ['monthly', '0.9'], 'portfolio' => ['monthly', '0.9'], 'about' => ['yearly', '0.6'], 'contact' => ['yearly', '0.7']];
+        $meta = ['' => ['monthly', '1.0'], 'services' => ['monthly', '0.9'], 'solutions' => ['monthly', '0.9'], 'portfolio' => ['monthly', '0.9'], 'about' => ['yearly', '0.6'], 'contact' => ['yearly', '0.7']];
 
-        return array_map(fn ($key, $m) => [self::SITE . ($key === '' ? '/' : '/' . $key), self::lastModified($key), $m[0], $m[1]], array_keys($meta), $meta);
+        foreach (self::solutions()['order'] as $slug) {
+            $meta['solutions/' . $slug] = ['monthly', '0.8'];
+        }
+
+        return array_map(fn ($key, $m) => [self::SITE . ($key === '' ? '/' : '/' . $key), self::lastModified((string) $key), $m[0], $m[1]], array_keys($meta), $meta);
     }
 
-    private static function schema(string $key, string $canonical, array $page): array
+    private static function schema(string $key, string $canonical, array $page, ?array $solution = null): array
     {
         $org = [
             '@type' => ['Organization', 'ProfessionalService'],
@@ -123,6 +185,30 @@ class Seo
             'sameAs' => ['https://github.com/rvrbk'],
         ];
 
+        $webpage = [
+            '@type' => match (true) {
+                $key === 'contact' => 'ContactPage',
+                $key === 'about' => 'AboutPage',
+                $key === 'solutions' => 'CollectionPage',
+                default => 'WebPage',
+            },
+            '@id' => $canonical . '#webpage',
+            'url' => $canonical,
+            'name' => $page['title'],
+            'description' => $page['description'],
+            'isPartOf' => ['@id' => self::SITE . '/#website'],
+            'about' => ['@id' => self::SITE . '/#organization'],
+            'dateModified' => self::lastModified($key),
+        ];
+
+        if ($key === 'about') {
+            $webpage['mainEntity'] = ['@id' => self::SITE . '/#founder'];
+        }
+
+        if ($solution) {
+            $webpage['about'] = ['@id' => $canonical . '#service'];
+        }
+
         $graph = [
             $org,
             $founder,
@@ -134,20 +220,46 @@ class Seo
                 'publisher' => ['@id' => self::SITE . '/#organization'],
                 'inLanguage' => ['en', 'lg'],
             ],
-            [
-                '@type' => $key === 'contact' ? 'ContactPage' : ($key === 'about' ? 'AboutPage' : 'WebPage'),
-                '@id' => $canonical . '#webpage',
-                'url' => $canonical,
-                'name' => $page['title'],
-                'description' => $page['description'],
-                'isPartOf' => ['@id' => self::SITE . '/#website'],
-                'about' => ['@id' => self::SITE . '/#organization'],
-                'dateModified' => self::lastModified($key),
-            ],
+            $webpage,
         ];
 
-        if ($key === 'about') {
-            $graph[2]['mainEntity'] = ['@id' => self::SITE . '/#founder'];
+        if ($solution) {
+            $graph[] = [
+                '@type' => 'Service',
+                '@id' => $canonical . '#service',
+                'name' => $solution['card_title'],
+                'serviceType' => $solution['card_title'],
+                'description' => $page['description'],
+                'url' => $canonical,
+                'provider' => ['@id' => self::SITE . '/#organization'],
+                'areaServed' => [
+                    ['@type' => 'Country', 'name' => 'Uganda'],
+                    ['@type' => 'Continent', 'name' => 'Africa'],
+                ],
+            ];
+            $graph[] = [
+                '@type' => 'FAQPage',
+                '@id' => $canonical . '#faq',
+                'mainEntity' => array_map(fn ($f) => [
+                    '@type' => 'Question',
+                    'name' => $f['q'],
+                    'acceptedAnswer' => ['@type' => 'Answer', 'text' => $f['a']],
+                ], $solution['faq']),
+            ];
+        }
+
+        if ($key === 'solutions') {
+            $data = self::solutions();
+            $graph[] = [
+                '@type' => 'ItemList',
+                'name' => 'Solutions',
+                'itemListElement' => array_map(fn ($slug, $i) => [
+                    '@type' => 'ListItem',
+                    'position' => $i + 1,
+                    'url' => self::SITE . '/solutions/' . $slug,
+                    'name' => $data['pages'][$slug]['card_title'],
+                ], $data['order'], array_keys($data['order'])),
+            ];
         }
 
         if ($key === 'services') {
@@ -189,13 +301,23 @@ class Seo
         }
 
         if ($key !== '') {
-            $label = ucfirst(explode('/', $key)[0]);
+            $crumbs = [['Home', self::SITE]];
+
+            if ($solution) {
+                $crumbs[] = ['Solutions', self::SITE . '/solutions'];
+                $crumbs[] = [$solution['card_title'], $canonical];
+            } else {
+                $crumbs[] = [ucfirst(explode('/', $key)[0]), $canonical];
+            }
+
             $graph[] = [
                 '@type' => 'BreadcrumbList',
-                'itemListElement' => [
-                    ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => self::SITE],
-                    ['@type' => 'ListItem', 'position' => 2, 'name' => $label, 'item' => $canonical],
-                ],
+                'itemListElement' => array_map(fn ($c, $i) => [
+                    '@type' => 'ListItem',
+                    'position' => $i + 1,
+                    'name' => $c[0],
+                    'item' => $c[1],
+                ], $crumbs, array_keys($crumbs)),
             ];
         }
 

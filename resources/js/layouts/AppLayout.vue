@@ -17,6 +17,9 @@
           <router-link to="/services" class="hb-nav-item" exact-active-class="hb-nav-item-active">
             {{ $t('nav.services') }}
           </router-link>
+          <router-link to="/solutions" class="hb-nav-item" active-class="hb-nav-item-active">
+            {{ $t('nav.solutions') }}
+          </router-link>
           <router-link to="/portfolio" class="hb-nav-item" exact-active-class="hb-nav-item-active">
             {{ $t('nav.portfolio') }}
           </router-link>
@@ -44,6 +47,7 @@
       <nav class="mobile-nav" @click.stop>
         <router-link to="/" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">{{ $t('nav.home') }}</router-link>
         <router-link to="/services" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">{{ $t('nav.services') }}</router-link>
+        <router-link to="/solutions" class="mobile-nav-link" @click="mobileMenuOpen = false" active-class="hb-nav-item-active">{{ $t('nav.solutions') }}</router-link>
         <router-link to="/portfolio" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">{{ $t('nav.portfolio') }}</router-link>
         <router-link to="/about" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">{{ $t('nav.about') }}</router-link>
         <router-link to="/contact" class="mobile-nav-link" @click="mobileMenuOpen = false" exact-active-class="hb-nav-item-active">{{ $t('nav.contact') }}</router-link>

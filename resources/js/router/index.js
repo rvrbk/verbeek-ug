@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { watch } from 'vue'
 import i18n from '../i18n'
+import solutions from '../i18n/solutions.en.json'
 
 const routes = [
     {
@@ -14,6 +15,20 @@ const routes = [
         name: 'Services',
         component: () => import('@/pages/Services/Index.vue'),
         meta: { seo: 'services' }
+    },
+    {
+        path: '/solutions',
+        name: 'Solutions',
+        component: () => import('@/pages/Solutions/Index.vue'),
+        meta: { seoBase: () => 'solutions.index.seo' }
+    },
+    {
+        path: '/solutions/:slug',
+        name: 'Solution',
+        component: () => import('@/pages/Solutions/Page.vue'),
+        // Unknown slugs go back to the overview (the server answers them with a 404)
+        beforeEnter: (to) => (solutions.pages[to.params.slug] ? true : '/solutions'),
+        meta: { seoBase: (route) => `solutions.pages.${route.params.slug}.seo` }
     },
     {
         path: '/portfolio',
@@ -69,9 +84,9 @@ const setMeta = (selector, attr, value) => {
 }
 function applySeo(route) {
     const { t, locale } = i18n.global
-    const key = route.meta.seo || 'home'
-    const title = t(`seo.${key}.title`)
-    const description = t(`seo.${key}.description`)
+    const base = route.meta.seoBase ? route.meta.seoBase(route) : `seo.${route.meta.seo || 'home'}`
+    const title = t(`${base}.title`)
+    const description = t(`${base}.description`)
     const url = SITE + (route.path === '/' ? '' : route.path)
     document.title = title
     document.documentElement.lang = locale.value

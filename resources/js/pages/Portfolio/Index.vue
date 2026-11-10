@@ -49,25 +49,6 @@
                     </article>
 
                     <article class="hb-project">
-                        <a href="https://collective-canvas.verbeek.ug" target="_blank" rel="noopener" class="hb-project-media" :aria-label="$t('portfolio.items.collective_canvas.title')">
-                            <CanvasVisual />
-                        </a>
-                        <div class="hb-project-body">
-                            <h3 class="hb-portfolio-title">{{ $t('portfolio.items.collective_canvas.title') }}</h3>
-                            <p class="hb-project-tagline">{{ $t('portfolio.items.collective_canvas.tagline') }}</p>
-                            <p class="hb-portfolio-description">{{ $t('portfolio.items.collective_canvas.description') }}</p>
-                            <ul class="hb-project-features">
-                                <li v-for="n in 3" :key="n">{{ $t('portfolio.items.collective_canvas.features.' + (n - 1)) }}</li>
-                            </ul>
-                            <div class="hb-portfolio-tags">
-                                <span v-for="n in 3" :key="n" class="hb-tag">{{ $t('portfolio.items.collective_canvas.tags.' + (n - 1)) }}</span>
-                            </div>
-                            <a href="https://collective-canvas.verbeek.ug" target="_blank" rel="noopener" class="hb-btn hb-btn-primary hb-portfolio-btn">
-                                {{ $t('common.visit_site') }}
-                            </a>
-                        </div>
-                    </article>
-                    <article class="hb-project">
                         <a href="https://crowded-airport.com" target="_blank" rel="noopener" class="hb-project-media" :aria-label="$t('portfolio.items.crowded_airport.title')">
                             <AirportVisual />
                         </a>
@@ -84,6 +65,22 @@
                             <a href="https://crowded-airport.com" target="_blank" rel="noopener" class="hb-btn hb-btn-primary hb-portfolio-btn">
                                 {{ $t('common.visit_site') }}
                             </a>
+                        </div>
+                    </article>
+                    <article class="hb-project">
+                        <div class="hb-project-media">
+                            <JobVisual />
+                        </div>
+                        <div class="hb-project-body">
+                            <h3 class="hb-portfolio-title">{{ $t('portfolio.items.job_scout.title') }}</h3>
+                            <p class="hb-project-tagline">{{ $t('portfolio.items.job_scout.tagline') }}</p>
+                            <p class="hb-portfolio-description">{{ $t('portfolio.items.job_scout.description') }}</p>
+                            <ul class="hb-project-features">
+                                <li v-for="n in 3" :key="n">{{ $t('portfolio.items.job_scout.features.' + (n - 1)) }}</li>
+                            </ul>
+                            <div class="hb-portfolio-tags">
+                                <span v-for="n in 3" :key="n" class="hb-tag">{{ $t('portfolio.items.job_scout.tags.' + (n - 1)) }}</span>
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -119,23 +116,6 @@
                         </a>
                     </div>
                 </article>
-                <article class="hb-project hb-project-wip hb-project-stack">
-                    <div class="hb-project-media">
-                        <JobVisual />
-                    </div>
-                    <div class="hb-project-body">
-                        <span class="hb-status"><i></i>{{ $t('portfolio.wip.status') }}</span>
-                        <h3 class="hb-portfolio-title">{{ $t('portfolio.wip.job_scout.title_item') }}</h3>
-                        <p class="hb-project-tagline">{{ $t('portfolio.wip.job_scout.tagline') }}</p>
-                        <p class="hb-portfolio-description">{{ $t('portfolio.wip.job_scout.description') }}</p>
-                        <ul class="hb-project-features">
-                            <li v-for="n in 3" :key="n">{{ $t('portfolio.wip.job_scout.features.' + (n - 1)) }}</li>
-                        </ul>
-                        <div class="hb-portfolio-tags">
-                            <span v-for="n in 3" :key="n" class="hb-tag">{{ $t('portfolio.wip.job_scout.tags.' + (n - 1)) }}</span>
-                        </div>
-                    </div>
-                </article>
                 </div>
             </div>
         </section>
@@ -158,14 +138,13 @@
 
 <script>
 import PromptVisual from '../../components/PromptVisual.vue'
-import CanvasVisual from '../../components/CanvasVisual.vue'
 import AirportVisual from '../../components/AirportVisual.vue'
 import MapVisual from '../../components/MapVisual.vue'
 import JobVisual from '../../components/JobVisual.vue'
 
 export default {
     name: 'Portfolio',
-    components: { PromptVisual, CanvasVisual, AirportVisual, MapVisual, JobVisual }
+    components: { PromptVisual, AirportVisual, MapVisual, JobVisual }
 }
 </script>
 
