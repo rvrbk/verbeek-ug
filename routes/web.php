@@ -22,7 +22,7 @@ Route::post('/api/contact', function (Request $request) {
         Mail::raw(
             "Name: {$validated['name']}\n\nEmail: {$validated['email']}\n\nPhone: " . ($validated['phone'] ?? 'N/A') . "\n\nMessage: {$validated['message']}",
             function ($message) use ($validated) {
-                $message->to('rvrbk.dev@gmail.com');
+                $message->to('info@verbeek.ug');
                 $message->subject('Contact Form Submission from verbeek.ug');
                 $message->from($validated['email'], $validated['name']);
                 $message->replyTo($validated['email'], $validated['name']);

@@ -21,7 +21,7 @@ Max-requests: 1 request per 2 seconds
 
 # Contact
 Owner: verbeek.ug software solutions
-Email: rvrbk.dev@gmail.com
+Email: info@verbeek.ug
 Website: https://verbeek.ug
 
 # Site Description

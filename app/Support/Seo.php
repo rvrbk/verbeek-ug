@@ -163,7 +163,7 @@ class Seo
             'description' => 'Custom software, business automation, AI solutions, community platforms and consultancy for businesses across Africa.',
             'url' => self::SITE,
             'logo' => self::SITE . '/logo.png',
-            'email' => 'rvrbk.dev@gmail.com',
+            'email' => 'info@verbeek.ug',
             'areaServed' => ['@type' => 'Continent', 'name' => 'Africa'],
             'serviceType' => array_column(self::SERVICES, 0),
             'founder' => ['@id' => self::SITE . '/#founder'],
@@ -171,7 +171,7 @@ class Seo
             'contactPoint' => [
                 '@type' => 'ContactPoint',
                 'contactType' => 'customer support',
-                'email' => 'rvrbk.dev@gmail.com',
+                'email' => 'info@verbeek.ug',
                 'availableLanguage' => ['English', 'Luganda'],
             ],
         ];
