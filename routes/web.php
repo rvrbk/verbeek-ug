@@ -23,8 +23,7 @@ Route::post('/api/contact', function (Request $request) {
             "Name: {$validated['name']}\n\nEmail: {$validated['email']}\n\nPhone: " . ($validated['phone'] ?? 'N/A') . "\n\nMessage: {$validated['message']}",
             function ($message) use ($validated) {
                 $message->to('info@verbeek.ug');
-                $message->subject('Contact Form Submission from verbeek.ug');
-                $message->from($validated['email'], $validated['name']);
+                $message->subject('Contact Form Submission from ' . $validated['name']);
                 $message->replyTo($validated['email'], $validated['name']);
             }
         );
