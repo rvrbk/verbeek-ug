@@ -19,7 +19,7 @@
     "index": {
         "seo": {
             "title": "Software Solutions for African Businesses | verbeek.ug",
-            "description": "Mobile money integration, inventory and records software, and WhatsApp and SMS automation for businesses in Uganda and across Africa."
+            "description": "Mobile money integration, inventory and records software, WhatsApp and SMS automation, and a job search assistant for businesses in Uganda and across Africa."
         },
         "hero_subtitle": "Solutions",
         "hero_title": "Real problems, solved with software",
@@ -29,7 +29,8 @@
     "order": [
         "mobile-money-integration",
         "inventory-and-records-software",
-        "whatsapp-and-sms-automation"
+        "whatsapp-and-sms-automation",
+        "job-search-and-cv-assistant"
     ],
     "pages": {
         "mobile-money-integration": {
@@ -118,7 +119,11 @@
                     "a": "Yes. Disbursements let you pay staff, suppliers, farmers or refunds straight to a mobile money number, with approvals and limits so that no single person can send money alone."
                 }
             ],
-            "related": ["inventory-and-records-software", "whatsapp-and-sms-automation"]
+            "related": [
+                "inventory-and-records-software",
+                "whatsapp-and-sms-automation",
+                "job-search-and-cv-assistant"
+            ]
         },
         "inventory-and-records-software": {
             "card_title": "Replace paper books and Excel",
@@ -206,7 +211,11 @@
                     "a": "Sometimes. If an existing product already fits, we will say so in the free first consultation. We build custom software when your process is specific, or when existing tools are too expensive, too complex or do not handle mobile money and local needs."
                 }
             ],
-            "related": ["mobile-money-integration", "whatsapp-and-sms-automation"]
+            "related": [
+                "mobile-money-integration",
+                "whatsapp-and-sms-automation",
+                "job-search-and-cv-assistant"
+            ]
         },
         "whatsapp-and-sms-automation": {
             "card_title": "WhatsApp and SMS automation",
@@ -293,7 +302,92 @@
                     "a": "Yes. A confirmed MTN MoMo or Airtel Money payment can send the customer a receipt and update the order automatically."
                 }
             ],
-            "related": ["mobile-money-integration", "inventory-and-records-software"]
+            "related": [
+                "mobile-money-integration",
+                "inventory-and-records-software",
+                "job-search-and-cv-assistant"
+            ]
+        },
+        "job-search-and-cv-assistant": {
+            "card_title": "Job search and CV assistant",
+            "summary": "Find the roles that fit you, and get a tailored CV and cover letter for each one, with every claim checked against facts you have confirmed.",
+            "seo": {
+                "title": "Job Search & CV Assistant, Job Scout | verbeek.ug",
+                "description": "Job Scout searches job boards, scores each posting against your profile and writes a tailored CV and cover letter, checking every claim against your own facts."
+            },
+            "h1": "A job search assistant that only claims what is true",
+            "lead": "Searching job boards and rewriting your CV for every application takes hours. Job Scout does the searching and the first draft for you, and checks every statement against facts about you, so nothing in your application is made up.",
+            "problem": {
+                "paragraphs": [
+                    "A good job search means reading dozens of postings, deciding which ones really fit, and then adapting your CV and cover letter for each. Most people either send the same generic documents everywhere or run out of energy before they have applied to enough of the right roles.",
+                    "General AI writing tools make this faster, but they also invent. They add skills you do not have, round up your experience and write achievements that never happened. An employer who checks, or an interview that goes deeper, can then cost you the job."
+                ]
+            },
+            "costs": {
+                "items": [
+                    "Hours spent every week scanning job boards for the few roles that fit",
+                    "Generic CVs and cover letters that do not speak to the specific role",
+                    "Good matches missed because you did not see the posting in time",
+                    "Documents with claims you cannot back up in an interview",
+                    "No clear record of what you applied for and why"
+                ]
+            },
+            "approach": {
+                "steps": [
+                    {
+                        "title": "Set your preferences",
+                        "text": "You describe the roles you want, and Job Scout builds a profile of your experience, skills and preferences."
+                    },
+                    {
+                        "title": "Search and score",
+                        "text": "It searches job boards for matching roles and scores each posting against your profile, so the best fits come first."
+                    },
+                    {
+                        "title": "Choose what to pursue",
+                        "text": "You pick the roles that interest you. Nothing is written or sent until you decide."
+                    },
+                    {
+                        "title": "Draft tailored documents",
+                        "text": "For each chosen role it writes a CV and cover letter aimed at that posting."
+                    },
+                    {
+                        "title": "Check every claim",
+                        "text": "Each statement in a generated document is checked against a ledger of facts about you. Claims that are not backed by a confirmed fact are flagged instead of passed through."
+                    }
+                ]
+            },
+            "tech": {
+                "intro": "What it is built with and how it works:",
+                "items": [
+                    "A Laravel application with a web interface you can use from any browser",
+                    "AI models that score postings and draft documents",
+                    "A ledger of facts about you, which drives the claim checking",
+                    "Scheduled searches across job boards",
+                    "You stay in control: facts are confirmed by you, and roles are chosen by you"
+                ]
+            },
+            "faq": [
+                {
+                    "q": "Does it apply to jobs for me?",
+                    "a": "No. It finds and scores roles and drafts documents for the ones you choose. You review everything and apply yourself."
+                },
+                {
+                    "q": "How does it stop the AI inventing things?",
+                    "a": "Every statement in a generated CV or cover letter is checked against a ledger of facts about you. Anything the ledger does not support is flagged, so you can fix or remove it before you send it."
+                },
+                {
+                    "q": "Where can I try it?",
+                    "a": "Job Scout is live at https://job-scout.verbeek.ug/."
+                },
+                {
+                    "q": "Can you build something similar for my business?",
+                    "a": "Yes. The same approach, AI that drafts and a record of confirmed facts that checks the result, suits proposals, reports and customer replies. Tell us what you need and we will say honestly whether it is a good fit."
+                }
+            ],
+            "related": [
+                "inventory-and-records-software",
+                "whatsapp-and-sms-automation"
+            ]
         }
     }
 }

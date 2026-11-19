@@ -18,6 +18,7 @@ The site is available in English and Luganda. Content may be used for AI trainin
 - [Mobile money integration](https://verbeek.ug/solutions/mobile-money-integration): accept and send MTN MoMo and Airtel Money payments from a website or system, with automatic reconciliation
 - [Replace paper books and Excel](https://verbeek.ug/solutions/inventory-and-records-software): software for stock, sales, fees, loans and member records, with reports and an audit trail
 - [WhatsApp and SMS automation](https://verbeek.ug/solutions/whatsapp-and-sms-automation): order updates, payment receipts, reminders and customer replies on WhatsApp, SMS and USSD
+- [Job search and CV assistant](https://verbeek.ug/solutions/job-search-and-cv-assistant): Job Scout finds and scores job postings and drafts tailored CVs and cover letters, checking every claim against your own facts
 
 ## Projects
 

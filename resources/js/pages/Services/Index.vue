@@ -70,26 +70,6 @@
             </div>
         </section>
 
-        <!-- Job Scout -->
-        <section id="job-scout" class="hb-section hb-consultancy">
-            <div class="hb-container">
-                <div class="hb-consultancy-intro">
-                    <p class="hb-section-label text-sm tracking-widest uppercase">{{ $t('services.job_scout.label') }}</p>
-                    <h2 class="hb-section-title">{{ $t('services.job_scout.title') }}</h2>
-                    <p class="hb-cta-text">{{ $t('services.job_scout.text') }}</p>
-                </div>
-                <div class="hb-consultancy-points">
-                    <div v-for="n in 3" :key="n" class="hb-consultancy-point">
-                        <h3>{{ $t('services.job_scout.points.' + (n - 1) + '.title') }}</h3>
-                        <p>{{ $t('services.job_scout.points.' + (n - 1) + '.text') }}</p>
-                    </div>
-                </div>
-                <a href="https://job-scout.verbeek.ug/" target="_blank" rel="noopener" class="hb-btn hb-btn-primary hb-cta-btn">
-                    {{ $t('common.visit_site') }}
-                </a>
-            </div>
-        </section>
-
         <!-- Consultancy -->
         <section id="consultancy" class="hb-section hb-consultancy">
             <div class="hb-container">

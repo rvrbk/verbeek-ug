@@ -124,17 +124,6 @@ export default {
         cta_text: 'Let\'s discuss which service is right for your business. First consultation is always free.',
         cta_button: 'Get a Free Consultation',
 
-        job_scout: {
-            label: 'Job Scout',
-            title: 'A job search assistant you can trust',
-            text: 'Job Scout is our own AI product, built to show what we do for clients: practical automation with a human in charge. It searches job boards for roles that fit your preferences, scores each posting against your profile and drafts a tailored CV and cover letter for the ones you pick.',
-            points: [
-                { title: 'Search and scoring', text: 'It scans job boards for you and ranks every posting by how well it fits your profile.' },
-                { title: 'Tailored documents', text: 'A CV and cover letter written for each role you choose, not a generic template.' },
-                { title: 'Nothing made up', text: 'Every claim in a document is checked against a ledger of facts about you, so you never send something untrue.' }
-            ]
-        },
-
         consultancy: {
             label: 'Consultancy',
             title: 'Advice before you build',
