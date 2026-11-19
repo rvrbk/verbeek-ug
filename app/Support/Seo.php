@@ -47,6 +47,7 @@ class Seo
 
     private const APPS = [
         ['Prompt a Tool', 'https://prompt-a-tool.com', 'BusinessApplication', 'Turn an app idea into ready-to-use AI prompts, roles, agents and skills.'],
+        ['Job Scout', 'https://job-scout.verbeek.ug/', 'BusinessApplication', 'A job search assistant that scores jobs against your profile and writes tailored CVs and cover letters, with every claim checked against your own facts.'],
         ['Crowded Airport', 'https://crowded-airport.com', 'TravelApplication', 'Find your way on any airport in the world.'],
     ];
 

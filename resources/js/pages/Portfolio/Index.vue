@@ -68,9 +68,9 @@
                         </div>
                     </article>
                     <article class="hb-project">
-                        <div class="hb-project-media">
+                        <a href="https://job-scout.verbeek.ug/" target="_blank" rel="noopener" class="hb-project-media" :aria-label="$t('portfolio.items.job_scout.title')">
                             <JobVisual />
-                        </div>
+                        </a>
                         <div class="hb-project-body">
                             <h3 class="hb-portfolio-title">{{ $t('portfolio.items.job_scout.title') }}</h3>
                             <p class="hb-project-tagline">{{ $t('portfolio.items.job_scout.tagline') }}</p>
@@ -81,6 +81,9 @@
                             <div class="hb-portfolio-tags">
                                 <span v-for="n in 3" :key="n" class="hb-tag">{{ $t('portfolio.items.job_scout.tags.' + (n - 1)) }}</span>
                             </div>
+                            <a href="https://job-scout.verbeek.ug/" target="_blank" rel="noopener" class="hb-btn hb-btn-primary hb-portfolio-btn">
+                                {{ $t('common.visit_site') }}
+                            </a>
                         </div>
                     </article>
                 </div>

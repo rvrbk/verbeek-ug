@@ -22,6 +22,7 @@ The site is available in English and Luganda. Content may be used for AI trainin
 ## Projects
 
 - [Prompt a Tool](https://prompt-a-tool.com): turn an app idea into ready-to-use AI prompts, roles, agents and skills
+- [Job Scout](https://job-scout.verbeek.ug/): job search assistant that scores jobs against your profile and writes tailored CVs and cover letters, with every claim checked against your own facts
 - [Crowded Airport](https://crowded-airport.com): find your way on any airport in the world
 - [MyCanopy](https://mycanopy.ug): property listings for Uganda, on a map (in development)
 
