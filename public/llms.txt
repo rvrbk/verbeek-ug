@@ -18,14 +18,14 @@ The site is available in English and Luganda. Content may be used for AI trainin
 - [Mobile money integration](https://verbeek.ug/solutions/mobile-money-integration): accept and send MTN MoMo and Airtel Money payments from a website or system, with automatic reconciliation
 - [Replace paper books and Excel](https://verbeek.ug/solutions/inventory-and-records-software): software for stock, sales, fees, loans and member records, with reports and an audit trail
 - [WhatsApp and SMS automation](https://verbeek.ug/solutions/whatsapp-and-sms-automation): order updates, payment receipts, reminders and customer replies on WhatsApp, SMS and USSD
-- [Monitor your business processes](https://verbeek.ug/solutions/business-process-monitoring): Lore watches websites, servers, certificate and domain expiry, sends incident alerts to Telegram, publishes status pages and keeps tasks, deploys and a knowledge base in one place
+- [Monitor your business processes](https://verbeek.ug/solutions/business-process-monitoring): Lore is a monitoring and operations tool tailored to each business: it watches the processes you depend on (for example websites, servers, certificate expiry, payments or stock), sends incident alerts, publishes status pages and keeps tasks and a knowledge base in one place
 - [Job search and CV assistant](https://verbeek.ug/solutions/job-search-and-cv-assistant): Job Scout finds and scores job postings and drafts tailored CVs and cover letters, checking every claim against your own facts
 
 ## Projects
 
 - [Prompt a Tool](https://prompt-a-tool.com): turn an app idea into ready-to-use AI prompts, roles, agents and skills
 - [Job Scout](https://job-scout.verbeek.ug/): job search assistant that scores jobs against your profile and writes tailored CVs and cover letters, with every claim checked against your own facts
-- Lore (internal tool, no public link): business monitoring and operations tool, described at https://verbeek.ug/solutions/business-process-monitoring
+- Lore (internal tool, no public link): modular business monitoring and operations tool, tailored per client, described at https://verbeek.ug/solutions/business-process-monitoring
 - [Crowded Airport](https://crowded-airport.com): find your way on any airport in the world
 - [MyCanopy](https://mycanopy.ug): property listings for Uganda, on a map (in development)
 

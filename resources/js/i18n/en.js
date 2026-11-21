@@ -206,14 +206,14 @@ export default {
             },
             lore: {
                 title: 'Lore',
-                tagline: 'Monitor your business processes in one place',
-                description: 'Lore watches the things a business depends on and tells you the moment one of them fails. It checks websites and servers, tracks certificate and domain expiry, opens incidents with Telegram alerts, publishes status pages and keeps tasks, reminders, deploys and a Markdown knowledge base next to them. We built it for our own work and run it every day.',
+                tagline: 'A monitoring tool tailored to your business',
+                description: 'Lore watches the processes a business depends on and tells you the moment one of them fails. It is modular and tailored: our own setup monitors websites and servers, tracks certificate and domain expiry, sends Telegram alerts and keeps tasks, deploys and a knowledge base alongside. A shop, a school or a farm would get a different mix, built around what matters to them.',
                 features: [
-                    'Uptime and server health checks with instant Telegram alerts',
-                    'Incidents, post-mortems and public status pages',
-                    'Tasks, reminders, deploys, analytics and a knowledge base in one tool'
+                    'Checks, alerts and tools chosen per business, not a fixed product',
+                    'Incidents, post-mortems and optional public status pages',
+                    'Our own setup is one example: uptime, servers, tasks, deploys and a knowledge base'
                 ],
-                tags: ['Monitoring', 'Operations', 'Laravel']
+                tags: ['Monitoring', 'Tailored', 'Laravel']
             },
             crowded_airport: {
                 title: 'Crowded Airport',
