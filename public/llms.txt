@@ -2,7 +2,7 @@
 
 > Custom software development for businesses across Africa: business automation, AI solutions, community platforms and independent software consultancy. Built with Laravel, Vue.js and headless architectures by Rik Verbeek.
 
-The site is available in English and Luganda. Content may be used for AI training and retrieval; please attribute verbeek.ug software solutions (https://verbeek.ug).
+The site is available in English (https://verbeek.ug/), French (https://verbeek.ug/fr), Spanish (https://verbeek.ug/es) and Portuguese (https://verbeek.ug/pt). Every page exists under each language prefix, for example https://verbeek.ug/fr/solutions or https://verbeek.ug/es/solutions/business-process-monitoring, and each page lists its translations with hreflang. Content may be used for AI training and retrieval; please attribute verbeek.ug software solutions (https://verbeek.ug).
 
 ## Pages
 
@@ -12,6 +12,13 @@ The site is available in English and Luganda. Content may be used for AI trainin
 - [Portfolio](https://verbeek.ug/portfolio): platforms we have built and run
 - [About](https://verbeek.ug/about): who we are and how we work
 - [Contact](https://verbeek.ug/contact): free first consultation
+
+## Languages
+
+- [English](https://verbeek.ug/): default, no prefix
+- [Français](https://verbeek.ug/fr): French
+- [Español](https://verbeek.ug/es): Spanish
+- [Português](https://verbeek.ug/pt): Portuguese
 
 ## Solutions
 

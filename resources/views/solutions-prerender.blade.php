@@ -1,7 +1,8 @@
 {{-- Plain-HTML copy of the Vue solutions pages, for crawlers that do not run JavaScript (rendered inside <noscript>). --}}
 @php($labels = $data['labels'])
+@php($prefix = $lang === 'en' ? '' : '/' . $lang)
 <header>
-    <a href="/">{{ $labels['home'] }}</a> / <a href="/solutions">{{ $labels['solutions'] }}</a>
+    <a href="{{ $prefix }}/">{{ $labels['home'] }}</a> / <a href="{{ $prefix }}/solutions">{{ $labels['solutions'] }}</a>
 </header>
 <main>
 @if ($page)
@@ -44,7 +45,7 @@
     <h2>{{ $labels['related'] }}</h2>
     <ul>
         @foreach ($page['related'] as $rel)
-            <li><a href="/solutions/{{ $rel }}">{{ $data['pages'][$rel]['card_title'] }}</a>: {{ $data['pages'][$rel]['summary'] }}</li>
+            <li><a href="{{ $prefix }}/solutions/{{ $rel }}">{{ $data['pages'][$rel]['card_title'] }}</a>: {{ $data['pages'][$rel]['summary'] }}</li>
         @endforeach
     </ul>
 @else
@@ -53,11 +54,11 @@
     <p>{{ $data['index']['intro'] }}</p>
     <ul>
         @foreach ($data['order'] as $slug)
-            <li><a href="/solutions/{{ $slug }}">{{ $data['pages'][$slug]['card_title'] }}</a>: {{ $data['pages'][$slug]['summary'] }}</li>
+            <li><a href="{{ $prefix }}/solutions/{{ $slug }}">{{ $data['pages'][$slug]['card_title'] }}</a>: {{ $data['pages'][$slug]['summary'] }}</li>
         @endforeach
     </ul>
 @endif
     <h2>{{ $labels['cta_title'] }}</h2>
     <p>{{ $labels['cta_text'] }}</p>
-    <p><a href="/contact">{{ $labels['cta_button'] }}</a></p>
+    <p><a href="{{ $prefix }}/contact">{{ $labels['cta_button'] }}</a></p>
 </main>

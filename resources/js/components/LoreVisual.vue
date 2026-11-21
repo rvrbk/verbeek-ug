@@ -4,19 +4,19 @@
             <span class="lv-logo">L</span>
             <div>
                 <strong>Lore</strong>
-                <small>Built around your business</small>
+                <small>{{ $t('visuals.lore.tagline') }}</small>
             </div>
         </div>
-        <div class="lv-label">Pick what you need</div>
+        <div class="lv-label">{{ $t('visuals.lore.pick') }}</div>
         <div class="lv-grid">
             <div class="lv-tile" v-for="m in modules" :key="m.name" :class="{ on: m.on }">
                 <span class="lv-dot"></span>
-                <b>{{ m.name }}</b>
+                <b>{{ $t('visuals.lore.' + m.name) }}</b>
             </div>
         </div>
         <div class="lv-alert">
-            <span>Your setup, your alerts</span>
-            <em>Tailored per business</em>
+            <span>{{ $t('visuals.lore.setup') }}</span>
+            <em>{{ $t('visuals.lore.tailored') }}</em>
         </div>
     </div>
 </template>
@@ -27,12 +27,12 @@ export default {
     data() {
         return {
             modules: [
-                { name: 'Uptime checks', on: true },
-                { name: 'Stock levels', on: true },
-                { name: 'Payments', on: true },
-                { name: 'Renewals', on: true },
-                { name: 'Deliveries', on: false },
-                { name: 'Status page', on: false }
+                { name: 'uptime', on: true },
+                { name: 'stock', on: true },
+                { name: 'payments', on: true },
+                { name: 'renewals', on: true },
+                { name: 'deliveries', on: false },
+                { name: 'status', on: false }
             ]
         }
     }

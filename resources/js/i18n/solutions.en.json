@@ -14,7 +14,8 @@
         "cta_title": "Tell us about your situation",
         "cta_text": "Describe the problem in a few lines. We will tell you honestly whether software is the right answer, what it would involve and what to leave out. The first consultation is always free.",
         "cta_button": "Get a free consultation",
-        "all_solutions": "All solutions"
+        "all_solutions": "All solutions",
+        "breadcrumb": "Breadcrumb"
     },
     "index": {
         "seo": {
@@ -255,7 +256,7 @@
                     },
                     {
                         "title": "Automate the routine",
-                        "text": "Order confirmations, payment receipts, delivery updates, appointment reminders and answers to common questions, written in your voice and in English or Luganda."
+                        "text": "Order confirmations, payment receipts, delivery updates, appointment reminders and answers to common questions, written in your voice and in the languages your customers use."
                     },
                     {
                         "title": "Hand over to people smoothly",

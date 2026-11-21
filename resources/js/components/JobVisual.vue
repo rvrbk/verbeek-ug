@@ -4,22 +4,22 @@
             <span class="jv-logo">JS</span>
             <div>
                 <strong>Job Scout</strong>
-                <small>Finds jobs that fit you, writes the CV</small>
+                <small>{{ $t('visuals.job.tagline') }}</small>
             </div>
         </div>
-        <div class="jv-cols"><span>Jobs found for you</span><span>Match</span></div>
+        <div class="jv-cols"><span>{{ $t('visuals.job.found') }}</span><span>{{ $t('visuals.job.match') }}</span></div>
         <div class="jv-row" v-for="r in rows" :key="r.title">
             <div class="jv-text">
-                <b>{{ r.title }}</b>
+                <b>{{ $t('visuals.' + r.title) }}</b>
                 <i :style="{ width: r.w }"></i>
             </div>
             <span class="jv-score" :class="{ hi: r.score >= 85 }">{{ r.score }}%</span>
         </div>
         <div class="jv-doc">
-            <span>Tailored CV</span>
+            <span>{{ $t('visuals.job.cv') }}</span>
             <i style="width: 80%"></i>
             <i style="width: 56%"></i>
-            <em>&#10003; Every claim verified</em>
+            <em>&#10003; {{ $t('visuals.job.verified') }}</em>
         </div>
     </div>
 </template>
@@ -30,9 +30,9 @@ export default {
     data() {
         return {
             rows: [
-                { title: 'Backend developer', w: '62%', score: 92 },
-                { title: 'Full-stack engineer', w: '74%', score: 87 },
-                { title: 'Laravel developer', w: '55%', score: 81 }
+                { title: 'job.r1', w: '62%', score: 92 },
+                { title: 'job.r2', w: '74%', score: 87 },
+                { title: 'job.r3', w: '55%', score: 81 }
             ]
         }
     }

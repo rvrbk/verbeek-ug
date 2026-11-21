@@ -36,7 +36,8 @@ export default {
         send_message: 'Send Message',
         back_to_portfolio: 'Back to Portfolio',
         book_a_call: 'Book a Call',
-        visit_site: 'Visit Site'
+        visit_site: 'Visit Site',
+        toggle_menu: 'Toggle menu'
     },
     
     // Hero Section (Home)
@@ -253,7 +254,8 @@ export default {
         required: 'This field is required',
         valid_email: 'Please enter a valid email',
         send: 'Send Message',
-        sending: 'Sending...'
+        sending: 'Sending...',
+        error_sending: 'Error sending message. Please try again.'
     },
     
     // Contact info
@@ -329,9 +331,40 @@ export default {
         copyright: 'All rights reserved.'
     },
     
-    // Language names
+    // Text inside the decorative portfolio mock-ups
+    visuals: {
+        rent: 'Rent',
+        sale: 'Sale',
+        land: 'Land',
+        job: {
+            tagline: 'Finds jobs that fit you, writes the CV',
+            found: 'Jobs found for you',
+            match: 'Match',
+            cv: 'Tailored CV',
+            verified: 'Every claim verified',
+            r1: 'Backend developer',
+            r2: 'Full-stack engineer',
+            r3: 'Laravel developer'
+        },
+        lore: {
+            tagline: 'Built around your business',
+            pick: 'Pick what you need',
+            uptime: 'Uptime checks',
+            stock: 'Stock levels',
+            payments: 'Payments',
+            renewals: 'Renewals',
+            deliveries: 'Deliveries',
+            status: 'Status page',
+            setup: 'Your setup, your alerts',
+            tailored: 'Tailored per business'
+        }
+    },
+
+    // Language names (each in its own language)
     languages: {
         en: 'English',
-        lg: 'Luganda'
+        fr: 'Français',
+        es: 'Español',
+        pt: 'Português'
     }
 }

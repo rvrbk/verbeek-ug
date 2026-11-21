@@ -1,0 +1,492 @@
+{
+    "labels": {
+        "home": "Accueil",
+        "solutions": "Solutions",
+        "problem": "Le problème",
+        "costs": "Ce que cela vous coûte aujourd'hui",
+        "approach": "Comment nous le résolvons",
+        "tech": "Avec quoi c'est construit",
+        "faq": "Questions fréquentes",
+        "related": "Solutions associées",
+        "read_more": "En savoir plus",
+        "step": "Étape",
+        "cta_label": "Première consultation gratuite",
+        "cta_title": "Parlez-nous de votre situation",
+        "cta_text": "Décrivez le problème en quelques lignes. Nous vous dirons honnêtement si un logiciel est la bonne réponse, ce que cela impliquerait et ce qu'il vaut mieux laisser de côté. La première consultation est toujours gratuite.",
+        "cta_button": "Obtenir une consultation gratuite",
+        "all_solutions": "Toutes les solutions",
+        "breadcrumb": "Fil d'Ariane"
+    },
+    "index": {
+        "seo": {
+            "title": "Solutions logicielles pour les entreprises africaines | verbeek.ug",
+            "description": "Intégration du mobile money, logiciels de stocks et de registres, automatisation WhatsApp et SMS, assistant de recherche d'emploi et tableau de bord de suivi d'entreprise sur mesure pour les entreprises en Ouganda et partout en Afrique."
+        },
+        "hero_subtitle": "Solutions",
+        "hero_title": "De vrais problèmes, résolus par le logiciel",
+        "hero_description": "Des logiciels pratiques pour les problèmes que les entreprises africaines rencontrent vraiment : se faire payer par mobile money, tenir des registres fiables et parler aux clients à grande échelle.",
+        "intro": "Chaque entreprise que nous rencontrons a une version des mêmes quelques problèmes. Des paiements que quelqu'un doit vérifier à la main. Des registres qui vivent dans un cahier ou un tableur. Des clients qui écrivent la nuit et attendent une réponse. Choisissez celui qui ressemble au vôtre pour voir comment nous l'aborderions, ou parlez-nous d'autre chose."
+    },
+    "order": [
+        "mobile-money-integration",
+        "inventory-and-records-software",
+        "whatsapp-and-sms-automation",
+        "job-search-and-cv-assistant",
+        "business-process-monitoring"
+    ],
+    "pages": {
+        "mobile-money-integration": {
+            "card_title": "Intégration du mobile money",
+            "summary": "Encaissez les paiements MTN MoMo et Airtel Money directement dans votre site ou votre système, pour que chaque paiement corresponde automatiquement à une commande.",
+            "seo": {
+                "title": "Intégration mobile money en Ouganda : MTN MoMo, Airtel | verbeek.ug",
+                "description": "Acceptez et envoyez des paiements MTN MoMo et Airtel Money depuis votre site ou application, avec reçus et rapprochement automatiques. Pour les entreprises ougandaises."
+            },
+            "h1": "Intégration du mobile money pour les entreprises ougandaises",
+            "lead": "Encaissez les paiements MTN MoMo et Airtel Money directement dans votre site, votre application ou votre système, pour que chaque paiement soit rapproché automatiquement d'une commande au lieu que quelqu'un vérifie un téléphone.",
+            "problem": {
+                "paragraphs": [
+                    "La plupart des clients ougandais paient par mobile money, mais beaucoup d'entreprises encaissent encore à la main. Le client envoie de l'argent à un numéro, envoie un message ou une capture d'écran, et quelqu'un vérifie le téléphone pour confirmer l'arrivée avant que la commande ne soit libérée.",
+                    "Cela fonctionne avec cinq commandes par jour. À cinquante, tout casse : des paiements sont manqués ou confirmés deux fois, un mauvais montant est accepté, le personnel devient le goulot d'étranglement, et en fin de mois personne ne sait dire quel paiement correspond à quelle commande."
+                ]
+            },
+            "costs": {
+                "items": [
+                    "Du temps de personnel passé à vérifier des téléphones, des relevés et des captures WhatsApp",
+                    "Des commandes retardées ou perdues parce que le paiement n'est pas confirmé assez vite",
+                    "De fausses captures de paiement ou des captures modifiées, et des paiements qui ne sont jamais arrivés",
+                    "De l'argent que vous ne pouvez pas rattacher à une facture en fin de mois",
+                    "Des remboursements et des litiges clients réglés de mémoire"
+                ]
+            },
+            "approach": {
+                "steps": [
+                    {
+                        "title": "Définir le flux",
+                        "text": "Encaissez-vous auprès de clients, payez-vous des fournisseurs, du personnel ou des agriculteurs, ou les deux ? Quels réseaux, et quel système doit savoir quand l'argent circule ?"
+                    },
+                    {
+                        "title": "Choisir la voie",
+                        "text": "Connexion directe aux API MTN MoMo et Airtel Money, ou passage par un agrégateur comme Flutterwave, Pesapal ou DPO lorsque vous voulez aussi les paiements par carte. Nous expliquons les compromis en frais, délai de mise en place et couverture avant que vous ne décidiez."
+                    },
+                    {
+                        "title": "Construire et tester dans le bac à sable",
+                        "text": "Le client reçoit une invite sur son téléphone et valide avec son code PIN. Votre système reçoit le résultat par rappel (callback) et vérifie aussi lui-même le statut au cas où un rappel serait perdu."
+                    },
+                    {
+                        "title": "Sécuriser",
+                        "text": "Chaque demande de paiement n'est faite qu'une seule fois, même si un client appuie deux fois ou si un appel réseau est relancé. Les montants sont comparés à la commande, les rappels sont vérifiés et chaque événement est journalisé."
+                    },
+                    {
+                        "title": "Passer en production et rapprocher",
+                        "text": "Nous vous accompagnons dans les étapes de mise en production du fournisseur, puis nous ajoutons un rapport de rapprochement quotidien qui compare les enregistrements du fournisseur à vos commandes et signale tout écart."
+                    }
+                ]
+            },
+            "tech": {
+                "intro": "Ce que cela implique généralement :",
+                "items": [
+                    "Les API MTN MoMo Collections et Disbursements",
+                    "Les API d'encaissement et de décaissement d'Airtel Money",
+                    "Des agrégateurs comme Flutterwave, Pesapal et DPO, pour les cartes et plusieurs réseaux dans une seule intégration",
+                    "Des rappels (webhooks) plus des vérifications de statut en solution de repli",
+                    "Validation et normalisation des numéros de téléphone au format international 256",
+                    "Des files d'attente Laravel pour les nouvelles tentatives, et un registre de chaque événement de paiement",
+                    "Des reçus par e-mail, SMS ou WhatsApp"
+                ]
+            },
+            "faq": [
+                {
+                    "q": "Quels réseaux de mobile money pouvez-vous intégrer ?",
+                    "a": "MTN MoMo et Airtel Money, les deux principaux réseaux en Ouganda, soit directement, soit via un agrégateur. La meilleure voie dépend de vos volumes, de votre besoin éventuel de paiements par carte et de la rapidité avec laquelle vous devez lancer."
+                },
+                {
+                    "q": "Combien de temps prend une intégration du mobile money ?",
+                    "a": "Construire et tester un flux d'encaissement standard dans le bac à sable du fournisseur se compte souvent en quelques semaines. L'accord du fournisseur pour passer en production échappe à notre contrôle et peut prendre plus de temps, c'est pourquoi nous lançons ces démarches tôt."
+                },
+                {
+                    "q": "Ai-je besoin d'une entreprise enregistrée ?",
+                    "a": "Les fournisseurs exigent en général une entreprise enregistrée et un compte marchand ou professionnel avant d'approuver l'accès en production. Les conditions diffèrent selon le fournisseur et évoluent, nous vous disons donc ce qu'il vous faudra lors de la première consultation gratuite."
+                },
+                {
+                    "q": "Et si la connexion internet du client est lente ?",
+                    "a": "L'invite de paiement arrive sur le téléphone du client par le réseau mobile, et votre page n'a qu'à attendre le résultat. Si la connexion tombe, votre système continue de vérifier et met la commande à jour dès que le résultat est connu."
+                },
+                {
+                    "q": "Est-ce sécurisé ?",
+                    "a": "Les clients saisissent leur code PIN sur leur propre téléphone, jamais sur votre site. Votre système ne conserve que des références et des montants. Nous vérifions aussi les rappels, gardons les identifiants d'API hors du code et journalisons chaque événement de paiement pour qu'il puisse être audité."
+                },
+                {
+                    "q": "Pouvez-vous aussi payer, pas seulement encaisser ?",
+                    "a": "Oui. Les décaissements vous permettent de payer le personnel, les fournisseurs, les agriculteurs ou des remboursements directement sur un numéro de mobile money, avec des validations et des plafonds pour qu'aucune personne ne puisse envoyer de l'argent seule."
+                }
+            ],
+            "related": [
+                "inventory-and-records-software",
+                "whatsapp-and-sms-automation",
+                "job-search-and-cv-assistant",
+                "business-process-monitoring"
+            ]
+        },
+        "inventory-and-records-software": {
+            "card_title": "Remplacer les cahiers et Excel",
+            "summary": "Un logiciel simple pour les stocks, les ventes, les frais de scolarité, les prêts et les registres de membres, avec des rapports clairs et une trace de qui a modifié quoi.",
+            "seo": {
+                "title": "Logiciel de stocks et de gestion en Ouganda | verbeek.ug",
+                "description": "Remplacez les cahiers et Excel par un logiciel simple pour les stocks, les ventes, les frais et les registres de membres. Fonctionne sur téléphone, avec des rapports clairs. Pour les entreprises ougandaises."
+            },
+            "h1": "Remplacez les cahiers et Excel par un logiciel adapté à votre façon de travailler",
+            "lead": "Sachez ce qu'il y a dans votre réserve, qui vous doit de l'argent et ce qui s'est passé aujourd'hui, depuis un téléphone ou un ordinateur, sans dépendre d'un seul cahier ou de la mémoire d'une seule personne.",
+            "problem": {
+                "paragraphs": [
+                    "Beaucoup de boutiques, d'entrepôts, d'écoles, de cliniques, de coopératives et de SACCO fonctionnent encore avec des registres papier et des tableurs. Ils sont bon marché et familiers, mais dépendent de la mémoire d'une personne et de l'ordinateur d'une personne.",
+                    "Quand le cahier est perdu, que le fichier est écrasé ou que la personne qui connaît le système part, les données partent avec elle. Et comme personne ne voit les chiffres avant la fin du mois, les pertes passent inaperçues pendant des semaines."
+                ]
+            },
+            "costs": {
+                "items": [
+                    "Du stock qui disparaît sans que personne ne s'en aperçoive, ou qui manque quand les clients en ont besoin",
+                    "Des frais, des prêts ou des cotisations dus mais jamais relancés",
+                    "Des heures chaque mois passées à recopier des chiffres entre des cahiers et des tableurs",
+                    "Des succursales ou des employés qui rapportent des chiffres différents",
+                    "Aucune preuve de qui a modifié quoi, et pas de registres propres pour une banque, un bailleur ou l'administration fiscale"
+                ]
+            },
+            "approach": {
+                "steps": [
+                    {
+                        "title": "Partir de votre façon de travailler aujourd'hui",
+                        "text": "Nous étudions vos cahiers et vos feuilles et notons les vraies règles : qui vend, qui valide, ce qui compte comme stock et quels rapports vous utilisez vraiment."
+                    },
+                    {
+                        "title": "Construire la plus petite version utile",
+                        "text": "En général une tâche centrale d'abord, comme enregistrer les entrées et sorties de stock, ou les frais payés et dus. Le personnel l'utilise depuis un téléphone ou un ordinateur, avec les mêmes mots qu'il emploie déjà."
+                    },
+                    {
+                        "title": "Transférer vos données",
+                        "text": "Nous nettoyons et importons vos tableurs existants, pour que vous démarriez avec votre véritable historique plutôt que de zéro."
+                    },
+                    {
+                        "title": "Ajouter du contrôle",
+                        "text": "Des rôles et des permissions, une piste d'audit de chaque modification, et des validations pour des choses comme les remises, les annulations et les prêts."
+                    },
+                    {
+                        "title": "Des rapports qui répondent aux questions",
+                        "text": "Niveaux de stock, ventes du jour, qui doit quoi et comparaisons entre succursales, avec des exports Excel et PDF pour ceux qui veulent encore une version imprimée."
+                    }
+                ]
+            },
+            "tech": {
+                "intro": "Ce que cela implique généralement :",
+                "items": [
+                    "Une application web qui fonctionne sur téléphone, ordinateur portable ou les deux",
+                    "Des pages légères qui se chargent vite sur les données mobiles, avec une saisie hors ligne qui se synchronise plus tard quand le travail l'exige",
+                    "Des rôles, des permissions et un journal d'audit complet",
+                    "Import depuis Excel, et export vers Excel et PDF",
+                    "Des paiements mobile money enregistrés automatiquement sur les factures ou les frais",
+                    "Intégration de la facturation électronique URA EFRIS lorsque votre entreprise est tenue de l'utiliser",
+                    "Lecture de codes-barres, plusieurs succursales et alertes de stock bas"
+                ]
+            },
+            "faq": [
+                {
+                    "q": "Mon personnel s'adaptera-t-il s'il est habitué au papier ?",
+                    "a": "C'est ce que nous concevons avant tout. Nous gardons des écrans simples, utilisons vos propres termes et formons votre équipe. Beaucoup d'entreprises font tourner le papier et le nouveau système en parallèle pendant une courte période, jusqu'à ce que tout le monde soit à l'aise."
+                },
+                {
+                    "q": "Puis-je continuer à utiliser Excel ?",
+                    "a": "Oui. Nous importons depuis Excel pour vous lancer, et chaque rapport peut être réexporté vers Excel quand vous le souhaitez."
+                },
+                {
+                    "q": "Faut-il une connexion internet permanente ?",
+                    "a": "Le système est conçu pour rester léger sur les données mobiles. Si votre travail l'exige, par exemple sur un étal de marché ou un site rural, nous pouvons ajouter une saisie hors ligne qui se synchronise au retour de la connexion."
+                },
+                {
+                    "q": "Et si je n'ai besoin que du suivi de stock, pas d'un système complet ?",
+                    "a": "Alors c'est ce que nous construisons. Commencer par une seule tâche et grandir ensuite coûte moins cher et comporte moins de risques qu'un gros système que personne n'utilise."
+                },
+                {
+                    "q": "À qui appartiennent les données et le logiciel ?",
+                    "a": "Les données de votre entreprise vous appartiennent et peuvent être exportées à tout moment. Nous convenons par écrit, au début du projet, de qui possède le logiciel lui-même."
+                },
+                {
+                    "q": "Un logiciel prêt à l'emploi serait-il une meilleure option ?",
+                    "a": "Parfois. Si un produit existant convient déjà, nous vous le dirons lors de la première consultation gratuite. Nous construisons du logiciel sur mesure quand votre processus est spécifique, ou quand les outils existants sont trop chers, trop complexes ou ne gèrent pas le mobile money et les besoins locaux."
+                }
+            ],
+            "related": [
+                "mobile-money-integration",
+                "whatsapp-and-sms-automation",
+                "job-search-and-cv-assistant"
+            ]
+        },
+        "whatsapp-and-sms-automation": {
+            "card_title": "Automatisation WhatsApp et SMS",
+            "summary": "Envoyez automatiquement des suivis de commande, des reçus de paiement et des rappels, et répondez aux questions courantes sans que personne ne soit rivé au téléphone.",
+            "seo": {
+                "title": "Automatisation WhatsApp et SMS pour les entreprises en Ouganda | verbeek.ug",
+                "description": "Automatisez les suivis de commande, les reçus de paiement, les rappels de rendez-vous et les réponses aux clients sur WhatsApp et par SMS. Conçu pour les entreprises ougandaises et africaines."
+            },
+            "h1": "Automatisation WhatsApp et SMS pour les entreprises en Ouganda",
+            "lead": "Retrouvez vos clients là où ils sont déjà. Envoyez automatiquement des suivis de commande, des reçus de paiement et des rappels, et répondez aux questions courantes sans que quelqu'un soit au téléphone toute la journée.",
+            "problem": {
+                "paragraphs": [
+                    "Pour la plupart des entreprises ougandaises, WhatsApp est la vitrine. Commandes, questions, preuves de paiement et réclamations arrivent dans une seule discussion, mélangées aux messages personnels et traitées par celui qui a le téléphone.",
+                    "Des messages restent sans réponse le soir, des commandes se perdent entre les discussions, des clients oublient leurs rendez-vous et le propriétaire devient le service d'assistance. Le SMS atteint les clients sans smartphone, mais l'envoyer message par message ne passe pas à l'échelle."
+                ]
+            },
+            "costs": {
+                "items": [
+                    "Des clients qui écrivent après les heures d'ouverture et achètent ailleurs",
+                    "Des rendez-vous manqués parce que personne n'a envoyé de rappel",
+                    "Des commandes et des détails de paiement recopiés à la main depuis la discussion vers un cahier",
+                    "Les mêmes dix questions reposées chaque jour",
+                    "Aucune trace de ce qui a été promis à qui"
+                ]
+            },
+            "approach": {
+                "steps": [
+                    {
+                        "title": "Cartographier les conversations",
+                        "text": "Nous listons les messages que vous envoyez et recevez le plus, et décidons lesquels doivent être automatiques, lesquels demandent une personne et ce que cette personne doit voir."
+                    },
+                    {
+                        "title": "Connecter les canaux",
+                        "text": "WhatsApp via la plateforme officielle WhatsApp Business, et SMS ou USSD via un fournisseur comme Africa's Talking, pour inclure aussi les clients sans smartphone."
+                    },
+                    {
+                        "title": "Automatiser la routine",
+                        "text": "Confirmations de commande, reçus de paiement, suivis de livraison, rappels de rendez-vous et réponses aux questions courantes, rédigés dans votre style et dans les langues de vos clients."
+                    },
+                    {
+                        "title": "Passer le relais aux personnes en douceur",
+                        "text": "Tout ce que le système ne sait pas traiter va dans une boîte de réception partagée avec tout l'historique, pour qu'une personne reprenne exactement là où l'automatisation s'est arrêtée."
+                    },
+                    {
+                        "title": "Le relier à votre activité",
+                        "text": "Les messages sont liés à vos commandes, votre stock et vos paiements, de sorte qu'un paiement mobile money confirmé peut envoyer le reçu tout seul."
+                    }
+                ]
+            },
+            "tech": {
+                "intro": "Ce que cela implique généralement :",
+                "items": [
+                    "La plateforme WhatsApp Business (Cloud API) avec des modèles de messages approuvés",
+                    "SMS et USSD via Africa's Talking ou un fournisseur similaire",
+                    "Une boîte de réception partagée avec transfert de l'automatisation vers une personne",
+                    "Un assistant IA optionnel qui répond à partir de votre propre liste de prix et de votre FAQ, et passe la main en cas de doute",
+                    "Des déclencheurs issus de vos commandes, paiements et rendez-vous",
+                    "La gestion de l'adhésion et du désabonnement pour que les clients gardent le contrôle"
+                ]
+            },
+            "faq": [
+                {
+                    "q": "Ai-je besoin de l'API WhatsApp Business officielle ?",
+                    "a": "Pour des messages automatiques à une échelle quelconque, oui. Les applications WhatsApp ordinaires ne sont pas faites pour l'envoi automatisé ou en masse, et les utiliser ainsi expose votre numéro à un bannissement. La plateforme officielle est la voie sûre, et nous la configurons avec vous."
+                },
+                {
+                    "q": "WhatsApp peut-il écrire aux clients en premier ?",
+                    "a": "Oui, mais au-delà des 24 heures suivant le dernier message d'un client, WhatsApp exige des modèles de messages préapprouvés, comme des suivis de commande ou des rappels. Nous les rédigeons et les soumettons pour approbation."
+                },
+                {
+                    "q": "Les clients auront-ils l'impression de parler à un robot ?",
+                    "a": "Les messages automatiques sont ceux qui sont utiles : confirmations, reçus et rappels. Quand une réponse demande du jugement, une personne prend le relais. Si vous ajoutez un assistant IA, nous le réglons pour qu'il dise ce qu'il est et passe la main plutôt que de deviner."
+                },
+                {
+                    "q": "Pouvez-vous joindre des clients sans smartphone ?",
+                    "a": "Oui, par SMS et menus USSD, qui fonctionnent sur n'importe quel téléphone, y compris les modèles de base."
+                },
+                {
+                    "q": "Combien cela coûte-t-il à faire tourner ?",
+                    "a": "Les coûts d'exploitation sont principalement les frais par message facturés par WhatsApp et par les fournisseurs de SMS, plus l'hébergement. Nous les estimons à partir de votre volume de messages prévu avant que vous ne vous engagiez."
+                },
+                {
+                    "q": "Cela peut-il se connecter au mobile money ?",
+                    "a": "Oui. Un paiement MTN MoMo ou Airtel Money confirmé peut envoyer un reçu au client et mettre la commande à jour automatiquement."
+                }
+            ],
+            "related": [
+                "mobile-money-integration",
+                "inventory-and-records-software",
+                "job-search-and-cv-assistant"
+            ]
+        },
+        "job-search-and-cv-assistant": {
+            "card_title": "Assistant de recherche d'emploi et de CV",
+            "summary": "Trouvez les postes qui vous conviennent et obtenez un CV et une lettre de motivation sur mesure pour chacun, avec chaque affirmation vérifiée par rapport à des faits que vous avez confirmés.",
+            "seo": {
+                "title": "Assistant de recherche d'emploi et de CV, Job Scout | verbeek.ug",
+                "description": "Job Scout parcourt les sites d'emploi, évalue chaque annonce par rapport à votre profil et rédige un CV et une lettre de motivation sur mesure, en vérifiant chaque affirmation à partir de vos propres faits."
+            },
+            "h1": "Un assistant de recherche d'emploi qui n'affirme que ce qui est vrai",
+            "lead": "Parcourir les sites d'emploi et réécrire son CV pour chaque candidature prend des heures. Job Scout fait la recherche et le premier jet à votre place, et vérifie chaque affirmation par rapport à des faits vous concernant, pour que rien dans votre candidature ne soit inventé.",
+            "problem": {
+                "paragraphs": [
+                    "Une bonne recherche d'emploi, c'est lire des dizaines d'annonces, décider lesquelles correspondent vraiment, puis adapter son CV et sa lettre de motivation pour chacune. La plupart des gens envoient les mêmes documents génériques partout ou n'ont plus l'énergie de postuler à assez de bons postes.",
+                    "Les outils d'écriture IA généralistes accélèrent cela, mais ils inventent aussi. Ils ajoutent des compétences que vous n'avez pas, arrondissent votre expérience et écrivent des réalisations qui n'ont jamais eu lieu. Un employeur qui vérifie, ou un entretien qui va plus loin, peut alors vous coûter le poste."
+                ]
+            },
+            "costs": {
+                "items": [
+                    "Des heures chaque semaine passées à parcourir les sites d'emploi pour les quelques postes qui conviennent",
+                    "Des CV et des lettres de motivation génériques qui ne parlent pas du poste visé",
+                    "De bonnes opportunités manquées parce que vous n'avez pas vu l'annonce à temps",
+                    "Des documents avec des affirmations que vous ne pouvez pas justifier en entretien",
+                    "Aucune trace claire de ce à quoi vous avez postulé et pourquoi"
+                ]
+            },
+            "approach": {
+                "steps": [
+                    {
+                        "title": "Définir vos préférences",
+                        "text": "Vous décrivez les postes que vous voulez, et Job Scout construit un profil de votre expérience, de vos compétences et de vos préférences."
+                    },
+                    {
+                        "title": "Rechercher et évaluer",
+                        "text": "Il parcourt les sites d'emploi à la recherche de postes correspondants et évalue chaque annonce par rapport à votre profil, pour que les meilleures correspondances arrivent en premier."
+                    },
+                    {
+                        "title": "Choisir ce que vous visez",
+                        "text": "Vous choisissez les postes qui vous intéressent. Rien n'est rédigé ni envoyé tant que vous ne l'avez pas décidé."
+                    },
+                    {
+                        "title": "Rédiger des documents sur mesure",
+                        "text": "Pour chaque poste choisi, il écrit un CV et une lettre de motivation ciblés sur l'annonce."
+                    },
+                    {
+                        "title": "Vérifier chaque affirmation",
+                        "text": "Chaque phrase d'un document généré est comparée à un registre de faits vous concernant. Les affirmations qui ne reposent pas sur un fait confirmé sont signalées au lieu d'être laissées passer."
+                    }
+                ]
+            },
+            "tech": {
+                "intro": "Avec quoi c'est construit et comment cela fonctionne :",
+                "items": [
+                    "Une application Laravel avec une interface web utilisable depuis n'importe quel navigateur",
+                    "Des modèles d'IA qui évaluent les annonces et rédigent les documents",
+                    "Un registre de faits vous concernant, qui pilote la vérification des affirmations",
+                    "Des recherches planifiées sur les sites d'emploi",
+                    "Vous gardez le contrôle : les faits sont confirmés par vous, et les postes sont choisis par vous"
+                ]
+            },
+            "faq": [
+                {
+                    "q": "Postule-t-il aux emplois à ma place ?",
+                    "a": "Non. Il trouve et évalue des postes et rédige des documents pour ceux que vous choisissez. Vous relisez tout et postulez vous-même."
+                },
+                {
+                    "q": "Comment empêche-t-il l'IA d'inventer des choses ?",
+                    "a": "Chaque phrase d'un CV ou d'une lettre de motivation générés est comparée à un registre de faits vous concernant. Tout ce que le registre ne confirme pas est signalé, pour que vous puissiez le corriger ou le retirer avant l'envoi."
+                },
+                {
+                    "q": "Où puis-je l'essayer ?",
+                    "a": "Job Scout est en ligne sur https://job-scout.verbeek.ug/."
+                },
+                {
+                    "q": "Pouvez-vous construire quelque chose de similaire pour mon entreprise ?",
+                    "a": "Oui. La même approche, une IA qui rédige et un registre de faits confirmés qui vérifie le résultat, convient aux propositions commerciales, aux rapports et aux réponses aux clients. Dites-nous ce dont vous avez besoin et nous vous dirons honnêtement si c'est une bonne option."
+                }
+            ],
+            "related": [
+                "inventory-and-records-software",
+                "whatsapp-and-sms-automation",
+                "business-process-monitoring"
+            ]
+        },
+        "business-process-monitoring": {
+            "card_title": "Surveillez vos processus d'entreprise",
+            "summary": "Un tableau de bord de suivi et d'exploitation construit autour de votre entreprise : nous choisissons et construisons les vérifications, alertes et outils dont vos processus ont besoin, et laissons le reste de côté.",
+            "seo": {
+                "title": "Tableau de bord de suivi des processus d'entreprise, Lore | verbeek.ug",
+                "description": "Lore est un outil de suivi et d'exploitation sur mesure pour votre entreprise. Nous construisons les vérifications, alertes, pages de statut, tâches et base de connaissances dont vos processus ont besoin : sites web, serveurs, stocks, paiements ou échéances."
+            },
+            "h1": "Sachez ce qui se passe dans votre entreprise avant vos clients",
+            "lead": "La plupart des petites entreprises découvrent qu'une chose est cassée quand un client se plaint. Lore est un outil de suivi et d'exploitation que nous adaptons à votre entreprise : il surveille ce dont vos processus dépendent, vous alerte dès que l'un d'eux échoue, et garde les tâches, notes et échéances qui les entourent au même endroit.",
+            "problem": {
+                "paragraphs": [
+                    "Une entreprise fonctionne grâce à de nombreux petits processus : le site web qui prend les commandes, le serveur qui le fait tourner, le certificat et le domaine à renouveler, la mise en production de vendredi, le suivi promis à un client. Chacun vit dans un outil différent, une boîte mail différente ou dans la tête de quelqu'un.",
+                    "Quand l'un d'eux tombe en panne discrètement, personne ne le sait avant que le mal soit fait. Le site est hors ligne depuis la nuit, le certificat a expiré pendant le week-end, le disque s'est rempli, ou la solution était connue la dernière fois mais n'a jamais été écrite."
+                ]
+            },
+            "costs": {
+                "items": [
+                    "Des pannes que vous ne découvrez que lorsqu'un client appelle ou qu'une commande n'arrive pas",
+                    "Des certificats et des domaines qui expirent parce que personne n'a suivi la date de renouvellement",
+                    "Des serveurs qui manquent d'espace disque ou de mémoire sans prévenir",
+                    "La même panne réexpliquée depuis le début à chaque fois, parce que rien n'a été écrit",
+                    "Des tâches, rappels et connaissances éparpillés entre discussions, tableurs et papier"
+                ]
+            },
+            "approach": {
+                "steps": [
+                    {
+                        "title": "Cartographier ce dont votre entreprise dépend",
+                        "text": "Chaque entreprise est différente. Nous commençons par lister les processus qui font mal quand ils échouent : un site web, un flux de paiement, un niveau de stock, une livraison, un renouvellement de licence. Cette liste décide de ce que Lore surveille pour vous."
+                    },
+                    {
+                        "title": "Construire les vérifications adaptées",
+                        "text": "Lore contrôle selon un calendrier tout ce qui compte pour vous, qu'il s'agisse de vérifier qu'une page fonctionne vraiment, de la santé du serveur, de l'expiration des certificats et des domaines, ou d'un chiffre de votre propre système qui sort de la plage normale."
+                    },
+                    {
+                        "title": "Être alerté là où vous travaillez",
+                        "text": "Quand quelque chose échoue, Lore ouvre un incident, l'ajoute à un tableau de tâches et envoie un message, sur Telegram aujourd'hui et sur d'autres canaux si cela convient mieux à votre équipe. Un seul incident reste ouvert par problème, pour qu'une longue panne ne vous noie pas de messages."
+                    },
+                    {
+                        "title": "Montrer la vérité aux clients",
+                        "text": "Si cela vous aide, chaque service peut avoir une page de statut publique indiquant s'il est en ligne et son historique récent, sans connexion et sans exposer d'éléments internes."
+                    },
+                    {
+                        "title": "Apprendre de chaque incident",
+                        "text": "Lancez un post-mortem pour un incident avec ce que Lore sait déjà prérempli, et gardez-le dans la base de connaissances à côté de vos procédures, pour que le prochain problème soit réglé plus vite."
+                    },
+                    {
+                        "title": "Ajouter seulement les outils dont vous avez besoin",
+                        "text": "Autour du suivi, vous choisissez parmi le reste : un tableau de tâches avec tâches récurrentes, des rappels et un résumé du matin, des déploiements, des statistiques de visites, une page de réservation, une base de connaissances. Une boutique, une école et une équipe de développement n'ont pas besoin du même assortiment, alors nous construisons le vôtre."
+                    }
+                ]
+            },
+            "tech": {
+                "intro": "Avec quoi c'est construit et comment cela fonctionne :",
+                "items": [
+                    "Une application Laravel avec une interface web rapide, utilisable depuis n'importe quel navigateur, sur ordinateur ou téléphone",
+                    "Modulaire par conception : les vérifications, alertes et outils sont choisis et construits pour chaque entreprise, ce n'est pas un produit figé",
+                    "Des vérifications planifiées, par exemple disponibilité, santé du serveur, expiration des certificats et des domaines, ou vos propres règles métier",
+                    "Des alertes par Telegram et dans l'application, avec des incidents regroupés pour que vous ne soyez pas submergé",
+                    "Une base de connaissances en Markdown avec historique des révisions, étiquettes et recherche, pour les procédures et les post-mortems",
+                    "Fonctionne sur votre propre serveur avec PostgreSQL et des sauvegardes quotidiennes de la base de données, pour que vos données restent les vôtres"
+                ]
+            },
+            "faq": [
+                {
+                    "q": "Que peut surveiller Lore ?",
+                    "a": "Cela dépend de votre entreprise, et c'est tout l'intérêt. Des exemples typiques sont les sites web et applications web, les serveurs, l'expiration des certificats et des domaines, mais nous pouvons aussi surveiller des éléments de vos propres systèmes, comme des factures impayées, un stock bas ou des paiements échoués. Tout ce qui peut être vérifié selon un calendrier peut être ajouté."
+                },
+                {
+                    "q": "Est-ce identique pour toutes les entreprises ?",
+                    "a": "Non. Lore est sur mesure. Le nôtre est configuré pour faire tourner des sites web et des serveurs, le vôtre pourrait se concentrer sur les stocks, les paiements, les livraisons ou les échéances. Nous choisissons avec vous les vérifications, alertes et outils, et ne construisons que ce que vous utiliserez."
+                },
+                {
+                    "q": "Comment saurai-je que quelque chose ne va pas ?",
+                    "a": "Lore ouvre un incident, l'ajoute à votre tableau de tâches, affiche une bannière dans l'application et envoie un message, sur Telegram aujourd'hui. Tant que le problème persiste il ne se répète pas, et une fois résolu l'incident est clos."
+                },
+                {
+                    "q": "Est-ce seulement pour les entreprises de logiciel ?",
+                    "a": "Non. Toute entreprise ayant un site web, une boutique en ligne, un système de réservation, du stock ou des échéances récurrentes a des processus qui méritent d'être surveillés. Lore gère aussi le côté non technique : tâches, rappels, notes et procédures."
+                },
+                {
+                    "q": "Mes clients peuvent-ils voir si mon service est en ligne ?",
+                    "a": "Oui, si vous le souhaitez. Vous pouvez activer une page de statut publique par service. Elle n'indique que s'il est en ligne et son historique récent."
+                },
+                {
+                    "q": "Lore est-il un produit auquel je peux m'abonner ?",
+                    "a": "Pas comme produit prêt à l'emploi. Nous l'avons construit pour notre propre travail et adaptons la même approche à chaque client. Dites-nous ce que vous voulez surveiller et nous vous dirons honnêtement ce qui vaut la peine d'être mis en place."
+                }
+            ],
+            "related": [
+                "whatsapp-and-sms-automation",
+                "inventory-and-records-software",
+                "job-search-and-cv-assistant"
+            ]
+        }
+    }
+}

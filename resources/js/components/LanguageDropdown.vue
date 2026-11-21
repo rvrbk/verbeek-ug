@@ -33,6 +33,7 @@
 <script>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { switchLocale } from '../i18n'
 
 export default {
     name: 'LanguageDropdown',
@@ -55,11 +56,10 @@ export default {
         }
         
         const switchLanguage = (newLocale) => {
-            if (newLocale !== currentLocale.value) {
-                locale.value = newLocale
-                localStorage.setItem('locale', newLocale)
-            }
             closeDropdown()
+            if (newLocale !== currentLocale.value) {
+                switchLocale(newLocale)
+            }
         }
         
         // Close dropdown when clicking outside

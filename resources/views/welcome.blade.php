@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ $seo['lang'] }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,7 +22,10 @@
         <meta property="og:image:height" content="630">
         <meta property="og:image:type" content="image/jpeg">
         <meta property="og:image:alt" content="verbeek.ug: smart software for smart businesses">
-        <meta property="og:locale" content="en_GB">
+        <meta property="og:locale" content="{{ $seo['ogLocale'] }}">
+        @foreach ($seo['ogAlternates'] as $alt)
+        <meta property="og:locale:alternate" content="{{ $alt }}">
+        @endforeach
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image">
@@ -30,8 +33,11 @@
         <meta name="twitter:description" content="{{ $seo['description'] }}">
         <meta name="twitter:image" content="{{ $seo['image'] }}">
 
-        <!-- Canonical URL -->
+        <!-- Canonical URL and the same page in the other languages -->
         <link rel="canonical" href="{{ $seo['canonical'] }}">
+        @foreach ($seo['alternates'] as $code => $url)
+        <link rel="alternate" hreflang="{{ $code }}" href="{{ $url }}">
+        @endforeach
 
         <!-- Structured data -->
         <script type="application/ld+json">{!! json_encode($seo['schema'], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) !!}</script>

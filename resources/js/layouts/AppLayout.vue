@@ -5,7 +5,7 @@
     <header class="hb-header" :class="{ 'hb-header-scrolled': scrolled }">
       <div class="hb-header-inner">
         <!-- Logo -->
-        <a href="/" class="hb-logo" exact>
+        <a :href="localePrefix + '/'" class="hb-logo" exact>
           <span class="hb-logo-text">verbeek<span class="hb-logo-dot">.</span>ug</span>
         </a>
         
@@ -34,7 +34,7 @@
         </nav>
         
         <!-- Simple Mobile Menu Button -->
-        <button @click="mobileMenuOpen = !mobileMenuOpen" class="mobile-menu-btn" :class="{ 'mobile-menu-btn-open': mobileMenuOpen }" aria-label="Toggle menu">
+        <button @click="mobileMenuOpen = !mobileMenuOpen" class="mobile-menu-btn" :class="{ 'mobile-menu-btn-open': mobileMenuOpen }" :aria-label="$t('common.toggle_menu')">
           <span class="hamburger-line hamburger-line-1"></span>
           <span class="hamburger-line hamburger-line-2"></span>
           <span class="hamburger-line hamburger-line-3"></span>
@@ -81,6 +81,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import LanguageDropdown from '../components/LanguageDropdown.vue'
 import { initMotion } from '../motion'
+import { localePrefix } from '../i18n'
 
 export default {
   components: {
@@ -198,7 +199,7 @@ export default {
       document.body.style.overflow = ''
     })
     
-    return { scrolled, mobileMenuOpen, currentSection, navigateToSection, toggleMobileMenu, closeMobileMenu, route }
+    return { scrolled, mobileMenuOpen, currentSection, navigateToSection, toggleMobileMenu, closeMobileMenu, route, localePrefix }
   }
 }
 </script>

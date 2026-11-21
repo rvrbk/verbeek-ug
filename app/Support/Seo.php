@@ -11,6 +11,39 @@ class Seo
     public const SITE = 'https://verbeek.ug';
     public const NAME = 'verbeek.ug software solutions';
 
+    /** Languages: English has no URL prefix, the others live under /fr, /es and /pt. */
+    public const LANGS = ['en', 'fr', 'es', 'pt'];
+
+    private const OG_LOCALES = ['en' => 'en_GB', 'fr' => 'fr_FR', 'es' => 'es_ES', 'pt' => 'pt_PT'];
+
+    /** Titles and descriptions of the plain pages in the other languages (mirrors the seo block of resources/js/i18n/*.js). */
+    private const PAGES_TRANSLATED = [
+        'fr' => [
+            '' => ['title' => 'verbeek.ug | Solutions logicielles sur mesure pour les entreprises', 'description' => 'Logiciels sur mesure pour les entreprises africaines : automatisation, solutions d\'IA, plateformes communautaires et conseil. Créés par verbeek.ug software solutions.'],
+            'services' => ['title' => 'Services | verbeek.ug software solutions', 'description' => 'Automatisation des processus, solutions d\'IA, plateformes communautaires participatives et conseil logiciel indépendant, adaptés à votre entreprise.'],
+            'portfolio' => ['title' => 'Réalisations | verbeek.ug software solutions', 'description' => 'Les plateformes que nous avons créées et que nous exploitons : Prompt a Tool, Crowded Airport, Job Scout et Lore, ainsi que MyCanopy, des annonces immobilières pour l\'Ouganda, en cours de développement.'],
+            'about' => ['title' => 'À propos | verbeek.ug software solutions', 'description' => 'Qui nous sommes, comment nous travaillons et dans quoi nous sommes spécialisés : des solutions logicielles intelligentes qui résolvent de vrais problèmes pour les entreprises africaines.'],
+            'contact' => ['title' => 'Contact | verbeek.ug software solutions', 'description' => 'Contactez-nous pour une première consultation gratuite sur votre projet logiciel.'],
+            'blog' => ['title' => 'Blog | verbeek.ug software solutions', 'description' => 'Articles et actualités de verbeek.ug software solutions.'],
+        ],
+        'es' => [
+            '' => ['title' => 'verbeek.ug | Soluciones de software a medida para empresas', 'description' => 'Software a medida para empresas de toda África: automatización, soluciones de IA, plataformas comunitarias y consultoría. Creado por verbeek.ug software solutions.'],
+            'services' => ['title' => 'Servicios | verbeek.ug software solutions', 'description' => 'Automatización de procesos, soluciones de IA, plataformas comunitarias colaborativas y consultoría de software independiente, adaptadas a su negocio.'],
+            'portfolio' => ['title' => 'Portafolio | verbeek.ug software solutions', 'description' => 'Las plataformas que hemos creado y que gestionamos: Prompt a Tool, Crowded Airport, Job Scout y Lore, además de MyCanopy, anuncios inmobiliarios para Uganda, en desarrollo.'],
+            'about' => ['title' => 'Nosotros | verbeek.ug software solutions', 'description' => 'Quiénes somos, cómo trabajamos y en qué nos especializamos: soluciones de software inteligentes que resuelven problemas reales de las empresas africanas.'],
+            'contact' => ['title' => 'Contacto | verbeek.ug software solutions', 'description' => 'Póngase en contacto para una primera consulta gratuita sobre su proyecto de software.'],
+            'blog' => ['title' => 'Blog | verbeek.ug software solutions', 'description' => 'Artículos y novedades de verbeek.ug software solutions.'],
+        ],
+        'pt' => [
+            '' => ['title' => 'verbeek.ug | Soluções de software à medida para empresas', 'description' => 'Software à medida para empresas de toda a África: automação, soluções de IA, plataformas comunitárias e consultoria. Criado pela verbeek.ug software solutions.'],
+            'services' => ['title' => 'Serviços | verbeek.ug software solutions', 'description' => 'Automação de processos, soluções de IA, plataformas comunitárias colaborativas e consultoria de software independente, adaptadas ao seu negócio.'],
+            'portfolio' => ['title' => 'Portefólio | verbeek.ug software solutions', 'description' => 'As plataformas que criámos e gerimos: Prompt a Tool, Crowded Airport, Job Scout e Lore, além do MyCanopy, anúncios imobiliários para o Uganda, em desenvolvimento.'],
+            'about' => ['title' => 'Sobre nós | verbeek.ug software solutions', 'description' => 'Quem somos, como trabalhamos e em que nos especializamos: soluções de software inteligentes que resolvem problemas reais das empresas africanas.'],
+            'contact' => ['title' => 'Contacto | verbeek.ug software solutions', 'description' => 'Entre em contacto para uma primeira consulta gratuita sobre o seu projeto de software.'],
+            'blog' => ['title' => 'Blogue | verbeek.ug software solutions', 'description' => 'Artigos e novidades da verbeek.ug software solutions.'],
+        ],
+    ];
+
     private const PAGES = [
         '' => [
             'title' => 'verbeek.ug | Custom Software Solutions for Businesses',
@@ -52,46 +85,75 @@ class Seo
         ['Crowded Airport', 'https://crowded-airport.com', 'TravelApplication', 'Find your way on any airport in the world.'],
     ];
 
-    /** The solutions content, shared with the Vue pages (resources/js/i18n/solutions.en.json). */
-    public static function solutions(): array
+    /** The solutions content in one language, shared with the Vue pages (resources/js/i18n/solutions.{lang}.json). */
+    public static function solutions(string $lang = 'en'): array
     {
-        static $data = null;
+        static $data = [];
 
-        return $data ??= json_decode(file_get_contents(self::solutionsFile()), true, 512, JSON_THROW_ON_ERROR);
+        return $data[$lang] ??= json_decode(file_get_contents(self::solutionsFile($lang)), true, 512, JSON_THROW_ON_ERROR);
     }
 
-    private static function solutionsFile(): string
+    private static function solutionsFile(string $lang = 'en'): string
     {
-        return resource_path('js/i18n/solutions.en.json');
+        return resource_path('js/i18n/solutions.' . $lang . '.json');
+    }
+
+    /** Language and page key of a request path such as "fr/solutions/mobile-money-integration". */
+    public static function parsePath(string $path): array
+    {
+        $parts = explode('/', trim($path, '/'), 2);
+
+        if (in_array($parts[0], self::LANGS, true) && $parts[0] !== 'en') {
+            return [$parts[0], trim($parts[1] ?? '', '/')];
+        }
+
+        return ['en', trim($path, '/')];
+    }
+
+    /** URL of a page key in a language. */
+    public static function url(string $key, string $lang = 'en'): string
+    {
+        $prefix = $lang === 'en' ? '' : '/' . $lang;
+
+        return self::SITE . $prefix . ($key === '' ? ($lang === 'en' ? '/' : '') : '/' . $key);
     }
 
     public static function forPath(string $path): array
     {
-        $key = trim($path, '/');
+        [$lang, $key] = self::parsePath($path);
         $robots = 'index, follow';
         $status = 200;
         $solution = null;
+        $solutions = self::solutions($lang);
 
         if ($key === 'solutions') {
-            $page = self::solutions()['index']['seo'];
+            $page = $solutions['index']['seo'];
         } elseif (str_starts_with($key, 'solutions/')) {
             $slug = substr($key, strlen('solutions/'));
-            $solution = self::solutions()['pages'][$slug] ?? null;
+            $solution = $solutions['pages'][$slug] ?? null;
 
             if ($solution) {
                 $page = $solution['seo'];
             } else {
                 // Unknown solution: a real 404 that stays out of the index; the Vue app redirects visitors to the overview
-                $page = self::solutions()['index']['seo'];
+                $page = $solutions['index']['seo'];
                 $key = 'solutions';
                 $robots = 'noindex, follow';
                 $status = 404;
             }
         } else {
-            $page = self::PAGES[$key] ?? (str_starts_with($key, 'blog/') ? self::PAGES['blog'] : self::PAGES['']);
+            $pages = $lang === 'en' ? self::PAGES : self::PAGES_TRANSLATED[$lang];
+            $page = $pages[$key] ?? (str_starts_with($key, 'blog/') ? $pages['blog'] : $pages['']);
         }
 
-        $canonical = self::SITE . ($key === '' ? '' : '/' . $key);
+        $canonical = self::url($key, $lang);
+        $alternates = [];
+
+        foreach (self::LANGS as $code) {
+            $alternates[$code] = self::url($key, $code);
+        }
+
+        $alternates['x-default'] = $alternates['en'];
 
         return [
             'title' => $page['title'],
@@ -100,8 +162,12 @@ class Seo
             'image' => self::SITE . '/images/og-image.jpg',
             'robots' => $robots,
             'status' => $status,
-            'schema' => self::schema($key, $canonical, $page, $solution),
-            'prerender' => self::prerender($key, $solution),
+            'lang' => $lang,
+            'ogLocale' => self::OG_LOCALES[$lang],
+            'ogAlternates' => array_values(array_diff(self::OG_LOCALES, [self::OG_LOCALES[$lang]])),
+            'alternates' => $alternates,
+            'schema' => self::schema($key, $canonical, $page, $solution, $lang),
+            'prerender' => self::prerender($key, $solution, $lang),
         ];
     }
 
@@ -109,14 +175,15 @@ class Seo
      * Plain HTML of the same content the Vue page shows, for crawlers and AI bots that do not run JavaScript.
      * Rendered inside <noscript>, so people with JavaScript never see it twice.
      */
-    private static function prerender(string $key, ?array $solution): ?string
+    private static function prerender(string $key, ?array $solution, string $lang): ?string
     {
         if ($key !== 'solutions' && ! $solution) {
             return null;
         }
 
         return view('solutions-prerender', [
-            'data' => self::solutions(),
+            'data' => self::solutions($lang),
+            'lang' => $lang,
             'slug' => $solution ? substr($key, strlen('solutions/')) : null,
             'page' => $solution,
         ])->render();
@@ -143,7 +210,7 @@ class Seo
         return date('Y-m-d', is_file($file) ? filemtime($file) : time());
     }
 
-    /** Sitemap entries: [url, lastmod, changefreq, priority]. */
+    /** Sitemap entries: [url, lastmod, changefreq, priority, alternates]. Every page is listed once per language. */
     public static function sitemap(): array
     {
         $meta = ['' => ['monthly', '1.0'], 'services' => ['monthly', '0.9'], 'solutions' => ['monthly', '0.9'], 'portfolio' => ['monthly', '0.9'], 'about' => ['yearly', '0.6'], 'contact' => ['yearly', '0.7']];
@@ -152,10 +219,27 @@ class Seo
             $meta['solutions/' . $slug] = ['monthly', '0.8'];
         }
 
-        return array_map(fn ($key, $m) => [self::SITE . ($key === '' ? '/' : '/' . $key), self::lastModified((string) $key), $m[0], $m[1]], array_keys($meta), $meta);
+        $entries = [];
+
+        foreach ($meta as $key => $m) {
+            $key = (string) $key;
+            $alternates = [];
+
+            foreach (self::LANGS as $lang) {
+                $alternates[$lang] = self::url($key, $lang);
+            }
+
+            $alternates['x-default'] = $alternates['en'];
+
+            foreach (self::LANGS as $lang) {
+                $entries[] = [self::url($key, $lang), self::lastModified($key), $m[0], $m[1], $alternates];
+            }
+        }
+
+        return $entries;
     }
 
-    private static function schema(string $key, string $canonical, array $page, ?array $solution = null): array
+    private static function schema(string $key, string $canonical, array $page, ?array $solution = null, string $lang = 'en'): array
     {
         $org = [
             '@type' => ['Organization', 'ProfessionalService'],
@@ -174,7 +258,7 @@ class Seo
                 '@type' => 'ContactPoint',
                 'contactType' => 'customer support',
                 'email' => 'info@verbeek.ug',
-                'availableLanguage' => ['English', 'Luganda'],
+                'availableLanguage' => ['English', 'French', 'Spanish', 'Portuguese'],
             ],
         ];
 
@@ -198,6 +282,7 @@ class Seo
             'url' => $canonical,
             'name' => $page['title'],
             'description' => $page['description'],
+            'inLanguage' => $lang,
             'isPartOf' => ['@id' => self::SITE . '/#website'],
             'about' => ['@id' => self::SITE . '/#organization'],
             'dateModified' => self::lastModified($key),
@@ -220,7 +305,7 @@ class Seo
                 'url' => self::SITE,
                 'name' => self::NAME,
                 'publisher' => ['@id' => self::SITE . '/#organization'],
-                'inLanguage' => ['en', 'lg'],
+                'inLanguage' => self::LANGS,
             ],
             $webpage,
         ];
@@ -251,14 +336,14 @@ class Seo
         }
 
         if ($key === 'solutions') {
-            $data = self::solutions();
+            $data = self::solutions($lang);
             $graph[] = [
                 '@type' => 'ItemList',
-                'name' => 'Solutions',
+                'name' => $data['labels']['solutions'],
                 'itemListElement' => array_map(fn ($slug, $i) => [
                     '@type' => 'ListItem',
                     'position' => $i + 1,
-                    'url' => self::SITE . '/solutions/' . $slug,
+                    'url' => self::url('solutions/' . $slug, $lang),
                     'name' => $data['pages'][$slug]['card_title'],
                 ], $data['order'], array_keys($data['order'])),
             ];
@@ -303,13 +388,14 @@ class Seo
         }
 
         if ($key !== '') {
-            $crumbs = [['Home', self::SITE]];
+            $labels = self::solutions($lang)['labels'];
+            $crumbs = [[$labels['home'], self::url('', $lang)]];
 
             if ($solution) {
-                $crumbs[] = ['Solutions', self::SITE . '/solutions'];
+                $crumbs[] = [$labels['solutions'], self::url('solutions', $lang)];
                 $crumbs[] = [$solution['card_title'], $canonical];
             } else {
-                $crumbs[] = [ucfirst(explode('/', $key)[0]), $canonical];
+                $crumbs[] = [$key === 'solutions' ? $labels['solutions'] : explode(' | ', $page['title'])[0], $canonical];
             }
 
             $graph[] = [

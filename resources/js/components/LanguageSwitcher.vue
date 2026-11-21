@@ -15,6 +15,7 @@
 <script>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { switchLocale } from '../i18n'
 
 export default {
     name: 'LanguageSwitcher',
@@ -24,8 +25,9 @@ export default {
         const currentLocale = computed(() => locale.value)
         
         const switchLanguage = (newLocale) => {
-            locale.value = newLocale
-            localStorage.setItem('locale', newLocale)
+            if (newLocale !== locale.value) {
+                switchLocale(newLocale)
+            }
         }
         
         return {

@@ -18,7 +18,7 @@
         <div class="mv-pin mv-pin-2"><i></i></div>
         <div class="mv-pin mv-pin-3"><i></i></div>
         <div class="mv-pin mv-pin-main"><i></i></div>
-        <div class="mv-filters"><em class="on">Rent</em><em>Sale</em><em>Land</em></div>
+        <div class="mv-filters"><em class="on">{{ $t('visuals.rent') }}</em><em>{{ $t('visuals.sale') }}</em><em>{{ $t('visuals.land') }}</em></div>
         <div class="mv-card">
             <div class="mv-img"><span></span><span></span><span></span></div>
             <b>UGX 900,000</b>

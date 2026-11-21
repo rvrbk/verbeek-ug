@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { watch } from 'vue'
-import i18n from '../i18n'
+import i18n, { localePrefix } from '../i18n'
 import solutions from '../i18n/solutions.en.json'
 
 const routes = [
@@ -63,7 +63,7 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(localePrefix),
     routes,
     scrollBehavior(to) {
         if (to.hash) {
@@ -87,7 +87,7 @@ function applySeo(route) {
     const base = route.meta.seoBase ? route.meta.seoBase(route) : `seo.${route.meta.seo || 'home'}`
     const title = t(`${base}.title`)
     const description = t(`${base}.description`)
-    const url = SITE + (route.path === '/' ? '' : route.path)
+    const url = SITE + localePrefix + (route.path === '/' ? '' : route.path)
     document.title = title
     document.documentElement.lang = locale.value
     setMeta('meta[name="description"]', 'content', description)

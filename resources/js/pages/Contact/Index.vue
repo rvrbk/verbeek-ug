@@ -143,10 +143,12 @@
 
 <script>
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 export default {
     name: 'Contact',
     setup() {
+        const { t } = useI18n()
         const form = ref({
             name: '',
             email: '',
@@ -161,9 +163,9 @@ export default {
         
         const validateField = (field) => {
             if (!form.value[field]) {
-                errors.value[field] = 'This field is required'
+                errors.value[field] = t('form.required')
             } else if (field === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.value.email)) {
-                errors.value[field] = 'Please enter a valid email'
+                errors.value[field] = t('form.valid_email')
             } else {
                 delete errors.value[field]
             }
@@ -191,13 +193,13 @@ export default {
                 })
                 const data = await response.json()
                 if (response.ok) {
-                    successMessage.value = data.message || 'Thank you! We will get back to you within 24 hours.'
+                    successMessage.value = t('contact.success_message')
                     form.value = { name: '', email: '', phone: '', message: '' }
                 } else {
-                    errorMessage.value = data.message || 'Error sending message. Please try again.'
+                    errorMessage.value = t('form.error_sending')
                 }
             } catch (err) {
-                errorMessage.value = 'Error sending message. Please try again.'
+                errorMessage.value = t('form.error_sending')
             } finally {
                 isSubmitting.value = false
             }

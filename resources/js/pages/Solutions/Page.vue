@@ -4,7 +4,7 @@
         <section class="hb-section hb-hero-section min-h-[50vh] flex items-center">
             <div class="hb-hero-bg"></div>
             <div class="hb-hero-content relative z-10">
-                <nav class="hb-crumbs" aria-label="Breadcrumb">
+                <nav class="hb-crumbs" :aria-label="$t('solutions.labels.breadcrumb')">
                     <router-link to="/">{{ $t('solutions.labels.home') }}</router-link>
                     <span aria-hidden="true">/</span>
                     <router-link to="/solutions">{{ $t('solutions.labels.solutions') }}</router-link>
