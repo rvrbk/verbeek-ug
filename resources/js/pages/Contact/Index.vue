@@ -27,7 +27,7 @@
         <!-- Contact Content -->
         <section class="hb-section">
             <div class="hb-container">
-                <div class="max-w-4xl mx-auto">
+                <div class="max-w-6xl mx-auto">
                     <div class="hb-contact-grid">
                         <!-- Contact Form -->
                         <div class="hb-contact-card">
@@ -224,7 +224,7 @@ export default {
 .hb-hero-title { font-family: Georgia, serif; font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 400; line-height: 1.2; color: var(--hb-text); margin-bottom: 1.5rem; letter-spacing: -0.01em; }
 .hb-hero-description { font-size: 1.125rem; line-height: 1.7; color: var(--hb-text-muted); max-width: 700px; margin: 0 auto; }
 .hb-container { max-width: 1440px; margin: 0 auto; padding: 0 2rem; }
-.hb-contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.hb-contact-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 2rem; }
 .hb-contact-card { padding: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.2); }
 .hb-contact-card-title { font-family: Georgia, serif; font-size: 1.5rem; font-weight: 400; color: var(--hb-text); margin-bottom: 1.5rem; letter-spacing: -0.01em; }
 .hb-contact-card-description { font-size: 0.95rem; line-height: 1.6; color: var(--hb-text-muted); margin-bottom: 2rem; }
