@@ -19,7 +19,7 @@
     "index": {
         "seo": {
             "title": "Software Solutions for African Businesses | verbeek.ug",
-            "description": "Mobile money integration, inventory and records software, WhatsApp and SMS automation, and a job search assistant for businesses in Uganda and across Africa."
+            "description": "Mobile money integration, inventory and records software, WhatsApp and SMS automation, a job search assistant and a business monitoring dashboard for businesses in Uganda and across Africa."
         },
         "hero_subtitle": "Solutions",
         "hero_title": "Real problems, solved with software",
@@ -30,7 +30,8 @@
         "mobile-money-integration",
         "inventory-and-records-software",
         "whatsapp-and-sms-automation",
-        "job-search-and-cv-assistant"
+        "job-search-and-cv-assistant",
+        "business-process-monitoring"
     ],
     "pages": {
         "mobile-money-integration": {
@@ -122,7 +123,8 @@
             "related": [
                 "inventory-and-records-software",
                 "whatsapp-and-sms-automation",
-                "job-search-and-cv-assistant"
+                "job-search-and-cv-assistant",
+                "business-process-monitoring"
             ]
         },
         "inventory-and-records-software": {
@@ -386,7 +388,99 @@
             ],
             "related": [
                 "inventory-and-records-software",
-                "whatsapp-and-sms-automation"
+                "whatsapp-and-sms-automation",
+                "business-process-monitoring"
+            ]
+        },
+        "business-process-monitoring": {
+            "card_title": "Monitor your business processes",
+            "summary": "One dashboard that watches your websites, servers, deployments, deadlines and tasks, and tells you the moment something needs attention, before your customers notice.",
+            "seo": {
+                "title": "Business Process Monitoring Dashboard, Lore | verbeek.ug",
+                "description": "Lore is a tool for monitoring your business processes: uptime checks, incident alerts on Telegram, server health, certificate and domain expiry, a status page, deploys, tasks and a team knowledge base in one place."
+            },
+            "h1": "Know what is happening in your business before your customers do",
+            "lead": "Most small businesses find out something is broken when a customer complains. Lore is a monitoring and operations tool that watches the things your business depends on, alerts you the moment one of them fails, and keeps the notes, tasks and deadlines around them in one place.",
+            "problem": {
+                "paragraphs": [
+                    "A business runs on many small processes: the website that takes orders, the server behind it, the certificate and domain that must be renewed, the release that goes out on Friday, the follow-up someone promised a customer. Each one lives in a different tool, a different inbox or somebody's head.",
+                    "When one of them quietly fails, nobody knows until the damage is done. The website has been down since the night, the certificate expired over the weekend, the disk filled up, or the fix was known last time but never written down."
+                ]
+            },
+            "costs": {
+                "items": [
+                    "Downtime you only discover when a customer calls or an order does not arrive",
+                    "Certificates and domains that lapse because nobody tracked the renewal date",
+                    "Servers that run out of disk space or memory without warning",
+                    "The same outage explained from scratch every time, because nothing was written down",
+                    "Tasks, reminders and knowledge scattered over chats, spreadsheets and paper"
+                ]
+            },
+            "approach": {
+                "steps": [
+                    {
+                        "title": "Register what matters",
+                        "text": "You add your websites, shops and systems. Lore checks them on a schedule, including a deeper check that a page really works and not only that the server answers."
+                    },
+                    {
+                        "title": "Get alerted at once",
+                        "text": "When something fails, Lore opens an incident, puts it on your task board and sends a message to your Telegram. One incident stays open per problem, so a long outage does not flood you with repeats."
+                    },
+                    {
+                        "title": "Watch the quiet risks",
+                        "text": "Lore tracks when each SSL certificate and domain registration expires and warns you in time. It also samples the server for disk, memory and load, and raises an incident before the disk fills up."
+                    },
+                    {
+                        "title": "Show customers the truth",
+                        "text": "Each site can have a public status page that shows whether it is up and its recent history, without a login and without exposing internals."
+                    },
+                    {
+                        "title": "Learn from every incident",
+                        "text": "Start a post-mortem page for an incident with what Lore already knows filled in, and keep it in the knowledge base next to your procedures, so the next outage is faster to fix."
+                    },
+                    {
+                        "title": "Run the work around it",
+                        "text": "A task board with checklists and recurring tasks, reminders and a morning digest, deploys triggered by a push to GitHub, visitor numbers per site and a booking page for client calls keep the daily routine in the same place."
+                    }
+                ]
+            },
+            "tech": {
+                "intro": "What it is built with and how it works:",
+                "items": [
+                    "A Laravel application with a fast web interface you can use from any browser, on desktop or phone",
+                    "Scheduled checks for uptime, server health and certificate and domain expiry",
+                    "Alerts by Telegram and in the app, with incidents grouped so you are not spammed",
+                    "A knowledge base in Markdown with revision history, tags and search, for procedures and post-mortems",
+                    "Web analytics per site, automatic deploys from GitHub and a public status page per site",
+                    "Runs on your own server with PostgreSQL and daily database backups, so your data stays yours"
+                ]
+            },
+            "faq": [
+                {
+                    "q": "What can Lore monitor?",
+                    "a": "Websites and web applications (is the page up, and does it still work), the server it runs on (disk, memory, load, queue), and the dates that quietly cause outages: SSL certificate and domain expiry. Anything that can be checked on a schedule can be added."
+                },
+                {
+                    "q": "How will I know when something breaks?",
+                    "a": "Lore opens an incident, adds it to your task board, shows a banner in the app and sends a Telegram message. While the problem persists it does not repeat itself, and when it is resolved the incident is closed."
+                },
+                {
+                    "q": "Is this only for software companies?",
+                    "a": "No. Any business with a website, an online shop, a booking system or a server has processes worth watching. Lore also holds the non-technical side: tasks, reminders, notes and procedures."
+                },
+                {
+                    "q": "Can my customers see whether my service is up?",
+                    "a": "Yes. You can switch on a public status page per site. It shows only whether the site is up and its recent history."
+                },
+                {
+                    "q": "Is Lore a product I can sign up for?",
+                    "a": "Lore is a tool we built and run ourselves. We can set up the same kind of monitoring for your business, tailored to your sites and processes. Tell us what you want to keep an eye on and we will say honestly what is worth setting up."
+                }
+            ],
+            "related": [
+                "whatsapp-and-sms-automation",
+                "inventory-and-records-software",
+                "job-search-and-cv-assistant"
             ]
         }
     }

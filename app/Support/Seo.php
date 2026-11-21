@@ -22,7 +22,7 @@ class Seo
         ],
         'portfolio' => [
             'title' => 'Portfolio | verbeek.ug software solutions',
-            'description' => 'Platforms we have built and run: Prompt a Tool, Crowded Airport and Job Scout, plus MyCanopy, property listings for Uganda, currently in development.',
+            'description' => 'Platforms we have built and run: Prompt a Tool, Crowded Airport, Job Scout and Lore, plus MyCanopy, property listings for Uganda, currently in development.',
         ],
         'about' => [
             'title' => 'About | verbeek.ug software solutions',
@@ -48,6 +48,7 @@ class Seo
     private const APPS = [
         ['Prompt a Tool', 'https://prompt-a-tool.com', 'BusinessApplication', 'Turn an app idea into ready-to-use AI prompts, roles, agents and skills.'],
         ['Job Scout', 'https://job-scout.verbeek.ug/', 'BusinessApplication', 'A job search assistant that scores jobs against your profile and writes tailored CVs and cover letters, with every claim checked against your own facts.'],
+        ['Lore', null, 'BusinessApplication', 'A monitoring and operations tool that watches websites, servers, certificates and deadlines, alerts on Telegram, publishes status pages and keeps tasks and a knowledge base alongside.'],
         ['Crowded Airport', 'https://crowded-airport.com', 'TravelApplication', 'Find your way on any airport in the world.'],
     ];
 
@@ -291,7 +292,7 @@ class Seo
                     'item' => [
                         '@type' => 'WebApplication',
                         'name' => $a[0],
-                        'url' => $a[1],
+                        ...($a[1] ? ['url' => $a[1]] : []),
                         'applicationCategory' => $a[2],
                         'operatingSystem' => 'Any (web browser)',
                         'description' => $a[3],

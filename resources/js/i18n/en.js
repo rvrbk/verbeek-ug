@@ -16,7 +16,7 @@ export default {
     seo: {
         home: { title: 'verbeek.ug | Custom Software Solutions for Businesses', description: 'Custom software for businesses across Africa: business automation, AI solutions, community platforms and consultancy. Built by verbeek.ug software solutions.' },
         services: { title: 'Services | verbeek.ug software solutions', description: 'Business automation, AI solutions, community crowd sourced platforms and independent software consultancy, tailored to your business.' },
-        portfolio: { title: 'Portfolio | verbeek.ug software solutions', description: 'Platforms we have built and run: Prompt a Tool, Crowded Airport and Job Scout, plus MyCanopy, property listings for Uganda, currently in development.' },
+        portfolio: { title: 'Portfolio | verbeek.ug software solutions', description: 'Platforms we have built and run: Prompt a Tool, Crowded Airport, Job Scout and Lore, plus MyCanopy, property listings for Uganda, currently in development.' },
         about: { title: 'About | verbeek.ug software solutions', description: 'Who we are, how we work and what we specialise in: smart software solutions that solve real business problems for businesses across Africa.' },
         contact: { title: 'Contact | verbeek.ug software solutions', description: 'Get in touch for a free first consultation about your software project.' },
         blog: { title: 'Blog | verbeek.ug software solutions', description: 'Articles and updates from verbeek.ug software solutions.' }
@@ -160,7 +160,7 @@ export default {
     portfolio: {
         hero_subtitle: 'Portfolio',
         hero_title: 'Our Work',
-        hero_description: 'See the platforms we have built and run: an AI prompt generator for entrepreneurs, an airport wayfinder and a job search assistant.',
+        hero_description: 'See the platforms we have built and run: an AI prompt generator for entrepreneurs, an airport wayfinder, a job search assistant and a business monitoring tool.',
         
         cta_text: 'Let\'s discuss how we can create a smart solution for your business or community.',
         
@@ -203,6 +203,17 @@ export default {
                     'Every claim in a document is checked against your own facts'
                 ],
                 tags: ['AI', 'Jobs', 'Automation']
+            },
+            lore: {
+                title: 'Lore',
+                tagline: 'Monitor your business processes in one place',
+                description: 'Lore watches the things a business depends on and tells you the moment one of them fails. It checks websites and servers, tracks certificate and domain expiry, opens incidents with Telegram alerts, publishes status pages and keeps tasks, reminders, deploys and a Markdown knowledge base next to them. We built it for our own work and run it every day.',
+                features: [
+                    'Uptime and server health checks with instant Telegram alerts',
+                    'Incidents, post-mortems and public status pages',
+                    'Tasks, reminders, deploys, analytics and a knowledge base in one tool'
+                ],
+                tags: ['Monitoring', 'Operations', 'Laravel']
             },
             crowded_airport: {
                 title: 'Crowded Airport',

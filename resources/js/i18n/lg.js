@@ -16,7 +16,7 @@ export default {
     seo: {
         home: { title: 'verbeek.ug | Software ey\'enjawulo eri bizinensi', description: 'Software ey\'enjawulo eri bizinensi: okukola emirimu mu ngeri ey\'otoma, AI, pulatifomu z\'abantu n\'okuwabula. Ekoleddwa verbeek.ug software solutions.' },
         services: { title: 'Obuweereza | verbeek.ug software solutions', description: 'Okukola emirimu mu ngeri ey\'otoma, AI, pulatifomu z\'abantu n\'okuwabula ku software, nga bikwatagana ne bizinensi yo.' },
-        portfolio: { title: 'Bye Tukoze | verbeek.ug software solutions', description: 'Pulatifomu ze twazimba: Prompt a Tool, Crowded Airport ne Job Scout, ne MyCanopy ekyakolebwako.' },
+        portfolio: { title: 'Bye Tukoze | verbeek.ug software solutions', description: 'Pulatifomu ze twazimba: Prompt a Tool, Crowded Airport Job Scout ne Lore, ne MyCanopy ekyakolebwako.' },
         about: { title: 'Ebitukwatako | verbeek.ug software solutions', description: 'Abo be tuli, engeri gye tukolamu n\'ebyo bye tukugu: software ennungi ezigonjoola ebizibu bya bizinensi.' },
         contact: { title: 'Tukwatagane | verbeek.ug software solutions', description: 'Tukwatagane okufuna okuteesa okusooka okw\'obwereere ku pulojekiti yo eya software.' },
         blog: { title: 'Blog | verbeek.ug software solutions', description: 'Ebiwandiiko n\'amawulire okuva ku verbeek.ug software solutions.' }

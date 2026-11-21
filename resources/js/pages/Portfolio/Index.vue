@@ -49,6 +49,26 @@
                     </article>
 
                     <article class="hb-project">
+                        <div class="hb-project-media" aria-hidden="true">
+                            <LoreVisual />
+                        </div>
+                        <div class="hb-project-body">
+                            <h3 class="hb-portfolio-title">{{ $t('portfolio.items.lore.title') }}</h3>
+                            <p class="hb-project-tagline">{{ $t('portfolio.items.lore.tagline') }}</p>
+                            <p class="hb-portfolio-description">{{ $t('portfolio.items.lore.description') }}</p>
+                            <ul class="hb-project-features">
+                                <li v-for="n in 3" :key="n">{{ $t('portfolio.items.lore.features.' + (n - 1)) }}</li>
+                            </ul>
+                            <div class="hb-portfolio-tags">
+                                <span v-for="n in 3" :key="n" class="hb-tag">{{ $t('portfolio.items.lore.tags.' + (n - 1)) }}</span>
+                            </div>
+                            <router-link to="/solutions/business-process-monitoring" class="hb-btn hb-btn-light hb-portfolio-btn">
+                                {{ $t('common.learn_more') }}
+                            </router-link>
+                        </div>
+                    </article>
+
+                    <article class="hb-project">
                         <a href="https://prompt-a-tool.com" target="_blank" rel="noopener" class="hb-project-media" :aria-label="$t('portfolio.items.prompt_tool.title')">
                             <PromptVisual />
                         </a>
@@ -145,10 +165,11 @@ import PromptVisual from '../../components/PromptVisual.vue'
 import AirportVisual from '../../components/AirportVisual.vue'
 import MapVisual from '../../components/MapVisual.vue'
 import JobVisual from '../../components/JobVisual.vue'
+import LoreVisual from '../../components/LoreVisual.vue'
 
 export default {
     name: 'Portfolio',
-    components: { PromptVisual, AirportVisual, MapVisual, JobVisual }
+    components: { PromptVisual, AirportVisual, MapVisual, JobVisual, LoreVisual }
 }
 </script>
 
