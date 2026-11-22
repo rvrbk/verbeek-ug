@@ -65,6 +65,7 @@
 
           gtag('config', 'G-L2N30C0ENR');
         </script>
+        <script defer src="https://lore.verbeek.ug/heat.js" data-key="CCySXY1VWPtSqtNg4cGG5rKeoGonaMwj" data-lore-heat></script>
     </head>
     <body class="bg-white dark:bg-black text-gray-800 dark:text-white">
         <div id="app"></div>
