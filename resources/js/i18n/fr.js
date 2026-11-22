@@ -32,6 +32,7 @@ export default {
         send_message: 'Envoyer le message',
         back_to_portfolio: 'Retour aux réalisations',
         book_a_call: 'Réserver un appel',
+        close: 'Fermer',
         visit_site: 'Visiter le site',
         toggle_menu: 'Afficher ou masquer le menu'
     },

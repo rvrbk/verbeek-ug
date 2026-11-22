@@ -36,6 +36,7 @@ export default {
         send_message: 'Send Message',
         back_to_portfolio: 'Back to Portfolio',
         book_a_call: 'Book a Call',
+        close: 'Close',
         visit_site: 'Visit Site',
         toggle_menu: 'Toggle menu'
     },

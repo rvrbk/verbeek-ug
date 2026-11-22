@@ -123,7 +123,7 @@
                                     <svg class="hb-contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                     </svg>
-                                    <a href="https://lore.verbeek.ug/pointy/introduction?site=verbeek-ug" target="_blank" rel="noopener" class="hb-contact-link">{{ $t('common.book_a_call') }}</a>
+                                    <a :href="bookingUrl" target="_blank" rel="noopener" class="hb-contact-link" @click.prevent="openBooking">{{ $t('common.book_a_call') }}</a>
                                 </div>
                                 <div class="hb-contact-method">
                                     <svg class="hb-contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -138,17 +138,41 @@
                 </div>
             </div>
         </section>
-    </div>
+    
+        <!-- Pointy booking pop-up -->
+        <Teleport to="body">
+            <div v-if="bookingOpen" class="hb-booking-overlay" role="dialog" aria-modal="true" :aria-label="$t('common.book_a_call')" @click.self="closeBooking">
+                <div class="hb-booking-modal">
+                    <button type="button" class="hb-booking-close" :aria-label="$t('common.close')" @click="closeBooking">&times;</button>
+                    <iframe :src="bookingUrl" class="hb-booking-frame" :title="$t('common.book_a_call')"></iframe>
+                </div>
+            </div>
+        </Teleport>
+</div>
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref, onBeforeUnmount } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 export default {
     name: 'Contact',
     setup() {
         const { t } = useI18n()
+        const bookingUrl = 'https://lore.verbeek.ug/pointy/introduction?site=verbeek-ug'
+        const bookingOpen = ref(false)
+        const onBookingKey = (event) => { if (event.key === 'Escape') closeBooking() }
+        const openBooking = () => {
+            bookingOpen.value = true
+            document.body.style.overflow = 'hidden'
+            window.addEventListener('keydown', onBookingKey)
+        }
+        const closeBooking = () => {
+            bookingOpen.value = false
+            document.body.style.overflow = ''
+            window.removeEventListener('keydown', onBookingKey)
+        }
+        onBeforeUnmount(closeBooking)
         const form = ref({
             name: '',
             email: '',
@@ -205,7 +229,7 @@ export default {
             }
         }
         
-        return { form, errors, isSubmitting, successMessage, errorMessage, validateField, submitForm }
+        return { bookingUrl, bookingOpen, openBooking, closeBooking, form, errors, isSubmitting, successMessage, errorMessage, validateField, submitForm }
     }
 }
 </script>
@@ -259,6 +283,11 @@ export default {
 .hb-btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
 .hb-btn-light { background-color: transparent; color: var(--hb-text); border: 1px solid var(--hb-text); }
 .hb-btn-light:hover { background-color: rgba(255, 255, 255, 0.2); color: var(--hb-primary); border-color: var(--hb-text); }
-@media (max-width: 768px) { .hb-section { padding: 4rem 0; } .hb-contact-grid { grid-template-columns: 1fr; } .hb-hero-bg { opacity: 0.5; } }
+.hb-booking-overlay { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 1.5rem; background: rgba(18, 26, 35, 0.8); backdrop-filter: blur(4px); }
+.hb-booking-modal { position: relative; width: 100%; max-width: 760px; height: min(860px, 100%); background: #18222d; border: 1px solid rgba(169, 183, 198, 0.25); border-radius: 2px; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5); }
+.hb-booking-frame { display: block; width: 100%; height: 100%; border: 0; border-radius: 2px; background: #18222d; }
+.hb-booking-close { position: absolute; top: 0.25rem; right: 0.75rem; z-index: 1; background: none; border: 0; color: #a9b7c6; font-size: 2rem; line-height: 1; cursor: pointer; }
+.hb-booking-close:hover { color: #ff7a1a; }
+@media (max-width: 768px) { .hb-booking-overlay { padding: 0; } .hb-booking-modal { height: 100%; border: 0; } .hb-section { padding: 4rem 0; } .hb-contact-grid { grid-template-columns: 1fr; } .hb-hero-bg { opacity: 0.5; } }
 @media (max-width: 480px) { .hb-hero-title { font-size: 1.75rem; } }
 </style>
