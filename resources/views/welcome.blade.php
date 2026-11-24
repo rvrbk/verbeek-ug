@@ -55,7 +55,27 @@
         @fonts
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        @include('partials.cookie-consent', ['gaId' => 'G-L2N30C0ENR'])
+        {{-- Slate and orange to match theme.css: square corners, uppercase letterspaced buttons. --}}
+        @include('partials.cookie-consent', [
+            'gaId' => 'G-L2N30C0ENR',
+            'theme' => [
+                '--cc-bg' => '#121a23',
+                '--cc-fg' => '#ffffff',
+                '--cc-border' => '#2e3d4f',
+                '--cc-bar' => '3px solid #ff7a1a',
+                '--cc-radius' => '2px',
+                '--cc-btn-radius' => '2px',
+                '--cc-font' => "'Ubuntu', 'Helvetica Neue', ui-sans-serif, system-ui, sans-serif",
+                '--cc-accent' => '#ff7a1a',
+                '--cc-accent-fg' => '#121a23',
+                '--cc-border-strong' => '#ff7a1a',
+                '--cc-btn-weight' => '700',
+                '--cc-btn-transform' => 'uppercase',
+                '--cc-btn-spacing' => '.1em',
+                '--cc-shadow' => '0 12px 32px rgba(0, 0, 0, .45)',
+            ],
+            'extraCss' => '#cookie-consent button{font-size:.75rem;padding:.7rem .9rem}#cookie-consent .cc-accept:hover{background:transparent;color:#ff7a1a;filter:none}#cookie-consent .cc-decline:hover{background:#ff7a1a;color:#121a23;filter:none}',
+        ])
         <script defer src="https://lore.verbeek.ug/heat.js" data-key="CCySXY1VWPtSqtNg4cGG5rKeoGonaMwj" data-lore-heat></script>
     </head>
     <body class="bg-white dark:bg-black text-gray-800 dark:text-white">
