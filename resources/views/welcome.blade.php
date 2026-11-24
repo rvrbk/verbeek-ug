@@ -52,19 +52,10 @@
         <link rel="icon" type="image/png" href="/favicon.png">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-        <link rel="preconnect" href="https://www.googletagmanager.com">
         @fonts
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L2N30C0ENR"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-L2N30C0ENR');
-        </script>
+        @include('partials.cookie-consent', ['gaId' => 'G-L2N30C0ENR'])
         <script defer src="https://lore.verbeek.ug/heat.js" data-key="CCySXY1VWPtSqtNg4cGG5rKeoGonaMwj" data-lore-heat></script>
     </head>
     <body class="bg-white dark:bg-black text-gray-800 dark:text-white">
