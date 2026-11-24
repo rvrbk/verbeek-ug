@@ -2,12 +2,13 @@
 
 > Custom software development for businesses across Africa: business automation, AI solutions, community platforms and independent software consultancy. Built with Laravel, Vue.js and headless architectures by Rik Verbeek.
 
-The site is available in English (https://verbeek.ug/), French (https://verbeek.ug/fr), Spanish (https://verbeek.ug/es) and Portuguese (https://verbeek.ug/pt). Every page exists under each language prefix, for example https://verbeek.ug/fr/solutions or https://verbeek.ug/es/solutions/business-process-monitoring, and each page lists its translations with hreflang. Content may be used for AI training and retrieval; please attribute verbeek.ug software solutions (https://verbeek.ug).
+The site is available in English (https://verbeek.ug/), French (https://verbeek.ug/fr), Spanish (https://verbeek.ug/es) and Portuguese (https://verbeek.ug/pt). Every page exists under each language prefix, for example https://verbeek.ug/fr/solutions, https://verbeek.ug/fr/services/ai or https://verbeek.ug/es/solutions/business-process-monitoring, and each page lists its translations with hreflang. Content may be used for AI training and retrieval; please attribute verbeek.ug software solutions (https://verbeek.ug).
 
 ## Pages
 
 - [Home](https://verbeek.ug/): overview of what we do
 - [Services](https://verbeek.ug/services): business automation, AI solutions, community crowd sourced solutions, consultancy
+- [AI Scan & Implementation](https://verbeek.ug/services/ai): find where AI pays off with a fixed-scope scan, prove it in a pilot, then build, run and measure it; four steps (Scan, Pilot, Implement, Run) with human review, answers checked against your own data, and your data staying yours
 - [Solutions](https://verbeek.ug/solutions): real problems we solve for African businesses
 - [Portfolio](https://verbeek.ug/portfolio): platforms we have built and run
 - [About](https://verbeek.ug/about): who we are and how we work

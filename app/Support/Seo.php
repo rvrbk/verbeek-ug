@@ -21,6 +21,7 @@ class Seo
         'fr' => [
             '' => ['title' => 'verbeek.ug | Solutions logicielles sur mesure pour les entreprises', 'description' => 'Logiciels sur mesure pour les entreprises africaines : automatisation, solutions d\'IA, plateformes communautaires et conseil. Créés par verbeek.ug software solutions.'],
             'services' => ['title' => 'Services | verbeek.ug software solutions', 'description' => 'Automatisation des processus, solutions d\'IA, plateformes communautaires participatives et conseil logiciel indépendant, adaptés à votre entreprise.'],
+            'services/ai' => ['title' => 'Scan et mise en œuvre de l\'IA | verbeek.ug software solutions', 'description' => 'Trouvez où l\'IA est rentable dans votre entreprise : scan au périmètre défini, pilote, puis mise en œuvre et exploitation. Notre méthode.'],
             'portfolio' => ['title' => 'Réalisations | verbeek.ug software solutions', 'description' => 'Les plateformes que nous avons créées et que nous exploitons : Prompt a Tool, Crowded Airport, Job Scout et Lore, ainsi que MyCanopy, des annonces immobilières pour l\'Ouganda, en cours de développement.'],
             'about' => ['title' => 'À propos | verbeek.ug software solutions', 'description' => 'Qui nous sommes, comment nous travaillons et dans quoi nous sommes spécialisés : des solutions logicielles intelligentes qui résolvent de vrais problèmes pour les entreprises africaines.'],
             'contact' => ['title' => 'Contact | verbeek.ug software solutions', 'description' => 'Contactez-nous pour une première consultation gratuite sur votre projet logiciel.'],
@@ -29,6 +30,7 @@ class Seo
         'es' => [
             '' => ['title' => 'verbeek.ug | Soluciones de software a medida para empresas', 'description' => 'Software a medida para empresas de toda África: automatización, soluciones de IA, plataformas comunitarias y consultoría. Creado por verbeek.ug software solutions.'],
             'services' => ['title' => 'Servicios | verbeek.ug software solutions', 'description' => 'Automatización de procesos, soluciones de IA, plataformas comunitarias colaborativas y consultoría de software independiente, adaptadas a su negocio.'],
+            'services/ai' => ['title' => 'Escaneo e implementación de IA | verbeek.ug software solutions', 'description' => 'Descubra dónde la IA rinde en su negocio: escaneo de alcance definido, piloto y luego implementación y operación. Cómo trabajamos.'],
             'portfolio' => ['title' => 'Portafolio | verbeek.ug software solutions', 'description' => 'Las plataformas que hemos creado y que gestionamos: Prompt a Tool, Crowded Airport, Job Scout y Lore, además de MyCanopy, anuncios inmobiliarios para Uganda, en desarrollo.'],
             'about' => ['title' => 'Nosotros | verbeek.ug software solutions', 'description' => 'Quiénes somos, cómo trabajamos y en qué nos especializamos: soluciones de software inteligentes que resuelven problemas reales de las empresas africanas.'],
             'contact' => ['title' => 'Contacto | verbeek.ug software solutions', 'description' => 'Póngase en contacto para una primera consulta gratuita sobre su proyecto de software.'],
@@ -37,6 +39,7 @@ class Seo
         'pt' => [
             '' => ['title' => 'verbeek.ug | Soluções de software à medida para empresas', 'description' => 'Software à medida para empresas de toda a África: automação, soluções de IA, plataformas comunitárias e consultoria. Criado pela verbeek.ug software solutions.'],
             'services' => ['title' => 'Serviços | verbeek.ug software solutions', 'description' => 'Automação de processos, soluções de IA, plataformas comunitárias colaborativas e consultoria de software independente, adaptadas ao seu negócio.'],
+            'services/ai' => ['title' => 'Scan e implementação de IA | verbeek.ug software solutions', 'description' => 'Descubra onde a IA compensa no seu negócio: scan de âmbito definido, piloto e depois implementação e operação. Como trabalhamos.'],
             'portfolio' => ['title' => 'Portefólio | verbeek.ug software solutions', 'description' => 'As plataformas que criámos e gerimos: Prompt a Tool, Crowded Airport, Job Scout e Lore, além do MyCanopy, anúncios imobiliários para o Uganda, em desenvolvimento.'],
             'about' => ['title' => 'Sobre nós | verbeek.ug software solutions', 'description' => 'Quem somos, como trabalhamos e em que nos especializamos: soluções de software inteligentes que resolvem problemas reais das empresas africanas.'],
             'contact' => ['title' => 'Contacto | verbeek.ug software solutions', 'description' => 'Entre em contacto para uma primeira consulta gratuita sobre o seu projeto de software.'],
@@ -52,6 +55,10 @@ class Seo
         'services' => [
             'title' => 'Services | verbeek.ug software solutions',
             'description' => 'Business automation, AI solutions, community crowd sourced platforms and independent software consultancy, tailored to your business.',
+        ],
+        'services/ai' => [
+            'title' => 'AI Scan & Implementation | verbeek.ug software solutions',
+            'description' => 'Find where AI pays off in your business with a fixed-scope AI Scan, prove it in a pilot, then have it built and run. How we work.',
         ],
         'portfolio' => [
             'title' => 'Portfolio | verbeek.ug software solutions',
@@ -74,6 +81,7 @@ class Seo
     private const SERVICES = [
         ['Business Automation', 'Streamline your operations with smart automation solutions. Improve efficiency and reduce manual work with intelligent workflows.'],
         ['AI Solutions', 'Harness the power of artificial intelligence to transform your business. Smart solutions that learn, adapt, and deliver results.'],
+        ['AI Scan & Implementation', 'Find where AI really pays off with a fixed-scope AI Scan, prove it in a pilot, then have it built, run and measured.'],
         ['Community Crowd Sourced Solutions', 'Build connected communities with crowd sourced digital platforms. Engage users, share information, and collaborate effectively.'],
         ['Consultancy', 'Practical, independent advice on your software, processes and where AI and automation can help, before you commit to building anything.'],
     ];
@@ -193,6 +201,7 @@ class Seo
     private const SOURCES = [
         '' => 'Home.vue',
         'services' => 'Services/Index.vue',
+        'services/ai' => 'Services/Ai.vue',
         'portfolio' => 'Portfolio/Index.vue',
         'about' => 'About/Index.vue',
         'contact' => 'Contact/Index.vue',
@@ -213,7 +222,7 @@ class Seo
     /** Sitemap entries: [url, lastmod, changefreq, priority, alternates]. Every page is listed once per language. */
     public static function sitemap(): array
     {
-        $meta = ['' => ['monthly', '1.0'], 'services' => ['monthly', '0.9'], 'solutions' => ['monthly', '0.9'], 'portfolio' => ['monthly', '0.9'], 'about' => ['yearly', '0.6'], 'contact' => ['yearly', '0.7']];
+        $meta = ['' => ['monthly', '1.0'], 'services' => ['monthly', '0.9'], 'services/ai' => ['monthly', '0.8'], 'solutions' => ['monthly', '0.9'], 'portfolio' => ['monthly', '0.9'], 'about' => ['yearly', '0.6'], 'contact' => ['yearly', '0.7']];
 
         foreach (self::solutions()['order'] as $slug) {
             $meta['solutions/' . $slug] = ['monthly', '0.8'];
@@ -364,6 +373,18 @@ class Seo
                         'url' => self::SITE . '/services',
                     ],
                 ], self::SERVICES, array_keys(self::SERVICES)),
+            ];
+        }
+
+        if ($key === 'services/ai') {
+            $graph[] = [
+                '@type' => 'Service',
+                'name' => 'AI Scan & Implementation',
+                'description' => $page['description'],
+                'serviceType' => 'AI consulting and implementation',
+                'provider' => ['@id' => self::SITE . '/#organization'],
+                'areaServed' => ['@type' => 'Continent', 'name' => 'Africa'],
+                'url' => $canonical,
             ];
         }
 

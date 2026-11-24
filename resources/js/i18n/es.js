@@ -14,7 +14,39 @@ export default {
     seo: {
         home: { title: 'verbeek.ug | Soluciones de software a medida para empresas', description: 'Software a medida para empresas de toda África: automatización, soluciones de IA, plataformas comunitarias y consultoría. Creado por verbeek.ug software solutions.' },
         services: { title: 'Servicios | verbeek.ug software solutions', description: 'Automatización de procesos, soluciones de IA, plataformas comunitarias colaborativas y consultoría de software independiente, adaptadas a su negocio.' },
-        portfolio: { title: 'Portafolio | verbeek.ug software solutions', description: 'Las plataformas que hemos creado y que gestionamos: Prompt a Tool, Crowded Airport, Job Scout y Lore, además de MyCanopy, anuncios inmobiliarios para Uganda, en desarrollo.' },
+        services_ai: { title: "Escaneo e implementación de IA | verbeek.ug software solutions", description: "Descubra dónde la IA rinde en su negocio: escaneo de alcance definido, piloto y luego implementación y operación. Cómo trabajamos." },
+        // AI scan and implementation page
+    aiServices: {
+        hero_subtitle: "Escaneo e implementación de IA",
+        hero_title: "Una IA que se gana su lugar en su negocio",
+        hero_description: "Empezamos por encontrar dónde la IA le ahorrará realmente tiempo o dinero, lo comprobamos en un proceso y solo después lo integramos en su forma de trabajar.",
+        back: "Todos los servicios",
+        steps_label: "Cómo trabajamos",
+        steps_title: "Del escaneo al sistema en producción en cuatro pasos",
+        duration: "Duración",
+        deliverable: "Usted recibe",
+        steps: [
+            { name: "Escaneo", duration: "Aproximadamente una semana", text: "Hablamos con las personas que hacen el trabajo, mapeamos sus procesos y revisamos las herramientas y los datos que ya tiene.", deliverable: "Una lista priorizada de casos de uso con el tiempo que se espera ahorrar, los riesgos y una decisión clara de seguir o no." },
+            { name: "Piloto", duration: "De dos a cuatro semanas", text: "Construimos el caso de uso más prometedor, pequeño pero real, y lo medimos frente a la situación de partida del escaneo.", deliverable: "Un piloto funcionando, resultados medidos y una decisión sobre si ampliarlo." },
+            { name: "Implementación", duration: "Según el alcance", text: "Lo conectamos a sus sistemas, añadimos controles y alternativas, y formamos a las personas que lo usarán.", deliverable: "Un sistema en producción, documentación y un equipo formado." },
+            { name: "Operación", duration: "Continua, opcional", text: "Vigilamos la calidad, el costo y el uso, y revisamos los resultados con usted cada mes. Puede asumir el control en cualquier momento.", deliverable: "Una revisión mensual y una lista corta de mejoras." }
+        ],
+        principles_label: "Principios",
+        principles_title: "Cómo mantenemos honesta a la IA",
+        principles: [
+            { title: "Primero el problema", text: "Partimos de una tarea que le cuesta tiempo o dinero, no de un modelo ni de una moda." },
+            { title: "Una persona siempre en el circuito", text: "La IA redacta y sugiere; las personas aprueban todo lo que importa." },
+            { title: "Contrastado con sus datos", text: "Los resultados se verifican con sus propios datos, igual que Job Scout comprueba cada afirmación de un CV." },
+            { title: "Sus datos siguen siendo suyos", text: "No entrenamos modelos con sus datos, usted es dueño de lo que construimos y todo queda documentado para que pueda irse cuando quiera." }
+        ],
+        fit_title: "El escaneo también es un buen lugar para parar",
+        fit_text: "Si la IA todavía no vale la pena para usted, el escaneo se lo dice, y se queda con el informe de todos modos. Sin obligación de construir con nosotros.",
+        cta_title: "Empiece con un escaneo",
+        cta_text: "Cuéntenos sobre su negocio y acordaremos con usted el alcance de un escaneo. La primera consulta siempre es gratuita.",
+        cta_button: "Reservar una consulta gratuita"
+    },
+
+    portfolio: { title: 'Portafolio | verbeek.ug software solutions', description: 'Las plataformas que hemos creado y que gestionamos: Prompt a Tool, Crowded Airport, Job Scout y Lore, además de MyCanopy, anuncios inmobiliarios para Uganda, en desarrollo.' },
         about: { title: 'Nosotros | verbeek.ug software solutions', description: 'Quiénes somos, cómo trabajamos y en qué nos especializamos: soluciones de software inteligentes que resuelven problemas reales de las empresas africanas.' },
         contact: { title: 'Contacto | verbeek.ug software solutions', description: 'Póngase en contacto para una primera consulta gratuita sobre su proyecto de software.' },
         blog: { title: 'Blog | verbeek.ug software solutions', description: 'Artículos y novedades de verbeek.ug software solutions.' }
@@ -134,7 +166,8 @@ export default {
             },
             ai_solutions: {
                 title: 'Soluciones de IA',
-                description: 'Aproveche el poder de la inteligencia artificial para transformar su negocio. Soluciones inteligentes que aprenden, se adaptan y dan resultados.'
+                description: 'Aproveche el poder de la inteligencia artificial para transformar su negocio. Soluciones inteligentes que aprenden, se adaptan y dan resultados.',
+                scan: "Descubra dónde rinde la IA con un escaneo, compruébelo en un piloto y luego constrúyalo, opérelo y mídalo. Vea cómo trabajamos."
             },
             community_systems: {
                 title: 'Soluciones comunitarias colaborativas',

@@ -43,8 +43,11 @@
                         <p class="hb-service-description">
                             {{ $t('services.items.ai_solutions.description') }}
                         </p>
-                        <router-link to="/contact" class="hb-service-link">
-                            {{ $t('common.get_started') }}
+                        <p class="hb-service-description">
+                            {{ $t('services.items.ai_solutions.scan') }}
+                        </p>
+                        <router-link to="/services/ai" class="hb-service-link">
+                            {{ $t('common.learn_more') }}
                         </router-link>
                     </div>
                     

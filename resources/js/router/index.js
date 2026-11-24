@@ -17,6 +17,12 @@ const routes = [
         meta: { seo: 'services' }
     },
     {
+        path: '/services/ai',
+        name: 'AiServices',
+        component: () => import('@/pages/Services/Ai.vue'),
+        meta: { seo: 'services_ai' }
+    },
+    {
         path: '/solutions',
         name: 'Solutions',
         component: () => import('@/pages/Solutions/Index.vue'),
