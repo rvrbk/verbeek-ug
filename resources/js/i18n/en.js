@@ -17,38 +17,7 @@ export default {
         home: { title: 'verbeek.ug | Custom Software Solutions for Businesses', description: 'Custom software for businesses across Africa: business automation, AI solutions, community platforms and consultancy. Built by verbeek.ug software solutions.' },
         services: { title: 'Services | verbeek.ug software solutions', description: 'Business automation, AI solutions, community crowd sourced platforms and independent software consultancy, tailored to your business.' },
         services_ai: { title: "AI Scan & Implementation | verbeek.ug software solutions", description: "Find where AI pays off in your business with a fixed-scope AI Scan, prove it in a pilot, then have it built and run. How we work." },
-        // AI scan and implementation page
-    aiServices: {
-        hero_subtitle: "AI Scan & Implementation",
-        hero_title: "AI that earns its place in your business",
-        hero_description: "We start by finding where AI will really save you time or money, prove it on one process, and only then build it into the way you work.",
-        back: "All services",
-        steps_label: "How we work",
-        steps_title: "From scan to running system in four steps",
-        duration: "Time",
-        deliverable: "You get",
-        steps: [
-            { name: "Scan", duration: "About a week", text: "We talk to the people who do the work, map your processes and look at the tools and data you already have.", deliverable: "A ranked shortlist of use cases with expected time saved, risks and a clear go or no-go." },
-            { name: "Pilot", duration: "Two to four weeks", text: "We build the single most promising use case, small but real, and measure it against the baseline from the scan.", deliverable: "A working pilot, measured results and a decision on whether to scale it." },
-            { name: "Implement", duration: "Depends on scope", text: "We connect it to your systems, add checks and fallbacks, and train the people who will use it.", deliverable: "A production system, documentation and a trained team." },
-            { name: "Run", duration: "Ongoing, optional", text: "We monitor quality, cost and usage, and review the results with you every month. You can take over at any time.", deliverable: "A monthly review and a short list of improvements." }
-        ],
-        principles_label: "Principles",
-        principles_title: "How we keep AI honest",
-        principles: [
-            { title: "Problem first", text: "We start from a task that costs you time or money, not from a model or a trend." },
-            { title: "A human stays in the loop", text: "AI drafts and suggests; people approve anything that matters." },
-            { title: "Checked against your facts", text: "Outputs are verified against your own data, the way Job Scout checks every claim in a CV." },
-            { title: "Your data stays yours", text: "We do not train on your data, you own what we build, and it is documented so you can leave." }
-        ],
-        fit_title: "The scan is also a good place to stop",
-        fit_text: "If AI is not worth it for you yet, the scan tells you so, and you keep the report either way. No obligation to build with us.",
-        cta_title: "Start with a scan",
-        cta_text: "Tell us about your business and we will agree the scope of a scan with you. First consultation is always free.",
-        cta_button: "Book a free consultation"
-    },
-
-    portfolio: { title: 'Portfolio | verbeek.ug software solutions', description: 'Platforms we have built and run: Prompt a Tool, Crowded Airport, Job Scout and Lore, plus MyCanopy, property listings for Uganda, currently in development.' },
+        portfolio: { title: 'Portfolio | verbeek.ug software solutions', description: 'Platforms we have built and run: Prompt a Tool, Crowded Airport, Job Scout and Lore, plus MyCanopy, property listings for Uganda, currently in development.' },
         about: { title: 'About | verbeek.ug software solutions', description: 'Who we are, how we work and what we specialise in: smart software solutions that solve real business problems for businesses across Africa.' },
         contact: { title: 'Contact | verbeek.ug software solutions', description: 'Get in touch for a free first consultation about your software project.' },
         blog: { title: 'Blog | verbeek.ug software solutions', description: 'Articles and updates from verbeek.ug software solutions.' }
@@ -192,6 +161,37 @@ export default {
     },
     
     // Portfolio Page
+    // AI scan and implementation page
+    aiServices: {
+        hero_subtitle: "AI Scan & Implementation",
+        hero_title: "AI that earns its place in your business",
+        hero_description: "We start by finding where AI will really save you time or money, prove it on one process, and only then build it into the way you work.",
+        back: "All services",
+        steps_label: "How we work",
+        steps_title: "From scan to running system in four steps",
+        duration: "Time",
+        deliverable: "You get",
+        steps: [
+            { name: "Scan", duration: "About a week", text: "We talk to the people who do the work, map your processes and look at the tools and data you already have.", deliverable: "A ranked shortlist of use cases with expected time saved, risks and a clear go or no-go." },
+            { name: "Pilot", duration: "Two to four weeks", text: "We build the single most promising use case, small but real, and measure it against the baseline from the scan.", deliverable: "A working pilot, measured results and a decision on whether to scale it." },
+            { name: "Implement", duration: "Depends on scope", text: "We connect it to your systems, add checks and fallbacks, and train the people who will use it.", deliverable: "A production system, documentation and a trained team." },
+            { name: "Run", duration: "Ongoing, optional", text: "We monitor quality, cost and usage, and review the results with you every month. You can take over at any time.", deliverable: "A monthly review and a short list of improvements." }
+        ],
+        principles_label: "Principles",
+        principles_title: "How we keep AI honest",
+        principles: [
+            { title: "Problem first", text: "We start from a task that costs you time or money, not from a model or a trend." },
+            { title: "A human stays in the loop", text: "AI drafts and suggests; people approve anything that matters." },
+            { title: "Checked against your facts", text: "Outputs are verified against your own data, the way Job Scout checks every claim in a CV." },
+            { title: "Your data stays yours", text: "We do not train on your data, you own what we build, and it is documented so you can leave." }
+        ],
+        fit_title: "The scan is also a good place to stop",
+        fit_text: "If AI is not worth it for you yet, the scan tells you so, and you keep the report either way. No obligation to build with us.",
+        cta_title: "Start with a scan",
+        cta_text: "Tell us about your business and we will agree the scope of a scan with you. First consultation is always free.",
+        cta_button: "Book a free consultation"
+    },
+
     portfolio: {
         hero_subtitle: 'Portfolio',
         hero_title: 'Our Work',

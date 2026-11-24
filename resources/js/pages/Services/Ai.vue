@@ -58,7 +58,7 @@ export default {
     name: 'AiServices',
     computed: {
         steps() {
-            return this.$tm('aiServices.steps').map((_, i) => ({
+            return Array.from({ length: 4 }, (_, i) => ({
                 name: this.$t(`aiServices.steps.${i}.name`),
                 duration: this.$t(`aiServices.steps.${i}.duration`),
                 text: this.$t(`aiServices.steps.${i}.text`),
@@ -66,7 +66,7 @@ export default {
             }))
         },
         principles() {
-            return this.$tm('aiServices.principles').map((_, i) => ({
+            return Array.from({ length: 4 }, (_, i) => ({
                 title: this.$t(`aiServices.principles.${i}.title`),
                 text: this.$t(`aiServices.principles.${i}.text`)
             }))
