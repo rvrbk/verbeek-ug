@@ -16,7 +16,7 @@ export default {
     seo: {
         home: { title: 'verbeek.ug | Custom Software Solutions for Businesses', description: 'Custom software for businesses across Africa: business automation, AI solutions, community platforms and consultancy. Built by verbeek.ug software solutions.' },
         services: { title: 'Services | verbeek.ug software solutions', description: 'Business automation, AI solutions, community crowd sourced platforms and independent software consultancy, tailored to your business.' },
-        services_ai: { title: "AI Scan & Implementation | verbeek.ug software solutions", description: "Find where AI pays off in your business with a fixed-scope AI Scan, prove it in a pilot, then have it built and run. How we work." },
+        services_ai: { title: "AI Scan & Implementation | verbeek.ug software solutions", description: "Find out where AI pays off in your business with an AI Scan, prove it in a pilot, then have it built and run. See how we work, step by step." },
         portfolio: { title: 'Portfolio | verbeek.ug software solutions', description: 'Platforms we have built and run: Prompt a Tool, Crowded Airport, Job Scout and Lore, plus MyCanopy, property listings for Uganda, currently in development.' },
         about: { title: 'About | verbeek.ug software solutions', description: 'Who we are, how we work and what we specialise in: smart software solutions that solve real business problems for businesses across Africa.' },
         contact: { title: 'Contact | verbeek.ug software solutions', description: 'Get in touch for a free first consultation about your software project.' },
@@ -182,8 +182,7 @@ export default {
         principles: [
             { title: "Problem first", text: "We start from a task that costs you time or money, not from a model or a trend." },
             { title: "A human stays in the loop", text: "AI drafts and suggests; people approve anything that matters." },
-            { title: "Checked against your facts", text: "Outputs are verified against your own data, the way Job Scout checks every claim in a CV." },
-            { title: "Your data stays yours", text: "We do not train on your data, you own what we build, and it is documented so you can leave." }
+            { title: "Checked against your facts", text: "Outputs are verified against your own data, the way Job Scout checks every claim in a CV." }
         ],
         fit_title: "The scan is also a good place to stop",
         fit_text: "If AI is not worth it for you yet, the scan tells you so, and you keep the report either way. No obligation to build with us.",

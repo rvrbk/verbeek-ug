@@ -66,7 +66,7 @@ export default {
             }))
         },
         principles() {
-            return Array.from({ length: 4 }, (_, i) => ({
+            return Array.from({ length: 3 }, (_, i) => ({
                 title: this.$t(`aiServices.principles.${i}.title`),
                 text: this.$t(`aiServices.principles.${i}.text`)
             }))

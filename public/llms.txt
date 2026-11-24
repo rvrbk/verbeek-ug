@@ -8,7 +8,7 @@ The site is available in English (https://verbeek.ug/), French (https://verbeek.
 
 - [Home](https://verbeek.ug/): overview of what we do
 - [Services](https://verbeek.ug/services): business automation, AI solutions, community crowd sourced solutions, consultancy
-- [AI Scan & Implementation](https://verbeek.ug/services/ai): find where AI pays off with a fixed-scope scan, prove it in a pilot, then build, run and measure it; four steps (Scan, Pilot, Implement, Run) with human review, answers checked against your own data, and your data staying yours
+- [AI Scan & Implementation](https://verbeek.ug/services/ai): find out where AI pays off with a scan, prove it in a pilot, then build, run and measure it; four steps (Scan, Pilot, Implement, Run), with a person reviewing what the AI produces and results checked against your own data
 - [Solutions](https://verbeek.ug/solutions): real problems we solve for African businesses
 - [Portfolio](https://verbeek.ug/portfolio): platforms we have built and run
 - [About](https://verbeek.ug/about): who we are and how we work

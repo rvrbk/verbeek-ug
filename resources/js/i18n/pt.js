@@ -14,7 +14,7 @@ export default {
     seo: {
         home: { title: 'verbeek.ug | Soluções de software à medida para empresas', description: 'Software à medida para empresas de toda a África: automação, soluções de IA, plataformas comunitárias e consultoria. Criado pela verbeek.ug software solutions.' },
         services: { title: 'Serviços | verbeek.ug software solutions', description: 'Automação de processos, soluções de IA, plataformas comunitárias colaborativas e consultoria de software independente, adaptadas ao seu negócio.' },
-        services_ai: { title: "Scan e implementação de IA | verbeek.ug software solutions", description: "Descubra onde a IA compensa no seu negócio: scan de âmbito definido, piloto e depois implementação e operação. Como trabalhamos." },
+        services_ai: { title: "Scan e implementação de IA | verbeek.ug software solutions", description: "Descubra onde a IA compensa no seu negócio com um scan, comprove-a num piloto e depois implemente-a e opere-a. Veja como trabalhamos, passo a passo." },
         portfolio: { title: 'Portefólio | verbeek.ug software solutions', description: 'As plataformas que criámos e gerimos: Prompt a Tool, Crowded Airport, Job Scout e Lore, além do MyCanopy, anúncios imobiliários para o Uganda, em desenvolvimento.' },
         about: { title: 'Sobre nós | verbeek.ug software solutions', description: 'Quem somos, como trabalhamos e em que nos especializamos: soluções de software inteligentes que resolvem problemas reais das empresas africanas.' },
         contact: { title: 'Contacto | verbeek.ug software solutions', description: 'Entre em contacto para uma primeira consulta gratuita sobre o seu projeto de software.' },
@@ -170,8 +170,7 @@ export default {
         principles: [
             { title: "Primeiro o problema", text: "Partimos de uma tarefa que lhe custa tempo ou dinheiro, não de um modelo nem de uma moda." },
             { title: "Uma pessoa fica sempre no circuito", text: "A IA redige e sugere; as pessoas aprovam tudo o que importa." },
-            { title: "Confrontado com os seus factos", text: "Os resultados são verificados com os seus próprios dados, tal como o Job Scout verifica cada afirmação de um CV." },
-            { title: "Os seus dados continuam seus", text: "Não treinamos modelos com os seus dados, é dono daquilo que construímos e fica tudo documentado para poder sair quando quiser." }
+            { title: "Confrontado com os seus factos", text: "Os resultados são verificados com os seus próprios dados, tal como o Job Scout verifica cada afirmação de um CV." }
         ],
         fit_title: "O scan também é um bom sítio para parar",
         fit_text: "Se a IA ainda não compensa para si, o scan diz-lhe, e fica com o relatório de qualquer forma. Sem obrigação de construir connosco.",
