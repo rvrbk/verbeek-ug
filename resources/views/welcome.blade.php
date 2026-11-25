@@ -76,7 +76,6 @@
             ],
             'extraCss' => '#cookie-consent button{font-size:.75rem;padding:.7rem .9rem}#cookie-consent .cc-accept:hover{background:transparent;color:#ff7a1a;filter:none}#cookie-consent .cc-decline:hover{background:#ff7a1a;color:#121a23;filter:none}',
         ])
-        <script defer src="https://lore.verbeek.ug/heat.js" data-key="CCySXY1VWPtSqtNg4cGG5rKeoGonaMwj" data-lore-heat></script>
     </head>
     <body class="bg-white dark:bg-black text-gray-800 dark:text-white">
         <div id="app"></div>
